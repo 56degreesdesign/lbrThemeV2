@@ -1,0 +1,31 @@
+.directions-content {
+    a {
+        @apply underline underline-offset-4;
+    }
+    h3 {
+        @apply text-40 font-Reckless leading-none mt-3 mb-4 font-light;
+    }
+    strong {
+        @apply text-orange;
+    }
+    h6 {
+        @apply font-bold mb-4 mt-14 uppercase;
+    }
+    h4 {
+        > a {
+            @apply text-orange font-bold text-15;
+        }
+    }
+    p {
+        @apply font-normal text-17;
+    }
+    h5 {
+        @apply font-bold;
+    }
+}
+.map-and-slider-content {
+    @apply text-center;
+    p {
+        @apply mt-6 text-17;
+    }
+}

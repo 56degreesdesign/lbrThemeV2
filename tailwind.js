@@ -1,0 +1,83 @@
+module.exports = {
+    future: {
+        removeDeprecatedGapUtilities: true,
+        purgeLayersByDefault: true,
+    },
+    corePlugins: {
+        container: false
+    },
+    content: [
+        // './*.php',
+        "./templates/**/*.php",
+        "./build/js/*.js",
+        "./header.php",
+        "./footer.php",
+        "./404.php",
+        "./page.php",
+    ],
+    theme: {
+        colors: {
+            transparent: "transparent",
+            black: "#000",
+            white: "#fff",
+            beige: {
+                DEFAULT: '#EEE3D6',
+                light: "#F6EEE5"
+            },
+            green: '#3C4A38',
+            orange: "#CC885D"
+        },
+        fontFamily: {
+            Oscar: ["FH Oscar", "sans-serif"],
+            Reckless: ["Reckless Neue", "sans-serif"],
+        },
+        extend: {
+            fontSize: {
+                167: "10.438rem",
+                70 : "4.375rem", 
+                51: "3.188rem",
+                40: "2.5rem",
+                35: "2.188rem",
+                30: "1.875rem",
+                26: "1.625rem",
+                25: "1.563rem",
+                22: "1.375rem",
+                20: "1.25rem",
+                17: "1.063rem",
+                16: "1rem",
+                15:"0.938rem",
+                14: "0.875rem",
+                10: "0.625rem"
+            },
+            lineHeight: {
+                1.87: "1.875",
+                1.56: "1.5625",
+                1.35: "1.35294117647",
+                1.33: "1.33333333333",
+                1.28: "1.28571428571",
+                1.25: "1.25",
+                1.2: "1.2",
+                1.18: "1.18181818182",
+                1.16 : "1.16666666667",
+                1.125: "1.125",
+                1.17: "1.176"
+            },
+        }
+    },
+    plugins: [
+        function ({
+            addComponents
+        }) {
+            addComponents({
+                '.container': {
+                    width: '100%',
+                    maxWidth: '1920px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    paddingLeft: '3.563rem',
+                    paddingRight: '3.563rem',
+                }
+            })
+        }
+    ]
+};

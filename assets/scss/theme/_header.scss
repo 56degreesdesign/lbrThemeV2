@@ -1,0 +1,13 @@
+.menu-wrapper { 
+    @apply translate-x-full;
+    &.active {
+        @apply translate-x-0;
+    }
+
+    .main-menu {
+        @apply flex flex-col items-center gap-y-12 mt-32 mb-10;
+        > li {
+            @apply text-51 font-bold uppercase underline underline-offset-8 decoration-1;
+        }
+    }
+}

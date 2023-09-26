@@ -1,0 +1,14 @@
+.small-content {
+    span {
+        @apply text-17;
+    }
+    p:first-of-type {
+        span {
+            @apply inline-block mb-3;
+        }
+    }
+ 
+    img {
+        @apply inline-block;
+    }
+}

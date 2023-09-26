@@ -1,0 +1,65 @@
+// !!! IMPORTANT !!! .woff2 format should be first
+
+// @font-face {
+//     font-family: 'ModernEra-Regular';
+//     src: url('../../assets/font/ModernEra-Regular.woff2') format('woff2'),
+//     url('../../assets/font/ModernEra-Regular.woff') format('woff');
+//     font-style: normal;
+//     font-weight: normal;
+//     text-rendering: optimizeLegibility;
+//     font-display: swap;
+// }
+
+
+// @font-face {
+//     font-family: 'ModernEra-Bold';
+//     src: url('../../assets/font/ModernEra-Bold.woff2') format('woff2'),
+//     url('../../assets/font/ModernEra-Bold.woff') format('woff');
+//     font-style: normal;
+//     font-weight: normal;
+//     text-rendering: optimizeLegibility;
+//     font-display: swap;
+// }
+
+
+// @font-face {
+//     font-family: 'ModernEra-Medium';
+//     src: url('../../assets/font/ModernEra-Medium.woff2') format('woff2'),
+//     url('../../assets/font/ModernEra-Medium.woff') format('woff');
+//     font-style: normal;
+//     font-weight: normal;
+//     text-rendering: optimizeLegibility;
+//     font-display: swap;
+// }
+
+
+@font-face {
+    font-family: 'FH Oscar';
+    src: url('../../assets/font/FHOscar-Regular.woff2') format('woff2'),
+    url('../../assets/font/FHOscar-Regular.woff') format('woff'),
+    url('../../assets/font/FHOscar-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FH Oscar';
+    src: url('../../assets/font/FHOscar-Bold.woff2') format('woff2'),
+    url('../../assets/font/FHOscar-Bold.woff') format('woff'),
+    url('../../assets/font/FHOscar-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Reckless Neue';
+    src: url('../../assets/font/RecklessNeue-Light.woff2') format('woff2'),
+    url('../../assets/font/RecklessNeue-Light.woff') format('woff'),
+    url('../../assets/font/RecklessNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

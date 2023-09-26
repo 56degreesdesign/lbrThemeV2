@@ -1,0 +1,27 @@
+// Add any custom base CSS can go here
+
+
+// Foundation
+// =≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠=≠
+html {
+  @apply antialiased;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+    font-family: FH Oscar, sans-serif;
+}
+
+.grid-gap {
+    @apply gap-x-2.5;
+    @apply md:gap-x-4;
+    @apply 2xl:gap-x-[30px]
+}
+
+.grid-layout {
+    @apply grid grid-cols-4;
+    @apply md:grid-cols-12;
+    @extend .grid-gap;
+}
+
+.absolute-full {
+    @apply absolute left-0 top-0 w-full h-full;
+}

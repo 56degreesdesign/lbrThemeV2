@@ -1,0 +1,22 @@
+@import "lib/mixins";
+@import "lib/fonts";
+@import "lib/gradients";
+
+@import "~tailwindcss/base";
+@import "theme/base";
+@import "~swiper/css";
+
+@import "lib/animations";
+@import "~tailwindcss/components";
+
+@import "~tailwindcss/utilities";
+
+@import "theme/typography";
+
+@import "theme/header"; 
+@import "theme/footer";
+
+@import "theme/components";
+@import "theme/sections";
+
+
