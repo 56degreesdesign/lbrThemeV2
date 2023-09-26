@@ -1,132 +1,62 @@
 form {
-    //@include fluid-type(420px, 1920px, 14px, 16px);
-    //padding-left: 22px;
     @apply pl-[22px];
+    
     .wpcf7-not-valid-tip {
-        //margin-top: 5px;
-        //font-size: 1.2rem;
-        //color: #CC885D;
         @apply mt-1.5 text-14 text-[#CC885D];
     }
-
+    
     .wpcf7-response-output {
-        //border-width: 0;
-        //margin: 2em 0 0 0;
-        //padding: 0;
         @apply p-0 border-0 mt-7 mx-0 mb-0;
     }
 
     label {
-        //position: relative;
         @apply relative;
     }
 
     input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]) {
-        //display: block;
-        //
-        //background-color: transparent;
-        //border: 0px solid black;
-        //border-bottom-width: 1px;
-
         -webkit-appearance: none;
-        //border-radius: 0;
-        //outline: 0;
-        //margin: 0;
-        //padding: 5px 10px;
-
-        //color: black;
-        //
-        //width: 100%;
         @apply block bg-transparent border-b outline-0 m-0 py-1 px-2.5 text-black w-full;
         @apply md:py-[5px] md:px-5;
-        //@include md {
-        //    padding: 5px 20px;
-        //}
-     
-
+        
         &::placeholder {
-            //opacity: 1;
-            //color: black;
-            //font-weight: bold;
-            //text-transform: uppercase;
             @apply opacity-100 text-black font-bold uppercase;
         }
     }
 
     input[type="checkbox"] {
-        //position: absolute;
-        //padding: 0;
-        //margin: 0;
-        //border-width: 0;
-        //width: 0;
-        //height: 0;
-        //visibility: hidden;
         @apply absolute p-0 m-0 border-0 w-0 h-0 hidden;
 
         &:checked {
             + span {
                 &::before {
-                    //background-color: black;
                     @apply bg-black;
                 }
             }
         }
 
         + span {
-            display: block;
-            position: relative;
-            padding-left: 35px;
             @apply block relative pl-[35px];
 
             &::before {
-                position: absolute;
-                top: 1px;
-                left: 0;
-                display: block;
                 content: '';
                 border-radius: 50%;
-                border: 1px solid black;
-                width: 16px;
-                height: 16px;
-                
-                @apply absolute top-px left-0 block ;
+                @apply absolute top-px left-0 block border h-4 w-4;
             }
         }
     }
 
     .wpcf7-checkbox {
         label {
-            display: block;
-            cursor: pointer;
+            @apply block cursor-pointer;
         }
     }
 
     input[type="radio"] {
-        position: absolute;
-        top: 50%;
-        left: -10px;
-
-        display: block;
-
-        background-color: transparent;
-        border: 0px solid black;
-
         -webkit-appearance: none;
-        border-radius: 0;
-        outline: 0;
-        margin: 0;
-
-        width: 12px;
-        height: 15px;
-
-
-        background-repeat: no-repeat;
         background-position: 0 0;
         -webkit-background-size: contain;
-        background-size: contain;
         transform: translate(-100%,-55%);
-
-        //@include transform(translate(-100%, -55%));
+        @apply absolute top-1/2 -left-2.5 block bg-transparent border-0 rounded-none outline-0 m-0 w-3 h-[15px] bg-no-repeat bg-contain;
 
         &:checked {
             background-image: url('../../assets/img/icon-arrow-orange.svg');
@@ -134,61 +64,22 @@ form {
     }
 
     .wpcf7-radio {
-        display: block;
-        text-transform: uppercase;
-        font-weight: bold;
-        @apply mb-5 ml-5;
+        @apply block uppercase font-bold mb-5 ml-5;
         @apply md:mb-0 md:ml-0;
 
-        //@include max-md {
-        //    margin-bottom: 20px;
-        //    margin-left: 22px;
-        //}
-
         .wpcf7-list-item {
-            margin: 0 35px 0 0;
-            @apply md:mr-10;
-            //@include md {
-            //    margin: 0 40px 0 0;
-            //}
+            @apply mr-[35px] md:mr-10;
 
             label {
-                display: block;
-                cursor: pointer;
+                @apply block cursor-pointer;
             }
         }
     }
 
     input[type="submit"] {
-        display: block;
-
-        background-color: #CC885D;
-        border: 0px solid black;
-
         -webkit-appearance: none;
-        border-radius: 0;
-        outline: 0;
-        margin: 0;
-        padding: 12px 40px;
-        width: 100%;
-
-        color: black;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-
-        cursor: pointer;
-
-        //@include transition(background 0.35s ease);
-
-        //
+        @apply block bg-[#CC885D] border-0 rounded-none outline-0 m-0 py-3 px-10 w-full text-black text-center font-bold uppercase cursor-pointer;
         @apply md:w-fit md:py-2.5 md:px-10; 
-        //@include md {
-        //    padding: 10px 40px;
-        //    //width: auto;
-        //    width: fit-content;
-        //
-        //}
 
         &:hover {
             background-color: rgba(#CC885D, 0.7);
@@ -196,84 +87,31 @@ form {
     }
 
     textarea {
-        display: block;
-
-        background-color: transparent;
-        border: 1px solid black;
-
         -webkit-appearance: none;
-        border-radius: 0;
-        outline: 0;
-        margin: 0;
-        padding: 5px 10px;
-
-        color: black;
-
-        width: 100%;
-        height: 90px;
-
-        //@include md {
-        //    padding: 5px 20px;
-        //    height: 150px;
-        //}
-        @apply md:py-[5px] md:px-5 h-[150px];
+        @apply block bg-transparent border rounded-none outline-0 m-0 py-[5px] px-[2.5] text-black w-full h-[90px];
+        @apply md:py-[5px] md:px-5 md:h-[150px];
         &::placeholder {
-            opacity: 1;
-            color: black;
-            font-weight: bold;
-            text-transform: uppercase;
+            @apply opacity-100 text-black font-bold uppercase;
         }
     }
 
     select {
-        display: block;
-
-        color: black;
-        text-transform: uppercase;
-        font-weight: bold;
-
-        background-color: transparent;
-        border: 0px solid black;
-        border-bottom-width: 1px;
-
         -webkit-appearance: none;
-        border-radius: 0;
-        outline: 0;
-        margin: 0;
-        padding: 5px 10px;
-
-        width: 100%;
-
-        //@include md {
-        //    padding: 5px 20px;
-        //}
+        @apply block text-black uppercase font-bold bg-transparent border-b rounded-none outline-0 m-0 py-[5px] px-2.5 w-full;
         @apply md:py-[5px] md:px-5;
     }
 
     .select2 {
-        display: block;
-        width: 100%;
+        @apply block w-full;
 
         &-container {
-            display: block;
-
-            border-bottom: 1px solid black;
-            padding: 5px 10px;
-
-            //@include md {
-            //    padding: 5px 20px;
-            //}
+            @apply block border-b py-[5px];
             @apply md:py-[5px] md:px-5;
         }
 
         &-selection {
-
             &__rendered {
-                color: black;
-                text-transform: uppercase;
-                font-weight: bold;
-
-                padding: 0;
+                @apply text-black uppercase font-bold p-0;
             }
         }
     }
@@ -281,7 +119,6 @@ form {
 
 .form {
     .wpcf7-list-item {
-        margin: 0;
         @apply mr-10;
     }
 
@@ -289,32 +126,21 @@ form {
         @apply flex justify-between flex-wrap flex-col lg:flex-row;
 
         &--push {
-            margin-bottom: 20px;
+            @apply mb-5;
             @apply md:mt-[30px] md:mb-0;
         }
     }
 
     &__fieldset {
-        position: relative;
-        margin-bottom: 18px;
-        width: 100%;
+        @apply relative mb-[18px] w-full;
         @apply md:mb-6 lg:w-[calc(50%-15px)];
 
         &--wide {
-            width: 100%;
+            @apply w-full;
         }
 
         &__label {
-            display: block;
-
-            padding: 5px 10px;
-
-            font-weight: bold;
-            text-transform: uppercase;
-
-            //@include md {
-            //    padding: 5px 20px;
-            //}
+            @apply block py-[5px] px-2.5 font-bold uppercase;
             @apply md:py-[5px] md:px-5;
         }
     }
@@ -326,83 +152,54 @@ form {
     }
 
     .dropdown-wrapper {
-        position: absolute;
-        top: 50%;
-        right: 0;
-
-        margin-top: -7px;
-        width: 12px;
-        height: 15px;
-
         background-image: url('../../assets/img/icon-arrow-orange.svg');
-        background-repeat: no-repeat;
         background-position: 0 0;
         -webkit-background-size: contain;
-        background-size: contain;
-
-        //@include transform(rotate(90deg));
-        @apply rotate-90;
+        @apply absolute top-1/2 right-0 -mt-[7px] w-3 h-[15px] bg-no-repeat bg-contain rotate-90;
     }
 
     &-container {
-        position: relative;
+        @apply relative;
 
         &--open {
             .dropdown-wrapper {
-                //@include transform(rotate(-90deg));
                 @apply -rotate-90;
-
             }
         }
 
         .selection {
-            display: block;
+            @apply block;
         }
     }
 
     &-selection {
-        cursor: pointer;
-        display: block;
+        @apply cursor-pointer block;
     }
 
     &-search {
-        display: none;
+        @apply hidden;
     }
 
     &-dropdown {
-        display: block;
+        @apply block;
     }
 
     &-results {
-        display: block;
-        @apply border border-orange bg-orange;
-        //border: 1px solid red;
-        margin-top: -1px;
-
-        //background-color: red;
-        
-        
+        @apply block border border-orange bg-orange -mt-px;
 
         &__options {
-            list-style: none;
+            @apply list-none;
         }
 
         &__option {
-            font-size: 1.6rem;
-            //color: black;
-            @apply text-beige txt-1;
-
-            cursor: pointer;
-
-            padding: 5px 20px;
+            @apply text-beige txt-1 cursor-pointer py-[5px] px-5;
 
             &--highlighted {
                 background-color: rgba(red, 0.2);
             }
 
             &:first-child {
-                font-weight: bold;
-                text-transform: uppercase;
+                @apply font-bold uppercase;
             }
         }
     }

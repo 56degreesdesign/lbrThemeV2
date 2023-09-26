@@ -138,7 +138,7 @@ $img3 = $section['img3'] ?? false;
                         <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>
                     </div>
                     <div class="col-start-11 col-span-2 flex justify-end">
-                        <span class="swiper-pagination-el text-center">1/3</span>
+                        <span class="swiper-pagination-el text-center txt-h5">1/3</span>
                     </div>
                      
                 </div>
