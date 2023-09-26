@@ -6,7 +6,11 @@ $location = $section['location'] ?? false;
 ?>
 
 <?php if ($section) : ?>
-    <section class="flex items-end relative pt-[444px]">
+    <section class="flex items-end pt-[444px] relative z-30">
+        <div class="absolute top-0 left-0 w-full">
+            <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
+        </div>
+        
         <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $background_image, 'class' => 'w-full -z-10']); ?>
         <div class="container grid-layout">
                 <div class="col-start-2 col-span-10 flex justify-center">
@@ -28,11 +32,8 @@ $location = $section['location'] ?? false;
                         <span class="text-22 font-bold uppercase text-beige"><?php echo $item['label'] ?></span>
                     <?php endforeach ;?>
                 </div>
-                
             </div>
-          
         </div>
-        
     </section>
 <?php endif ;?>
 

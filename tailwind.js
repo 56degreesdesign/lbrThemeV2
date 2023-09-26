@@ -74,8 +74,16 @@ module.exports = {
                     maxWidth: '1920px',
                     marginLeft: 'auto',
                     marginRight: 'auto',
-                    paddingLeft: '3.563rem',
-                    paddingRight: '3.563rem',
+                    paddingLeft: '1.5625rem',
+                    paddingRight: '1.5625rem',
+                    '@screen md': {
+                        paddingLeft: "2.5rem",
+                        paddingRight: "2.5rem",
+                    },
+                    '@screen xl': {
+                        paddingLeft: '3.563rem',
+                        paddingRight: '3.563rem',
+                    }
                 }
             })
         }

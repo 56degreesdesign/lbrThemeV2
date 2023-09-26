@@ -3,11 +3,13 @@ $section = $args['data'] ?? false;
 $bg = $section['background_image'] ?? false;
 $heading = $section['heading'] ?? false;
 $subheading = $section['subheading'] ?? false;
-
 ?>
-
 <?php if ($section) : ?>
-<section class="h-screen flex items-center relative">
+<section class="h-screen flex items-center relative z-30">
+    <div class="absolute top-0 left-0 w-full">
+        <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
+    </div>
+ 
     <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $bg, 'class' => 'w-full -z-10']); ?>
     <div class="absolute-full white-to-orange -z-10  mix-blend-darken"></div>
     <div class="container grid-layout">

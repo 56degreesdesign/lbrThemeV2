@@ -2,21 +2,15 @@
 
 <!-- Site header markup goes here -->
 <?php 
-$white_nav = get_field('white_navigation');
 $logo = get_field('logo', 'option') ?? false;
 $hidden = $args['hidden'] ?? false;
-
 if (!$hidden) :
-
 ?>
-<header class="fixed top-0 left-0 w-full z-30">
-    <div class="container flex justify-between py-8">
-        <a href="/">
-           <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => $white_nav]) ?>
-        </a>
-        <div class="toggle-menu txt-h4 cursor-pointer <?php echo $white_nav ? 'text-white' : 'text-black'; ?>">MENU</div>
-    </div>
-    <div class="menu-wrapper fixed w-full h-screen top-0 left-0 translate-x-full overflow-auto">
+
+<header class="fixed top-0 left-0 w-full z-20">
+    <?php get_template_part('templates/partials/navbar') ?>
+</header>
+    <div class="menu-wrapper fixed w-full h-screen top-0 left-0 translate-x-full overflow-auto z-[60]">
         <div class="w-1/2 bg-orange absolute top-0 left-0 h-full -z-10"></div>
         <div class="w-1/2 bg-green absolute top-0 right-0 h-full -z-10"></div>
         <div class="grid grid-cols-2 h-full max-w-[1920px] mx-auto z-10">
@@ -57,19 +51,17 @@ if (!$hidden) :
                         <span class="toggle-menu txt-h4 cursor-pointer">close</span>
                     </div>
                 </div>
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'fs_nav_menu',
-                        'container' => false,
-                        'menu_class' => 'main-menu',
-                    ));
-                    ?>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'fs_nav_menu',
+                    'container' => false,
+                    'menu_class' => 'main-menu',
+                ));
+                ?>
                 <div class="flex justify-center mt-auto">
                     <span class="text-16 font-bold uppercase underline underline-offset-4">PURCHASER DOCUMENTS</span>
                 </div>
             </div>
         </div>
-       
     </div>
-</header>
 <?php endif ;?>

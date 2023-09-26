@@ -105,7 +105,7 @@ form {
         @apply block w-full;
 
         &-container {
-            @apply block border-b py-[5px];
+            @apply block border-b px-2.5 py-[5px];
             @apply md:py-[5px] md:px-5;
         }
 
@@ -144,7 +144,11 @@ form {
             @apply md:py-[5px] md:px-5;
         }
     }
-} }
+}
+    .btn {
+        @apply bg-orange uppercase px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300;
+    }
+}
 
 .select2 {
     &-hidden-accessible {
@@ -204,6 +208,7 @@ form {
         }
     }
 }
+
 
 
 
