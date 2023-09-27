@@ -18,7 +18,9 @@ $location = $section['location'] ?? false;
                 </div>
         </div>
         <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center">
-            <?php get_template_part('templates/partials/nav-arrow', null, ['fill' => '#EEE3D6', 'class' => 'rotate-90']); ?>
+            <a href="#casitas-explore" class="pointer-events-auto">
+                <?php get_template_part('templates/partials/nav-arrow', null, ['fill' => '#EEE3D6', 'class' => 'rotate-90']); ?>
+            </a>
         </div>
         <div class="absolute bottom-[43.43%] left-0 w-full">
             <div class="container grid-layout max-w-[1920px] mx-auto">
@@ -37,7 +39,7 @@ $location = $section['location'] ?? false;
     </section>
 <?php endif ;?>
 
-<section class="bg-beige-light pt-24 pb-20">
+<section id="casitas-explore" class="bg-beige-light pt-24 pb-20">
     <div class="container grid-layout">
         <h2 class="col-span-full txt-h1 text-beige">Designed <br> to <br> blend in</h2>
     </div>

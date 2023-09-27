@@ -7,7 +7,27 @@
     .main-menu {
         @apply flex flex-col items-center gap-y-12 mt-32 mb-10;
         > li {
-            @apply text-51 font-bold uppercase underline underline-offset-8 decoration-1;
+            > a {
+                @apply text-51 font-bold uppercase underline-animation;
+
+            }
+        }
+    }
+    
+    .header-links {
+        a {
+            @apply text-center text-17 leading-1.25 font-bold mb-5 inline-block underline-animation-black;
+        }
+        p:first-of-type {
+            @apply mb-0;
+        }
+        p:nth-of-type(2) {
+            @apply hidden;
+        }
+        p:last-of-type {
+            a {
+                @apply mb-0;
+            }
         }
     }
 }

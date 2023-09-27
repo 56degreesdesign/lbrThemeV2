@@ -19,13 +19,15 @@ $slides = $section['slides'] ?? false;
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="absolute bottom-20 left-0 z-20 text-white container grid-layout">
-                    <div class="col-start-6 col-span-2 flex flex-col items-center justify-center">
-                        <div class="swiper-next-el mb-4 txt-h5 hover:opacity-50 duration-300 cursor-pointer">NEXT</div>
-                        <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>
-                    </div>
-                    <div class="col-start-11 col-span-2 flex justify-end">
-                        <span class="swiper-pagination-el text-center txt-h5">1/3</span>
+                <div class="absolute bottom-20 left-0 z-20 w-full">
+                    <div class="text-white container grid-layout mx-auto">
+                        <div class="col-start-6 col-span-2 flex flex-col items-center justify-center">
+                            <div class="swiper-next-el mb-4 swiper-nav">NEXT</div>
+                            <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
+                        </div>
+                        <div class="col-start-11 col-span-2 flex justify-end">
+                            <span class="swiper-pagination-el text-center txt-h5">1/3</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17258,12 +17258,21 @@ var fSwiperLazy = __webpack_require__(/*! ./components/swiper-lazy */ "./assets/
 
 var InitVueComponents = function InitVueComponents() {
   // Async components
-  var MapDirections;
+  var MapDirections, Resort;
 
   if (document.querySelector(".map-directions")) {
     MapDirections = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
       loader: function loader() {
         return __webpack_require__.e(/*! import() */ "assets_js_vue_map-directions_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/map-directions.vue */ "./assets/js/vue/map-directions.vue"));
+      },
+      delay: 500
+    });
+  }
+
+  if (document.querySelector(".resort")) {
+    Resort = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
+      loader: function loader() {
+        return __webpack_require__.e(/*! import() */ "assets_js_vue_resort_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/resort.vue */ "./assets/js/vue/resort.vue"));
       },
       delay: 500
     });
@@ -17274,6 +17283,10 @@ var InitVueComponents = function InitVueComponents() {
 
   if (MapDirections) {
     $VueApp.component("map-directions", MapDirections);
+  }
+
+  if (Resort) {
+    $VueApp.component("resort", Resort);
   } // $VueApp.use(VueMasonryPlugin);
 
 
@@ -26133,7 +26146,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"2d3a28a8564c7103","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"2d3a28a8564c7103","assets_js_vue_resort_vue":"524e4971700abdb6","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

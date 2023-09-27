@@ -704,6 +704,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65141b96492ab": {
+                    "key": "layout_65141b96492ab",
+                    "name": "availability",
+                    "label": "Availability",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65141b9c492ae",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_65141a619354f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -731,5 +763,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695283434
+    "modified": 1695816617
 }

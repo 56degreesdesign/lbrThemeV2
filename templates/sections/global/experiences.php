@@ -6,7 +6,7 @@ $img3 = $section['img3'] ?? false;
 
 ?>
 
-<section class="bg-beige pt-20 pb-24">
+<section id="testing" class="bg-beige pt-20 pb-24">
     <div class="container grid-layout">
         <div class="col-span-full uppercase text-15 font-bold text-center mb-6">filter by experience</div>
         <div class="col-span-full flex justify-center mb-24">
@@ -34,8 +34,8 @@ $img3 = $section['img3'] ?? false;
     <div class="container grid-layout">
         <div class="col-start-7 col-span-full txt-h5 mb-3.5">FEATURED</div>
         <div class="col-start-1 col-span-2 flex flex-col">
-            <div class="mb-4 txt-h5 cursor-pointer">NEXT</div>
-            <div class="txt-h5 opacity-50 cursor-pointer">PREVIOUS</div>
+            <div class="mb-4 swiper-nav">NEXT</div>
+            <div class="swiper-nav">PREVIOUS</div>
         </div>
         <div class="col-start-7 col-span-6 mb-32">
             <div class="flex justify-between items-center mb-10">
@@ -114,34 +114,34 @@ $img3 = $section['img3'] ?? false;
     </div>
 </section>
 
-<section class="bg-beige">
-    <div class="">
-        <div class="relative">
-            <div class="swiper banner-carousel relative">
-                <div class="swiper-wrapper ">
-                    <div class="swiper-slide h-full w-full">
-                            <div class="relative bg-blue pb-[51%] z-0">
-                                <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $img1, 'class' => 'w-full']); ?>
-                            </div>
-                        </div>
-                    <div class="swiper-slide h-full w-full">
-                        <div class="relative bg-blue pb-[51%] z-0">
-                            <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $img2, 'class' => 'w-full']); ?>
-                        </div>
-                    </div>
-                  
-                </div>
-                <div class="absolute bottom-20 left-0 z-20 text-white container grid-layout">
-                    <div class="col-start-1 col-span-4 txt-h5">Canyonlands Needles Hike</div>
-                    <div class="col-start-6 col-span-2 flex flex-col items-center justify-center">
-                        <div class="swiper-next-el mb-4 txt-h5 hover:opacity-50 duration-300 cursor-pointer">NEXT</div>
-                        <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>
-                    </div>
-                    <div class="col-start-11 col-span-2 flex justify-end">
-                        <span class="swiper-pagination-el text-center txt-h5">1/3</span>
-                    </div>
-                     
-                </div>
-            </div>
-    </div>
-</section>
+<!--<section class="bg-beige">-->
+<!--    <div class="">-->
+<!--        <div class="relative">-->
+<!--            <div class="swiper banner-carousel relative">-->
+<!--                <div class="swiper-wrapper ">-->
+<!--                    <div class="swiper-slide h-full w-full">-->
+<!--                            <div class="relative bg-blue pb-[51%] z-0">-->
+<!--                                --><?php //get_template_part('templates/partials/images/image', 'bg', ['image' => $img1, 'class' => 'w-full']); ?>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    <div class="swiper-slide h-full w-full">-->
+<!--                        <div class="relative bg-blue pb-[51%] z-0">-->
+<!--                            --><?php //get_template_part('templates/partials/images/image', 'bg', ['image' => $img2, 'class' => 'w-full']); ?>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                  -->
+<!--                </div>-->
+<!--                <div class="absolute bottom-20 left-0 z-20 text-white container grid-layout">-->
+<!--                    <div class="col-start-1 col-span-4 txt-h5">Canyonlands Needles Hike</div>-->
+<!--                    <div class="col-start-6 col-span-2 flex flex-col items-center justify-center">-->
+<!--                        <div class="swiper-next-el mb-4 txt-h5 hover:opacity-50 duration-300 cursor-pointer">NEXT</div>-->
+<!--                        <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>-->
+<!--                    </div>-->
+<!--                    <div class="col-start-11 col-span-2 flex justify-end">-->
+<!--                        <span class="swiper-pagination-el text-center txt-h5">1/3</span>-->
+<!--                    </div>-->
+<!--                     -->
+<!--                </div>-->
+<!--            </div>-->
+<!--    </div>-->
+<!--</section>-->

@@ -6,6 +6,8 @@ $downloads = $footer['downloads'] ?? false;
 $social_media = $footer['social_media'] ?? false;
 $bg = $footer['background_image'] ?? false;
 $hidden = $args['hidden'] ?? false;
+$links = get_field('links', 'option') ?? false;
+
 if (!$hidden) :
 ?>
 <footer class="bg-black text-beige relative pb-7">
@@ -19,7 +21,9 @@ if (!$hidden) :
                 <div class="text-center text-17 footer-links">
                     <?php echo $find_us['content'] ?>
                 </div>
-                <div class="mt-auto text-17 underline font-bold">PURCHASER DOCUMENTS</div>
+                <?php if ($links['purchaser_documents']) : ?>
+                    <a class="text-17 font-bold uppercase underline-animation mt-auto" href="<?php echo $links['purchaser_documents']['url']?>" target="<?php echo $links['purchaser_documents']['target'] ?>"><?php echo $links['purchaser_documents']['title'] ?></a>
+                <?php endif ;?>
             </div>
         </div>
         <?php endif ;?>
@@ -36,10 +40,16 @@ if (!$hidden) :
         <div class="col-span-1 flex justify-center mb-10 lg:mb-0 lg:justify-start">
             <div class="flex flex-col items-center">
                 <img class="mb-10 lg:mb-4" src="<?php echo $social_media['icon']['url'] ?>" alt="">
-                <div class="text-center text-17 leading-1.25 footer-links flex gap-x-12 lg:flex-col">
-                    <?php echo $social_media['links'] ?>
+                <div class="text-center footer-links flex gap-x-12 lg:flex-col">
+<!--                    --><?php //echo $social_media['links'] ?>
+                    <?php if ($links['instagram']) : ?>
+                        <a class="text-16 font-bold uppercase underline-animation-black" href="<?php echo $links['instagram']['url']?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
+                    <?php endif ;?>
+                    <?php if ($links['facebook']) : ?>
+                        <a class="text-16 font-bold uppercase underline-animation-black" href="<?php echo $links['facebook']['url']?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>
+                    <?php endif ;?>
                 </div>
-                <div class="mt-auto text-17 underline font-bold">SALES DISCLOSURE PACKAGE</div>
+                <div class="mt-auto text-17 font-bold underline-animation cursor-pointer">SALES DISCLOSURE PACKAGE</div>
             </div>
         </div>
         

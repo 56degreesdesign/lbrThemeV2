@@ -3,10 +3,10 @@ $section = $args['data'] ?? false;
 $heading = $section['heading'] ?? false;
 $icon = $section['icon'] ?? false;
 $image = $section['image'] ?? false;
-
+$anchor = $section['anchor'] ?? false;
 ?>
 <?php if($section) : ?>
-    <section class="bg-beige ">
+    <section id="<?php echo $anchor?>" class="bg-beige ">
         <div class="grid grid-cols-2 max-w-[1920px] mx-auto relative">
             <div class="col-span-1 flex items-center justify-center">
                 <h1 class="txt-h2"><?php echo $heading ?></h1>

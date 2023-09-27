@@ -28,8 +28,8 @@ $slides = $section['slides'] ?? false;
                 </div>
                 <div class="flex justify-between pr-[3.563rem]">
                     <div class="flex flex-col">
-                        <div class="swiper-next-el mb-4 txt-h5 hover:opacity-50 duration-300 cursor-pointer">NEXT</div>
-                        <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>
+                        <div class="swiper-next-el mb-4 swiper-nav">NEXT</div>
+                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
                     </div>
                     <div class="">
                         <span class="swiper-pagination-el text-center txt-h5">1/3</span>

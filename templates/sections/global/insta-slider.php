@@ -30,14 +30,14 @@ $background = $section['background'] ?? false;
                      <?php endforeach; ?>
                  </div>
              </div>
-             <div class="flex mr-[60px] justify-between mt-16 txt-h5">
+             <div class="flex mr-[60px] justify-between mt-16">
                  <div class="flex gap-x-60">
-                     <div class="swiper-prev-el cursor-pointer hover:opacity-30 duration-300">PREVIOUS</div>
-                     <div class="swiper-next-el cursor-pointer hover:opacity-30 duration-300">NEXT</div>
+                     <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
+                     <div class="swiper-next-el swiper-nav">NEXT</div>
                  </div>
                <div>
                    <div class="">
-                       <span class="swiper-pagination-el text-center">1/3</span>
+                       <span class="swiper-pagination-el text-center txt-h5">1/3</span>
                    </div>
                </div>
              </div>

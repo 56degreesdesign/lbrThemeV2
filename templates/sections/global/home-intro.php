@@ -22,7 +22,7 @@ $bottom_img = get_field('logo', 'option') ?? false;
         </div>
         <?php if($link) : ?>
         <div class="col-start-10 col-span-2 flex items-center">
-            <a class="uppercase underline text-22 font-bold text-beige" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
+            <a class="uppercase underline-animation text-22 font-bold text-beige" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
         </div>
         <?php endif ;?>
     </div>

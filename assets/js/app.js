@@ -25,11 +25,18 @@ import {
 
 const InitVueComponents = () => {
     // Async components
-    let MapDirections;
+    let MapDirections, Resort;
 
     if (document.querySelector(".map-directions")) {
         MapDirections = defineAsyncComponent({
             loader: () => import("./vue/map-directions.vue"),
+            delay: 500,
+        });
+    }
+
+    if (document.querySelector(".resort")) {
+        Resort = defineAsyncComponent({
+            loader: () => import("./vue/resort.vue"),
             delay: 500,
         });
     }
@@ -39,6 +46,9 @@ const InitVueComponents = () => {
 
     if (MapDirections) {
         $VueApp.component("map-directions", MapDirections);
+    }
+    if (Resort) {
+        $VueApp.component("resort", Resort);
     }
     
 

@@ -11,7 +11,7 @@ $subheading = $section['subheading'] ?? false;
     </div>
  
     <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $bg, 'class' => 'w-full -z-10']); ?>
-    <div class="absolute-full white-to-orange -z-10  mix-blend-darken"></div>
+    <div class="absolute-full white-to-orange -z-10  mix-blend-darken hidden"></div>
     <div class="container grid-layout">
      <h1 class="col-span-full txt-h2 leading-none text-beige mb-12">
          <?php echo $heading ?>
@@ -19,7 +19,9 @@ $subheading = $section['subheading'] ?? false;
         <p class="col-start-4 col-span-6 uppercase text-17 font-bold text-beige text-center"><?php echo $subheading ?></p>
     </div>
     <div class="absolute bottom-16 left-0 w-full pointer-events-none flex justify-center">
-        <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
+        <a href="#testing" class="pointer-events-auto">
+            <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
+        </a>
     </div>
 </section>
 <?php endif ;?>

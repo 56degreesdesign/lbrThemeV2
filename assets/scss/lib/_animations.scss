@@ -65,3 +65,52 @@
     background-position: 0% 50%
   }
 }
+
+.underline-animation {
+    @apply relative;
+    &::after {
+        display: block;
+        content: '';
+
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+        background-color: #EEE3D6;
+        @apply transition-all duration-300;
+        //@include transition(width 0.35s ease);
+    }
+
+    &:hover {
+
+        &::after {
+            width: 0%;
+        }
+    }
+}
+.underline-animation-black {
+    @apply relative;
+    &::after {
+        display: block;
+        content: '';
+
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        @apply transition-all duration-300;
+        //@include transition(width 0.35s ease);
+    }
+
+    &:hover {
+
+        &::after {
+            width: 0%;
+        }
+    }
+}

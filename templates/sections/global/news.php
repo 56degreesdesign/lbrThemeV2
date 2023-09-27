@@ -81,8 +81,8 @@ $image = $section['image'] ?? false;
         </div>
         <div class="col-span-full h-px w-full bg-black mb-16 mt-14"></div>
         <div class="col-start-1 col-span-2 flex flex-col mb-16">
-            <div class="swiper-next-el mb-4 txt-h5 hover:opacity-50 duration-300 cursor-pointer">NEXT</div>
-            <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>
+            <div class="swiper-next-el mb-4 swiper-nav">NEXT</div>
+            <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
         </div>
         <div class="col-start-7 col-span-full flex justify-between">
             <span class="txt-h5">March 16, 2023</span>
@@ -114,8 +114,8 @@ $image = $section['image'] ?? false;
         </div>
         <div class="col-span-full h-px w-full bg-black mb-16 mt-14"></div>
         <div class="col-start-1 col-span-2 flex flex-col mb-16">
-            <div class="swiper-next-el mb-4 txt-h5 hover:opacity-50 duration-300 cursor-pointer">NEXT</div>
-            <div class="swiper-prev-el txt-h5 hover:opacity-50 duration-300 cursor-pointer">PREVIOUS</div>
+            <div class="swiper-next-el mb-4 swiper-nav">NEXT</div>
+            <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
         </div>
         <div class="col-start-7 col-span-full flex justify-between">
             <div class="flex flex-col">

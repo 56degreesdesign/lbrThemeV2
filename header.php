@@ -3,7 +3,12 @@
 <!-- Site header markup goes here -->
 <?php 
 $logo = get_field('logo', 'option') ?? false;
+$links = get_field('links', 'option') ?? false;
 $hidden = $args['hidden'] ?? false;
+$footer = get_field('footer', 'option') ?? false;
+$downloads = $footer['downloads'] ?? false;
+
+
 if (!$hidden) :
 ?>
 
@@ -18,15 +23,11 @@ if (!$hidden) :
                 <?php get_template_part('templates/partials/lbr-logo') ?>
                 <div class="flex flex-col items-center mt-28">
                     <img class="mb-6" src="<?php echo $logo['url']?>" alt="">
-                    <h4 class="txt-h4 mb-9">downloads</h4>
-                    <p class="text-center text-16 font-bold uppercase underline underline-offset-4 mb-14">DOWNLOAD ALL<br><br>
-                        FULL SITE PLAN<br><br>
-                        PHASE 1 SITE PLAN<br><br>
-                        STRATA CASITA FLOOR PLANS<br><br>
-                        MESA CASITA FLOOR PLANS<br><br>
-                        ARROYO FINISH PACKAGE<br><br>
-                        DUNE FINISH PACKAGE<br><br>
-                        BROCHURE</p>
+                    <h4 class="txt-h4 mb-9"><?php echo $downloads['heading'] ?></h4>
+                    <div class="header-links mb-14">
+                        <?php echo $downloads['content'] ?>
+                    </div>
+                    
                     <div class="h-px bg-black w-[38.645%] mb-10"></div>
                     <h4 class="txt-h4 mb-9">upcoming events</h4>
                     <p class="text-center text-16 font-bold mb-8">Site Tour <br>
@@ -35,9 +36,15 @@ if (!$hidden) :
                         rsvp</a>
                 </div>
                 <div class="flex justify-between pr-16 mt-auto">
-                    <span class="text-16 font-bold uppercase underline underline-offset-4">instagram</span>
-                    <span class="text-16 font-bold uppercase underline underline-offset-4">VIEW CONSTRUCTION CAMERA</span>
-                    <span class="text-16 font-bold uppercase underline underline-offset-4">facebook</span>
+                    <?php if ($links['instagram']) : ?>
+                    <a class="text-16 font-bold uppercase underline-animation-black" href="<?php echo $links['instagram']['url']?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
+                    <?php endif ;?>
+                    <?php if ($links['camera']) : ?>
+                        <a class="text-16 font-bold uppercase underline-animation-black" href="<?php echo $links['camera']['url']?>" target="<?php echo $links['camera']['target'] ?>"><?php echo $links['camera']['title'] ?></a>
+                    <?php endif ;?>
+                    <?php if ($links['facebook']) : ?>
+                        <a class="text-16 font-bold uppercase underline-animation-black" href="<?php echo $links['facebook']['url']?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>
+                    <?php endif ;?>
                 </div>
             </div>
             <div class="col-span-1 bg-green pr-[3.563rem] pt-8 pb-20 flex flex-col justify-stretch text-white">
@@ -59,7 +66,9 @@ if (!$hidden) :
                 ));
                 ?>
                 <div class="flex justify-center mt-auto">
-                    <span class="text-16 font-bold uppercase underline underline-offset-4">PURCHASER DOCUMENTS</span>
+                    <?php if ($links['purchaser_documents']) : ?>
+                        <a class="text-16 font-bold uppercase underline-animation" href="<?php echo $links['purchaser_documents']['url']?>" target="<?php echo $links['purchaser_documents']['target'] ?>"><?php echo $links['purchaser_documents']['title'] ?></a>
+                    <?php endif ;?>
                 </div>
             </div>
         </div>
