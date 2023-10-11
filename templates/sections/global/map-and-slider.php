@@ -6,15 +6,15 @@ $slides = $section['slides'] ?? false;
 ?>
 
 <?php if($section) : ?>
-    <section class="bg-beige pb-32">
+    <section class="bg-beige pb-16 md:pb-24 lg:pb-32">
         <div class="container grid-layout">
-            <div class="col-start-1 col-span-6">
-                <div class="relative pb-[62.1266%] mb-52">
+            <div class="col-span-full flex flex-col-reverse lg:flex-col lg:col-start-1 lg:col-span-6">
+                <div class="relative pb-[62.1266%] lg:mb-40 xl:mb-52">
                     <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
                 </div>
-                <div class="map-and-slider-content"> <?php echo $content ?></div>
+                <div class="map-and-slider-content mb-10 lg:mb-0"> <?php echo $content ?></div>
             </div>
-            <div class="col-start-8 col-span-5 mt-32 translate-x-[3.563rem]">
+            <div class="col-span-full mt-10 lg:col-start-8 lg:col-span-5 lg:mt-32 xl:translate-x-[3.563rem]">
                 <div class="swiper small-carousel mb-7">
                     <div class="swiper-wrapper">
                         <?php foreach ($slides as $slide) : ?>
@@ -26,9 +26,9 @@ $slides = $section['slides'] ?? false;
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="flex justify-between pr-[3.563rem]">
-                    <div class="flex flex-col">
-                        <div class="swiper-next-el mb-4 swiper-nav">NEXT</div>
+                <div class="flex justify-between xl:pr-[3.563rem]">
+                    <div class="flex gap-x-4 lg:flex-col">
+                        <div class="swiper-next-el lg:mb-4 swiper-nav">NEXT</div>
                         <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
                     </div>
                     <div class="">

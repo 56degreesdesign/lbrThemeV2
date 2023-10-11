@@ -1,5 +1,5 @@
 form {
-    @apply pl-[22px];
+    //@apply pl-[22px];
     
     .wpcf7-not-valid-tip {
         @apply mt-1.5 text-14 text-[#CC885D];
@@ -40,7 +40,7 @@ form {
             &::before {
                 content: '';
                 border-radius: 50%;
-                @apply absolute top-px left-0 block border h-4 w-4;
+                @apply absolute top-1 left-0 block border h-4 w-4;
             }
         }
     }
@@ -64,8 +64,8 @@ form {
     }
 
     .wpcf7-radio {
-        @apply block uppercase font-bold mb-5 ml-5;
-        @apply md:mb-0 md:ml-0;
+        @apply block uppercase font-bold mb-5 ml-1.5;
+        @apply md:mb-0;
 
         .wpcf7-list-item {
             @apply mr-[35px] md:mr-10;

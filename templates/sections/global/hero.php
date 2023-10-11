@@ -5,7 +5,7 @@ $heading = $section['heading'] ?? false;
 $subheading = $section['subheading'] ?? false;
 ?>
 <?php if ($section) : ?>
-<section class="h-screen flex items-center relative z-30">
+<section class="min-h-screen flex items-center relative z-30">
     <div class="absolute top-0 left-0 w-full">
         <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
     </div>
@@ -16,7 +16,7 @@ $subheading = $section['subheading'] ?? false;
      <h1 class="col-span-full txt-h2 leading-none text-beige mb-12">
          <?php echo $heading ?>
      </h1>
-        <p class="col-start-4 col-span-6 uppercase text-17 font-bold text-beige text-center"><?php echo $subheading ?></p>
+        <p class="col-span-full uppercase text-14 font-bold text-beige text-center md:text-16 lg:text-17 lg:col-start-4 lg:col-span-6"><?php echo $subheading ?></p>
     </div>
     <div class="absolute bottom-16 left-0 w-full pointer-events-none flex justify-center">
         <a href="#testing" class="pointer-events-auto">

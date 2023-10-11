@@ -12,20 +12,20 @@ $slides = $section['slides'] ?? false;
                         <div class="swiper-slide h-full w-full">
                             <div class="relative bg-blue pb-[51%] z-0">
                                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $slide['image'], 'class' => 'w-full']); ?>
-                                <div class="absolute bottom-32 left-0 z-20 text-white container grid-layout">
-                                    <div class="col-start-1 col-span-4 txt-h5"><?php echo $slide['caption'] ?></div>
+                                <div class="absolute bottom-4 left-0 z-20 text-white container grid-layout lg:bottom-32">
+                                    <div class="col-span-full lg:col-start-1 lg:col-span-4 txt-h5"><?php echo $slide['caption'] ?></div>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="absolute bottom-20 left-0 z-20 w-full">
-                    <div class="text-white container grid-layout mx-auto">
-                        <div class="col-start-6 col-span-2 flex flex-col items-center justify-center">
-                            <div class="swiper-next-el mb-4 swiper-nav">NEXT</div>
+                <div class="left-0 z-20 w-full mt-3 lg:mt-0 lg:absolute lg:bottom-20">
+                    <div class="container grid-layout mx-auto lg:text-white">
+                        <div class="col-span-2 flex gap-x-3 lg:flex-col items-center lg:justify-center lg:col-start-6 lg:col-span-2">
+                            <div class="swiper-next-el swiper-nav lg:mb-4">NEXT</div>
                             <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
                         </div>
-                        <div class="col-start-11 col-span-2 flex justify-end">
+                        <div class="col-span-2 flex justify-end lg:col-start-11 lg:col-span-2">
                             <span class="swiper-pagination-el text-center txt-h5">1/3</span>
                         </div>
                     </div>

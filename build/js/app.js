@@ -17364,11 +17364,25 @@ var sliders = /*#__PURE__*/function () {
                 var swiperCarousel = new Swiper(el, {
                   loop: true,
                   speed: 600,
-                  slidesPerView: 3,
-                  spaceBetween: 21,
+                  slidesPerView: 1.5,
+                  spaceBetween: 16,
                   autoplay: {
                     delay: 5000,
                     disableOnInteraction: false
+                  },
+                  breakpoints: {
+                    768: {
+                      slidesPerView: 2.5,
+                      spaceBetween: 32
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 21
+                    },
+                    1920: {
+                      slidesPerView: 3,
+                      spaceBetween: 21
+                    }
                   },
                   pagination: {
                     el: el.parentElement.querySelector('.swiper-pagination-el'),
@@ -26146,7 +26160,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"2d3a28a8564c7103","assets_js_vue_resort_vue":"524e4971700abdb6","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"a9d49d31a749948b","assets_js_vue_resort_vue":"79889e8aca71b0cc","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

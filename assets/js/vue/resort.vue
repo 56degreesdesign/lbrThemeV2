@@ -1,16 +1,16 @@
 <template>
     <div class="sc-resort__map container" :class="curCategory">
         <div class="sc-resort__map__aside">
-            <div class="sc-resort__map__aside__wrapper">
+            <div class="sc-resort__map__aside__wrapper h-full">
                 <h4 class="txt-h3 mb-8">Availability</h4>
-                <div v-if="phase === 'all'" class="flex flex-col gap-y-8">
+                <div v-if="phase === 'all' && !activePreview" class="flex flex-col gap-y-8">
                     <button class="btn"
                              v-html="all.phase_all.button"
                              @click="phase = '1'"></button>
                     <a href="/contact" class="btn">RESERVE YOUR CASITA</a>
 
                 </div>
-                <div  v-if="phase === '1'" class="">
+                <div  v-if="phase === '1' && !activePreview" class="">
                     <div class="btn mb-10"
                          v-html="all.phase_1.button"
                          @click="[phase = 'all', curCategory = false]"></div>
@@ -26,14 +26,54 @@
                         </div>
                     </div>
                 </div>
+                <div v-if="activePreview" class="flex flex-col justify-between pb-20 h-full">
+                    <button class="btn" @click="clearPreview(); phase = '1'">Back to phase 1</button>
+                    <div class="flex flex-col h-full mt-auto justify-end">
+                        <span class="mb-4 txt-h5">LOT 2</span>
+                        <h4 class="txt-h3 mb-4">MESA <br> ONE STORY CASITA</h4>
+                        <span class="txt-h5">3 BEDROOM / 3.5 BATH</span>
+                        <span class="txt-h5">WITH STAIRS</span>
+                        <span class="txt-h5">2 GARAGE</span>
+                        <span class="txt-h5 mb-24">2,100 SF</span>
+                        <a href="#" class="btn">download floor plans</a>
+                    </div>
+                </div>
             </div>
             <div class="w-1/2 mb-20">
-                <img v-if="phase === 'all'" :src="legend" alt="Legend">
-                <img v-if="phase === '1'" :src="legendPhase1" alt="Legend">
+                <img v-if="phase === 'all' && !activePreview" :src="legend" alt="Legend">
+                <img v-if="phase === '1' && !activePreview" :src="legendPhase1" alt="Legend">
             </div>
         </div>
-        <div class="sc-resort__map__wrapper">
-            <svg v-if="phase === 'all'" class="map-phase-all" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        <div  v-if="activePreview" class="col-start-5 col-span-8 relative pb-[78%] bg-beige-light">
+            <div class="absolute top-5 right-5">
+                <svg class="cursor-pointer" @click="clearPreview()" xmlns="http://www.w3.org/2000/svg" width="18.677" height="18.676" viewBox="0 0 18.677 18.676">
+                    <g id="Group_125755" data-name="Group 125755" transform="translate(6322.456 3589.494)">
+                        <g id="Group_102105" data-name="Group 102105" transform="translate(682.484 -5512.652) rotate(-45)">
+                            <path id="Path_53943" data-name="Path 53943" d="M-12656.9-19813.566h24.411" transform="translate(6331.578 16233.409)" fill="none" stroke="#aa2b24" stroke-width="2"/>
+                            <path id="Path_53944" data-name="Path 53944" d="M0,0H24.412" transform="translate(-6313.117 -3592.363) rotate(90)" fill="none" stroke="#aa2b24" stroke-width="2"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="absolute right-5 bottom-12">
+                <div class="flex flex-col gap-y-11">
+                    <svg id="Component_16_1" data-name="Component 16 – 1" xmlns="http://www.w3.org/2000/svg" width="24.411" height="24.411" viewBox="0 0 24.411 24.411">
+                        <path id="Path_53943" data-name="Path 53943" d="M-12656.9-19813.566h24.411" transform="translate(12656.901 19825.77)" fill="none" stroke="#000" stroke-width="1"/>
+                        <path id="Path_53944" data-name="Path 53944" d="M0,0H24.412" transform="translate(12.206 -0.001) rotate(90)" fill="none" stroke="#000" stroke-width="1"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24.411" height="1" viewBox="0 0 24.411 1">
+                        <path id="Path_53945" data-name="Path 53945" d="M-12656.9-19813.566h24.411" transform="translate(12656.901 19814.066)" fill="none" stroke="#000" stroke-width="1"/>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+        <div v-if="!activePreview" class="sc-resort__map__wrapper">
+<!--            <div v-if="activePreview" class="absolute-full bg-orange z-20 pl-36">-->
+<!--                -->
+<!--            </div>-->
+            
+            <svg v-if="phase === 'all' && !activePreview" class="map-phase-all" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                  y="0px" viewBox="0 0 1379.6 980.5" overflow="visible" xml:space="preserve">
                 <g id="Base">
 	<polygon fill="#F6EEE5" points="622.5,0 622.5,142.8 314.2,270.6 314.2,424.4 271.6,487.1 126.2,487.1 0,651.7 0,852.2
@@ -1378,7 +1418,7 @@
                     <path id="Available_5_" fill="#1C708D" d="M637.7,590.5c3.9,0,7-3.1,7-7s-3.1-7-7-7c-3.9,0-7,3.1-7,7S633.8,590.5,637.7,590.5"/>
 </g>
             </svg>
-            <svg v-if="phase === '1'" class="map-phase-1" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            <svg v-if="phase === '1' && !activePreview" class="map-phase-1" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                  y="0px" viewBox="0 0 1231.2 920.7" overflow="visible" xml:space="preserve">
                 <g id="Base">
                     <rect fill="#F6EEE5" width="1231.2" height="920.7"/>
@@ -3271,7 +3311,7 @@
                  v-on:mouseover="hoverHouse(house.number)"
             >
                 <p class="text-16" v-html="house.description"></p>
-                <a class="text-white text-16" href="/contact">view floor plan</a>
+                <button class="text-white text-16" @click="selectPreview(house)">view floor plan</button>
                 <svg height="21" viewBox="0 0 24 21" width="24" xmlns="http://www.w3.org/2000/svg">
                     <g id="Polygon_1" data-name="Polygon 1" fill="#1a6e8d" transform="translate(24 21) rotate(180)">
                         <path
@@ -3307,6 +3347,7 @@ export default {
             legend: false,
             legendPhase1: false,
             activeHouse: false,
+            activePreview:null,
             phase: 'all',
             tooltip: {
                 top: 0,
@@ -3342,6 +3383,7 @@ export default {
                 this.tooltip.top = rect.top - parent.top + 'px';
                 this.tooltip.left = rect.left + (rect.width / 2) - parent.left + 'px';
             }
+            console.log(this.activeHouse);
 
         },
         mouseleave: function () {
@@ -3367,6 +3409,14 @@ export default {
         },
         setCategory: function(cat) {
             (this.curCategory !== cat) ? this.curCategory = cat : this.curCategory = false;
+        },
+        selectPreview: function(item) {
+            console.log(item)
+            this.mouseleave();
+            this.activePreview = item
+        },
+        clearPreview: function() {
+            this.activePreview = null;
         }
     }
 }
@@ -3376,7 +3426,10 @@ export default {
 .btn {
     @apply bg-orange uppercase px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300 cursor-pointer;
     &--black {
-        @apply bg-black text-white;
+        @apply bg-black/10 text-white;
+        &.is-active {
+            @apply bg-black;
+        }
     }
 }
 </style>

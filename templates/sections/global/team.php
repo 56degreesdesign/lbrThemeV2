@@ -4,18 +4,18 @@ $team = $section['team'] ?? false;
 $vision = $section['vision'] ?? false;
 ?>
 <?php if ($section) : ?>
-<section class="bg-beige pt-44 pb-28">
+<section class="bg-beige pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-32 lg:pb-20 xl:pt-44 xl:pb-28">
     <div class="container grid-layout">
-      <h4 class="txt-h4 col-span-6 mb-24"><?php echo $vision['label'] ?></h4>
-        <h4 class="txt-h4 col-span-6 mb-24"><?php echo $team['label'] ?></h4>
-        <div class="col-span-6">
-            <p class="txt-1 w-4/6"><?php echo $vision['content'] ?></p>
+        <h4 class="txt-h4 col-span-full mb-8 lg:col-span-6 lg:mb-16 xl:mb-24"><?php echo $vision['label'] ?></h4>
+        <h4 class="txt-h4 col-span-full mb-8 lg:mb-16 lg:col-span-6 xl:mb-24"><?php echo $team['label'] ?></h4>
+        <div class="col-span-full row-start-2 mb-8 lg:mb-0 lg:row-start-auto lg:col-span-6">
+            <p class="txt-1 lg:w-4/6"><?php echo $vision['content'] ?></p>
         </div>
-        <div class="col-span-6 flex flex-col gap-y-16">
+        <div class="col-span-full flex flex-col gap-y-8 lg:gap-y-16 lg:col-span-6">
             <?php foreach ($team['team'] as $item) : ?>
-            <div class="flex">
-                <h6 class="text-15 font-bold uppercase w-2/6"><?php echo $item['label'] ?></h6>
-                <div class="w-4/6">
+            <div class="flex flex-col lg:flex-row">
+                <h6 class="text-15 font-bold uppercase mb-4 lg:mb-0 lg:w-2/6"><?php echo $item['label'] ?></h6>
+                <div class="lg:w-4/6">
                     <?php if ($item['logo']) : ?> 
                     <div class="mb-5">
                         <img src="<?php echo $item['logo']['url'] ?>" alt="">

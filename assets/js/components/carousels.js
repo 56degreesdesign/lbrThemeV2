@@ -13,11 +13,25 @@ const sliders = async function () {
                 let swiperCarousel = new Swiper(el, {
                     loop: true,
                     speed: 600,
-                    slidesPerView: 3,
-                    spaceBetween: 21,
+                    slidesPerView: 1.5,
+                    spaceBetween: 16,
                     autoplay: {
                         delay: 5000,
                         disableOnInteraction: false,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 32
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 21,
+                        },
+                        1920: {
+                            slidesPerView: 3,
+                            spaceBetween: 21,
+                        },
                     },
                     pagination: {
                         el: el.parentElement.querySelector('.swiper-pagination-el'),
