@@ -5,10 +5,10 @@
     }
 
     .main-menu {
-        @apply flex flex-col items-center gap-y-12 mt-32 mb-10;
+        @apply flex flex-col items-center gap-y-8 mt-10 mb-10 xl:gap-y-12 xl:mt-32;
         > li {
             > a {
-                @apply text-51 font-bold uppercase underline-animation;
+                @apply lg:text-40 xl:text-51 font-bold uppercase underline-animation;
 
             }
         }
@@ -16,7 +16,7 @@
     
     .header-links {
         a {
-            @apply text-center text-17 leading-1.25 font-bold mb-5 inline-block underline-animation-black;
+            @apply text-center text-14 lg:text-17 leading-1.25 font-bold mb-3 inline-block underline-animation-black lg:mb-5;
         }
         p:first-of-type {
             @apply mb-0;

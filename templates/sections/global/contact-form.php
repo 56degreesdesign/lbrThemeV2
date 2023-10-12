@@ -9,7 +9,7 @@ $form = $section['form'] ?? false;
 <section class="bg-beige pt-20 pb-10 md:pt-24 mb:pb-20 lg:pt-32 lg:pb-28 xl:pb-32 xl:pt-40">
     <div class="container grid-layout">
         <h4 class="col-span-full txt-h4 mb-10 lg:col-start-1 lg:col-span-2 lg:mb-0"><?php echo $label ?></h4>
-        <div class="col-span-full mb-10 lg:col-start-3 lg:col-span-4 lg:mb-20">
+        <div class="col-span-full mb-10 lg:col-start-3 lg:mb-16 lg:col-span-5 xl:mb-20 xl:col-span-4">
             <h4 class="txt-h4 mb-5"><?php echo $heading ?></h4>
             <p class="txt-1"><?php echo $content ?></p>
         </div>

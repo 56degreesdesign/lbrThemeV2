@@ -2,7 +2,7 @@
 $colour = $args['colour'] ?? 'black';
 ?>
 
-<svg id="Group_78817" data-name="Group 78817" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240.87" height="18.012" viewBox="0 0 240.87 18.012">
+<svg class="max-w-[158px] md:max-w-[170px] lg:max-w-none" id="Group_78817" data-name="Group 78817" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240.87" height="18.012" viewBox="0 0 240.87 18.012">
     <defs>
         <clipPath id="clip-path">
             <path id="Path_20" data-name="Path 20" d="M0-2.56H240.87V-20.572H0Z" transform="translate(0 20.572)"/>

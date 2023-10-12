@@ -1,22 +1,22 @@
 <template>
     <div class="sc-resort__map container" :class="curCategory">
         <div class="sc-resort__map__aside">
-            <div class="sc-resort__map__aside__wrapper h-full">
+            <div class="sc-resort__map__aside__wrapper h-full w-full">
                 <h4 class="txt-h3 mb-8">Availability</h4>
                 <div v-if="phase === 'all' && !activePreview" class="flex flex-col gap-y-8">
                     <button class="btn"
                              v-html="all.phase_all.button"
                              @click="phase = '1'"></button>
-                    <a href="/contact" class="btn">RESERVE YOUR CASITA</a>
+                    <a href="/contact" class="btn hidden lg:block">RESERVE YOUR CASITA</a>
 
                 </div>
                 <div  v-if="phase === '1' && !activePreview" class="">
-                    <div class="btn mb-10"
+                    <div class="btn mb-5 xl:mb-10"
                          v-html="all.phase_1.button"
                          @click="[phase = 'all', curCategory = false]"></div>
-                    <div class="sc-resort__map__filter">
-                        <div class="text-10 font-bold uppercase mb-8">Filter by<span @click="curCategory = false" class="hidden">reset</span></div>
-                        <div class="flex flex-col gap-y-4">
+                    <div class="sc-resort__map__filter hidden lg:block">
+                        <div class="text-10 font-bold uppercase mb-4 xl:mb-8">Filter by<span @click="curCategory = false" class="hidden">reset</span></div>
+                        <div class="flex flex-col gap-y-4 mb-4">
                             <div class="btn btn--black"
                                  :class="{'is-active': ( curCategory === category.category || !curCategory )}"
                                  @click="setCategory(category.category)"
@@ -26,25 +26,25 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="activePreview" class="flex flex-col justify-between pb-20 h-full">
+                <div v-if="activePreview" class="flex flex-col md:flex-row md:justify-between lg:flex-col lg:pb-20 h-full">
                     <button class="btn" @click="clearPreview(); phase = '1'">Back to phase 1</button>
-                    <div class="flex flex-col h-full mt-auto justify-end">
+                    <div class="flex flex-col my-5 lg:h-full md:-mt-[60px] lg:mb-0 lg:mt-auto lg:justify-end">
                         <span class="mb-4 txt-h5">LOT 2</span>
                         <h4 class="txt-h3 mb-4">MESA <br> ONE STORY CASITA</h4>
                         <span class="txt-h5">3 BEDROOM / 3.5 BATH</span>
                         <span class="txt-h5">WITH STAIRS</span>
                         <span class="txt-h5">2 GARAGE</span>
-                        <span class="txt-h5 mb-24">2,100 SF</span>
+                        <span class="txt-h5 mb-7 lg:mb-24">2,100 SF</span>
                         <a href="#" class="btn">download floor plans</a>
                     </div>
                 </div>
             </div>
-            <div class="w-1/2 mb-20">
+            <div v-if="!activePreview" class="ml-8 w-full mt-1.5 max-w-[200px] lg:max-w-none lg:ml-0 lg:w-1/2 mb-10 xl:mb-20">
                 <img v-if="phase === 'all' && !activePreview" :src="legend" alt="Legend">
                 <img v-if="phase === '1' && !activePreview" :src="legendPhase1" alt="Legend">
             </div>
         </div>
-        <div  v-if="activePreview" class="col-start-5 col-span-8 relative pb-[78%] bg-beige-light">
+        <div  v-if="activePreview" class="col-span-full -mx-[25px] pb-[120%] md:-mx-10 lg:mx-0 lg:col-start-5 lg:col-span-8 relative lg:pb-[78%] bg-beige-light">
             <div class="absolute top-5 right-5">
                 <svg class="cursor-pointer" @click="clearPreview()" xmlns="http://www.w3.org/2000/svg" width="18.677" height="18.676" viewBox="0 0 18.677 18.676">
                     <g id="Group_125755" data-name="Group 125755" transform="translate(6322.456 3589.494)">
@@ -3311,7 +3311,7 @@
                  v-on:mouseover="hoverHouse(house.number)"
             >
                 <p class="text-16" v-html="house.description"></p>
-                <button class="text-white text-16" @click="selectPreview(house)">view floor plan</button>
+                <button class="text-white text-16 uppercase underline" @click="selectPreview(house)">view floor plan</button>
                 <svg height="21" viewBox="0 0 24 21" width="24" xmlns="http://www.w3.org/2000/svg">
                     <g id="Polygon_1" data-name="Polygon 1" fill="#1a6e8d" transform="translate(24 21) rotate(180)">
                         <path
@@ -3324,7 +3324,11 @@
                 </svg>
             </div>
         </div>
-        <p class="col-span-full mt-20 text-15 text-right">Casitas square footages are approximate and subject to change without notice.</p>
+        <p class="col-span-full mt-10 text-15 text-center lg:mt-14 lg:text-right xl:mt-20">Casitas square footages are approximate and subject to change without notice.</p>
+        <div class="col-span-full flex justify-center mt-5 lg:hidden">
+            <a href="/contact" class="btn">RESERVE YOUR CASITA</a>
+
+        </div>
     </div>
 </template>
 
@@ -3424,7 +3428,7 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-    @apply bg-orange uppercase px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300 cursor-pointer;
+    @apply bg-orange uppercase px-5 xl:px-12 text-center pt-2.5 pb-2 text-15 w-fit h-fit text-white font-bold rounded-full hover:opacity-70 duration-300 cursor-pointer;
     &--black {
         @apply bg-black/10 text-white;
         &.is-active {

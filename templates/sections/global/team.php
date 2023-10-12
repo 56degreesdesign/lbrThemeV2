@@ -11,7 +11,7 @@ $vision = $section['vision'] ?? false;
         <div class="col-span-full row-start-2 mb-8 lg:mb-0 lg:row-start-auto lg:col-span-6">
             <p class="txt-1 lg:w-4/6"><?php echo $vision['content'] ?></p>
         </div>
-        <div class="col-span-full flex flex-col gap-y-8 lg:gap-y-16 lg:col-span-6">
+        <div class="col-span-full flex flex-col gap-y-8 lg:gap-y-12 lg:col-span-6 xl:gap-y-16">
             <?php foreach ($team['team'] as $item) : ?>
             <div class="flex flex-col lg:flex-row">
                 <h6 class="text-15 font-bold uppercase mb-4 lg:mb-0 lg:w-2/6"><?php echo $item['label'] ?></h6>

@@ -37,7 +37,7 @@ $img3 = $section['img3'] ?? false;
             <div class="mb-4 swiper-nav">NEXT</div>
             <div class="swiper-nav">PREVIOUS</div>
         </div>
-        <div class="col-start-7 col-span-6 mb-32">
+        <div class="col-start-7 col-span-6 lg:mb-20 xl:mb-32">
             <div class="flex justify-between items-center mb-10">
                 <div class="txt-h3">Double Arch Trail</div>
                 <div class="txt-h5">1 / 2</div>
@@ -50,7 +50,7 @@ $img3 = $section['img3'] ?? false;
             </div>
         </div>
         <div class="col-start-7 col-span-3 flex flex-col">
-            <div class="relative pb-[69%] mb-12">
+            <div class="relative pb-[69%] mb-7 xl:mb-12">
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $img2, 'class' => 'w-full']); ?>
             </div>
             <div class="font-Reckless txt-h3 ">EASY - 1.6MI <br>
@@ -75,7 +75,7 @@ $img3 = $section['img3'] ?? false;
     <div class="container grid-layout">
         <div class="col-span-full txt-h5 mb-4 md:mb-7 lg:mb-12">Trails</div>
         
-        <div class="col-span-4 border-b pb-12 mb-5 lg:mb-0">
+        <div class="col-span-full md:col-span-6 lg:col-span-4 border-b pb-12 mb-5 lg:mb-0">
             <h4 class="txt-h3 mb-6">Double Arch Trail</h4>
             <p class="text-17 mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis
                 ipsum quis risus feugiat consectetur. Donec pretium, nibh eu tempus
@@ -86,7 +86,7 @@ $img3 = $section['img3'] ?? false;
                 trailhead</a>
         </div>
 
-        <div class="col-span-4 border-b pb-12 mb-5 lg:mb-0">
+        <div class="col-span-full md:col-span-6 lg:col-span-4 border-b pb-12 mb-5 lg:mb-0">
             <h4 class="txt-h3 mb-6">Double Arch Trail</h4>
             <p class="text-17 mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis
                 ipsum quis risus feugiat consectetur. Donec pretium, nibh eu tempus
@@ -97,7 +97,7 @@ $img3 = $section['img3'] ?? false;
                 trailhead</a>
         </div>
 
-        <div class="col-span-4 border-b pb-12 mb-5 lg:mb-0">
+        <div class="col-span-full md:col-span-6 lg:col-span-4 border-b pb-12 mb-5 lg:mb-0">
             <h4 class="txt-h3 mb-6">Double Arch Trail</h4>
             <p class="text-17 mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis
                 ipsum quis risus feugiat consectetur. Donec pretium, nibh eu tempus

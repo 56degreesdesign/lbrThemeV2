@@ -39,8 +39,8 @@ if (!$hidden) :
         
         <div class="col-span-1 flex justify-center mb-10 lg:mb-0 lg:justify-start">
             <div class="flex flex-col items-center">
-                <img class="mb-10 lg:mb-4" src="<?php echo $social_media['icon']['url'] ?>" alt="">
-                <div class="text-center footer-links flex gap-x-12 lg:flex-col">
+                <img class="mb-10 lg:mb-4 lg:-mt-4" src="<?php echo $social_media['icon']['url'] ?>" alt="">
+                <div class="text-center footer-links flex gap-x-12 lg:mt-4 lg:flex-col">
                     <?php if ($links['instagram']) : ?>
                         <a class="text-14 lg:text-16 font-bold uppercase underline-animation-black" href="<?php echo $links['instagram']['url']?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
                     <?php endif ;?>
