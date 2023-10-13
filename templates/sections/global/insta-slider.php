@@ -8,9 +8,13 @@ $background = $section['background'] ?? false;
  <section class="bg-orange relative overflow-hidden py-20 md:py-24 lg:py-32 xl:py-40">
      <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="<?php echo $background['url']?>" alt="">
      <div class="container grid-layout">
-         <div class="col-span-full flex items-center mb-10 md:mb-16 lg:mb-0 lg:col-start-1 lg:col-span-4 ">
-             <h3 class="text-center w-full txt-h2"><?php echo $heading ?></h3>
-         </div>
+         <?php if($heading) : ?>
+             <div class="col-span-full flex items-center mb-10 md:mb-16 lg:mb-0 lg:col-start-1 lg:col-span-4 ">
+                 <h3 class="text-center w-full txt-h2">
+                     <?php echo $heading ?>
+                 </h3>
+             </div>
+        <?php endif ;?>
          <div class="col-span-full relative -mx-[25px] md:-mx-10 lg:ml-0 lg:-mr-[60px] lg:col-start-5 lg:col-span-8">
              <div class="swiper swiper-carousel">
                  <div class="swiper-wrapper">
@@ -31,7 +35,7 @@ $background = $section['background'] ?? false;
                  </div>
              </div>
              <div class="flex flex-row-reverse justify-between mx-[25px] mt-10 md:mx-10 md:mt-12 lg:flex-row lg:ml-0 lg:mr-[60px] xl:mt-16">
-                 <div class="flex gap-x-10 lg:gap-x-60">
+                 <div class="flex gap-x-10 lg:gap-x-40 xl:gap-x-52 2xl:gap-x-60">
                      <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
                      <div class="swiper-next-el swiper-nav">NEXT</div>
                  </div>

@@ -27,8 +27,11 @@ $bottom_img = get_field('logo', 'option') ?? false;
         <?php endif ;?>
     </div>
     <?php if ($bottom_img) : ?>
-    <div class="absolute bottom-16 left-0 w-full pointer-events-none flex justify-center">
-        <img src="<?php echo $bottom_img['url'] ?>" alt="">
+    <div class="absolute bottom-16 left-0 w-full flex justify-center">
+        <a href="<?php echo $link['url'] ?>">
+            <img src="<?php echo $bottom_img['url'] ?>" alt="">
+
+        </a>
     </div>
     <?php endif ;?>
 </section>

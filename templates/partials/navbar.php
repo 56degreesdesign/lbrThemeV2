@@ -2,8 +2,8 @@
 $colour = $args['colour'] ?? 'black';
 ?>
 
-<div class="w-full <?php echo ($colour === 'black' ? 'bg-beige' : '' ) ?>">
-    <div class="container flex justify-between py-6 lg:py-8 <?php echo ($colour === 'black' ? 'bg-beige' : '' ) ?>">
+<div class="w-full shadow-lg <?php echo ($colour === 'black' ? 'bg-beige' : '' ) ?>">
+    <div class="container flex justify-between py-6 xl:py-8 <?php echo ($colour === 'black' ? 'bg-beige' : '' ) ?>" >
         <a class="flex items-center" href="/">
             <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => $colour]) ?>
         </a>

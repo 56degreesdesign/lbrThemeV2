@@ -16,15 +16,19 @@ $portrait = $section['image_long'] ?? false;
 <?php if ($section) : ?>
     <section class="bg-beige relative py-16 md:py-20 lg:py-28 xl:py-40">
         <?php if ($display_bg_pattern) : ?>
-        <img class="absolute-full object-cover" src="<?php echo $bg_pattern['url'] ?>" alt="">
+            <img class="absolute-full object-cover" src="<?php echo $bg_pattern['url'] ?>" alt="">
         <?php endif ;?>
         <div class="container grid-layout relative">
             <div class="flex flex-col justify-center <?php echo ($orientation == 'vertical') ? 'col-span-full' : 'col-span-full lg:col-start-1 lg:col-span-6'; ?>">
-                <h2 class="txt-h2 mb-8"><?php echo $heading ?></h2>
+                <?php if($heading) :?>
+                    <h2 class="txt-h2 mb-8"><?php echo $heading ?></h2>
+                <?php endif ;?>
                 <?php if ($subheading) : ?>
                     <h5 class="text-center text-16 font-bold mt-4 mb-5"><?php echo $subheading ?></h5>
                 <?php endif ;?>
-                <p class="text-center text-17 mb-10 mx-auto md:mb-14 lg:mb-16 lg:w-1/2"><?php echo $content ?></p>
+                <?php if($content) :?>
+                    <p class="text-center text-17 mb-10 mx-auto md:mb-14 lg:mb-16 lg:w-1/2"><?php echo $content ?></p>
+                <?php endif ;?>
                 <div class="flex justify-center <?php echo ($orientation == 'vertical') ? 'mb-10 md:mb-14 lg:mb-24 xl:mb-40' : 'mb-10 lg:mb-0'; ?>">
                     <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
                 </div>

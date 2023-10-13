@@ -7,6 +7,7 @@ $links = get_field('links', 'option') ?? false;
 $hidden = $args['hidden'] ?? false;
 $footer = get_field('footer', 'option') ?? false;
 $downloads = $footer['downloads'] ?? false;
+$events = get_field('header', 'option')['upcoming_event'] ?? false;
 
 
 if (!$hidden) :
@@ -25,17 +26,22 @@ if (!$hidden) :
                 </div>
                 <div class="flex flex-col items-center mt-10 mb-5 md:mt-16 lg:mt-20 xl:mt-28">
                     <img class="mb-4 max-w-[72px] md:max-w-none md:mb-6" src="<?php echo $logo['url']?>" alt="">
-                    <h4 class="txt-h4 mb-5 md:mb-7 lg:mb-9"><?php echo $downloads['heading'] ?></h4>
-                    <div class="header-links mb-7 md:mb-10 xl:mb-14">
-                        <?php echo $downloads['content'] ?>
-                    </div>
-                    
+                    <?php if($downloads['heading']) : ?>
+                        <h4 class="txt-h4 mb-5 md:mb-7 lg:mb-9"><?php echo $downloads['heading'] ?></h4>
+                    <?php endif ;?>
+                    <?php if($downloads['content']) : ?>
+                        <div class="header-links mb-7 md:mb-10 xl:mb-14">
+                            <?php echo $downloads['content'] ?>
+                        </div>
+                    <?php endif ;?>
                     <div class="h-px bg-black w-[38.645%] mb-10"></div>
-                    <h4 class="txt-h4 mb-7 xl:mb-9">upcoming events</h4>
-                    <p class="text-center text-16 font-bold mb-8">Site Tour <br>
-                        Monday 24TH January</p>
-                    <a class="bg-black uppercase px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300" href="#">
-                        rsvp</a>
+                    <?php if($events['heading']) : ?>
+                        <h4 class="txt-h4 mb-7 xl:mb-9"><?php echo $events['heading'] ?></h4>
+                    <?php endif ;?>
+                    <?php if($events['content']) : ?>
+                        <p class="text-center text-16 font-bold mb-8"><?php echo $events['content'] ?></p>
+                    <?php endif ;?>
+                    <?php get_template_part( 'templates/partials/button', null, ['data' => $events['button'], 'class' => ''] ); ?>
                 </div>
                 <div class="flex justify-between gap-y-3 mt-auto flex-col items-center xl:flex-row xl:pr-16">
                     <?php if ($links['instagram']) : ?>
@@ -51,7 +57,7 @@ if (!$hidden) :
             </div>
             <div class="col-span-1 bg-green  pt-8 pb-20 flex flex-col justify-stretch text-white xl:pr-[3.563rem]">
                 <div class="grid grid-cols-6 lg:pr-[2.5rem] xl:pr-0">
-                    <div class="col-span-full flex flex-col justify-center items-center text-16 font-bold md:flex-row md:row-start-2 lg:col-start-2 lg:col-span-4">
+                    <div class="col-span-full flex flex-col justify-center items-center text-16 font-bold md:flex-row md:row-start-2 lg:col-start-2 lg:col-span-4 lg:row-start-auto">
                         <span>MOAB, UT <span class="hidden md:inline">-&nbsp</span></span>
                         <p class="currentDateTime"></p><span class="hidden md:inline">&nbsp</span>
                         <p class="currentWeather underline underline-offset-2"></p>

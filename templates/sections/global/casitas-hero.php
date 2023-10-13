@@ -14,7 +14,9 @@ $location = $section['location'] ?? false;
         <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $background_image, 'class' => 'w-full -z-10']); ?>
         <div class="container grid-layout">
                 <div class="col-span-full flex justify-center lg:col-start-2 lg:col-span-10">
-                   <h1 class="txt-h1 text-beige mb-24"><?php echo $heading ?></h1>
+                    <?php if($heading) : ?>
+                        <h1 class="txt-h1 text-beige mb-24"><?php echo $heading ?></h1>
+                    <?php endif ;?>
                 </div>
         </div>
         <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center">

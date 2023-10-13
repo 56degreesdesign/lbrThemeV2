@@ -28,8 +28,9 @@ $features = $section['features']
                     <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
                 </div>
             <?php endif ;?>
-            
-            <div class="col-span-full mt-4 mb-8 text-orange text-14 lg:hidden"><?php echo $caption ?></div>
+            <?php if($caption) :?>
+                <div class="col-span-full mt-4 mb-8 text-orange text-14 lg:hidden"><?php echo $caption ?></div>
+            <?php endif ;?>
             <?php if($features) :?>
                 <div class="col-span-full flex flex-col justify-end | lg:col-start-7 lg:col-span-6">
                     <div class="mb-20 txt-h5 hidden lg:block xl:mb-44"><?php echo $features['label'] ?></div>

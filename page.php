@@ -3,7 +3,6 @@ get_header();
 if ( have_rows('sections') ) {
     while ( have_rows('sections') ) {
         the_row();
-
         $templateName = get_row_layout();
         $fileName = str_replace('_','-', $templateName);
         $path = get_template_directory().'/templates/sections/global/'.$fileName.'.php';

@@ -9,10 +9,14 @@ $slides = $section['slides'] ?? false;
     <section class="bg-beige pb-16 md:pb-24 lg:pb-32">
         <div class="container grid-layout">
             <div class="col-span-full flex flex-col-reverse lg:flex-col lg:col-start-1 lg:col-span-6">
-                <div class="relative pb-[62.1266%] lg:mb-40 xl:mb-52">
-                    <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
-                </div>
-                <div class="map-and-slider-content mb-10 lg:mb-0"> <?php echo $content ?></div>
+                <?php if($image) :?>
+                    <div class="relative pb-[62.1266%] lg:mb-40 xl:mb-52">
+                        <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
+                    </div>
+                <?php endif ;?>
+                <?php if($content) : ?>
+                    <div class="map-and-slider-content mb-10 lg:mb-0"> <?php echo $content ?></div>
+                <?php endif ;?>
             </div>
             <div class="col-span-full mt-10 lg:col-start-8 lg:col-span-5 lg:mt-32 xl:translate-x-[3.563rem]">
                 <div class="swiper small-carousel mb-7">
