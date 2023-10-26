@@ -50,6 +50,7 @@ module.exports = {
                 15:"0.938rem",
                 14: "0.875rem",
                 13: "0.813rem",
+                11: "0.688rem",
                 10: "0.625rem"
             },
             lineHeight: {

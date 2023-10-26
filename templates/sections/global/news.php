@@ -3,45 +3,61 @@ $section = $args['data'] ?? false;
 $image = $section['image'] ?? false;
 
 ?>
-
+<script src="https://oxblue.com/pro/web_integration/refresh_script.php?domID=oxblueCameraImageba6de05aba1a174bd8857432318621552048x1536&photoURL=ba6de05aba1a174bd885743231862155/2048x1536.jpg"></script>
 <section class="bg-beige pt-28 pb-12">
     <div>
         <h1 class="txt-h3 text-center">Construction<br>progress</h1>
     </div>
 </section>
 
-<section class="bg-beige-light py-10">
-    <div class="container grid-layout text-17 font-bold leading-1.17 uppercase">
-        <div class="col-start-1 col-span-2 flex items-center gap-x-5">
-            <?php get_template_part('templates/partials/nav-arrow', null, ['class' => 'rotate-180']) ?>
-            <span>Jan 12th, 2023</span>
+
+<section class="bg-beige py-20">
+    <div class="container grid-layout">
+        <div class="col-span-full relative pb-[67%]">
+                <img class="absolute top-0 left-0 w-full h-full object-cover" id="oxblueCameraImageba6de05aba1a174bd8857432318621552048x1536" src="https://oxblue.com/archive/ba6de05aba1a174bd885743231862155/2048x1536.jpg?ts=1698323335"/>
         </div>
-        <div class="col-start-5 col-span-4 flex items-center justify-center gap-x-8">
-            <span>JAN 13TH, 2023</span>
-            <span>64˚F</span>
-            <span>SHARE</span>
-            <span>TIMELAPSE</span>
-        </div>
-        <div class="col-start-11 col-span-2 flex justify-end items-center gap-x-5">
-            <span>Jan 14th, 2023</span>
-            <?php get_template_part('templates/partials/nav-arrow', null, ['class' => '']) ?>
+    </div>
+</section>
+<section class="bg-beige py-20">
+    <div class="container grid-layout">
+        <div class="col-span-full">
+            <iframe class="w-full h-[900px]" src="https://hotels.cloudbeds.com/reservation/cStQ7x?widget=1" frameborder="0"></iframe>
         </div>
     </div>
 </section>
 
-<section class="relative pb-[37%]">
-    <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full -z-10']); ?>
-    <div class="container grid-layout absolute-full pb-14 content-end">
-     <div class="col-start-5 col-span-4 flex items-center justify-center">
-         <div class="h-px w-[376px] bg-black relative">
-             <div class="rounded-full bg-black h-[26px] w-[26px] absolute left-12 -top-3"></div>
-         </div>
-     </div>
-        <div class="col-start-11 col-span-2 flex justify-end text-white">LOGO</div>
-    
-    </div>
- 
-</section>
+
+
+<!--<section class="bg-beige-light py-10">-->
+<!--    <div class="container grid-layout text-17 font-bold leading-1.17 uppercase">-->
+<!--        <div class="col-start-1 col-span-2 flex items-center gap-x-5">-->
+<!--            --><?php //get_template_part('templates/partials/nav-arrow', null, ['class' => 'rotate-180']) ?>
+<!--            <span>Jan 12th, 2023</span>-->
+<!--        </div>-->
+<!--        <div class="col-start-5 col-span-4 flex items-center justify-center gap-x-8">-->
+<!--            <span>JAN 13TH, 2023</span>-->
+<!--            <span>64˚F</span>-->
+<!--            <span>SHARE</span>-->
+<!--            <span>TIMELAPSE</span>-->
+<!--        </div>-->
+<!--        <div class="col-start-11 col-span-2 flex justify-end items-center gap-x-5">-->
+<!--            <span>Jan 14th, 2023</span>-->
+<!--            --><?php //get_template_part('templates/partials/nav-arrow', null, ['class' => '']) ?>
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section class="relative pb-[37%]">-->
+<!--    --><?php //get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full -z-10']); ?>
+<!--    <div class="container grid-layout absolute-full pb-14 content-end">-->
+<!--     <div class="col-start-5 col-span-4 flex items-center justify-center">-->
+<!--         <div class="h-px w-[376px] bg-black relative">-->
+<!--             <div class="rounded-full bg-black h-[26px] w-[26px] absolute left-12 -top-3"></div>-->
+<!--         </div>-->
+<!--     </div>-->
+<!--        <div class="col-start-11 col-span-2 flex justify-end text-white">LOGO</div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <section class="bg-orange pt-28 pb-32">
     <div class="container grid-layout">

@@ -31,3 +31,31 @@
         }
     }
 }
+
+
+    .main-menu-test {
+        @apply flex gap-x-4;
+        li {
+            //@apply text-14 underline font-bold underline-offset-2;
+            a {
+                @apply text-14 underline font-bold underline-offset-2 uppercase;
+            }
+        }
+    }
+    
+    .casitas-submenu {
+        //@apply bg-orange;
+        display: grid;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+        grid-template-rows: 0fr;
+        > div {
+            overflow: hidden;
+        }
+        &.active {
+            grid-template-rows: 1fr;
+        }
+    }
+
+

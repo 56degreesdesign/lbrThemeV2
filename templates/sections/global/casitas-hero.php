@@ -140,9 +140,9 @@ $location = $section['location'] ?? false;
                     <p class="txt-h5 text-center mb-7 md:mb-10 xl:mb-14">LOCATED ON LOTS<br>
                         18 – 21</p>
                     <div class="flex flex-col gap-y-4 gap-x-8 mb-4 lg:mb-24 items-center lg:flex-row">
-                        <a class="border border-black uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-black font-bold rounded-full hover:opacity-70 duration-300 " href="#">
+                        <a class="border border-black uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-black font-bold rounded-full hover:bg-black hover:text-white duration-300 " href="#">
                             With Stairs</a>
-                        <a class="bg-black uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300 " href="#">
+                        <a class="bg-black uppercase border px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:bg-transparent hover:text-black duration-300 " href="#">
                             without stairs</a>
                     </div>
                     <a class="bg-orange uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300 " href="#">

@@ -76,4 +76,17 @@ jQuery(function ($) {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
     
+    const residentialMenu = document.querySelector('.residential-casitas');
+    const casitasSubmenu = document.querySelector('.casitas-submenu');
+
+    const toggleSubmenu = (event) => {
+        casitasSubmenu.classList.toggle('active', event.type === 'mouseenter');
+    };
+
+    residentialMenu.addEventListener("mouseenter", toggleSubmenu, false);
+    residentialMenu.addEventListener("mouseleave", toggleSubmenu, false);
+    casitasSubmenu.addEventListener("mouseenter", toggleSubmenu, false);
+    casitasSubmenu.addEventListener("mouseleave", toggleSubmenu, false);
+
+  
 })
