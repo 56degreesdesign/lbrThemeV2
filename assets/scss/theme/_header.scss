@@ -38,7 +38,7 @@
         li {
             //@apply text-14 underline font-bold underline-offset-2;
             a {
-                @apply text-14 underline font-bold underline-offset-2 uppercase;
+                @apply text-14 no-underline font-bold underline-offset-2 uppercase underline-animation-black;
             }
         }
     }

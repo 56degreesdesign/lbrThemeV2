@@ -50,14 +50,26 @@ $module: '.wysiwyg-headings';
   }
 
   h2 {
-    @apply text-xl;
+    @apply txt-h2 mb-8;
   }
 
-  h3, h4, h5 {
+  h3 {
+      
+  } 
+    h4 {
+    
+      } 
+    h5 {
     @apply text-lg;
   }
+    h6 {
+        @apply txt-3 mb-5 pt-3.5;
+    }
     p {
-        @apply txt-1;
+        @apply txt-1 text-center;
+        img {
+            @apply inline;
+        }
     }
     a {
         @apply underline underline-offset-2;

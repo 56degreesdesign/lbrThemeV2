@@ -18,12 +18,13 @@ $subheading = $section['subheading'] ?? false;
                  <?php echo $heading ?>
              </h1>
         <?php endif ;?>
-        <?php if($subheading) : ?>
-            <p class="col-span-full uppercase text-14 font-bold text-beige text-center md:text-16 lg:text-17 lg:col-start-4 lg:col-span-6">
-                <?php echo $subheading ?>
-            </p>
-        <?php endif ;?>
+    
     </div>
+    <?php if($subheading) : ?>
+        <p class="absolute bottom-32 left-0 w-full uppercase text-14 font-bold text-beige text-center md:text-16 lg:text-17">
+            <?php echo $subheading ?>
+        </p>
+    <?php endif ;?>
     <div class="absolute bottom-16 left-0 w-full pointer-events-none flex justify-center">
         <a href="#testing" class="pointer-events-auto">
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
