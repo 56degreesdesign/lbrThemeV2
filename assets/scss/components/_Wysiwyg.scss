@@ -46,7 +46,7 @@ $module: '.wysiwyg-headings';
   }
 
   h1 {
-    @apply text-2xl;
+    @apply txt-h1 mb-10 md:mb-12 lg:mb-16 xl:mb-20;
   }
 
   h2 {

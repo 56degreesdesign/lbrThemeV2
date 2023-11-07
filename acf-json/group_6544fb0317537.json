@@ -1,0 +1,118 @@
+{
+    "key": "group_6544fb0317537",
+    "title": "Single Post",
+    "fields": [
+        {
+            "key": "field_6544fb034726f",
+            "label": "Sections",
+            "name": "sections",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6544fb1c9900f": {
+                    "key": "layout_6544fb1c9900f",
+                    "name": "hero_single",
+                    "label": "Hero Single",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6544fee72bcfb": {
+                    "key": "layout_6544fee72bcfb",
+                    "name": "image_single",
+                    "label": "Image Single",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6544ff0b2bcfd",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_6544fdfb4fa11"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6544ff2f2bcfe": {
+                    "key": "layout_6544ff2f2bcfe",
+                    "name": "content_single",
+                    "label": "Content Single",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6544ff372bd01",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_6544fe164fa13"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1699020616
+}

@@ -10,7 +10,7 @@ $content = $section['content'] ?? false;
             <div class="col-span-full lg:col-span-1 relative pb-[121%]">
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
             </div>
-            <div class="col-span-full wysiwyg flex flex-col justify-center items-center py-20 row-start-1 px-[25px] md:px-10 lg:px-0 lg:py-0 lg:col-span-1">
+            <div class="col-span-full wysiwyg flex flex-col justify-center items-center py-20 row-start-1 px-[25px] md:px-10 lg:px-0 lg:py-0 lg:col-start-2 lg:col-span-1">
                 <div class="lg:w-[60%]">
                     <?php echo $content ?>
                 </div>

@@ -25,7 +25,8 @@ module.exports = {
                 light: "#F6EEE5"
             },
             green: '#3C4A38',
-            orange: "#CC885D"
+            orange: "#CC885D",
+            gray : '#707070'
         },
         fontFamily: {
             Oscar: ["FH Oscar", "sans-serif"],

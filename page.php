@@ -10,6 +10,7 @@ if ( have_rows('sections') ) {
 
         if ( file_exists($path) ) {
             $data = get_sub_field($templateName);
+
             echo "<!-- ".$fileName." -->";
             get_template_part('templates/sections/global/'.$fileName, null, ['data' => $data]);
         }

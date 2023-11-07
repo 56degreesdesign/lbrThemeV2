@@ -3,11 +3,12 @@ $section = $args['data'] ?? false;
 $image = $section['image'] ?? false;
 $heading = $section['heading'] ?? false;
 $content = $section['content'] ?? false;
+$button = $section['button'] ?? false;
 
 ?>
 <?php if ($section) : ?>
 <section class="bg-beige pt-14 lg:pt-20">
-    <div class="max-w-[1920px] px-[25px] mx-auto grid grid-cols-2 md:px-10 lg:px-0">
+    <div class="max-w-[1920px] px-[25px] mx-auto grid grid-cols-2 md:px-10 lg:px-0 relative">
         <div class="col-span-full lg:col-span-1">
             <div class="w-full relative pb-[112.87%]">
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
@@ -21,6 +22,12 @@ $content = $section['content'] ?? false;
                 <p class="text-center text-17 lg:w-1/2"><?php echo $content ?></p>
             <?php endif ;?>
         </div>
+        <div class="w-full absolute bottom-10 left-0">
+            <div class="container w-full pointer-events-none flex justify-end">
+                <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
+            </div>
+        </div>
     </div>
+  
 </section>
 <?php endif ;?>
