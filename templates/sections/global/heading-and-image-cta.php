@@ -21,7 +21,7 @@ $portrait = $section['image_long'] ?? false;
         <div class="container grid-layout relative">
             <div class="flex flex-col justify-center <?php echo ($orientation == 'vertical') ? 'col-span-full' : 'col-span-full lg:col-start-1 lg:col-span-6'; ?>">
                 <?php if($heading) :?>
-                    <h2 class="txt-h2 mb-8"><?php echo $heading ?></h2>
+                    <h2 class="txt-h2 mb-8 text-center"><?php echo $heading ?></h2>
                 <?php endif ;?>
                 <?php if ($subheading) : ?>
                     <h5 class="text-center text-16 font-bold mt-4 mb-5"><?php echo $subheading ?></h5>

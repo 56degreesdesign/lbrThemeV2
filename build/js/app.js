@@ -17239,8 +17239,9 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "jquery"); // LazyL
 
  // Theme Functions
 
-var fSmoothScroll = __webpack_require__(/*! ./utils/smooth-scroll */ "./assets/js/utils/smooth-scroll.js"); // const fGsapController = require('./components/gsap-controller')
+var fSmoothScroll = __webpack_require__(/*! ./utils/smooth-scroll */ "./assets/js/utils/smooth-scroll.js");
 
+var fGsapController = __webpack_require__(/*! ./components/gsap-controller */ "./assets/js/components/gsap-controller.js");
 
 var fCarousels = __webpack_require__(/*! ./components/carousels */ "./assets/js/components/carousels.js");
 
@@ -17297,8 +17298,8 @@ var InitVueComponents = function InitVueComponents() {
 fContactLazy.init();
 jQuery(function ($) {
   fSmoothScroll();
-  InitVueComponents(); // fGsapController.init()
-
+  InitVueComponents();
+  fGsapController.init();
   fHeader();
   fContact();
   fSwiperLazy();
@@ -17566,6 +17567,94 @@ var contactLazy = /*#__PURE__*/function () {
 }();
 
 var init = contactLazy;
+
+/***/ }),
+
+/***/ "./assets/js/components/gsap-controller.js":
+/*!*************************************************!*\
+  !*** ./assets/js/components/gsap-controller.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "init": () => (/* binding */ init)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var gsapController = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    var sectionAnimate, gsap, ScrollTrigger, _sectionAnimate;
+
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            sectionAnimate = document.querySelector(".cards-animate") !== null;
+
+            if (!sectionAnimate) {
+              _context.next = 20;
+              break;
+            }
+
+            _context.next = 4;
+            return __webpack_require__.e(/*! import() */ "node_modules_gsap_index_js").then(__webpack_require__.bind(__webpack_require__, /*! gsap */ "./node_modules/gsap/index.js"));
+
+          case 4:
+            _context.next = 6;
+            return _context.sent["default"];
+
+          case 6:
+            gsap = _context.sent;
+            _context.next = 9;
+            return __webpack_require__.e(/*! import() */ "node_modules_gsap_ScrollTrigger_js").then(__webpack_require__.bind(__webpack_require__, /*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js"));
+
+          case 9:
+            _context.next = 11;
+            return _context.sent["default"];
+
+          case 11:
+            ScrollTrigger = _context.sent;
+            gsap.registerPlugin(ScrollTrigger);
+
+            if (!sectionAnimate) {
+              _context.next = 20;
+              break;
+            }
+
+            _context.next = 16;
+            return __webpack_require__.e(/*! import() */ "assets_js_components_gsap_cards-animate_js").then(__webpack_require__.t.bind(__webpack_require__, /*! ./gsap/cards-animate */ "./assets/js/components/gsap/cards-animate.js", 23));
+
+          case 16:
+            _context.next = 18;
+            return _context.sent["default"];
+
+          case 18:
+            _sectionAnimate = _context.sent;
+
+            _sectionAnimate(gsap, ScrollTrigger);
+
+          case 20:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function gsapController() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+var init = gsapController;
 
 /***/ }),
 
@@ -26141,6 +26230,36 @@ module.exports = jQuery;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -26171,7 +26290,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"a9d49d31a749948b","assets_js_vue_resort_vue":"4cf75c18c92f6fcb","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"a9d49d31a749948b","assets_js_vue_resort_vue":"4cf75c18c92f6fcb","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"9eb293b4b2d8e89a","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

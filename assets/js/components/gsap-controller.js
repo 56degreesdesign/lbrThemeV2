@@ -1,19 +1,16 @@
 const gsapController = async function () {
-    const exampleElement = document.querySelector(".example") !== null;
-    
-    if ( exampleElement  ) {
+    const sectionAnimate = document.querySelector(".cards-animate") !== null;
+
+    if (sectionAnimate) {
         let gsap = await (await import('gsap')).default;
+        let ScrollTrigger = await (await import('gsap/ScrollTrigger')).default;
 
-        // ScrollTrigger
-        if ( exampleElement ) {
-            let ScrollTrigger = await (await import('gsap/ScrollTrigger')).default;
-            gsap.registerPlugin(ScrollTrigger);
-
-            if ( exampleElement ) {
-                let AnimatedSection = await (await import('./gsap/example')).default;
-                AnimatedSection(gsap, ScrollTrigger);
-            }
+        gsap.registerPlugin(ScrollTrigger)
+        if (sectionAnimate) {
+            let sectionAnimate = await (await import('./gsap/cards-animate')).default;
+            sectionAnimate(gsap, ScrollTrigger);
         }
+        
     }
 };
 

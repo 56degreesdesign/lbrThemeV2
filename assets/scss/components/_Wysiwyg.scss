@@ -60,13 +60,13 @@ $module: '.wysiwyg-headings';
     
       } 
     h5 {
-    @apply text-lg;
+        @apply txt-h5 mb-8;
   }
     h6 {
         @apply txt-3 mb-5 pt-3.5;
     }
     p {
-        @apply txt-1 text-center;
+        @apply txt-1;
         img {
             @apply inline;
         }
@@ -75,6 +75,7 @@ $module: '.wysiwyg-headings';
         @apply underline underline-offset-2;
     }
 }
+
 
 $module: '.wysiwyg-images';
 #{$module} {

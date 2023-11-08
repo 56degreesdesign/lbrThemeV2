@@ -7,7 +7,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 // Theme Functions
 const fSmoothScroll = require('./utils/smooth-scroll')
-// const fGsapController = require('./components/gsap-controller')
+const fGsapController = require('./components/gsap-controller')
 const fCarousels = require('./components/carousels');
 const fHeader = require('./components/header');
 const fContact = require('./components/lazy-load-contact-form')
@@ -61,7 +61,7 @@ fContactLazy.init()
 jQuery(function ($) {
     fSmoothScroll()
     InitVueComponents()
-    // fGsapController.init()
+    fGsapController.init()
     fHeader()
     fContact()
     fSwiperLazy();
@@ -87,6 +87,5 @@ jQuery(function ($) {
     residentialMenu.addEventListener("mouseleave", toggleSubmenu, false);
     casitasSubmenu.addEventListener("mouseenter", toggleSubmenu, false);
     casitasSubmenu.addEventListener("mouseleave", toggleSubmenu, false);
-
   
 })

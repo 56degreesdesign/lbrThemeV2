@@ -19,10 +19,10 @@ if ( have_rows('sections') ) {
 //            }
     }
 }
-$explore = get_field('explore', 'option');
 $contact = get_field('contact', 'option');
-get_template_part('templates/sections/global/explore', null, ['data' => $explore]);
 get_template_part('templates/sections/global/contact', null, ['data' => $contact]);
+get_template_part('templates/partials/book-now-bar');
+
 
 
 get_footer();

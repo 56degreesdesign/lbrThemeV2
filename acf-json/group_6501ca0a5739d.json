@@ -825,6 +825,134 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_654a41f02db19": {
+                    "key": "layout_654a41f02db19",
+                    "name": "image_cta",
+                    "label": "Image CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654a41f42db1c",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654a417af1734"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654b41f8368c3": {
+                    "key": "layout_654b41f8368c3",
+                    "name": "contact_intro",
+                    "label": "Contact Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654b41fe368c6",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654b41504b911"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654b52af7c5ac": {
+                    "key": "layout_654b52af7c5ac",
+                    "name": "explore",
+                    "label": "Explore",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654b52b27c5af",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654b51d393545"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654b5eb957049": {
+                    "key": "layout_654b5eb957049",
+                    "name": "visions",
+                    "label": "Visions",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654b5ebd5704c",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654b5e27a8527"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -852,5 +980,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699268811
+    "modified": 1699438284
 }
