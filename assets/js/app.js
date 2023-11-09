@@ -26,7 +26,16 @@ import {
 
 const InitVueComponents = () => {
     // Async components
-    let MapDirections, Resort;
+    let ListOfPosts, MapDirections, Resort;
+
+    if (document.querySelector(".list-of-posts")) {
+        ListOfPosts = defineAsyncComponent({
+            loader: () => import("./vue/list-of-posts.vue"),
+            delay: 500,
+        });
+
+        fShowTerms.init();
+    }
 
     if (document.querySelector(".map-directions")) {
         MapDirections = defineAsyncComponent({
@@ -44,6 +53,10 @@ const InitVueComponents = () => {
     
     // Init Vue Instance
     const $VueApp = createApp({});
+
+    if (ListOfPosts) {
+        $VueApp.component("list-of-posts", ListOfPosts);
+    }
 
     if (MapDirections) {
         $VueApp.component("map-directions", MapDirections);

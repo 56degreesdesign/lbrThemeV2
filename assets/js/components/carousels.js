@@ -2,10 +2,9 @@ const sliders = async function () {
     const swipers = document.querySelectorAll('.swiper-carousel');
     const bannerSwipers = document.querySelectorAll('.banner-carousel');
     const smallSwipers = document.querySelectorAll('.small-carousel');
+    const blogSwiper = document.querySelector('.blog-carousel');
 
-
-
-    if (bannerSwipers || swipers) {
+    if (bannerSwipers || swipers || blogSwiper) {
         let Swiper = await (await import("swiper/bundle")).default;
 
         if (swipers) {
@@ -122,6 +121,38 @@ const sliders = async function () {
                     }, false);
                 }
             });
+        }
+        
+        if (blogSwiper) {
+            let swiperCarousel = new Swiper(blogSwiper, {
+                loop: true,
+                speed: 600,
+                slidesPerView: 1,
+                spaceBetween: 21,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: blogSwiper.parentElement.parentElement.querySelector('.swiper-pagination-el'),
+                    type: 'fraction',
+                },
+            });
+
+            const prevBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-prev-el'),
+                nextBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-next-el');
+
+            if (prevBtn != null) {
+                prevBtn.addEventListener('click', () => {
+                    swiperCarousel.slidePrev()
+                }, false);
+            }
+
+            if (nextBtn != null) {
+                nextBtn.addEventListener('click', () => {
+                    swiperCarousel.slideNext()
+                }, false);
+            }
         }
     }
 };

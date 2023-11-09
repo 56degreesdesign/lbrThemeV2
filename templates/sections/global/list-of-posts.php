@@ -1,72 +1,51 @@
-<section class="bg-beige py-20 md:py-24 lg:py-32 xl:py-40">
+<?php
+    $section = $args['data'] ?? false;
+    $heading = $section['heading'] ?? false;
+    $posts = $section['posts'] ?? false;
+
+    $args_query = array(
+        'post_type' => 'post',
+        'post_status' => array('publish'),
+        'posts_per_page' => -1,
+        'order' => 'DESC',
+        'orderby' => 'date',
+    );
+    
+    $query = new WP_Query($args_query);
+    $posts = [];
+    
+    if ($query->have_posts()) {
+        $terms = [];
+    
+        $terms = get_terms('category', [
+            'hide_empty' => true,
+        ]);
+    
+        while ($query->have_posts()) {
+            $query->the_post();
+    
+            $posts[] = [
+                'id' => get_the_ID(),
+                'title' => get_the_title(),
+                'image' => featuredImageToAcfImage(get_post_thumbnail_id()),
+                'link' => get_the_permalink(),
+                'date' => get_the_date( 'F j, Y' ),
+                'terms' => wp_get_post_terms(get_the_ID(), 'category')
+            ];
+        }
+        wp_reset_postdata();
+    }
+?>
+<?php if ( $section ) : ?>
+<section id="vue-space" class="list-of-posts bg-beige py-20 md:py-24 lg:py-32 xl:py-40">
     <div class="container grid-layout">
-        <h2 class="col-span-full txt-h2 mb-16 md:mb-20 lg:mb-24 xl:mb-28">Always <br> moab <br> always <br> local</h2>
-        <div class="col-span-full flex flex-wrap lg:justify-center items-center gap-1 mb-12 md:mb-16 lg:mb-20">
-            <span class="font-bold text-10 uppercase w-full mb-4 md:mr-7 lg:mb-0 lg:w-fit lg:mr-11">Filter:</span>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MOAB</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MUSIC & ENTERTAINMENT</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">arts & culture</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">recreation & parks</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">bars & restaurants</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">shopping & retail</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">volounteer & donate</div>
-        </div>
-        <div class="col-span-full grid grid-cols-1 gap-y-10 mb-20 md:mb-28 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 lg:mb-32 xl:mb-40">
-            <div class="col-span-1 flex flex-col">
-                <div class="relative pb-[64.26%] mb-8 lg:mb-11">
-                    <div class="bg-black absolute-full"></div>
-                </div>
-                <div class="col-span-full flex flex-wrap gap-1 mb-7 md:mb-8 lg:mb-9">
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MOAB</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MUSIC & ENTERTAINMENT</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">arts & culture</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">...</div>
-                </div>
-                <h3 class="txt-h3 mb-6 !text-left !normal-case">Mighty Popular rocks the Moab Folk Festival and brings out the town, and all the folks.</h3>
-                <span class="text-17 font-bold">November 3, 2023</span>
-            </div>
-            <div class="col-span-1 flex flex-col">
-                <div class="relative pb-[64.26%] mb-8 lg:mb-11">
-                    <div class="bg-black absolute-full"></div>
-                </div>
-                <div class="col-span-full flex flex-wrap gap-1 mb-7 md:mb-8 lg:mb-9">
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MOAB</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MUSIC & ENTERTAINMENT</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">arts & culture</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">...</div>
-                </div>
-                <h3 class="txt-h3 mb-6 !text-left !normal-case">Mighty Popular rocks the Moab Folk Festival and brings out the town, and all the folks.</h3>
-                <span class="text-17 font-bold">November 3, 2023</span>
-            </div>
-            <div class="col-span-1 flex flex-col">
-                <div class="relative pb-[64.26%] mb-8 lg:mb-11">
-                    <div class="bg-black absolute-full"></div>
-                </div>
-                <div class="col-span-full flex flex-wrap gap-1 mb-7 md:mb-8 lg:mb-9">
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MOAB</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MUSIC & ENTERTAINMENT</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">arts & culture</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">...</div>
-                </div>
-                <h3 class="txt-h3 mb-6 !text-left !normal-case">Mighty Popular rocks the Moab Folk Festival and brings out the town, and all the folks.</h3>
-                <span class="text-17 font-bold">November 3, 2023</span>
-            </div>
-            <div class="col-span-1 flex flex-col">
-                <div class="relative pb-[64.26%] mb-8 lg:mb-11">
-                    <div class="bg-black absolute-full"></div>
-                </div>
-                <div class="col-span-full flex flex-wrap gap-1 mb-7 md:mb-8 lg:mb-9">
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MOAB</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">MUSIC & ENTERTAINMENT</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">arts & culture</div>
-                    <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full">...</div>
-                </div>
-                <h3 class="txt-h3 mb-6 !text-left !normal-case">Mighty Popular rocks the Moab Folk Festival and brings out the town, and all the folks.</h3>
-                <span class="text-17 font-bold">November 3, 2023</span>
-            </div>
-        </div>
-        <div class="col-span-full flex justify-center">
-            <button class="uppercase text-orange underline font-bold text-25">view more</button>
-        </div>
+        <h2 class="col-span-full txt-h2 mb-16 md:mb-20 lg:mb-24 xl:mb-28"><?= $heading; ?></h2>
+        <list-of-posts 
+            pagination='1'
+            terms='<?= json_encode($terms, JSON_HEX_APOS); ?>'
+            posts='<?= json_encode($posts, JSON_HEX_APOS); ?>'
+        >
+        </list-of-posts>
     </div>
 </section>
+<?php endif; ?>

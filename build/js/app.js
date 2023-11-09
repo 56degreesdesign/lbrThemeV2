@@ -17260,7 +17260,17 @@ var fShowTerms = __webpack_require__(/*! ./components/show-terms */ "./assets/js
 
 var InitVueComponents = function InitVueComponents() {
   // Async components
-  var MapDirections, Resort;
+  var ListOfPosts, MapDirections, Resort;
+
+  if (document.querySelector(".list-of-posts")) {
+    ListOfPosts = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
+      loader: function loader() {
+        return __webpack_require__.e(/*! import() */ "assets_js_vue_list-of-posts_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/list-of-posts.vue */ "./assets/js/vue/list-of-posts.vue"));
+      },
+      delay: 500
+    });
+    fShowTerms.init();
+  }
 
   if (document.querySelector(".map-directions")) {
     MapDirections = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
@@ -17282,6 +17292,10 @@ var InitVueComponents = function InitVueComponents() {
 
 
   var $VueApp = (0,vue__WEBPACK_IMPORTED_MODULE_3__.createApp)({});
+
+  if (ListOfPosts) {
+    $VueApp.component("list-of-posts", ListOfPosts);
+  }
 
   if (MapDirections) {
     $VueApp.component("map-directions", MapDirections);
@@ -17349,7 +17363,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var sliders = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-    var swipers, bannerSwipers, smallSwipers, Swiper;
+    var swipers, bannerSwipers, smallSwipers, blogSwiper, Swiper, swiperCarousel, prevBtn, nextBtn;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -17357,20 +17371,21 @@ var sliders = /*#__PURE__*/function () {
             swipers = document.querySelectorAll('.swiper-carousel');
             bannerSwipers = document.querySelectorAll('.banner-carousel');
             smallSwipers = document.querySelectorAll('.small-carousel');
+            blogSwiper = document.querySelector('.blog-carousel');
 
-            if (!(bannerSwipers || swipers)) {
-              _context.next = 12;
+            if (!(bannerSwipers || swipers || blogSwiper)) {
+              _context.next = 14;
               break;
             }
 
-            _context.next = 6;
+            _context.next = 7;
             return __webpack_require__.e(/*! import() */ "node_modules_swiper_swiper-bundle_esm_js").then(__webpack_require__.bind(__webpack_require__, /*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js"));
 
-          case 6:
-            _context.next = 8;
+          case 7:
+            _context.next = 9;
             return _context.sent["default"];
 
-          case 8:
+          case 9:
             Swiper = _context.sent;
 
             if (swipers) {
@@ -17486,7 +17501,37 @@ var sliders = /*#__PURE__*/function () {
               });
             }
 
-          case 12:
+            if (blogSwiper) {
+              swiperCarousel = new Swiper(blogSwiper, {
+                loop: true,
+                speed: 600,
+                slidesPerView: 1,
+                spaceBetween: 21,
+                autoplay: {
+                  delay: 5000,
+                  disableOnInteraction: false
+                },
+                pagination: {
+                  el: blogSwiper.parentElement.parentElement.querySelector('.swiper-pagination-el'),
+                  type: 'fraction'
+                }
+              });
+              prevBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-prev-el'), nextBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-next-el');
+
+              if (prevBtn != null) {
+                prevBtn.addEventListener('click', function () {
+                  swiperCarousel.slidePrev();
+                }, false);
+              }
+
+              if (nextBtn != null) {
+                nextBtn.addEventListener('click', function () {
+                  swiperCarousel.slideNext();
+                }, false);
+              }
+            }
+
+          case 14:
           case "end":
             return _context.stop();
         }
@@ -26241,7 +26286,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"cd16acc4a369bc51","assets_js_vue_resort_vue":"ce844e4ece1e382f","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"40a6cb84a83025e9","assets_js_vue_map-directions_vue":"cd16acc4a369bc51","assets_js_vue_resort_vue":"ce844e4ece1e382f","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

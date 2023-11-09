@@ -1216,6 +1216,12 @@ html {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}
 .ml-8 {
   margin-left: 2rem;
 }
@@ -1264,6 +1270,9 @@ html {
 .mt-5 {
   margin-top: 1.25rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .mt-7 {
   margin-top: 1.75rem;
 }
@@ -1294,6 +1303,9 @@ html {
 .hidden {
   display: none;
 }
+.h-14 {
+  height: 3.5rem;
+}
 .h-5 {
   height: 1.25rem;
 }
@@ -1309,8 +1321,14 @@ html {
 .h-\[48px\] {
   height: 48px;
 }
+.h-\[50px\] {
+  height: 50px;
+}
 .h-\[900px\] {
   height: 900px;
+}
+.h-auto {
+  height: auto;
 }
 .h-fit {
   height: -webkit-fit-content;
@@ -1329,6 +1347,12 @@ html {
 .max-h-\[21px\] {
   max-height: 21px;
 }
+.max-h-\[54px\] {
+  max-height: 54px;
+}
+.min-h-\[421px\] {
+  min-height: 421px;
+}
 .min-h-\[648px\] {
   min-height: 648px;
 }
@@ -1337,6 +1361,9 @@ html {
 }
 .w-1\/2 {
   width: 50%;
+}
+.w-6 {
+  width: 1.5rem;
 }
 .w-7 {
   width: 1.75rem;
@@ -1352,6 +1379,12 @@ html {
 }
 .w-\[38\.645\%\] {
   width: 38.645%;
+}
+.w-\[50px\] {
+  width: 50px;
+}
+.w-\[70\%\] {
+  width: 70%;
 }
 .w-\[83\.333\%\] {
   width: 83.333%;
@@ -1373,8 +1406,14 @@ html {
 .max-w-\[200px\] {
   max-width: 200px;
 }
+.max-w-\[213px\] {
+  max-width: 213px;
+}
 .max-w-\[72px\] {
   max-width: 72px;
+}
+.flex-grow {
+  flex-grow: 1;
 }
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
@@ -1458,6 +1497,12 @@ html {
 }
 .gap-1 {
   gap: 0.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-2\.5 {
+  gap: 0.625rem;
 }
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
@@ -1602,9 +1647,17 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.\!object-contain {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.\!object-left {
+  -o-object-position: left !important;
+     object-position: left !important;
 }
 .object-center {
   -o-object-position: center;
@@ -1721,8 +1774,8 @@ html {
 .pb-7 {
   padding-bottom: 1.75rem;
 }
-.pb-72 {
-  padding-bottom: 18rem;
+.pb-80 {
+  padding-bottom: 20rem;
 }
 .pb-\[100\%\] {
   padding-bottom: 100%;
@@ -1814,6 +1867,9 @@ html {
 .pl-4 {
   padding-left: 1rem;
 }
+.pl-8 {
+  padding-left: 2rem;
+}
 .pl-\[25px\] {
   padding-left: 25px;
 }
@@ -1825,6 +1881,9 @@ html {
 }
 .pr-5 {
   padding-right: 1.25rem;
+}
+.pr-8 {
+  padding-right: 2rem;
 }
 .pr-\[25px\] {
   padding-right: 25px;
@@ -1873,9 +1932,6 @@ html {
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pb-80 {
-  padding-bottom: 20rem;
 }
 .\!text-left {
   text-align: left !important;
@@ -2016,6 +2072,11 @@ html {
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -3333,6 +3394,9 @@ form .btn:hover {
   margin-top: 1.5rem;
   font-size: 1.063rem;
 }
+.last\:mb-0:last-child {
+  margin-bottom: 0px;
+}
 .last-of-type\:border-b:last-of-type {
   border-bottom-width: 1px;
 }
@@ -3347,12 +3411,24 @@ form .btn:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+.hover\:text-orange:hover {
+  --tw-text-opacity: 1;
+  color: rgb(204 136 93 / var(--tw-text-opacity));
+}
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .hover\:opacity-70:hover {
   opacity: 0.7;
+}
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+}
+@media (min-width: 640px) {
+  .sm\:w-auto {
+    width: auto;
+  }
 }
 @media (min-width: 768px) {
   .md\:col-span-1 {
@@ -3423,6 +3499,9 @@ form .btn:hover {
   }
   .md\:inline {
     display: inline;
+  }
+  .md\:min-h-\[414px\] {
+    min-height: 414px;
   }
   .md\:min-h-\[737px\] {
     min-height: 737px;
@@ -3749,6 +3828,9 @@ form .btn:hover {
   .lg\:justify-center {
     justify-content: center;
   }
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
   .lg\:gap-x-10 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
@@ -3850,6 +3932,9 @@ form .btn:hover {
   .lg\:pl-10 {
     padding-left: 2.5rem;
   }
+  .lg\:pl-12 {
+    padding-left: 3rem;
+  }
   .lg\:pl-7 {
     padding-left: 1.75rem;
   }
@@ -3864,6 +3949,9 @@ form .btn:hover {
   }
   .lg\:pr-10 {
     padding-right: 2.5rem;
+  }
+  .lg\:pr-14 {
+    padding-right: 3.5rem;
   }
   .lg\:pr-\[2\.5rem\] {
     padding-right: 2.5rem;
@@ -4103,4 +4191,7 @@ form .btn:hover {
   .\32xl\:pt-20 {
     padding-top: 5rem;
   }
+}
+.\[\&_path\]\:stroke-white path {
+  stroke: #fff;
 }
