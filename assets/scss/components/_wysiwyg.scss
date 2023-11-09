@@ -14,6 +14,30 @@ $module: '.wysiwyg';
   @extend .wysiwyg-code;
   @extend .wysiwyg-spacing;
   @extend .wysiwyg-lists;
+    
+    &.wysiwyg--single {
+        p {
+            @apply tracking-20 text-left mb-8;
+            
+            @apply text-24;
+        }
+        
+        blockquote {
+            @apply font-Reckless font-light;
+            
+            &.big {
+                p {
+                    @apply tracking-10 leading-1.07;
+                    @apply text-70;
+                }
+            }
+            
+            p {
+                @apply tracking-10 leading-1.07;
+                @apply text-40;
+            }
+        }
+    }
 }
 
 $module: '.wysiwyg-anchors';

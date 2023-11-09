@@ -13,6 +13,7 @@ const fHeader = require('./components/header');
 const fContact = require('./components/lazy-load-contact-form')
 const fContactLazy = require('./components/contact-lazy')
 const fSwiperLazy = require('./components/swiper-lazy')
+const fShowTerms = require('./components/show-terms')
 
 
 
@@ -65,6 +66,7 @@ jQuery(function ($) {
     fHeader()
     fContact()
     fSwiperLazy();
+    fShowTerms.init();
     
     $(document).ready(function () {
         $('.form select').select2({

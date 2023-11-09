@@ -26,6 +26,8 @@ require get_stylesheet_directory() . '/includes/utils/cf7-button.php';
 require get_stylesheet_directory() . '/includes/utils/acf-options.php';
 require get_stylesheet_directory() . '/includes/utils/google-maps-api.php';
 require get_stylesheet_directory() . '/includes/utils/shortcodes.php';
+require get_stylesheet_directory() . '/includes/utils/featured-image.php';
+require get_stylesheet_directory() . '/includes/utils/social-sharing.php';
 
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 require get_stylesheet_directory() . '/includes/wp-theme-support.php';
