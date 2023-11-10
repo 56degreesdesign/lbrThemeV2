@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref, defineProps, computed } from "vue";
 
 const props = defineProps({
     section: String
@@ -11,6 +11,7 @@ const selected = ref('by_air');
 const select = (option) => {
     selected.value = option;
 };
+
 </script>
 
 <template>
