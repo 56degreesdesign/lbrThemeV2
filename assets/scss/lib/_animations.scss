@@ -70,7 +70,7 @@
     @apply relative;
     &::after {
         content: '';
-        @apply block absolute bottom-0.5 bg-beige left-0 w-full h-px transition-all duration-300;
+        @apply block absolute -bottom-px bg-beige left-0 w-full h-px transition-all duration-300;
     }
 
     &:hover {
@@ -84,7 +84,7 @@
     @apply relative;
     &::after {
         content: '';
-        @apply block absolute bottom-0.5 left-0 w-full h-px bg-black transition-all duration-300;
+        @apply block absolute -bottom-px left-0 w-full h-px bg-black transition-all duration-300;
     }
 
     &:hover {

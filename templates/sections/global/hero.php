@@ -6,7 +6,7 @@ $subheading = $section['subheading'] ?? false;
 $button = $section['button'] ?? false;
 ?>
 <?php if ($section) : ?>
-<section class="min-h-screen flex items-center relative z-30">
+<section class="min-h-screen flex items-center relative">
     <div class="absolute top-0 left-0 w-full">
         <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
     </div>

@@ -16959,15 +16959,17 @@ jQuery(function ($) {
     var vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
   });
-  var residentialMenu = document.querySelector('.residential-casitas');
-  var casitasSubmenu = document.querySelector('.casitas-submenu');
+  var menuItems = document.querySelectorAll('.menu-item-has-children');
+  var dropdownMenu = document.querySelector('.dropdown-menu');
   var toggleSubmenu = function toggleSubmenu(event) {
-    casitasSubmenu.classList.toggle('active', event.type === 'mouseenter');
+    dropdownMenu.classList.toggle('active', event.type === 'mouseenter');
   };
-  residentialMenu.addEventListener("mouseenter", toggleSubmenu, false);
-  residentialMenu.addEventListener("mouseleave", toggleSubmenu, false);
-  casitasSubmenu.addEventListener("mouseenter", toggleSubmenu, false);
-  casitasSubmenu.addEventListener("mouseleave", toggleSubmenu, false);
+  dropdownMenu.addEventListener("mouseenter", toggleSubmenu, false);
+  dropdownMenu.addEventListener("mouseleave", toggleSubmenu, false);
+  menuItems.forEach(function (menuItem, index) {
+    menuItem.addEventListener('mouseenter', toggleSubmenu, false);
+    menuItem.addEventListener('mouseleave', toggleSubmenu, false);
+  });
 });
 
 /***/ }),

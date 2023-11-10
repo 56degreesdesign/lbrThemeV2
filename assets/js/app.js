@@ -85,16 +85,17 @@ jQuery(function ($) {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
     
-    const residentialMenu = document.querySelector('.residential-casitas');
-    const casitasSubmenu = document.querySelector('.casitas-submenu');
+    const menuItems = document.querySelectorAll('.menu-item-has-children');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
 
     const toggleSubmenu = (event) => {
-        casitasSubmenu.classList.toggle('active', event.type === 'mouseenter');
+        dropdownMenu.classList.toggle('active', event.type === 'mouseenter');
     };
+    dropdownMenu.addEventListener("mouseenter", toggleSubmenu, false);
+    dropdownMenu.addEventListener("mouseleave", toggleSubmenu, false);
 
-    residentialMenu.addEventListener("mouseenter", toggleSubmenu, false);
-    residentialMenu.addEventListener("mouseleave", toggleSubmenu, false);
-    casitasSubmenu.addEventListener("mouseenter", toggleSubmenu, false);
-    casitasSubmenu.addEventListener("mouseleave", toggleSubmenu, false);
-  
+    menuItems.forEach((menuItem, index) => {
+        menuItem.addEventListener('mouseenter', toggleSubmenu, false);
+        menuItem.addEventListener('mouseleave', toggleSubmenu, false);
+    });
 })

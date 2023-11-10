@@ -16,7 +16,7 @@ $button = $section['button'] ?? false;
         </div>
         <div class="col-span-full mt-10 flex flex-col items-center justify-center md:mt-12 lg:mt-0 lg:col-span-1">
             <?php if($heading) :?>
-                <h1 class="txt-h2 mb-8 md:mb-10 lg:mb-14"><?php echo $heading ?></h1>
+                <h1 class="txt-h2 text-center mb-8 md:mb-10 lg:mb-14"><?php echo $heading ?></h1>
             <?php endif ;?>
             <?php if($content) :?>
                 <p class="text-center text-17 lg:w-1/2"><?php echo $content ?></p>

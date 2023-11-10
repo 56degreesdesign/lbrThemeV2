@@ -9,7 +9,6 @@
         > li {
             > a {
                 @apply lg:text-40 xl:text-51 font-bold uppercase underline-animation;
-
             }
         }
     }
@@ -35,15 +34,30 @@
 
     .main-menu-test {
         @apply flex gap-x-4;
-        li {
-            //@apply text-14 underline font-bold underline-offset-2;
-            a {
+        > li {
+            @apply relative;
+            > a {
                 @apply text-14 no-underline font-bold underline-offset-2 uppercase underline-animation-black;
+            }
+            .sub-menu {
+                @apply pointer-events-none absolute top-4 pt-10 pb-3 left-0 opacity-0 duration-300 text-orange uppercase;
+                > li {
+                    > a {
+                        @apply font-bold text-14 whitespace-nowrap;
+                    }
+                }
+            }
+            &:hover {
+                .sub-menu {
+                    @apply opacity-100 duration-300 pointer-events-auto;
+                    > li {
+                    }
+                }
             }
         }
     }
     
-    .casitas-submenu {
+    .dropdown-menu {
         //@apply bg-orange;
         display: grid;
         transition-property: all;

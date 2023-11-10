@@ -7,7 +7,7 @@ $button = $section['button'] ?? false;
 ?>
 
 <?php if ($section) : ?>
-    <section class="flex items-end relative z-30 min-h-screen">
+    <section class="flex items-end relative min-h-screen">
         <div class="absolute top-0 left-0 w-full">
             <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
         </div>
@@ -25,20 +25,6 @@ $button = $section['button'] ?? false;
                 <?php get_template_part('templates/partials/nav-arrow', null, ['fill' => '#EEE3D6', 'class' => 'rotate-90']); ?>
             </a>
         </div>
-<!--        <div class="absolute bottom-[35%] xl:bottom-[43.43%] left-0 w-full hidden lg:block">-->
-<!--            <div class="container grid-layout max-w-[1920px] mx-auto">-->
-<!--                <div class="col-start-1 col-span-3 flex gap-x-20 2xl:gap-x-64">-->
-<!--                    --><?php //foreach ($location['north'] as $item) : ?>
-<!--                        <span class="text-22 font-bold uppercase text-beige">--><?php //echo $item['label'] ?><!--</span>-->
-<!--                    --><?php //endforeach ;?>
-<!--                </div>-->
-<!--                <div class="col-start-9 col-span-4 flex justify-end gap-x-20 2xl:gap-x-64">-->
-<!--                    --><?php //foreach ($location['west'] as $item) : ?>
-<!--                        <span class="text-22 font-bold uppercase text-beige">--><?php //echo $item['label'] ?><!--</span>-->
-<!--                    --><?php //endforeach ;?>
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
         <div class="w-full absolute bottom-10 left-0">
             <div class="container w-full pointer-events-none flex justify-end">
                 <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>

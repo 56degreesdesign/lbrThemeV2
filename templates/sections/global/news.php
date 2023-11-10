@@ -1,6 +1,6 @@
 <?php 
 $section = $args['data'] ?? false;
-if ($section) :
+
 $args_query = array(
     'post_type' => 'newsandevents',
     'post_status' => array('publish'),
@@ -32,7 +32,7 @@ if ($query->have_posts()) {
     wp_reset_postdata();
 }
 
-endif;
+
 ?>
 <?php if(count($posts) > 0) :?>
 <section id="vue-space" class="news-and-events">

@@ -8,6 +8,7 @@ $hidden = $args['hidden'] ?? false;
 $footer = get_field('footer', 'option') ?? false;
 $downloads = $footer['downloads'] ?? false;
 $events = get_field('header', 'option')['upcoming_event'] ?? false;
+$navbar = get_field('header', 'option')['navbar'] ?? false;
 
 
 if (!$hidden) :
@@ -15,11 +16,11 @@ if (!$hidden) :
 
     <header class="fixed top-0 left-0 w-full z-20">
         <div class="w-full shadow-lg bg-beige">
-            <div class="container flex justify-between py-6 xl:py-8 bg-beige flex-wrap" >
+            <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
                     <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => 'black']) ?>
                 </a>
-                <div class="flex items-center gap-x-20">
+                <div class="flex items-center lg:gap-x-10 xl:gap-x-20">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'fs_nav_menu',
@@ -27,64 +28,28 @@ if (!$hidden) :
                         'menu_class' => 'main-menu-test',
                     ));
                     ?>
-                    <button class="toggle-menu rounded-full border uppercase px-5 xl:px-10 pt-2.5 pb-2 text-15 w-fit text-center">Explore more</button>
+                    <button class="toggle-menu rounded-full border uppercase px-5 xl:px-10 pt-2.5 pb-2 text-14 w-fit text-center max-h-[35px] flex items-center">Explore more</button>
                 </div>
-                <div class="w-full casitas-submenu">
-                    <div class="w-full grid grid-cols-3 2xl:pl-[15.56%]">
-                        <div class="col-span-1 flex gap-x-6 pr-11 pb-6 pt-3 border-r xl:ml-12 mt-12">
-                            <div class="flex flex-col 2xl:w-[57.33%]">
-                                <h3 class="txt-h3 mb-1.5"> Strata</h3>
-                                <p class="text-11 font-bold mb-8">2 BEDROOM CASITAS</p>
-                                <a class="bg-orange uppercase px-5 xl:px-10 pt-2.5 pb-2 text-10 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="#">
-                                    view casita</a>
-                            </div>
-                        
-                           
-                            <div class="w-full">
-                                <div class="relative pb-[64%] w-full">
-                                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/img/test-img.jpg" alt="">
+                <div class="w-full dropdown-menu">
+                    <div class="w-full grid grid-cols-3">
+                        <div class="col-span-full min-h-[159px] pb-6 flex justify-between items-end">
+                            <div class="flex flex-col">
+                                <div class="text-12">
+                                    <span><?php echo $navbar['address'] ?></span>
+                                </div>
+                                <div>
+                                    <a class="underline-animation-black text-10 font-bold uppercase" href="<?php echo $navbar['link']['url'] ?>" target="<?php echo $navbar['link']['target'] ?>"><?php echo $navbar['link']['title'] ?></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-span-1 flex gap-x-6 pr-11 pb-6 pt-3 border-r xl:ml-12 mt-12">
-                            <div class="flex flex-col 2xl:w-[57.33%]">
-                                <h3 class="txt-h3 mb-1.5">Mesa</h3>
-                                <p class="text-11 font-bold mb-8">2 BEDROOM CASITAS</p>
-                                <a class="bg-orange uppercase px-5 xl:px-10 pt-2.5 pb-2 text-10 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="#">
-                                    view casita</a>
-                            </div>
-                            <div class="w-full">
-                                <div class="relative pb-[64%] w-full">
-                                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/img/test-img.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-span-1 flex gap-x-6 pb-6 pt-3 xl:ml-12 mt-12">
-                            <div class="flex flex-col 2xl:w-[57.33%]">
-                                <h3 class="txt-h3 mb-1.5"> Spire</h3>
-                                <p class="text-11 font-bold mb-8">2 BEDROOM CASITAS</p>
-                                <a class="bg-orange uppercase px-5 xl:px-10 pt-2.5 pb-2 text-10 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="#">
-                                    view casita</a>
-                            </div>
-                            <div class="w-full">
-                                <div class="relative pb-[64%] w-full">
-                                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/img/spire.png" alt="">
-                                </div>
-                            </div>
-
-                        
+                            <?php get_template_part( 'templates/partials/button', null, ['data' => $navbar['button'], 'class' => ''] ) ?>
                         </div>
                     </div>
                 </div>
-             
             </div>
         </div>
 
     </header>
 
-<!--<header class="fixed top-0 left-0 w-full z-20">-->
-<!--    --><?php //get_template_part('templates/partials/navbar') ?>
-<!--</header>-->
     <div class="menu-wrapper fixed w-full h-screen top-0 left-0 translate-x-full overflow-auto z-[60]">
         <div class="w-1/2 bg-orange absolute top-0 left-0 h-full -z-10"></div>
         <div class="w-1/2 bg-green absolute top-0 right-0 h-full -z-10"></div>
