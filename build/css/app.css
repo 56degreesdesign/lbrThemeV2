@@ -1016,8 +1016,8 @@ html {
 .-left-\[22px\] {
   left: -22px;
 }
-.-top-3 {
-  top: -0.75rem;
+.bottom-0 {
+  bottom: 0px;
 }
 .bottom-10 {
   bottom: 2.5rem;
@@ -1042,9 +1042,6 @@ html {
 }
 .left-1\/2 {
   left: 50%;
-}
-.left-12 {
-  left: 3rem;
 }
 .left-3 {
   left: 0.75rem;
@@ -1075,9 +1072,6 @@ html {
 }
 .top-\[60\%\] {
   top: 60%;
-}
-.bottom-0 {
-  bottom: 0px;
 }
 .-z-10 {
   z-index: -10;
@@ -1115,6 +1109,9 @@ html {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.col-span-8 {
+  grid-column: span 8 / span 8;
+}
 .col-span-full {
   grid-column: 1 / -1;
 }
@@ -1127,6 +1124,9 @@ html {
 .col-start-11 {
   grid-column-start: 11;
 }
+.col-start-12 {
+  grid-column-start: 12;
+}
 .col-start-4 {
   grid-column-start: 4;
 }
@@ -1138,9 +1138,6 @@ html {
 }
 .col-start-9 {
   grid-column-start: 9;
-}
-.col-start-3 {
-  grid-column-start: 3;
 }
 .row-start-1 {
   grid-row-start: 1;
@@ -1176,6 +1173,9 @@ html {
 }
 .mb-12 {
   margin-bottom: 3rem;
+}
+.mb-14 {
+  margin-bottom: 3.5rem;
 }
 .mb-16 {
   margin-bottom: 4rem;
@@ -1267,14 +1267,14 @@ html {
 .mt-5 {
   margin-top: 1.25rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .mt-7 {
   margin-top: 1.75rem;
 }
 .mt-auto {
   margin-top: auto;
-}
-.mt-36 {
-  margin-top: 9rem;
 }
 .block {
   display: block;
@@ -1300,6 +1300,12 @@ html {
 .hidden {
   display: none;
 }
+.h-1 {
+  height: 0.25rem;
+}
+.h-3 {
+  height: 0.75rem;
+}
 .h-5 {
   height: 1.25rem;
 }
@@ -1309,14 +1315,8 @@ html {
 .h-\[149px\] {
   height: 149px;
 }
-.h-\[26px\] {
-  height: 26px;
-}
 .h-\[48px\] {
   height: 48px;
-}
-.h-\[900px\] {
-  height: 900px;
 }
 .h-fit {
   height: -webkit-fit-content;
@@ -1332,11 +1332,14 @@ html {
 .h-screen {
   height: 100vh;
 }
+.max-h-10 {
+  max-height: 2.5rem;
+}
 .max-h-\[21px\] {
   max-height: 21px;
 }
-.max-h-10 {
-  max-height: 2.5rem;
+.min-h-\[29px\] {
+  min-height: 29px;
 }
 .min-h-\[648px\] {
   min-height: 648px;
@@ -1344,23 +1347,17 @@ html {
 .min-h-screen {
   min-height: 100vh;
 }
-.min-h-\[29px\] {
-  min-height: 29px;
-}
 .w-1\/2 {
   width: 50%;
 }
 .w-7 {
   width: 1.75rem;
 }
+.w-\[192px\] {
+  width: 192px;
+}
 .w-\[230px\] {
   width: 230px;
-}
-.w-\[26px\] {
-  width: 26px;
-}
-.w-\[376px\] {
-  width: 376px;
 }
 .w-\[38\.645\%\] {
   width: 38.645%;
@@ -1379,6 +1376,9 @@ html {
 .w-screen {
   width: 100vw;
 }
+.min-w-\[235px\] {
+  min-width: 235px;
+}
 .max-w-\[158px\] {
   max-width: 158px;
 }
@@ -1387,6 +1387,9 @@ html {
 }
 .max-w-\[200px\] {
   max-width: 200px;
+}
+.max-w-\[212px\] {
+  max-width: 212px;
 }
 .max-w-\[72px\] {
   max-width: 72px;
@@ -1400,6 +1403,10 @@ html {
 }
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-\[109px\] {
+  --tw-translate-y: -109px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .translate-x-full {
@@ -1453,9 +1460,6 @@ html {
 .flex-wrap {
   flex-wrap: wrap;
 }
-.content-end {
-  align-content: flex-end;
-}
 .items-end {
   align-items: flex-end;
 }
@@ -1484,6 +1488,10 @@ html {
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 .gap-x-14 {
   -moz-column-gap: 3.5rem;
@@ -1655,6 +1663,14 @@ html {
   padding-left: 25px;
   padding-right: 25px;
 }
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -1687,13 +1703,13 @@ html {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .py-40 {
   padding-top: 10rem;
   padding-bottom: 10rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -1706,10 +1722,6 @@ html {
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-}
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -1789,11 +1801,11 @@ html {
 .pb-\[134\%\] {
   padding-bottom: 134%;
 }
+.pb-\[134\.96\%\] {
+  padding-bottom: 134.96%;
+}
 .pb-\[151\.93\%\] {
   padding-bottom: 151.93%;
-}
-.pb-\[37\%\] {
-  padding-bottom: 37%;
 }
 .pb-\[51\%\] {
   padding-bottom: 51%;
@@ -1822,6 +1834,9 @@ html {
 .pb-\[64\.527\%\] {
   padding-bottom: 64.527%;
 }
+.pb-\[64\.65\%\] {
+  padding-bottom: 64.65%;
+}
 .pb-\[64\.75\%\] {
   padding-bottom: 64.75%;
 }
@@ -1833,9 +1848,6 @@ html {
 }
 .pb-\[66\%\] {
   padding-bottom: 66%;
-}
-.pb-\[67\%\] {
-  padding-bottom: 67%;
 }
 .pb-\[69\%\] {
   padding-bottom: 69%;
@@ -1909,9 +1921,6 @@ html {
 .pt-8 {
   padding-top: 2rem;
 }
-.pt-40 {
-  padding-top: 10rem;
-}
 .\!text-left {
   text-align: left !important;
 }
@@ -1926,6 +1935,9 @@ html {
 }
 .text-11 {
   font-size: 0.688rem;
+}
+.text-12 {
+  font-size: 0.75rem;
 }
 .text-13 {
   font-size: 0.813rem;
@@ -2474,7 +2486,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
 }
 .wysiwyg-headings h5, .wysiwyg h5 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -2488,6 +2500,16 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 @media (min-width: 1280px) {
   .wysiwyg-headings h5, .wysiwyg h5 {
     font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .wysiwyg-headings h5, .wysiwyg h5 {
+    margin-bottom: 1.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .wysiwyg-headings h5, .wysiwyg h5 {
+    margin-bottom: 2rem;
   }
 }
 .wysiwyg-headings h6, .wysiwyg h6 {
@@ -2559,8 +2581,16 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   list-style-type: decimal;
 }
 .wysiwyg-lists li, .wysiwyg li {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+  margin-left: -1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.35294117647;
+}
+@media (min-width: 1024px) {
+  .wysiwyg-lists li, .wysiwyg li {
+    font-size: 1.063rem;
+  }
 }
 
 form .wpcf7-not-valid-tip {
@@ -3493,10 +3523,6 @@ form .btn:hover {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
-  .md\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -3507,9 +3533,6 @@ form .btn:hover {
   }
   .md\:pb-12 {
     padding-bottom: 3rem;
-  }
-  .md\:pb-16 {
-    padding-bottom: 4rem;
   }
   .md\:pb-20 {
     padding-bottom: 5rem;
@@ -3716,9 +3739,6 @@ form .btn:hover {
   .lg\:mt-0 {
     margin-top: 0px;
   }
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
   .lg\:mt-14 {
     margin-top: 3.5rem;
   }
@@ -3793,9 +3813,6 @@ form .btn:hover {
   .lg\:items-start {
     align-items: flex-start;
   }
-  .lg\:items-center {
-    align-items: center;
-  }
   .lg\:justify-start {
     justify-content: flex-start;
   }
@@ -3804,6 +3821,9 @@ form .btn:hover {
   }
   .lg\:justify-center {
     justify-content: center;
+  }
+  .lg\:justify-between {
+    justify-content: space-between;
   }
   .lg\:gap-x-10 {
     -moz-column-gap: 2.5rem;
@@ -3842,9 +3862,9 @@ form .btn:hover {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
-  .lg\:px-\[21\.67\%\] {
-    padding-left: 21.67%;
-    padding-right: 21.67%;
+  .lg\:px-\[10\%\] {
+    padding-left: 10%;
+    padding-right: 10%;
   }
   .lg\:py-0 {
     padding-top: 0px;
@@ -3866,12 +3886,11 @@ form .btn:hover {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-  .lg\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
   }
-  .lg\:pb-16 {
-    padding-bottom: 4rem;
+  .lg\:pb-14 {
+    padding-bottom: 3.5rem;
   }
   .lg\:pb-20 {
     padding-bottom: 5rem;
@@ -3908,9 +3927,6 @@ form .btn:hover {
   }
   .lg\:pl-\[2\.5rem\] {
     padding-left: 2.5rem;
-  }
-  .lg\:pl-\[3\.563rem\] {
-    padding-left: 3.563rem;
   }
   .lg\:pr-0 {
     padding-right: 0px;
@@ -3981,14 +3997,14 @@ form .btn:hover {
   .xl\:col-start-2 {
     grid-column-start: 2;
   }
-  .xl\:col-start-8 {
-    grid-column-start: 8;
-  }
   .xl\:col-start-3 {
     grid-column-start: 3;
   }
   .xl\:col-start-7 {
     grid-column-start: 7;
+  }
+  .xl\:col-start-8 {
+    grid-column-start: 8;
   }
   .xl\:mb-10 {
     margin-bottom: 2.5rem;
@@ -4032,9 +4048,6 @@ form .btn:hover {
   .xl\:ml-12 {
     margin-left: 3rem;
   }
-  .xl\:mt-0 {
-    margin-top: 0px;
-  }
   .xl\:mt-16 {
     margin-top: 4rem;
   }
@@ -4047,11 +4060,11 @@ form .btn:hover {
   .xl\:mt-28 {
     margin-top: 7rem;
   }
-  .xl\:mt-52 {
-    margin-top: 13rem;
-  }
   .xl\:mt-36 {
     margin-top: 9rem;
+  }
+  .xl\:mt-52 {
+    margin-top: 13rem;
   }
   .xl\:block {
     display: block;
@@ -4066,9 +4079,6 @@ form .btn:hover {
   .xl\:flex-row {
     flex-direction: row;
   }
-  .xl\:justify-center {
-    justify-content: center;
-  }
   .xl\:gap-x-52 {
     -moz-column-gap: 13rem;
          column-gap: 13rem;
@@ -4081,6 +4091,10 @@ form .btn:hover {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  .xl\:px-\[15\%\] {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
   .xl\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -4089,11 +4103,8 @@ form .btn:hover {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .xl\:pb-20 {
-    padding-bottom: 5rem;
-  }
-  .xl\:pb-28 {
-    padding-bottom: 7rem;
+  .xl\:pb-14 {
+    padding-bottom: 3.5rem;
   }
   .xl\:pb-32 {
     padding-bottom: 8rem;
@@ -4131,6 +4142,9 @@ form .btn:hover {
   .xl\:pt-10 {
     padding-top: 2.5rem;
   }
+  .xl\:pt-16 {
+    padding-top: 4rem;
+  }
   .xl\:pt-24 {
     padding-top: 6rem;
   }
@@ -4146,8 +4160,14 @@ form .btn:hover {
   .xl\:pt-48 {
     padding-top: 12rem;
   }
+  .xl\:pt-52 {
+    padding-top: 13rem;
+  }
   .xl\:text-17 {
     font-size: 1.063rem;
+  }
+  .xl\:text-26 {
+    font-size: 1.625rem;
   }
   .xl\:text-35 {
     font-size: 2.188rem;
@@ -4157,6 +4177,9 @@ form .btn:hover {
   .\32xl\:w-\[57\.33\%\] {
     width: 57.33%;
   }
+  .\32xl\:flex-row {
+    flex-direction: row;
+  }
   .\32xl\:gap-x-60 {
     -moz-column-gap: 15rem;
          column-gap: 15rem;
@@ -4164,6 +4187,10 @@ form .btn:hover {
   .\32xl\:gap-x-64 {
     -moz-column-gap: 16rem;
          column-gap: 16rem;
+  }
+  .\32xl\:px-\[21\.67\%\] {
+    padding-left: 21.67%;
+    padding-right: 21.67%;
   }
   .\32xl\:pl-24 {
     padding-left: 6rem;

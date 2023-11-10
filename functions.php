@@ -30,3 +30,4 @@ require get_stylesheet_directory() . '/includes/utils/shortcodes.php';
 require get_stylesheet_directory() . '/includes/scripts-and-styles.php';
 require get_stylesheet_directory() . '/includes/wp-theme-support.php';
 require get_stylesheet_directory() . '/includes/api.php';
+require get_stylesheet_directory() . '/includes/cpt/news-and-events.php';

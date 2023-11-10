@@ -25,11 +25,17 @@ import {
 
 const InitVueComponents = () => {
     // Async components
-    let MapDirections, Resort;
+    let MapDirections, Resort, NewsAndEvents;
 
     if (document.querySelector(".map-directions")) {
         MapDirections = defineAsyncComponent({
             loader: () => import("./vue/map-directions.vue"),
+            delay: 500,
+        });
+    }
+    if (document.querySelector(".news-and-events")) {
+        NewsAndEvents = defineAsyncComponent({
+            loader: () => import("./vue/news-and-events.vue"),
             delay: 500,
         });
     }
@@ -46,6 +52,9 @@ const InitVueComponents = () => {
 
     if (MapDirections) {
         $VueApp.component("map-directions", MapDirections);
+    }
+    if (NewsAndEvents) {
+        $VueApp.component("news-and-events", NewsAndEvents);
     }
     if (Resort) {
         $VueApp.component("resort", Resort);

@@ -17259,12 +17259,21 @@ var fSwiperLazy = __webpack_require__(/*! ./components/swiper-lazy */ "./assets/
 
 var InitVueComponents = function InitVueComponents() {
   // Async components
-  var MapDirections, Resort;
+  var MapDirections, Resort, NewsAndEvents;
 
   if (document.querySelector(".map-directions")) {
     MapDirections = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
       loader: function loader() {
         return __webpack_require__.e(/*! import() */ "assets_js_vue_map-directions_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/map-directions.vue */ "./assets/js/vue/map-directions.vue"));
+      },
+      delay: 500
+    });
+  }
+
+  if (document.querySelector(".news-and-events")) {
+    NewsAndEvents = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
+      loader: function loader() {
+        return __webpack_require__.e(/*! import() */ "assets_js_vue_news-and-events_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/news-and-events.vue */ "./assets/js/vue/news-and-events.vue"));
       },
       delay: 500
     });
@@ -17284,6 +17293,10 @@ var InitVueComponents = function InitVueComponents() {
 
   if (MapDirections) {
     $VueApp.component("map-directions", MapDirections);
+  }
+
+  if (NewsAndEvents) {
+    $VueApp.component("news-and-events", NewsAndEvents);
   }
 
   if (Resort) {
@@ -26290,7 +26303,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"a9d49d31a749948b","assets_js_vue_resort_vue":"4cf75c18c92f6fcb","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"9eb293b4b2d8e89a","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_map-directions_vue":"a9d49d31a749948b","assets_js_vue_news-and-events_vue":"e40d4afd66e16c11","assets_js_vue_resort_vue":"02115dee9ec8bbdf","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"9eb293b4b2d8e89a","node_modules_swiper_swiper-bundle_esm_js":"58d943236f44c70d"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

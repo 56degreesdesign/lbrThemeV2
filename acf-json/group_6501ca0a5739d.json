@@ -493,10 +493,10 @@
                     "sub_fields": [
                         {
                             "key": "field_6509561c02b86",
-                            "label": "News",
-                            "name": "news",
+                            "label": "Section",
+                            "name": "section",
                             "aria-label": "",
-                            "type": "group",
+                            "type": "clone",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -505,34 +505,13 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "clone": [
+                                "field_654ce366d648f"
+                            ],
+                            "display": "seamless",
                             "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_650956a302b87",
-                                    "label": "Image",
-                                    "name": "image",
-                                    "aria-label": "",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "preview_size": "medium"
-                                }
-                            ]
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -953,6 +932,134 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_654b7547971f2": {
+                    "key": "layout_654b7547971f2",
+                    "name": "image_and_list",
+                    "label": "Image and List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654b754b971f5",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654b74be0d2e0"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654b81e65ba9f": {
+                    "key": "layout_654b81e65ba9f",
+                    "name": "floorplans",
+                    "label": "Floorplans",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654b81ea5baa2",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654b81b0075ff"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654c9ee4c2b52": {
+                    "key": "layout_654c9ee4c2b52",
+                    "name": "phases",
+                    "label": "Phases",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654c9ee8c2b55",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654c9e5e8f3dc"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654cd7289c67a": {
+                    "key": "layout_654cd7289c67a",
+                    "name": "construction_progress",
+                    "label": "Construction Progress",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654cd72f9c67d",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654cd6d640cee"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -980,5 +1087,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699438284
+    "modified": 1699537847
 }

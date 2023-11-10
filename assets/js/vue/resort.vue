@@ -3340,6 +3340,9 @@ export default {
             // type: Array | String,
             required: false,
             default: () => []
+        },
+        settings: {
+            required:false
         }
     },
     data() {
