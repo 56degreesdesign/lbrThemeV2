@@ -9,6 +9,7 @@ module.exports = {
     content: [
         // './*.php',
         "./templates/**/*.php",
+        "./sbi/*.php",
         "./build/js/*.js",
         "./header.php",
         "./footer.php",

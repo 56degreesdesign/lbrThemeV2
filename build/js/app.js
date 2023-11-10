@@ -17363,7 +17363,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var sliders = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-    var swipers, bannerSwipers, smallSwipers, blogSwiper, Swiper, swiperCarousel, prevBtn, nextBtn;
+    var swipers, bannerSwipers, smallSwipers, blogSwiper, InstagramSwiper, Swiper, swiperCarousel, prevBtn, nextBtn;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -17372,20 +17372,21 @@ var sliders = /*#__PURE__*/function () {
             bannerSwipers = document.querySelectorAll('.banner-carousel');
             smallSwipers = document.querySelectorAll('.small-carousel');
             blogSwiper = document.querySelector('.blog-carousel');
+            InstagramSwiper = document.querySelectorAll('.instagram-carousel');
 
-            if (!(bannerSwipers || swipers || blogSwiper)) {
-              _context.next = 14;
+            if (!(bannerSwipers || swipers || blogSwiper || InstagramSwiper)) {
+              _context.next = 16;
               break;
             }
 
-            _context.next = 7;
+            _context.next = 8;
             return __webpack_require__.e(/*! import() */ "node_modules_swiper_swiper-bundle_esm_js").then(__webpack_require__.bind(__webpack_require__, /*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js"));
 
-          case 7:
-            _context.next = 9;
+          case 8:
+            _context.next = 10;
             return _context.sent["default"];
 
-          case 9:
+          case 10:
             Swiper = _context.sent;
 
             if (swipers) {
@@ -17411,6 +17412,53 @@ var sliders = /*#__PURE__*/function () {
                     1920: {
                       slidesPerView: 3,
                       spaceBetween: 21
+                    }
+                  },
+                  pagination: {
+                    el: el.parentElement.querySelector('.swiper-pagination-el'),
+                    type: 'fraction'
+                  }
+                });
+                var prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+                    nextBtn = el.parentElement.querySelector('.swiper-next-el');
+
+                if (prevBtn != null) {
+                  prevBtn.addEventListener('click', function () {
+                    swiperCarousel.slidePrev();
+                  }, false);
+                }
+
+                if (nextBtn != null) {
+                  nextBtn.addEventListener('click', function () {
+                    swiperCarousel.slideNext();
+                  }, false);
+                }
+              });
+            }
+
+            if (InstagramSwiper) {
+              InstagramSwiper.forEach(function (el) {
+                var swiperCarousel = new Swiper(el, {
+                  loop: true,
+                  speed: 600,
+                  slidesPerView: 1.5,
+                  spaceBetween: 0,
+                  autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                  },
+                  breakpoints: {
+                    768: {
+                      slidesPerView: 2.5 // spaceBetween: 32
+
+                    },
+                    1024: {
+                      slidesPerView: 3 // spaceBetween: 21,
+
+                    },
+                    1920: {
+                      slidesPerView: 3 // spaceBetween: 21,
+
                     }
                   },
                   pagination: {
@@ -17531,7 +17579,7 @@ var sliders = /*#__PURE__*/function () {
               }
             }
 
-          case 14:
+          case 16:
           case "end":
             return _context.stop();
         }
