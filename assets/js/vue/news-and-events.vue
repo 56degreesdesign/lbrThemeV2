@@ -1,19 +1,15 @@
 <script setup>
 import {ref, defineProps, computed} from "vue";
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
-import { Autoplay } from 'swiper/modules/autoplay';
-
+const modules = [Pagination, Navigation]
 
 const props = defineProps({
     posts: String,
     terms: String
 });
-
 
 const postsData = ref(JSON.parse(props.posts));
 const termsData = ref(JSON.parse(props.terms));
@@ -34,8 +30,6 @@ const slides = computed(() => {
     } 
     return filtered;
 })
-
-
 </script>
 
 <template>
@@ -62,31 +56,45 @@ const slides = computed(() => {
                 <swiper
                     :slides-per-view="1"
                     :space-between="50"
-                    :autoplay="{
-                      delay: 250,
-                      disableOnInteraction: false,
+                    :modules="modules"
+                    :loop="true"
+                    :loopAdditionalSlides="2"
+                    :pagination="{
+                      type: 'fraction',
+                      el: '.swiper-pagination-el',
+                    }"
+                    :navigation="{
+                      nextEl: '.swiper-next-el',
+                      prevEl: '.swiper-prev-el',
                     }"
                 >
-                    <swiper-slide v-for="slide in slides" class="grid grid-cols-2 gap-x-[30px]">
-                        <div v-if="slide.data.image" class="col-span-1">
-                            <div class="w-full h-full relative pb-[65.3409%]">
-                                <img class="absolute-full object-cover" :src="slide.data.image.url" alt="">
+                    <swiper-slide v-for="slide in slides">
+                        <div class="grid grid-cols-2 gap-x-[30px]">
+                            <div v-if="slide.data.image" class="col-span-1">
+                                <div class="w-full h-full relative pb-[65.3409%]">
+                                    <img class="absolute-full object-cover" :src="slide.data.image.url" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-span-1 -translate-y-[109px]">
-                            <div v-if="slide.data.time && slide.data.date" class="flex flex-col">
-                                <span class="txt-h5">{{ slide.data.date }}</span>
-                                <span class="txt-h5">{{ slide.data.time }}</span>
-                            </div>
-                            <div class="w-[83.333%]">
-                                <h3 class="txt-h3 mb-16">{{ slide.title}}</h3>
-                                <div class="wysiwyg" v-html="slide.data.content"></div>
+                            <div class="col-span-1 -translate-y-[109px]">
+                                <div v-if="slide.data.time && slide.data.date" class="flex flex-col">
+                                    <span class="txt-h5">{{ slide.data.date }}</span>
+                                    <span class="txt-h5">{{ slide.data.time }}</span>
+                                </div>
+                                <div class="w-[83.333%]">
+                                    <h3 class="txt-h3 mb-14">{{ slide.title}}</h3>
+                                    <a class="text-16 font-bold underline uppercase block mb-8" :href="slide.data.file.url" download>{{slide.data.file.caption}}</a>
+                                    <div class="wysiwyg" v-html="slide.data.content"></div>
+                                    <div v-if="slide.data.button.link" class="mt-9">
+                                        <a :class="{ 'bg-black': slide.data.button.color === 'black', 'bg-orange': slide.data.button.color === 'orange' }" class="uppercase px-5 lg:px-7 pt-2.5 pb-2 text-15 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" :href="slide.data.button.link.url">
+                                            {{slide.data.button.link.title}}
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </swiper-slide>
                 </swiper>
             </div>
-     
         </div>
     </section>
 </template>
@@ -105,5 +113,8 @@ const slides = computed(() => {
 .swiper {
     overflow: visible !important;
     overflow-x: clip !important;
+}
+.swiper-button-lock {
+    display: block !important;
 }
 </style>

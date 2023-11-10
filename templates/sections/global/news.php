@@ -34,9 +34,10 @@ if ($query->have_posts()) {
 
 endif;
 ?>
-
+<?php if(count($posts) > 0) :?>
 <section id="vue-space" class="news-and-events">
     <news-and-events posts='<?= json_encode($posts, JSON_HEX_APOS); ?>' terms='<?= json_encode($terms, JSON_HEX_APOS); ?>'/>
 </section>
+<?php endif ;?>
 
 
