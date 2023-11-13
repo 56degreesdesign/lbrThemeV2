@@ -994,6 +994,9 @@ html {
 .bottom-4 {
   bottom: 1rem;
 }
+.bottom-6 {
+  bottom: 1.5rem;
+}
 .left-0 {
   left: 0px;
 }
@@ -1072,6 +1075,9 @@ html {
 .col-span-full {
   grid-column: 1 / -1;
 }
+.col-span-9 {
+  grid-column: span 9 / span 9;
+}
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -1084,6 +1090,9 @@ html {
 .col-start-12 {
   grid-column-start: 12;
 }
+.col-start-3 {
+  grid-column-start: 3;
+}
 .col-start-4 {
   grid-column-start: 4;
 }
@@ -1092,6 +1101,12 @@ html {
 }
 .col-start-7 {
   grid-column-start: 7;
+}
+.col-start-2 {
+  grid-column-start: 2;
+}
+.row-span-2 {
+  grid-row: span 2 / span 2;
 }
 .row-start-1 {
   grid-row-start: 1;
@@ -1115,6 +1130,10 @@ html {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .mb-10 {
   margin-bottom: 2.5rem;
@@ -1181,6 +1200,9 @@ html {
 }
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mt-12 {
+  margin-top: 3rem;
 }
 .mt-14 {
   margin-top: 3.5rem;
@@ -1394,6 +1416,9 @@ html {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.grid-cols-10 {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1402,6 +1427,9 @@ html {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-9 {
+  grid-template-columns: repeat(9, minmax(0, 1fr));
 }
 .flex-row-reverse {
   flex-direction: row-reverse;
@@ -1647,6 +1675,10 @@ html {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1773,6 +1805,9 @@ html {
 }
 .pb-\[64\.527\%\] {
   padding-bottom: 64.527%;
+}
+.pb-\[64\.6\%\] {
+  padding-bottom: 64.6%;
 }
 .pb-\[64\.65\%\] {
   padding-bottom: 64.65%;
@@ -2328,7 +2363,7 @@ html {
   display: grid;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 500ms;
+  transition-duration: 300ms;
   grid-template-rows: 0fr;
 }
 .dropdown-menu > div {
@@ -2437,6 +2472,24 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 @media (min-width: 1280px) {
   .wysiwyg-headings h2, .wysiwyg h2 {
     font-size: 4.375rem;
+  }
+}
+.wysiwyg-headings h3, .wysiwyg h3 {
+  margin-bottom: 2rem;
+  font-family: Reckless Neue, sans-serif;
+  font-size: 1.625rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.125;
+}
+@media (min-width: 1024px) {
+  .wysiwyg-headings h3, .wysiwyg h3 {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 1280px) {
+  .wysiwyg-headings h3, .wysiwyg h3 {
+    font-size: 2.5rem;
   }
 }
 .wysiwyg-headings h5, .wysiwyg h5 {
@@ -3022,6 +3075,9 @@ form .btn:hover {
 }
 .swiper-nav:hover {
   opacity: 0.3;
+}
+.swiper-nav--small {
+  font-size: 15px !important;
 }
 
 .sc-resort__map {

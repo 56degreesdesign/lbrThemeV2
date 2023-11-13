@@ -76,7 +76,7 @@ const slides = computed(() => {
                                 </div>
                             </div>
                             <div class="col-span-1 -translate-y-[109px]">
-                                <div v-if="slide.data.time && slide.data.date" class="flex flex-col">
+                                <div v-if="slide.data.time && slide.data.date" class="flex flex-col mb-12">
                                     <span class="txt-h5">{{ slide.data.date }}</span>
                                     <span class="txt-h5">{{ slide.data.time }}</span>
                                 </div>

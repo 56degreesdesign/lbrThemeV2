@@ -58,11 +58,10 @@
     }
     
     .dropdown-menu {
-        //@apply bg-orange;
         display: grid;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 500ms;
+        transition-duration: 300ms;
         grid-template-rows: 0fr;
         > div {
             overflow: hidden;

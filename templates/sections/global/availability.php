@@ -15,7 +15,7 @@ $props = json_encode($section, JSON_HEX_APOS);
     </section>
 <?php endif ;?>
 
-<?php if($data) :?> 
+<?php if($data && !$interactive) :?> 
 <section class="bg-beige-light pt-28 pb-16">
     <div class="container grid-layout">
         <div class="col-start-1 col-span-2">

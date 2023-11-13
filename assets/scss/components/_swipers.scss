@@ -1,3 +1,7 @@
 .swiper-nav {
     @apply txt-h5 cursor-pointer hover:opacity-30 duration-300;
+    &--small {
+        //@apply text-15;
+        font-size: 15px !important;
+    }
 }
