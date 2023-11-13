@@ -13,6 +13,7 @@ const fHeader = require('./components/header');
 const fContact = require('./components/lazy-load-contact-form')
 const fContactLazy = require('./components/contact-lazy')
 const fSwiperLazy = require('./components/swiper-lazy')
+const fShowTerms = require('./components/show-terms')
 
 
 
@@ -25,7 +26,16 @@ import {
 
 const InitVueComponents = () => {
     // Async components
-    let MapDirections, Resort, NewsAndEvents;
+    let MapDirections, Resort, NewsAndEvents, ListOfPosts;
+
+    if (document.querySelector(".list-of-posts")) {
+        ListOfPosts = defineAsyncComponent({
+            loader: () => import("./vue/list-of-posts.vue"),
+            delay: 500,
+        });
+
+        fShowTerms.init();
+    }
 
     if (document.querySelector(".map-directions")) {
         MapDirections = defineAsyncComponent({
@@ -49,6 +59,10 @@ const InitVueComponents = () => {
     
     // Init Vue Instance
     const $VueApp = createApp({});
+
+    if (ListOfPosts) {
+        $VueApp.component("list-of-posts", ListOfPosts);
+    }
 
     if (MapDirections) {
         $VueApp.component("map-directions", MapDirections);
@@ -74,6 +88,7 @@ jQuery(function ($) {
     fHeader()
     fContact()
     fSwiperLazy();
+    fShowTerms.init();
     
     $(document).ready(function () {
         $('.form select').select2({

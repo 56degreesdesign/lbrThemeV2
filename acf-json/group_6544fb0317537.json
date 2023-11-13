@@ -17,15 +17,6 @@
                 "id": ""
             },
             "layouts": {
-                "layout_6544fb1c9900f": {
-                    "key": "layout_6544fb1c9900f",
-                    "name": "hero_single",
-                    "label": "Hero Single",
-                    "display": "block",
-                    "sub_fields": [],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_6544fee72bcfb": {
                     "key": "layout_6544fee72bcfb",
                     "name": "image_single",
@@ -89,6 +80,38 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_654baf9e4e890": {
+                    "key": "layout_654baf9e4e890",
+                    "name": "quote_single",
+                    "label": "Quote Single",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654bafa64e893",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654baef8d2c4c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -110,9 +133,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699020616
+    "modified": 1699459177
 }

@@ -32,13 +32,23 @@ sbi_header_html( $settings, $header_data, 'outside' );
 
 <div id="sb_instagram" <?php echo $feed_classes . $feed_styles; ?> data-feedid="<?php echo esc_attr( $feed_id ); ?>" <?php echo $feed_atts; ?> data-shortcode-atts="<?php echo esc_attr( $shortcode_atts ); ?>" <?php echo $other_atts; ?>>
 	<?php sbi_header_html( $settings, $header_data ); ?>
-
-    <div id="sbi_images" <?php echo $sb_images_style; ?>>
-		<?php
-		if ( ! in_array( 'ajaxPostLoad', $flags, true ) ) {
-			$this->posts_loop( $posts, $settings );
-		}
-		?>
+    <div class="swiper instagram-carousel">
+        <div id="sbi_images" class="swiper-wrapper" <?php echo $sb_images_style; ?>>
+            <?php
+            if ( ! in_array( 'ajaxPostLoad', $flags, true ) ) {
+                $this->posts_loop( $posts, $settings );
+            }
+            ?>
+        </div>
+    </div>
+    <div class="flex flex-row-reverse justify-between mx-[25px] mt-10 md:mx-10 md:mt-12 lg:flex-row lg:ml-0 lg:mr-[60px] xl:mt-16">
+        <div class="flex gap-x-10 lg:gap-x-40 xl:gap-x-52 2xl:gap-x-60">
+            <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
+            <div class="swiper-next-el swiper-nav">NEXT</div>
+        </div>
+        <div>
+            <span class="swiper-pagination-el text-center txt-h5">1/3</span>
+        </div>
     </div>
 
 	<?php include sbi_get_feed_template_part( 'footer', $settings ); ?>
