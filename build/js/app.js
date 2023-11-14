@@ -17254,6 +17254,8 @@ var fSwiperLazy = __webpack_require__(/*! ./components/swiper-lazy */ "./assets/
 
 var fShowTerms = __webpack_require__(/*! ./components/show-terms */ "./assets/js/components/show-terms.js");
 
+var fAccordionList = __webpack_require__(/*! ./components/accordion-list */ "./assets/js/components/accordion-list.js");
+
  // Vue Support Function
 
 
@@ -17319,6 +17321,7 @@ jQuery(function ($) {
   fContact();
   fSwiperLazy();
   fShowTerms.init();
+  fAccordionList();
   $(document).ready(function () {
     $('.form select').select2({
       minimumResultsForSearch: Infinity,
@@ -17339,6 +17342,173 @@ jQuery(function ($) {
   casitasSubmenu.addEventListener("mouseenter", toggleSubmenu, false);
   casitasSubmenu.addEventListener("mouseleave", toggleSubmenu, false);
 });
+
+/***/ }),
+
+/***/ "./assets/js/components/accordion-list.js":
+/*!************************************************!*\
+  !*** ./assets/js/components/accordion-list.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+module.exports = function () {
+  var Accordion = /*#__PURE__*/function () {
+    function Accordion(accordionElement) {
+      _classCallCheck(this, Accordion);
+
+      this.accordion = accordionElement;
+      this.content = this.accordion.querySelector(".accordion-list-content");
+      this.button = this.accordion.querySelector(".accordion-list-button");
+      this.isOpen = false;
+      this.pagination = this.accordion.dataset.pagination ? Number(this.accordion.dataset.pagination) : -1;
+
+      if (this.content && this.pagination && this.content.children.length > this.pagination) {
+        this.init();
+      }
+    }
+
+    _createClass(Accordion, [{
+      key: "setContentHeight",
+      value: function setContentHeight(height) {
+        if (this.content) {
+          this.content.style.maxHeight = height + "px";
+        }
+      }
+    }, {
+      key: "open",
+      value: function open() {
+        this.isOpen = true;
+        this.accordion.classList.add("open");
+        this.setContentHeight(this.content.scrollHeight);
+      }
+    }, {
+      key: "close",
+      value: function close() {
+        this.isOpen = false;
+        this.accordion.classList.remove("open");
+        this.setContentHeight(this.getContentHeight());
+      }
+    }, {
+      key: "getContentHeight",
+      value: function getContentHeight() {
+        var height = 0;
+
+        for (var i = 0; i < this.pagination; i++) {
+          if (this.content.children[i]) {
+            height += this.content.children[i].clientHeight;
+          }
+        }
+
+        return height;
+      }
+    }, {
+      key: "init",
+      value: function init() {
+        var _this = this;
+
+        this.accordion.classList.add("init");
+        this.setContentHeight(this.getContentHeight());
+
+        if (this.accordion.classList.contains("open")) {
+          this.open();
+        }
+
+        window.addEventListener("resize", function () {
+          if (_this.isOpen) {
+            _this.setContentHeight(_this.content.scrollHeight);
+          } else {
+            _this.setContentHeight(_this.getContentHeight());
+          }
+        });
+
+        if (this.button) {
+          this.button.addEventListener("click", function () {
+            if (_this.accordion.classList.contains("open")) {
+              _this.close();
+            } else {
+              _this.open();
+            }
+          });
+        }
+
+        var observer = new MutationObserver(function (mutationsList) {
+          var _iterator = _createForOfIteratorHelper(mutationsList),
+              _step;
+
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var mutation = _step.value;
+
+              if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                var newClasses = _this.accordion.className.split(' ');
+
+                if (!_this.isOpen && newClasses.includes('open')) {
+                  _this.open();
+                } else if (_this.isOpen && !newClasses.includes('open')) {
+                  _this.close();
+                }
+              }
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+        });
+        observer.observe(this.accordion, {
+          attributes: true
+        });
+      }
+    }]);
+
+    return Accordion;
+  }();
+
+  var accordionLists = _toConsumableArray(document.querySelectorAll(".accordion-list"));
+
+  if (accordionLists) {
+    accordionLists.forEach(function (accordionElement) {
+      var accordion = new Accordion(accordionElement);
+
+      if (accordion.button) {
+        accordion.button.addEventListener("click", function () {
+          if (window.innerWidth >= 1024 && accordionElement.closest(".accordion-list-group")) {
+            var group = accordionElement.closest(".accordion-list-group");
+            group.querySelectorAll(".accordion-list").forEach(function (el) {
+              if (accordion.accordion !== el) {
+                if (!accordion.isOpen) {
+                  el.classList.remove("open");
+                } else {
+                  el.classList.add("open");
+                }
+              }
+            });
+          }
+        });
+      }
+    });
+  }
+};
 
 /***/ }),
 

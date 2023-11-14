@@ -825,6 +825,102 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_654a41f02db19": {
+                    "key": "layout_654a41f02db19",
+                    "name": "image_cta",
+                    "label": "Image CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654a41f42db1c",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654a417af1734"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_654e2c18b9f99": {
+                    "key": "layout_654e2c18b9f99",
+                    "name": "book_now",
+                    "label": "Book now",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_654e2c1eb9f9c",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_654e2bf973ea4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_655341a7423b3": {
+                    "key": "layout_655341a7423b3",
+                    "name": "book_iframe",
+                    "label": "Book iframe",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_655341b0423b6",
+                            "label": "Section",
+                            "name": "section",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_65533f30b46e3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -852,5 +948,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699268811
+    "modified": 1699955142
 }
