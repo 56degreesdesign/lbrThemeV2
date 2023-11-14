@@ -39,7 +39,7 @@
 <?php if ( $section ) : ?>
 <section id="vue-space" class="list-of-posts bg-beige py-20 md:py-24 lg:py-32 xl:py-40">
     <div class="container grid-layout">
-        <h2 class="col-span-full txt-h2 mb-16 md:mb-20 lg:mb-24 xl:mb-28"><?= $heading; ?></h2>
+        <h2 class="col-span-full txt-h2 text-center mb-16 md:mb-20 lg:mb-24 xl:mb-28"><?= $heading; ?></h2>
         <list-of-posts 
             pagination='1'
             terms='<?= json_encode($terms, JSON_HEX_APOS); ?>'

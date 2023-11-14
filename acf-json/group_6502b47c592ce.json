@@ -537,6 +537,26 @@
                             "prefix_name": 0
                         }
                     ]
+                },
+                {
+                    "key": "field_65532ff7bfe69",
+                    "label": "Downloads",
+                    "name": "downloads",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         },
@@ -1030,5 +1050,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699626304
+    "modified": 1699950592
 }

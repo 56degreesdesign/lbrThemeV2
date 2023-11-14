@@ -30,8 +30,9 @@ function seoUrl( $string )
 function register_fs_menus() {
 	register_nav_menus(
 	  array(
-		'fs_nav_menu' => __( 'Navbar Main Menu' ),
-		'fs_footer_menu' => __( 'Footer Main Menu' )
+          'fs_nav_menu' => __( 'Navbar Main Menu' ),
+          'fs_footer_menu' => __( 'Footer Main Menu' ), 
+          'fs_mega_menu' => __( 'Mega Main Menu' ),
 	   )
 	 );
    }

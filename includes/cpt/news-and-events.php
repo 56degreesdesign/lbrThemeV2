@@ -49,30 +49,67 @@ function create_newsandevents_cpt() {
         'hierarchical' => false,
         'exclude_from_search' => false,
         'show_in_rest' => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'capability_type' => 'post',
+        'rewrite' => array('slug' => 'news', 'with_front' => false ),
+
     );
     register_post_type( 'newsandevents', $args );
 
 }
 add_action( 'init', 'create_newsandevents_cpt', 0 );
 
-function create_year() {
-    $labels = array(
-        'name' => _x( 'Years', 'taxonomy general name' ),
-        'singular_name' => _x( 'Years', 'taxonomy singular name' ),
-        // Add other taxonomy labels as needed
-    );
+//function create_year() {
+//    $labels = array(
+//        'name' => _x( 'Years', 'taxonomy general name' ),
+//        'singular_name' => _x( 'Years', 'taxonomy singular name' ),
+//        // Add other taxonomy labels as needed
+//    );
+//
+//    $args = array(
+//        'labels' => $labels,
+//        'public' => true,
+//        'hierarchical' => true, // Set to true if you want hierarchical categories like default 'category'
+//        'show_ui' => true,
+//        'show_in_menu' => true,
+//        'show_in_rest' => true,
+//    );
+//
+//    register_taxonomy( 'year', array( 'newsandevents' ), $args );
+//}
+//add_action( 'init', 'create_year', 0 );
 
+// Register Taxonomy Years
+function create_years_tax() {
+
+    $labels = array(
+        'name'              => _x( 'year', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Years', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Search year', 'textdomain' ),
+        'all_items'         => __( 'All year', 'textdomain' ),
+        'parent_item'       => __( 'Parent Years', 'textdomain' ),
+        'parent_item_colon' => __( 'Parent Years:', 'textdomain' ),
+        'edit_item'         => __( 'Edit Years', 'textdomain' ),
+        'update_item'       => __( 'Update Years', 'textdomain' ),
+        'add_new_item'      => __( 'Add New Years', 'textdomain' ),
+        'new_item_name'     => __( 'New Years Name', 'textdomain' ),
+        'menu_name'         => __( 'Years', 'textdomain' ),
+    );
     $args = array(
         'labels' => $labels,
+        'description' => __( '', 'textdomain' ),
+        'hierarchical' => false,
         'public' => true,
-        'hierarchical' => true, // Set to true if you want hierarchical categories like default 'category'
+        'publicly_queryable' => true,
         'show_ui' => true,
         'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud' => true,
+        'show_in_quick_edit' => true,
+        'show_admin_column' => false,
         'show_in_rest' => true,
     );
+    register_taxonomy( 'year', array('newsandevents'), $args );
 
-    register_taxonomy( 'year', array( 'newsandevents' ), $args );
 }
-add_action( 'init', 'create_year', 0 );
+add_action( 'init', 'create_years_tax' );

@@ -4,11 +4,19 @@
         @apply translate-x-0;
     }
 
-    .main-menu {
-        @apply flex flex-col items-center gap-y-8 mt-10 mb-10 xl:gap-y-12 xl:mt-32;
+    .main-mega-menu {
+        @apply flex flex-col items-center gap-y-8 mt-10 mb-24 xl:mt-32;
         > li {
             > a {
-                @apply lg:text-40 xl:text-51 font-bold uppercase underline-animation;
+                @apply lg:text-30 xl:text-35 2xl:text-40 font-bold uppercase;
+            }
+            > .sub-menu {
+                @apply flex justify-center gap-x-[30px];
+                > li {
+                    > a {
+                        @apply text-14 font-bold uppercase underline-animation;
+                    }
+                }
             }
         }
     }
