@@ -1,8 +1,8 @@
 .txt-h1 {
-    @apply text-70 md:text-90 lg:text-120 xl:text-167 uppercase font-Reckless font-light text-center leading-none;
+    @apply text-60 md:text-90 lg:text-120 xl:text-167 uppercase font-Reckless font-light text-center leading-none;
 }
 .txt-h2 {
-    @apply text-40 lg:text-51 xl:text-70 font-Reckless uppercase font-light leading-none;
+    @apply text-40 md:text-55 lg:text-65 xl:text-70 font-Reckless uppercase font-light leading-none;
 }
 .txt-h3 {
     @apply text-26 lg:text-30 xl:text-40 font-Reckless uppercase font-light leading-1.125;
@@ -11,13 +11,13 @@
     @apply text-14 md:text-17 lg:text-22 xl:text-25 font-bold uppercase leading-1.2;
 }
 .txt-h5 {
-    @apply text-16 md:text-17 xl:text-20 font-bold uppercase leading-1.25;
+    @apply text-14 md:text-17 xl:text-20 font-bold uppercase leading-1.25;
 }
 .txt-h6 {
     @apply text-20 md:text-25 lg:text-30 uppercase font-Reckless text-center leading-1.16;
 }
 .txt-1 {
-    @apply text-15 lg:text-17 leading-1.35;
+    @apply text-15 md:text-16 lg:text-17 leading-1.35;
 }
 
 .txt-2 {
@@ -25,7 +25,7 @@
 }
 
 .txt-3 {
-    @apply text-16 font-bold uppercase leading-1.25;
+    @apply text-14 md:text-15 lg:text-16 font-bold uppercase leading-1.25;
 }
 .txt-4 {
     

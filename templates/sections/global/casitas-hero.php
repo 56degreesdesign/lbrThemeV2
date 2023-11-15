@@ -7,7 +7,7 @@ $button = $section['button'] ?? false;
 ?>
 
 <?php if ($section) : ?>
-    <section class="flex items-end relative min-h-screen">
+    <section class="flex items-end relative min-h-screen z-10">
         <div class="absolute top-0 left-0 w-full">
             <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
         </div>
@@ -20,9 +20,9 @@ $button = $section['button'] ?? false;
                     <?php endif ;?>
                 </div>
         </div>
-        <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center">
+        <div class="absolute bottom-8 md:bottom-9 lg:bottom-10 left-0 w-full pointer-events-none flex justify-center">
             <a href="#casitas-explore" class="pointer-events-auto">
-                <?php get_template_part('templates/partials/nav-arrow', null, ['fill' => '#EEE3D6', 'class' => 'rotate-90']); ?>
+                <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
             </a>
         </div>
         <div class="w-full absolute bottom-10 left-0">

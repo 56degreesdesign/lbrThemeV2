@@ -6,7 +6,7 @@
     }
 
     &-button svg {
-        @apply transform;
+        @apply transform duration-300;
 
         &.icon-animation {
             @apply transition-transform duration-200;
@@ -57,13 +57,13 @@
                 }
 
                 svg {
-                    @apply rotate-180;
+                    @apply rotate-45 duration-300;
 
                     &.icon-rotate-45 {
-                        @apply rotate-45;
+                        @apply rotate-45 duration-300;
                     }
                     &.icon-rotate-270 {
-                        @apply rotate-[270deg] md:rotate-0;
+                        @apply rotate-[270deg] duration-300 md:rotate-0;
                     }
                 }
             }

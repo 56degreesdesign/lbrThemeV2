@@ -17041,7 +17041,7 @@ module.exports = function () {
       value: function close() {
         this.isOpen = false;
         this.accordion.classList.remove("open");
-        this.setContentHeight(this.getContentHeight());
+        this.setContentHeight(0); // Close the accordion by setting the height to 0
       }
     }, {
       key: "getContentHeight",
@@ -17075,6 +17075,7 @@ module.exports = function () {
             if (_this.accordion.classList.contains("open")) {
               _this.close();
             } else {
+              _this.closeAll(); // Close all accordions before opening the clicked one
               _this.open();
             }
           });
@@ -17104,6 +17105,18 @@ module.exports = function () {
           attributes: true
         });
       }
+    }, {
+      key: "closeAll",
+      value: function closeAll() {
+        // Close all accordions
+        var accordions = document.querySelectorAll(".accordion-list");
+        accordions.forEach(function (accordion) {
+          var instance = accordion.AccordionInstance;
+          if (instance && instance.isOpen) {
+            instance.close();
+          }
+        });
+      }
     }]);
     return Accordion;
   }();
@@ -17111,6 +17124,8 @@ module.exports = function () {
   if (accordionLists) {
     accordionLists.forEach(function (accordionElement) {
       var accordion = new Accordion(accordionElement);
+      accordionElement.AccordionInstance = accordion; // Store the accordion instance in the element
+
       if (accordion.button) {
         accordion.button.addEventListener("click", function () {
           if (window.innerWidth >= 1024 && accordionElement.closest(".accordion-list-group")) {

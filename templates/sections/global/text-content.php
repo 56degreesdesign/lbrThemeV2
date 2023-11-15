@@ -8,22 +8,22 @@ $anchor = $section['anchor'] ?? false;
 $background_colour = $section['background_colour'] ?? false;
 ?>
 
-<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> py-40">
+<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> py-11 pb-20 lg:py-40">
     <div class="container grid-layout">
         <div class="col-span-full flex flex-col items-center">
-            <div class="lg:w-[46.5625%] wysiwyg">
+            <div class="w-[84.27%] lg:w-[46.5625%] wysiwyg">
                 <?php echo $content ?>
               </div>
              <?php if($buttons) :?>
-                  <div class="flex flex-col gap-y-5 gap-x-5 justify-center mt-20 lg:mt-24 lg:flex-row items-center">
+                  <div class="w-full flex flex-col gap-y-2.5 gap-x-5 justify-center items-center mt-7 mb-5 lg:gap-y-5 lg:mb-0 lg:mt-20 lg:flex-row xl:mt-24">
                       <?php foreach ($buttons as $button) : ?>
-                          <?php get_template_part( 'templates/partials/button', null, ['data' => $button['button'], 'class' => 'w-[317px]'] ) ?>
+                          <?php get_template_part( 'templates/partials/button', null, ['data' => $button['button'], 'class' => 'w-full lg:w-[317px]'] ) ?>
                       <?php endforeach;?>
                   </div>
             <?php endif ;?>
         </div>
         <?php if($image) : ?>
-            <div class="col-span-full lg:col-start-3 lg:col-span-8 lg:px-16 mt-20 lg:mt-40">
+            <div class="col-span-full row-start-1 mt-14 mb-11 lg:mb-0 lg:row-start-auto lg:col-start-3 lg:col-span-8 lg:px-16 lg:mt-20 xl:mt-40">
                 <div class="relative pb-[56.22%]">
                     <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
                 </div>

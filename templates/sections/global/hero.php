@@ -6,7 +6,7 @@ $subheading = $section['subheading'] ?? false;
 $button = $section['button'] ?? false;
 ?>
 <?php if ($section) : ?>
-<section class="min-h-screen flex items-center relative">
+<section class="min-h-screen flex items-center relative z-10">
     <div class="absolute top-0 left-0 w-full">
         <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
     </div>
@@ -31,7 +31,7 @@ $button = $section['button'] ?? false;
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
         </a>
     </div>
-    <div class="w-full absolute bottom-10 left-0">
+    <div class="w-full absolute bottom-10 left-0 hidden lg:block">
         <div class="container w-full flex justify-end">
             <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
         </div>

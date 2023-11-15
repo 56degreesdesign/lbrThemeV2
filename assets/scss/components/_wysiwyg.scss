@@ -38,6 +38,12 @@ $module: '.wysiwyg';
             }
         }
     }
+
+    &.wysiwyg--no-subheading {
+      h2 {
+          @apply mb-11;
+      }
+    }
 }
 
 $module: '.wysiwyg-anchors';
@@ -74,7 +80,7 @@ $module: '.wysiwyg-headings';
   }
 
   h2 {
-    @apply txt-h2 mb-8;
+    @apply txt-h2 mb-11;
   }
 
   h3 {
@@ -87,7 +93,7 @@ $module: '.wysiwyg-headings';
         @apply txt-h5 mb-3 lg:mb-5 xl:mb-8;
   }
     h6 {
-        @apply txt-3 mb-5 pt-3.5;
+        @apply txt-3 mb-4 lg:mb-5;
     }
     p {
         @apply txt-1;

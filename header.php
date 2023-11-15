@@ -13,13 +13,13 @@ $header_downloads = get_field('header', 'option')['downloads'] ?? false;
 if (!$hidden) :
 ?>
 
-    <header class="fixed top-0 left-0 w-full z-20">
+    <header class="fixed top-0 left-0 w-full z-20 max-h-[65px] overflow-hidden lg:max-h-none">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
                     <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => 'black']) ?>
                 </a>
-                <div class="flex items-center lg:gap-x-10 xl:gap-x-20">
+                <div class="flex items-center hidden lg:flex lg:gap-x-10 xl:gap-x-20">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'fs_nav_menu',
