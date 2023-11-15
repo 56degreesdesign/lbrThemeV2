@@ -15,11 +15,11 @@ $content = $section['content'] ?? false;
                     <?php echo $content ?>
                 </div>
             </div>
-            <div class="w-full absolute bottom-10 left-0">
+            <div class="w-full absolute bottom-8 left-0">
                 <div class="container w-full pointer-events-none flex justify-end">
-                    <button class="bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12">
+                    <a href="/casita-rentals" class="bg-black rounded-full py-2.5 px-10 pointer-events-auto uppercase font-bold text-beige text-14">
                         Book now
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

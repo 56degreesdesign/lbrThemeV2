@@ -18,10 +18,10 @@ if($section) :
                 </div>
             <?php endif ;?>
             <?php if($description) :?>
-                <div class="col-start-7 col-span-6 text-20 xl:text-26"><?php echo $description ?></div>
+                <div class="col-start-7 col-span-6 leading-1.38 text-20 xl:text-26 lg:mb-32 xl:mb-36"><?php echo $description ?></div>
             <?php endif ;?>
             <?php if($list) :?>
-                <div class="col-start-7 col-span-6 border-t wysiwyg pt-10 xl:pt-16"><?php echo $list ?></div>
+                <div class="col-start-7 col-span-6 border-t wysiwyg pt-10 xl:pt-16 lg:mb-24"><?php echo $list ?></div>
             <?php endif ;?>
 
             <div class="col-start-7 col-span-6 grid grid-cols-2 gap-x-[30px]">

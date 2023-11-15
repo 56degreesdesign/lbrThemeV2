@@ -10,8 +10,6 @@ $downloads = $footer['downloads'] ?? false;
 $events = get_field('header', 'option')['upcoming_event'] ?? false;
 $navbar = get_field('header', 'option')['navbar'] ?? false;
 $header_downloads = get_field('header', 'option')['downloads'] ?? false;
-
-
 if (!$hidden) :
 ?>
 

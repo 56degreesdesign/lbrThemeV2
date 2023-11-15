@@ -8,7 +8,7 @@ $right_col = $section['right_col'] ?? false;
 $slider_position = $section['slider_position'] ?? false;
 ?>
 
-<section class="bg-beige pb-20 md:pb-32 lg:pb-44">
+<section class="bg-beige-light pb-20 md:pb-32 lg:pb-44">
     <div class="container grid-layout">
         <div class="col-span-full <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>">
             <?php if($heading) :?>

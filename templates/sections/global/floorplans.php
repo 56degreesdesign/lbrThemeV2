@@ -24,7 +24,7 @@
                 <div class="flex flex-col items-center px-[25px] py-12 md:py-14 md:px-10 lg:pb-10 lg:px-0 lg:h-full lg:justify-between xl:pb-14">
                     <div class="text-20 font-bold text-center">FLOORPLANS</div>
                     <div>
-                        <h3 class="txt-h2 text-center mb-5 md:mb-8 lg:mb-10 xl:mb-22">STRATA<br>
+                        <h3 class="txt-h2 text-center mb-5 md:mb-8 lg:mb-10 xl:mb-20">STRATA<br>
                             2 BED / 2.5 BATH<br>
                             Single GARAGE
                         </h3>

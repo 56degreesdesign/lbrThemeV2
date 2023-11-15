@@ -1,10 +1,13 @@
 <?php 
 $section = $args['data'] ?? false;
 $cards = $section['cards'] ?? false;
+$anchor = $section['anchor'] ?? false;
+
 $counter = 1;
+
 ?>
 
-<div class="relative overflow-hidden">
+<div id="<?php echo $anchor ?>" class="relative overflow-hidden">
     <div class="cards-animate w-screen">
         <?php foreach ($cards as $key => $card) :?>
         <section data-index="<?= $key; ?>" class="bg-beige-light card-animate__item md:overflow-hidden z-10 md:shadow-2xl md:h-screen <?= $key == 0 ? 'relative' : 'relative md:absolute w-full top-0 left-0' ?>">

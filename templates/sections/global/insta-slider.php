@@ -15,7 +15,7 @@ $background = $section['background'] ?? false;
                  </h3>
              </div>
         <?php endif ;?>
-         <div class="col-span-full relative -mx-[25px] md:-mx-10 lg:ml-0 lg:-mr-[60px] lg:col-start-5 lg:col-span-8">
+         <div class="col-span-full relative -mx-[25px] md:-mx-10 lg:ml-0 lg:-mr-[78px] lg:col-start-5 lg:col-span-8">
              <?= do_shortcode('[instagram-feed feed=1]'); ?>
          </div>
      </div>

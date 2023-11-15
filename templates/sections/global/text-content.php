@@ -4,9 +4,11 @@ $content = $section['content'] ?? false;
 $buttons = $section['buttons'] ?? false;
 $image = $section['image'] ?? false;
 $button = $section['button'] ?? false;
+$anchor = $section['anchor'] ?? false;
+$background_colour = $section['background_colour'] ?? false;
 ?>
 
-<section class="bg-beige py-40">
+<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> py-40">
     <div class="container grid-layout">
         <div class="col-span-full flex flex-col items-center">
             <div class="lg:w-[46.5625%] wysiwyg">
@@ -15,7 +17,7 @@ $button = $section['button'] ?? false;
              <?php if($buttons) :?>
                   <div class="flex flex-col gap-y-5 gap-x-5 justify-center mt-20 lg:mt-24 lg:flex-row items-center">
                       <?php foreach ($buttons as $button) : ?>
-                          <?php get_template_part( 'templates/partials/button', null, ['data' => $button['button'], 'class' => ''] ) ?>
+                          <?php get_template_part( 'templates/partials/button', null, ['data' => $button['button'], 'class' => 'w-[317px]'] ) ?>
                       <?php endforeach;?>
                   </div>
             <?php endif ;?>

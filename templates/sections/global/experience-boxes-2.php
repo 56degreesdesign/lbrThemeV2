@@ -7,7 +7,7 @@ $box4 = $section['box_4']['slider_with_content'] ?? false;
 $box5 = $section['box_5']['slider_with_content'] ?? false;
 
 ?>
-<section class="bg-beige-light py-48">
+<section class="bg-beige-light pt-48 pb-52">
     <div class="container grid-layout grid-flow-dense">
         <!-- Box 1 -->
         <div class="col-start-2 col-span-9  grid grid-cols-9 gap-x-[30px] mb-12">
@@ -83,7 +83,6 @@ $box5 = $section['box_5']['slider_with_content'] ?? false;
             </div>
         </div>
         <!-- Box 5 -->
-
         <div class="col-start-4 col-span-6 grid grid-cols-2 gap-x-[30px]">
             <div class="col-span-1">
                 <div class="wysiwyg"><?php echo $box4['content'] ?></div>
@@ -102,6 +101,10 @@ $box5 = $section['box_5']['slider_with_content'] ?? false;
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-span-full flex justify-center pt-52">
+            <a class="bg-orange uppercase px-5 lg:px-7 xl:px-10 pt-2.5 pb-2 text-15 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="/contact">
+                INQUIRE TO LEARN MORE</a>
         </div>
     </div>
 </section>

@@ -49,11 +49,12 @@ if (!$hidden) :
         <?php endif ;?>
         
     </div>
-    <div class="container grid-layout lg:mt-16">
+    <div class="container grid-layout lg:mt-11">
         <div class="col-span-full flex items-center justify-center gap-x-10 lg:gap-x-16 footer-links">
-            <a href="<?php echo $links['facebook']['url'] ?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>
-            <img src="<?php echo $social_media['icon']['url'] ?>" alt="">
             <a href="<?php echo $links['instagram']['url'] ?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
+            <img src="<?php echo $social_media['icon']['url'] ?>" alt="">
+            <a href="<?php echo $links['facebook']['url'] ?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>
+
         </div>
         <div class="col-span-full mt-10 lg:col-start-2 lg:col-span-10 text-center mb-5 text-13 lg:text-14 lg:mt-16"><?php echo $footer['copy'] ?></div>
         <div class="col-span-full lg:col-start-2 lg:col-span-10 text-center text-13 lg:text-14"><?php echo $footer['copy_subtext'] ?></div>

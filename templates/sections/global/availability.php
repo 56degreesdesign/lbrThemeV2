@@ -16,14 +16,14 @@ $props = json_encode($section, JSON_HEX_APOS);
 <?php endif ;?>
 
 <?php if($data && !$interactive) :?> 
-<section class="bg-beige-light pt-28 pb-16">
+<section class="bg-beige pt-28 pb-16">
     <div class="container grid-layout">
         <div class="col-start-1 col-span-2">
             <h3 class="txt-h3 mt-6 mb-14"><?php echo $data['heading'] ?></h3>
             <p class="mb-8"><?php echo $data['subheading'] ?></p>
             <div class="flex flex-col gap-y-3">
                 <?php foreach ($data['buttons'] as $button) : ?>
-                   <?php get_template_part('templates/partials/button', null, ['data' => $button['button'], 'class' => 'block !w-[192px]']); ?>
+                   <?php get_template_part('templates/partials/button', null, ['data' => $button['button'], 'class' => 'block !w-[192px] lg:px-0 !xl:px-0 whitespace-nowrap']); ?>
                 <?php endforeach; ?>
             </div>
             <img class="mt-24 max-w-[212px]" src="<?php echo $section['legend']['url']?>" alt="">

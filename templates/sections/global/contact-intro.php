@@ -87,7 +87,7 @@ if($section) :
             </div>
         </div>
         <div class="col-span-full flex justify-end mt-16">
-            <a class="bg-black uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="#">
+            <a class="bg-black uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="/casita-rentals">
                 Book now</a>
         </div>
     </div>

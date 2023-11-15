@@ -4,8 +4,10 @@ $content = $section['content'] ?? false;
 $visions = $section['visions'] ?? false;
 $left_col = $section['left_column'] ?? false;
 $right_col = $section['right_column'] ?? false;
+$anchor = $section['anchor'] ?? false;
+
 if($section) :?>
-<section class="bg-beige py-20 md:py-26 lg:py-32 xl:py-40">
+<section id="<?php echo $anchor ?>" class="bg-beige py-20 md:py-26 lg:py-32 xl:py-40">
     <div class="container grid-layout">
         <?php if($content) :?>
             <div class="col-span-full wysiwyg text-center"><?php echo $content ?></div>
@@ -17,11 +19,11 @@ if($section) :?>
         <?php endforeach;?>
         
         <?php if($left_col['content']) :?>
-            <div class="col-span-full wysiwyg text-center mt-16 lg:col-start-1 lg:col-span-5 xl:col-start-3 xl:col-span-4 md:mt-20 lg:mt-28 xl:mt-36"><?php echo $left_col['content']?></div>
+            <div class="col-span-full wysiwyg text-center mt-16 lg:col-start-1 lg:col-span-5 xl:col-start-3 xl:col-span-4 md:mt-20 xl:mt-28"><?php echo $left_col['content']?></div>
         <?php endif;?>
         
         <?php if($right_col['content']) :?>
-            <div class="col-span-full wysiwyg text-center mt-16 lg:col-start-8 lg:col-span-5 xl:col-start-7 xl:col-span-4 md:mt-20 lg:mt-28 xl:mt-36"><?php echo $right_col['content']?></div>
+            <div class="col-span-full wysiwyg text-center mt-16 lg:col-start-8 lg:col-span-5 xl:col-start-7 xl:col-span-4 md:mt-20 xl:mt-28"><?php echo $right_col['content']?></div>
         <?php endif ;?>
     </div>
 </section>

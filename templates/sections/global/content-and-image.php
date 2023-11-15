@@ -23,7 +23,7 @@ $button = $section['button'] ?? false;
             <?php endif ;?>
         </div>
         <div class="w-full absolute bottom-10 left-0">
-            <div class="container w-full pointer-events-none flex justify-end">
+            <div class="container w-full flex justify-end">
                 <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
             </div>
         </div>

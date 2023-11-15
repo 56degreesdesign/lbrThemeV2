@@ -22,17 +22,17 @@ $button = $section['button'] ?? false;
     
     </div>
     <?php if($subheading) : ?>
-        <p class="absolute bottom-32 left-0 w-full uppercase text-14 font-bold text-beige text-center md:text-16 lg:text-17">
+        <p class="absolute bottom-24 left-0 w-full uppercase text-14 font-bold text-beige text-center md:text-16 lg:text-17">
             <?php echo $subheading ?>
         </p>
     <?php endif ;?>
-    <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center">
-        <a href="#testing" class="pointer-events-auto">
+    <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center z-20">
+        <a href="#" class="pointer-events-auto">
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
         </a>
     </div>
     <div class="w-full absolute bottom-10 left-0">
-        <div class="container w-full pointer-events-none flex justify-end">
+        <div class="container w-full flex justify-end">
             <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
         </div>
     </div>
