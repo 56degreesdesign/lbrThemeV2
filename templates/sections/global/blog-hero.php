@@ -3,9 +3,9 @@
     $heading = $section['heading'] ?? false;
     $posts = $section['posts'] ?? false;
 ?>
-<section class="bg-beige-light pt-48 pb-14">
+<section class="bg-beige-light pt-28 | lg:pt-48 lg:pb-14">
     <div class="container grid-layout">
-        <h1 class="col-span-full txt-h2 text-center mb-16 md:mb-20 lg:mb-28 xl:mb-32"><?= $heading; ?></h1>
+        <h1 class="col-span-full txt-h2 text-center mb-3.5 md:mb-20 lg:mb-28 xl:mb-32"><?= $heading; ?></h1>
         <?php if( $posts ): ?>
             <div class="col-span-full">
                 <div class="swiper blog-carousel">

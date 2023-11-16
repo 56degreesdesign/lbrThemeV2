@@ -46,8 +46,8 @@ onMounted(() => {
             <a :href="post.link" title="Read more"><background v-if="post.image" :image="post.image"/></a>
         </div>
         <div class="col-span-full flex flex-wrap gap-1 mb-7 md:mb-8 lg:mb-9 post-terms">
-            <div :ref="addRef" class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full transition-opacity duration-300 post-terms__item" :class="{ 'hidden opacity-0' : index > 1 }" v-for="(term, index) in post.terms" :key="term.name">{{ term.name }}</div>
-            <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full cursor-pointer transition-opacity duration-300 post-terms__btn" 
+            <div :ref="addRef" class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full transition-opacity duration-300 post-terms__item text-10 | lg:text-12" :class="{ 'hidden opacity-0' : index > 1 }" v-for="(term, index) in post.terms" :key="term.name">{{ term.name }}</div>
+            <div class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full cursor-pointer transition-opacity duration-300 post-terms__btn text-10 | lg:text-12" 
                  aria-label="Show more category"
                  ref="btn"
                  @click="open" 

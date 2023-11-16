@@ -27,9 +27,9 @@
     
     if ( $query_posts->have_posts() ) :
 ?>
-    <section class="bg-beige pt-12 pb-14 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20">
+    <section class="bg-beige pt-11 pb-11 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20">
         <div class="container grid grid-cols-2">
-            <h4 class="col-span-full text-center mb-10 md:mb-14 lg:mb-20 txt-h5">MORE TO DISCOVER In <?= $firstTerm->name; ?></h4>
+            <h4 class="col-span-full text-center mb-9 md:mb-14 lg:mb-20 txt-h5">MORE TO DISCOVER In <?= $firstTerm->name; ?></h4>
             <div class="col-span-full grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20">
                 <?php
                     while ( $query_posts->have_posts() ) {

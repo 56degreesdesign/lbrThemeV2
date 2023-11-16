@@ -38,19 +38,22 @@
                 <?php endif; ?>
                 <div class="mt-16">
                     <div class="relative">
-                        <h2 class="txt-h2 txt-h2--left mb-2">
+                        <h2 class="txt-h2 mb-3.5 text-center | lg:text-left lg:mb-2">
                             <?= $title; ?>
                         </h2>
-                        <button class="absolute bottom-0 right-0 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12">
+                        <button class="hidden absolute bottom-0 right-0 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 | lg:block">
                             Book now
                         </button>
                     </div>
-                    <p class="text-20 mb-7"><strong><?= $price; ?></strong></p>
+                    <p class="txt-h5 mb-7 text-center | lg:text-left lg:mb-7"><strong><?= $price; ?></strong></p>
+                    <button class="mb-11 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 | lg:hidden">
+                        Book now
+                    </button>
                     <div>
-                        <div class="text-26 mb-14">
+                        <div class="text-20 mb-2.5 | lg:text-26 lg:mb-14">
                             <p><?= $content; ?></p>
                         </div>
-                        <div class="accordion-list">
+                        <div class="accordion-list border-b border-gray pb-11 mb-12 | lg:border-b-0 lg:pb-0">
                             <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
                                 <div class="overflow-hidden border-t border-gray pb-10 pt-14">
                                     <h3 class="mb-16 font-Oscar font-bold pl-7 uppercase text-25"><?= $moreContent['heading']; ?></h3>
@@ -61,7 +64,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <button class="accordion-list-button uppercase text-orange underline font-bold text-25">
+                            <button class="accordion-list-button block uppercase text-orange underline font-bold txt-h4 text-center mx-auto | lg:mx-0 lg:text-left">
                                 <span>VIEW MORE</span>
                                 <span class="hidden">Close</span>
                             </button>

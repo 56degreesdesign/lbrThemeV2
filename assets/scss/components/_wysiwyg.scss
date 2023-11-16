@@ -17,9 +17,8 @@ $module: '.wysiwyg';
     
     &.wysiwyg--single {
         p {
-            @apply tracking-20 text-left mb-8;
-            
-            @apply text-24;
+            @apply text-15 tracking-20 text-left mb-6;
+            @apply xl:text-24 xl:mb-8;
         }
         
         blockquote {
@@ -28,13 +27,12 @@ $module: '.wysiwyg';
             &.big {
                 p {
                     @apply tracking-10 leading-1.07;
-                    @apply text-70;
                 }
             }
             
             p {
-                @apply tracking-10 leading-1.07;
-                @apply text-40;
+                @apply tracking-10 leading-1.07 text-center last:mb-0;
+                @apply xl:text-left;
             }
         }
     }

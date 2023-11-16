@@ -1,5 +1,5 @@
-<section class="flex justify-between uppercase text-20">
-    <div class="grid grid-cols-2 gap-x-12">
+<section class="flex justify-between uppercase text-12 | lg:text-20">
+    <div class="grid grid-cols-2 gap-x-4 xl:gap-x-12">
         <?php
             $next_post = get_adjacent_post(false, '', false);
             $classNext = empty($next_post) ? 'pointer-events-none cursor-default opacity-50' : null;

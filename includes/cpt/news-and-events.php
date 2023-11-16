@@ -59,34 +59,14 @@ function create_newsandevents_cpt() {
 }
 add_action( 'init', 'create_newsandevents_cpt', 0 );
 
-//function create_year() {
-//    $labels = array(
-//        'name' => _x( 'Years', 'taxonomy general name' ),
-//        'singular_name' => _x( 'Years', 'taxonomy singular name' ),
-//        // Add other taxonomy labels as needed
-//    );
-//
-//    $args = array(
-//        'labels' => $labels,
-//        'public' => true,
-//        'hierarchical' => true, // Set to true if you want hierarchical categories like default 'category'
-//        'show_ui' => true,
-//        'show_in_menu' => true,
-//        'show_in_rest' => true,
-//    );
-//
-//    register_taxonomy( 'year', array( 'newsandevents' ), $args );
-//}
-//add_action( 'init', 'create_year', 0 );
-
 // Register Taxonomy Years
 function create_years_tax() {
 
     $labels = array(
-        'name'              => _x( 'year', 'taxonomy general name', 'textdomain' ),
+        'name'              => _x( 'Year', 'taxonomy general name', 'textdomain' ),
         'singular_name'     => _x( 'Years', 'taxonomy singular name', 'textdomain' ),
-        'search_items'      => __( 'Search year', 'textdomain' ),
-        'all_items'         => __( 'All year', 'textdomain' ),
+        'search_items'      => __( 'Search Year', 'textdomain' ),
+        'all_items'         => __( 'All Year', 'textdomain' ),
         'parent_item'       => __( 'Parent Years', 'textdomain' ),
         'parent_item_colon' => __( 'Parent Years:', 'textdomain' ),
         'edit_item'         => __( 'Edit Years', 'textdomain' ),
@@ -98,7 +78,7 @@ function create_years_tax() {
     $args = array(
         'labels' => $labels,
         'description' => __( '', 'textdomain' ),
-        'hierarchical' => false,
+        'hierarchical' => true,
         'public' => true,
         'publicly_queryable' => true,
         'show_ui' => true,
@@ -109,7 +89,7 @@ function create_years_tax() {
         'show_admin_column' => false,
         'show_in_rest' => true,
     );
-    register_taxonomy( 'year', array('newsandevents'), $args );
+    register_taxonomy( 'years', array('newsandevents'), $args );
 
 }
 add_action( 'init', 'create_years_tax' );

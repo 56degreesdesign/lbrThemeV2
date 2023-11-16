@@ -84,21 +84,21 @@ onMounted(() => {
 <template>
     <category-list v-if="termsData">
         <template v-slot:content>
-            <button class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full" :class="{'bg-white text-black' : !currentCategory}" @click="setCategory(null)">All</button>
+            <button class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full text-10 | lg:text-12" :class="{'bg-orange' : !currentCategory}" @click="setCategory(null)">All</button>
 
             <template v-for="(cat, index) in termsData" :key="`category-${cat.term_id}-${index}`">
-                <button class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full" :class="{'bg-white text-black' : cat.term_id === currentCategory}" @click="setCategory(cat.term_id, index)">{{
+                <button class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full text-10 | lg:text-12" :class="{'bg-orange' : cat.term_id === currentCategory}" @click="setCategory(cat.term_id, index)">{{
                     cat.name }}</button>
             </template>
         </template>
     </category-list>
 
-    <div class="col-span-full grid grid-cols-1 gap-y-10 mb-20 md:mb-28 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 lg:mb-32 xl:mb-40">
+    <div class="col-span-full grid grid-cols-1 gap-y-10 mb-11 md:mb-28 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 lg:mb-32 xl:mb-40">
         <BoxPostPost v-for="(post, index) in printPosts" :key="`box-post-post-${post.id}-${index}`" :post="post" class="load" />
     </div>
     
     <div class="col-span-full flex justify-center">
-        <button v-if="postCount < currentPosts.length" @click="loadMore()" class="uppercase text-orange underline font-bold text-25">view more</button>
+        <button v-if="postCount < currentPosts.length" @click="loadMore()" class="uppercase text-orange underline txt-h4">view more</button>
     </div>
 </template>
 
