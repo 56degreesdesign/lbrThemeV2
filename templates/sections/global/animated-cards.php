@@ -20,7 +20,7 @@ $counter = 1;
                     </div>
                     <div class="col-span-full mb-10 md:mb-0 md:row-start-auto lg:col-start-7 lg:col-span-5 xl:col-start-8 xl:col-span-4 wysiwyg flex flex-col items-center justify-center">
                         <div class="txt-h5 mb-5 hidden lg:block lg:mb-10 xl:mb-14"><?php echo $card['label'] ?></div>
-                        <div class="text-orange txt-1 rounded-[50%] w-7 h-7 border border-orange flex items-center justify-center hidden lg:block lg:mb-10 xl:mb-14"><?php echo $counter ?></div>
+                        <div class="text-orange txt-1 rounded-[50%] w-7 h-7 border border-orange items-center justify-center hidden lg:flex lg:mb-10 xl:mb-14"><?php echo $counter ?></div>
                         <div class="text-center">
                             <?php echo $card['content'] ?>
                         </div>

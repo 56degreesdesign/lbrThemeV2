@@ -54,7 +54,7 @@ $slider_position = $section['slider_position'] ?? false;
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="flex justify-between xl:pr-[3.563rem]">
+                <div class="flex justify-between">
                     <div class="flex gap-x-4">
                         <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
                         <div class="swiper-next-el swiper-nav">NEXT</div>

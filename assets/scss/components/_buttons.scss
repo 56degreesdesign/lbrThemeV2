@@ -1,0 +1,28 @@
+.btn {
+    @apply uppercase px-4 pt-2.5 pb-2 text-14 lg:text-15 text-center h-fit text-white font-bold rounded-full duration-300 whitespace-nowrap;
+
+    &--black {
+        @apply bg-black hover:bg-orange;
+    }
+    &--orange {
+        @apply bg-orange hover:bg-black;
+    }
+    &--mobile-wide {
+        @apply w-full;
+    }
+    &--mobile-narrow {
+        @apply min-w-[180px];
+    }
+    &--desktop-wide {
+        @apply lg:w-auto lg:min-w-[317px];
+    }
+    &--desktop-medium {
+        @apply lg:w-auto lg:min-w-[250px];
+    }
+    &--desktop-narrow {
+        @apply lg:w-auto lg:min-w-[197px];
+    }
+    &--desktop-small {
+        @apply lg:w-auto lg:min-w-[150px];
+    }
+}

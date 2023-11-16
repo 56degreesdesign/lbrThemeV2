@@ -32,11 +32,11 @@ $slides = $section['slides'] ?? false;
                 </div>
                 <div class="flex justify-between xl:pr-[3.563rem]">
                     <div class="flex gap-x-4">
-                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
-                        <div class="swiper-next-el swiper-nav">NEXT</div>
+                        <div class="swiper-prev-el swiper-nav swiper-nav--small">PREVIOUS</div>
+                        <div class="swiper-next-el swiper-nav swiper-nav--small">NEXT</div>
                     </div>
                     <div class="">
-                        <span class="swiper-pagination-el text-center txt-h5">1/3</span>
+                        <span class="swiper-pagination-el swiper-pagination-el--small text-center txt-h5">1/3</span>
                     </div>
                 </div>
             </div>

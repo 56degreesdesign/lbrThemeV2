@@ -59,7 +59,7 @@ form {
         @apply absolute top-1/2 -left-2.5 block bg-transparent border-0 rounded-none outline-0 m-0 w-3 h-[15px] bg-no-repeat bg-contain;
 
         &:checked {
-            background-image: url('../../assets/img/icon-arrow-orange.svg');
+            background-image: url('../../assets/img/icon-arrow-black.svg');
         }
     }
 
@@ -146,7 +146,7 @@ form {
     }
 }
     .btn {
-        @apply bg-orange uppercase px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300;
+        @apply bg-orange uppercase px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:bg-black duration-300;
     }
 }
 
@@ -156,7 +156,7 @@ form {
     }
 
     .dropdown-wrapper {
-        background-image: url('../../assets/img/icon-arrow-orange.svg');
+        background-image: url('../../assets/img/icon-arrow-black.svg');
         background-position: 0 0;
         -webkit-background-size: contain;
         @apply absolute top-1/2 right-0 -mt-[7px] w-3 h-[15px] bg-no-repeat bg-contain rotate-90;

@@ -27,7 +27,7 @@ if (!$hidden) :
                         'menu_class' => 'main-menu-test',
                     ));
                     ?>
-                    <button class="toggle-menu rounded-full border uppercase px-5 xl:px-10 pt-2.5 pb-2 text-14 w-fit text-center max-h-[35px] flex items-center">Explore more</button>
+                    <button class="toggle-menu rounded-full border uppercase px-5 xl:px-10 pt-2.5 pb-2 text-14 w-fit text-center max-h-[35px] font-bold flex items-center hover:bg-black hover:text-beige-light duration-300">Explore more</button>
                 </div>
                 <div class="w-full dropdown-menu">
                     <div class="w-full grid grid-cols-3">

@@ -17,7 +17,7 @@ $background_colour = $section['background_colour'] ?? false;
              <?php if($buttons) :?>
                   <div class="w-full flex flex-col gap-y-2.5 gap-x-5 justify-center items-center mt-7 mb-5 lg:gap-y-5 lg:mb-0 lg:mt-20 lg:flex-row xl:mt-24">
                       <?php foreach ($buttons as $button) : ?>
-                          <?php get_template_part( 'templates/partials/button', null, ['data' => $button['button'], 'class' => 'w-full lg:w-[317px]'] ) ?>
+                          <?php get_template_part( 'templates/partials/button', null, ['data' => $button['button'], 'class' => 'btn--mobile-wide btn--desktop-wide'] ) ?>
                       <?php endforeach;?>
                   </div>
             <?php endif ;?>

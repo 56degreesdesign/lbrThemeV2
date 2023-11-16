@@ -85,7 +85,7 @@ $box5 = $section['box_5']['slider_with_content'] ?? false;
         <!-- Box 5 -->
         <div class="col-start-4 col-span-6 grid grid-cols-2 gap-x-[30px]">
             <div class="col-span-1">
-                <div class="wysiwyg"><?php echo $box4['content'] ?></div>
+                <div class="wysiwyg"><?php echo $box5['content'] ?></div>
             </div>
             <div class="col-span-1">
                 <div class="swiper small-carousel">

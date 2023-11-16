@@ -1344,9 +1344,6 @@ html {
 .w-7 {
   width: 1.75rem;
 }
-.w-\[197px\] {
-  width: 197px;
-}
 .w-\[230px\] {
   width: 230px;
 }
@@ -1905,6 +1902,9 @@ html {
 .pt-1 {
   padding-top: 0.25rem;
 }
+.pt-1\.5 {
+  padding-top: 0.375rem;
+}
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -1949,9 +1949,6 @@ html {
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pt-1\.5 {
-  padding-top: 0.375rem;
 }
 .\!text-left {
   text-align: left !important;
@@ -2900,7 +2897,7 @@ form input[type=radio] {
   outline-width: 0px;
 }
 form input[type=radio]:checked {
-  background-image: url("../../assets/img/icon-arrow-orange.svg");
+  background-image: url("../../assets/img/icon-arrow-black.svg");
 }
 form .wpcf7-radio {
   margin-bottom: 1.25rem;
@@ -3129,14 +3126,15 @@ form .btn {
   transition-duration: 300ms;
 }
 form .btn:hover {
-  opacity: 0.7;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .select2-hidden-accessible {
   display: none !important;
 }
 .select2 .dropdown-wrapper {
-  background-image: url("../../assets/img/icon-arrow-orange.svg");
+  background-image: url("../../assets/img/icon-arrow-black.svg");
   background-position: 0 0;
   -webkit-background-size: contain;
   position: absolute;
@@ -3255,7 +3253,9 @@ form .btn:hover {
   }
 }
 .swiper-nav {
+  display: flex;
   cursor: pointer;
+  align-items: center;
   transition-duration: 300ms;
   font-size: 0.875rem;
   font-weight: 700;
@@ -3276,6 +3276,28 @@ form .btn:hover {
   opacity: 0.3;
 }
 .swiper-nav--small {
+  font-size: 15px !important;
+}
+
+.swiper-pagination-el {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination-el {
+    font-size: 1.063rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .swiper-pagination-el {
+    font-size: 1.25rem;
+  }
+}
+.swiper-pagination-el--small {
   font-size: 15px !important;
 }
 
@@ -3349,6 +3371,70 @@ form .btn:hover {
 }
 .accordion-list:not(.init) .accordion-list-button {
   display: none;
+}
+
+.btn {
+  height: -moz-fit-content;
+  height: fit-content;
+  white-space: nowrap;
+  border-radius: 9999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-duration: 300ms;
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    font-size: 0.938rem;
+  }
+}
+.btn--black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.btn--black:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 136 93 / var(--tw-bg-opacity));
+}
+.btn--orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 136 93 / var(--tw-bg-opacity));
+}
+.btn--orange:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.btn--mobile-wide {
+  width: 100%;
+}
+.btn--mobile-narrow {
+  min-width: 180px;
+}
+@media (min-width: 1024px) {
+  .btn--desktop-wide {
+    width: auto;
+    min-width: 317px;
+  }
+  .btn--desktop-medium {
+    width: auto;
+    min-width: 250px;
+  }
+  .btn--desktop-narrow {
+    width: auto;
+    min-width: 197px;
+  }
+  .btn--desktop-small {
+    width: auto;
+    min-width: 150px;
+  }
 }
 
 .sc-resort__map {
@@ -3644,6 +3730,10 @@ form .btn:hover {
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
+.hover\:text-beige-light:hover {
+  --tw-text-opacity: 1;
+  color: rgb(246 238 229 / var(--tw-text-opacity));
+}
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -3728,6 +3818,9 @@ form .btn:hover {
   .md\:mb-8 {
     margin-bottom: 2rem;
   }
+  .md\:mb-9 {
+    margin-bottom: 2.25rem;
+  }
   .md\:mr-7 {
     margin-right: 1.75rem;
   }
@@ -3742,9 +3835,6 @@ form .btn:hover {
   }
   .md\:mt-20 {
     margin-top: 5rem;
-  }
-  .md\:mb-9 {
-    margin-bottom: 2.25rem;
   }
   .md\:inline {
     display: inline;
@@ -3831,9 +3921,6 @@ form .btn:hover {
   }
   .md\:pt-28 {
     padding-top: 7rem;
-  }
-  .md\:pb-14 {
-    padding-bottom: 3.5rem;
   }
   .md\:text-16 {
     font-size: 1rem;
@@ -4058,9 +4145,6 @@ form .btn:hover {
   .lg\:w-4\/6 {
     width: 66.666667%;
   }
-  .lg\:w-\[317px\] {
-    width: 317px;
-  }
   .lg\:w-\[46\.5625\%\] {
     width: 46.5625%;
   }
@@ -4080,11 +4164,11 @@ form .btn:hover {
   .lg\:max-w-none {
     max-width: none;
   }
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .lg\:flex-row {
     flex-direction: row;
@@ -4265,9 +4349,6 @@ form .btn:hover {
   .lg\:text-14 {
     font-size: 0.875rem;
   }
-  .lg\:text-15 {
-    font-size: 0.938rem;
-  }
   .lg\:text-17 {
     font-size: 1.063rem;
   }
@@ -4361,14 +4442,14 @@ form .btn:hover {
   .xl\:mt-28 {
     margin-top: 7rem;
   }
+  .xl\:mt-36 {
+    margin-top: 9rem;
+  }
   .xl\:mt-40 {
     margin-top: 10rem;
   }
   .xl\:mt-52 {
     margin-top: 13rem;
-  }
-  .xl\:mt-36 {
-    margin-top: 9rem;
   }
   .xl\:block {
     display: block;
@@ -4394,10 +4475,6 @@ form .btn:hover {
     -moz-column-gap: 13rem;
          column-gap: 13rem;
   }
-  .xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
   .xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -4405,10 +4482,6 @@ form .btn:hover {
   .xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-  .xl\:px-9 {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
   .xl\:px-\[15\%\] {
     padding-left: 15%;

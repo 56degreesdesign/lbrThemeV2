@@ -5,7 +5,6 @@ $heading = $section['heading'] ?? false;
 $button = $section['button'] ?? false;
 $left_col = $section['left_col'] ?? false;
 $right_col = $section['right_col'] ?? false;
-var_dump($left_col['image']);
 if($section) :
 ?>
 
@@ -78,7 +77,7 @@ if($section) :
             </svg>
         </div>
         <div class="col-span-full lg:col-start-2 lg:col-span-4 flex justify-center mt-20">
-            <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'h-fit'] ) ?>
+            <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-medium'] ) ?>
 
         </div>
         <div class="col-span-full mt-10 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
@@ -86,8 +85,8 @@ if($section) :
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
             </div>
         </div>
-        <div class="col-span-full flex justify-end mt-16">
-            <a class="bg-black uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-center text-white font-bold rounded-full hover:opacity-70 duration-300" href="/casita-rentals">
+        <div class="col-span-full justify-end mt-16 hidden lg:flex">
+            <a class="btn btn--black btn--desktop-small" href="/casita-rentals">
                 Book now</a>
         </div>
     </div>

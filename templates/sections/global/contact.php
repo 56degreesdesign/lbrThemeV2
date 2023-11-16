@@ -14,7 +14,7 @@ $logo = $section['logo'] ?? false;
         <?php if($section['content']) :?>
             <p class="text-white text-center text-15 max-w-[290px] md:text-16 lg:max-w-[484px] lg:text-17 mb-8 md:mb-10 lg:mb-12"><?php echo $section['content'] ?></p>
         <?php endif ;?>
-        <?php get_template_part( 'templates/partials/button', null, ['data' => $section['button'], 'class' => ''] ) ?>
+        <?php get_template_part( 'templates/partials/button', null, ['data' => $section['button'], 'class' => 'btn--mobile-narrow'] ) ?>
     </div>
 </section>
 <?php endif ;?>
