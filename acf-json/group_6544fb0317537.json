@@ -126,6 +126,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "blog"
+            }
         ]
     ],
     "menu_order": 0,
@@ -139,5 +146,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699459177
+    "modified": 1700139505
 }

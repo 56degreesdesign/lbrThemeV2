@@ -4,15 +4,17 @@
     get_template_part('templates/sections/single-post/hero-single', null, null);
 ?>
 
-<main class="bg-beige-light pt-48 pb-80">
+<main class="bg-beige-light pt-7 pb-24 | xl:pt-48 xl:pb-80">
     <div class="container grid-layout">
-        <aside class="col-span-full lg:col-span-3 flex flex-col text-17">
+        <aside class="txt-1 col-span-full lg:col-span-3 flex mb-11 | xl:mb-0 xl:flex-col">
             <?php
                 $author_id = $post->post_author;
             ?>
-            <p class="uppercase mb-14"><strong>by <br><?php the_author_meta( 'display_name', $author_id ); ?></strong></p>
-            <p class="uppercase mb-4"><strong>Share</strong></p>
-            <?php get_social_share_56('flex flex-col', 'uppercase text-orange', ['email', 'facebook', 'linkedin', 'x']);  ?>
+            <p class="uppercase w-1/2 mb-14 | md:w-full"><strong>by <br><?php the_author_meta( 'display_name', $author_id ); ?></strong></p>
+            <div>
+                <p class="uppercase mb-4"><strong>Share</strong></p>
+                <?php get_social_share_56('flex flex-col', 'uppercase text-orange', ['email', 'facebook', 'linkedin', 'x']);  ?>
+            </div>
         </aside>
         <article class="col-span-full lg:col-span-6">
             <?php

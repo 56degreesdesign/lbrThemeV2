@@ -5,8 +5,8 @@
     $content = $section['content'] ?? false;
 ?>
 
-<section class="wysiwyg wysiwyg--single mb-14">
+<section class="wysiwyg wysiwyg--single mb-11 | xl:mb-14">
     <blockquote class="<?= $option; ?> <?= 'text-' . $color; ?>">
-        <p>“<?= $content ?>”</p>
+        <p class="<?= $option === 'big' ? 'txt-h2' : ''; ?>">“<?= $content ?>”</p>
     </blockquote>
 </section>

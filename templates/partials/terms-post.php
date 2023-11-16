@@ -3,19 +3,19 @@
     $types ='';
 ?>
 <?php if ( $term_list ) : ?>
-<div class="flex gap-x-1 post-terms">
+<div class="flex flex-wrap gap-1 post-terms">
     <?php foreach($term_list as $key=>$term_single) : ?>
         <?php
             // Hiding when there are more than 2 elements 
             $hideTerm = $key > 1 ? 'hidden opacity-0' : null;
         ?>
-        <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full transition-opacity duration-300 post-terms__item <?= $hideTerm; ?>"><?= $term_single->slug; ?></div>
+        <div class="post-terms__item bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full transition-opacity duration-300 text-10 | lg:text-12 <?= $hideTerm; ?>"><?= $term_single->name; ?></div>
     <?php endforeach; ?>
     <?php 
         // Shows when there are more than two elements
         if (count($term_list) > 2) : 
     ?>
-        <div class="bg-black px-4 pt-1 pb-0.5 text-beige text-10 font-bold uppercase rounded-full cursor-pointer transition-opacity duration-300 post-terms__btn" aria-label="Show more category">...</div>
+        <div class="post-terms__btn bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full cursor-pointer transition-opacity duration-300 text-10 | lg:text-12" aria-label="Show more category">...</div>
     <?php endif; ?>
 </div>
 <?php endif; ?>
