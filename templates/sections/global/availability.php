@@ -23,12 +23,12 @@ $props = json_encode($section, JSON_HEX_APOS);
             <p class="mb-8"><?php echo $data['subheading'] ?></p>
             <div class="flex flex-col gap-y-3">
                 <?php foreach ($data['buttons'] as $button) : ?>
-                   <?php get_template_part('templates/partials/button', null, ['data' => $button['button'], 'class' => 'block !w-[192px] lg:px-0 !xl:px-0 whitespace-nowrap']); ?>
+                   <?php get_template_part('templates/partials/button', null, ['data' => $button['button'], 'class' => 'btn--desktop-narrow']); ?>
                 <?php endforeach; ?>
             </div>
             <img class="mt-24 max-w-[212px]" src="<?php echo $section['legend']['url']?>" alt="">
         </div>
-        <div class="col-start-4 col-span-8">
+        <div class="col-start-4 col-span-9">
             <?php get_template_part('templates/partials/map-phase-all'); ?>
         </div>
     </div>

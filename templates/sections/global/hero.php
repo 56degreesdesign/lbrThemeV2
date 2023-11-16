@@ -31,10 +31,10 @@ $button = $section['button'] ?? false;
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
         </a>
     </div>
-    <div class="w-full absolute bottom-10 left-0 hidden lg:block">
-        <div class="container w-full flex justify-end">
-            <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
-        </div>
-    </div>
+<!--    <div class="w-full fixed bottom-10 left-0 hidden lg:block">-->
+<!--        <div class="container w-full flex justify-end">-->
+<!--            --><?php //get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--desktop-small'] ) ?>
+<!--        </div>-->
+<!--    </div>-->
 </section>
 <?php endif ;?>

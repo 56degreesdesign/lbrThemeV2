@@ -59,6 +59,9 @@
                 .sub-menu {
                     @apply opacity-100 duration-300 pointer-events-auto;
                     > li {
+                        > a {
+                            @apply underline-animation-orange;
+                        }
                     }
                 }
             }

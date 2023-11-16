@@ -114,4 +114,17 @@ if (!$hidden) :
             </div>
         </div>
     </div>
+    <?php
+    $excluded_pages = array('strata', 'mesa', 'spire', 'casita-rentals', 'blog');
+    if (!is_page($excluded_pages)) :
+        ?>
+        <div class="w-full fixed bottom-10 left-0 hidden lg:block z-10">
+            <div class="container w-full flex justify-end">
+                <a href="/residential-casitas" class="btn btn--desktop-small btn--black">Book now</a>
+            </div>
+        </div>
+    <?php
+    endif;
+    ?>
+
 <?php endif ;?>

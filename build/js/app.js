@@ -17188,14 +17188,10 @@ var sliders = /*#__PURE__*/function () {
           if (swipers) {
             swipers.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
-                loop: true,
+                loop: false,
                 speed: 600,
                 slidesPerView: 1.5,
                 spaceBetween: 16,
-                autoplay: {
-                  delay: 5000,
-                  disableOnInteraction: false
-                },
                 breakpoints: {
                   768: {
                     slidesPerView: 2.5,
@@ -17232,14 +17228,14 @@ var sliders = /*#__PURE__*/function () {
           if (InstagramSwiper) {
             InstagramSwiper.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
-                loop: true,
+                // loop: true,
                 speed: 600,
                 slidesPerView: 1.5,
                 spaceBetween: 0,
-                autoplay: {
-                  delay: 5000,
-                  disableOnInteraction: false
-                },
+                // autoplay: {
+                //     delay: 5000,
+                //     disableOnInteraction: false,
+                // },
                 breakpoints: {
                   768: {
                     slidesPerView: 2.5
@@ -17309,14 +17305,10 @@ var sliders = /*#__PURE__*/function () {
           if (smallSwipers) {
             smallSwipers.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
-                loop: true,
+                loop: false,
                 speed: 600,
                 slidesPerView: 1,
                 spaceBetween: 21,
-                autoplay: {
-                  delay: 5000,
-                  disableOnInteraction: false
-                },
                 pagination: {
                   el: el.parentElement.querySelector('.swiper-pagination-el'),
                   type: 'fraction'
@@ -17338,14 +17330,14 @@ var sliders = /*#__PURE__*/function () {
           }
           if (blogSwiper) {
             swiperCarousel = new Swiper(blogSwiper, {
-              loop: true,
+              // loop: true,
               speed: 600,
               slidesPerView: 1,
               spaceBetween: 21,
-              autoplay: {
-                delay: 5000,
-                disableOnInteraction: false
-              },
+              // autoplay: {
+              //     delay: 5000,
+              //     disableOnInteraction: false,
+              // },
               pagination: {
                 el: blogSwiper.parentElement.parentElement.querySelector('.swiper-pagination-el'),
                 type: 'fraction'

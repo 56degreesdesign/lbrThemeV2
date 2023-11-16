@@ -15,3 +15,8 @@
 .footer-menu {
     
 }
+.footer-copy {
+    a {
+        @apply underline-animation;
+    }
+}

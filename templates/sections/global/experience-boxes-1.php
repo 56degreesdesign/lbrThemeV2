@@ -11,7 +11,7 @@ $box4 = $section['box_4']['slider_with_content'] ?? false;
         <div class="col-start-3 col-span-full grid grid-cols-10 gap-x-[30px] mb-12">
             <div class="col-span-6">
                 <div class="swiper small-carousel">
-                    <?php (count($box1['slider']) > 1) ? get_template_part('templates/partials/experience-swiper-nav') : ''; ?>
+                    <?php (count($box1['slider']) > 1) ? get_template_part('templates/partials/swiper-nav', null, ['desktop_absolute' => true ]) : ''; ?>
                     <div class="swiper-wrapper">
                         <?php foreach ($box1['slider'] as $slide) : ?>
                             <div class="swiper-slide h-full w-full">
@@ -30,7 +30,7 @@ $box4 = $section['box_4']['slider_with_content'] ?? false;
             <div class="col-span-1 wysiwyg"><?php echo $box2['content'] ?></div>
             <div class="col-span-1">
                 <div class="swiper small-carousel">
-                    <?php (count($box2['slider']) > 1) ? get_template_part('templates/partials/experience-swiper-nav') : ''; ?>
+                    <?php (count($box2['slider']) > 1) ? get_template_part('templates/partials/swiper-nav', null, ['desktop_absolute' => true ]) : ''; ?>
                     <div class="swiper-wrapper">
                         <?php foreach ($box2['slider'] as $slide) : ?>
                             <div class="swiper-slide h-full w-full">
@@ -46,7 +46,7 @@ $box4 = $section['box_4']['slider_with_content'] ?? false;
         <!-- Box 3 -->
         <div class="col-span-6 row-span-2 relative">
             <div class="swiper small-carousel mb-12">
-                <?php (count($box3['slider']) > 1) ? get_template_part('templates/partials/experience-swiper-nav') : ''; ?>
+                <?php (count($box3['slider']) > 1) ? get_template_part('templates/partials/swiper-nav', null, ['desktop_absolute' => true ]) : ''; ?>
                 <div class="swiper-wrapper">
                     <?php foreach ($box3['slider'] as $slide) : ?>
                         <div class="swiper-slide h-full w-full">
@@ -62,7 +62,7 @@ $box4 = $section['box_4']['slider_with_content'] ?? false;
         <!-- Box 4 -->
         <div class="col-span-6 gap-x-[30px] row-span-2 mt-12">
             <div class="swiper small-carousel">
-                <?php (count($box4['slider']) > 1) ? get_template_part('templates/partials/experience-swiper-nav') : ''; ?>
+                <?php (count($box4['slider']) > 1) ? get_template_part('templates/partials/swiper-nav', null, ['desktop_absolute' => true ]) : ''; ?>
                 <div class="swiper-wrapper">
                     <?php foreach ($box4['slider'] as $slide) : ?>
                         <div class="swiper-slide h-full w-full">

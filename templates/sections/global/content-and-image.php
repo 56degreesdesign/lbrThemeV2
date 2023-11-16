@@ -22,11 +22,11 @@ $button = $section['button'] ?? false;
                 <p class="text-center text-17 lg:w-1/2"><?php echo $content ?></p>
             <?php endif ;?>
         </div>
-        <div class="w-full absolute bottom-10 left-0">
-            <div class="container w-full flex justify-end">
-                <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
-            </div>
-        </div>
+<!--        <div class="w-full absolute bottom-10 left-0">-->
+<!--            <div class="container w-full flex justify-end">-->
+<!--                --><?php //get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
+<!--            </div>-->
+<!--        </div>-->
     </div>
   
 </section>

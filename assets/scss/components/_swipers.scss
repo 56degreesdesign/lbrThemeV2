@@ -1,13 +1,13 @@
 .swiper-nav {
     @apply txt-h5 cursor-pointer flex items-center hover:opacity-30 duration-300;
     &--small {
-        //@apply text-15;
-        font-size: 15px !important;
+        @apply text-12 md:text-13 lg:text-15;
+        //font-size: 15px !important;
     }
 }
 .swiper-pagination-el {
-    @apply txt-h5;
+    @apply txt-h5 text-center;
     &--small {
-        font-size: 15px !important;
+        @apply text-12 md:text-13 lg:text-15;
     }
 }

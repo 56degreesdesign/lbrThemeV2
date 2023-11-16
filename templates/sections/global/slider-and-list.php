@@ -25,7 +25,7 @@ $slider_position = $section['slider_position'] ?? false;
             <?php endif ;?>
             <ul class="pl-4 md:pl-10 lg:pl-0">
                 <?php foreach ($left_col['list'] as $item ) :?>
-                    <li class="list-disc txt-1"><?php echo $item['item'] ?></li>
+                    <li class="list-disc txt-1 -ml-5 pl-5"><?php echo $item['item'] ?></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -37,13 +37,13 @@ $slider_position = $section['slider_position'] ?? false;
             <?php endif ;?>
             <ul>
                 <?php foreach ($right_col['list'] as $item ) :?>
-                    <li class="list-disc txt-1"><?php echo $item['item'] ?></li>
+                    <li class="list-disc txt-1 -ml-5 pl-5"><?php echo $item['item'] ?></li>
                 <?php endforeach; ?>
             </ul>
         </div>
         <?php if($images) :?>
             <div class="col-span-full <?php echo ($slider_position === 'left') ? 'lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-3' : 'lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-2 lg:mt-28'; ?>">
-                <div class="swiper small-carousel mb-7">
+                <div class="swiper small-carousel mb-7 relative">
                     <div class="swiper-wrapper">
                         <?php foreach ($images as $slide) : ?>
                             <div class="swiper-slide h-full w-full">
@@ -53,15 +53,7 @@ $slider_position = $section['slider_position'] ?? false;
                             </div>
                         <?php endforeach; ?>
                     </div>
-                </div>
-                <div class="flex justify-between">
-                    <div class="flex gap-x-4">
-                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
-                        <div class="swiper-next-el swiper-nav">NEXT</div>
-                    </div>
-                    <div class="">
-                        <span class="swiper-pagination-el text-center txt-h5">1/3</span>
-                    </div>
+                    <?php get_template_part('templates/partials/swiper-nav') ?>
                 </div>
             </div>
         <?php endif ;?>

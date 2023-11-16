@@ -11,14 +11,10 @@ const sliders = async function () {
         if (swipers) {
             swipers.forEach(el => {
                 let swiperCarousel = new Swiper(el, {
-                    loop: true,
+                    loop: false,
                     speed: 600,
                     slidesPerView: 1.5,
                     spaceBetween: 16,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
                     breakpoints: {
                         768: {
                             slidesPerView: 2.5,
@@ -59,14 +55,14 @@ const sliders = async function () {
         if (InstagramSwiper) {
             InstagramSwiper.forEach(el => {
                 let swiperCarousel = new Swiper(el, {
-                    loop: true,
+                    // loop: true,
                     speed: 600,
                     slidesPerView: 1.5,
                     spaceBetween: 0,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
+                    // autoplay: {
+                    //     delay: 5000,
+                    //     disableOnInteraction: false,
+                    // },
                     breakpoints: {
                         768: {
                             slidesPerView: 2.5,
@@ -141,14 +137,10 @@ const sliders = async function () {
         if (smallSwipers) {
             smallSwipers.forEach(el => {
                 let swiperCarousel = new Swiper(el, {
-                    loop: true,
+                    loop: false,
                     speed: 600,
                     slidesPerView: 1,
                     spaceBetween: 21,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
                     pagination: {
                         el: el.parentElement.querySelector('.swiper-pagination-el'),
                         type: 'fraction',
@@ -174,14 +166,14 @@ const sliders = async function () {
         
         if (blogSwiper) {
             let swiperCarousel = new Swiper(blogSwiper, {
-                loop: true,
+                // loop: true,
                 speed: 600,
                 slidesPerView: 1,
                 spaceBetween: 21,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
+                // autoplay: {
+                //     delay: 5000,
+                //     disableOnInteraction: false,
+                // },
                 pagination: {
                     el: blogSwiper.parentElement.parentElement.querySelector('.swiper-pagination-el'),
                     type: 'fraction',

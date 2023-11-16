@@ -19,7 +19,7 @@ $slides = $section['slides'] ?? false;
                 <?php endif ;?>
             </div>
             <div class="col-span-full mt-10 lg:col-start-8 lg:col-span-5 lg:mt-32 xl:translate-x-[3.563rem]">
-                <div class="swiper small-carousel mb-7">
+                <div class="swiper small-carousel relative">
                     <div class="swiper-wrapper">
                         <?php foreach ($slides as $slide) : ?>
                             <div class="swiper-slide h-full w-full">
@@ -29,14 +29,8 @@ $slides = $section['slides'] ?? false;
                             </div>
                         <?php endforeach; ?>
                     </div>
-                </div>
-                <div class="flex justify-between xl:pr-[3.563rem]">
-                    <div class="flex gap-x-4">
-                        <div class="swiper-prev-el swiper-nav swiper-nav--small">PREVIOUS</div>
-                        <div class="swiper-next-el swiper-nav swiper-nav--small">NEXT</div>
-                    </div>
-                    <div class="">
-                        <span class="swiper-pagination-el swiper-pagination-el--small text-center txt-h5">1/3</span>
+                    <div class="xl:pr-[3.563rem]">
+                        <?php get_template_part('templates/partials/swiper-nav') ?>
                     </div>
                 </div>
             </div>

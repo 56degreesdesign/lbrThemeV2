@@ -8,7 +8,7 @@ $right_col = $section['right_col'] ?? false;
 if($section) :
 ?>
 
-<section class="bg-beige pt-20 md:pt-28 lg:pt-40 xl:pt-48 pb-9">
+<section class="bg-beige pt-20 md:pt-28 lg:pt-40 xl:pt-48 pb-32">
     <div class="container grid-layout">
         <h1 class="col-span-full lg:col-start-1 lg:col-span-5 xl:col-start-2 xl:col-span-4 txt-h2 text-center mb-8"><?php echo $heading ?></h1>
         <div class="col-span-full lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:col-span-2 lg:mt-8 xl:mt-16 flex flex-col justify-between">
@@ -85,10 +85,10 @@ if($section) :
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
             </div>
         </div>
-        <div class="col-span-full justify-end mt-16 hidden lg:flex">
-            <a class="btn btn--black btn--desktop-small" href="/casita-rentals">
-                Book now</a>
-        </div>
+<!--        <div class="col-span-full justify-end mt-16 hidden lg:flex">-->
+<!--            <a class="btn btn--black btn--desktop-small" href="/casita-rentals">-->
+<!--                Book now</a>-->
+<!--        </div>-->
     </div>
 </section>
 <div class="w-full py-9 bg-orange text-beige-light uppercase text-22 font-bold text-center">Phase 1 Casitas under construction and deliveries begin Spring 2024</div>

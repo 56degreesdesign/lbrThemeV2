@@ -11,7 +11,7 @@ $links = get_field('links', 'option') ?? false;
 if (!$hidden) :
 ?>
 <footer class="bg-black text-beige relative pb-7">
-    <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="<?php echo $bg['url']?>" alt="">
+    <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none opacity-60" src="<?php echo $bg['url']?>" alt="">
     <div class="container grid grid-cols-1 lg:grid-cols-3 pt-14">
 
         <?php if ($downloads['heading'] && $downloads['content']) : ?>
@@ -56,8 +56,8 @@ if (!$hidden) :
             <a href="<?php echo $links['facebook']['url'] ?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>
 
         </div>
-        <div class="col-span-full mt-10 lg:col-start-2 lg:col-span-10 text-center mb-5 text-13 lg:text-14 lg:mt-16"><?php echo $footer['copy'] ?></div>
-        <div class="col-span-full lg:col-start-2 lg:col-span-10 text-center text-13 lg:text-14"><?php echo $footer['copy_subtext'] ?></div>
+        <div class="footer-copy col-span-full mt-10 lg:col-start-2 lg:col-span-10 text-center mb-5 text-13 lg:text-14 lg:mt-16"><?php echo $footer['copy'] ?></div>
+        <div class="footer-copy col-span-full lg:col-start-2 lg:col-span-10 text-center text-13 lg:text-14"><?php echo $footer['copy_subtext'] ?></div>
         <?php if($footer['copy_icons']) : ?>
         <div class="col-span-full row-start-1 mb-5 lg:mb-0 lg:row-start-auto lg:col-start-12 lg:col-span-1 flex justify-center lg:justify-end">
             <img class="max-h-[21px]" src="<?php echo $footer['copy_icons']['url'] ?>" alt="">
