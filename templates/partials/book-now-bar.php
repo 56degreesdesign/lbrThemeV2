@@ -1,1 +1,1 @@
-<a href="#" class="fixed bottom-0 left-0 uppercase w-full bg-black text-beige-light text-center py-5 lg:hidden">book now</a>
+<a href="#" class="fixed bottom-0 left-0 uppercase w-full bg-black text-beige-light text-center py-5 lg:hidden z-10">book now</a>
