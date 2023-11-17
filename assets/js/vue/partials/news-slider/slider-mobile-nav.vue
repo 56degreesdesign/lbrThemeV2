@@ -4,7 +4,7 @@ const props = defineProps({
 })
 </script>
 <template>
-    <svg class="max-w-[11px] md:max-w-[15px]" :class="props.customClass" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.808" height="20.668" viewBox="0 0 16.808 20.668">
+    <svg class="max-w-[11px] md:max-w-[15px]" :class="props.customClass" xmlns="http://www.w3.org/2000/svg" width="16.808" height="20.668" viewBox="0 0 16.808 20.668">
         <defs>
             <clipPath id="clip-path2">
                 <path id="Path_4" data-name="Path 4" d="M0,11.778H16.808V-8.89H0Z" transform="translate(0 8.89)"/>

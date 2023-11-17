@@ -2,9 +2,9 @@
 import {ref, defineProps, computed} from "vue";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
 import SliderMobileNav from "./partials/news-slider/slider-mobile-nav.vue";
 import YearBtn from "./partials/news-slider/year-btn.vue";
+import 'swiper/css';
 
 const modules = [Pagination, Navigation]
 
