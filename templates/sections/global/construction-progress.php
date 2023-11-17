@@ -35,9 +35,6 @@ if($section):
 
     <div class="relative pb-[51%]">
         <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full -z-10']); ?>
-        <div class="container absolute-full pb-14 flex items-center justify-end">
-            <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
-        </div>
     </div>
     
 </section>

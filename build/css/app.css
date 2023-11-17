@@ -1037,9 +1037,6 @@ html {
 .top-0 {
   top: 0px;
 }
-.top-28 {
-  top: 7rem;
-}
 .top-3 {
   top: 0.75rem;
 }
@@ -1069,6 +1066,15 @@ html {
 }
 .z-\[60\] {
   z-index: 60;
+}
+.-order-1 {
+  order: -1;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -1160,6 +1166,9 @@ html {
 .-mt-10 {
   margin-top: -2.5rem;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1210,6 +1219,9 @@ html {
 }
 .mb-8 {
   margin-bottom: 2rem;
+}
+.mb-9 {
+  margin-bottom: 2.25rem;
 }
 .ml-8 {
   margin-left: 2rem;
@@ -1746,20 +1758,24 @@ html {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
 }
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
 .pb-0 {
   padding-bottom: 0px;
 }
-.pb-0\.5 {
-  padding-bottom: 0.125rem;
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pb-11 {
+  padding-bottom: 2.75rem;
+}
 .pb-12 {
   padding-bottom: 3rem;
-}
-.pb-14 {
-  padding-bottom: 3.5rem;
 }
 .pb-16 {
   padding-bottom: 4rem;
@@ -1773,6 +1789,9 @@ html {
 .pb-20 {
   padding-bottom: 5rem;
 }
+.pb-24 {
+  padding-bottom: 6rem;
+}
 .pb-32 {
   padding-bottom: 8rem;
 }
@@ -1784,12 +1803,6 @@ html {
 }
 .pb-7 {
   padding-bottom: 1.75rem;
-}
-.pb-80 {
-  padding-bottom: 20rem;
-}
-.pb-9 {
-  padding-bottom: 2.25rem;
 }
 .pb-\[100\%\] {
   padding-bottom: 100%;
@@ -1902,6 +1915,9 @@ html {
 .pl-5 {
   padding-left: 1.25rem;
 }
+.pl-6 {
+  padding-left: 1.5rem;
+}
 .pl-7 {
   padding-left: 1.75rem;
 }
@@ -1928,6 +1944,9 @@ html {
 }
 .pt-10 {
   padding-top: 2.5rem;
+}
+.pt-11 {
+  padding-top: 2.75rem;
 }
 .pt-12 {
   padding-top: 3rem;
@@ -2012,9 +2031,6 @@ html {
 }
 .text-25 {
   font-size: 1.563rem;
-}
-.text-26 {
-  font-size: 1.625rem;
 }
 .text-35 {
   font-size: 2.188rem;
@@ -2598,10 +2614,17 @@ html {
 }
 
 .wysiwyg.wysiwyg--single p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: left;
+  font-size: 0.938rem;
   letter-spacing: .020em;
-  font-size: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .wysiwyg.wysiwyg--single p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
 }
 .wysiwyg.wysiwyg--single blockquote {
   font-family: Reckless Neue, sans-serif;
@@ -2610,12 +2633,19 @@ html {
 .wysiwyg.wysiwyg--single blockquote.big p {
   line-height: 1.071;
   letter-spacing: .010em;
-  font-size: 4.375rem;
 }
 .wysiwyg.wysiwyg--single blockquote p {
+  text-align: center;
   line-height: 1.071;
   letter-spacing: .010em;
-  font-size: 2.5rem;
+}
+.wysiwyg.wysiwyg--single blockquote p:last-child {
+  margin-bottom: 0px;
+}
+@media (min-width: 1280px) {
+  .wysiwyg.wysiwyg--single blockquote p {
+    text-align: left;
+  }
 }
 .wysiwyg.wysiwyg--no-subheading h2 {
   margin-bottom: 2.75rem;
@@ -2842,8 +2872,8 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   list-style-type: decimal;
 }
 .wysiwyg-lists li, .wysiwyg li {
-  margin-left: -1.25rem;
-  padding-left: 1.25rem;
+  margin-left: -0.5rem;
+  padding-left: 0.5rem;
   font-size: 0.938rem;
   line-height: 1.35294117647;
 }
@@ -2855,6 +2885,8 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 @media (min-width: 1024px) {
   .wysiwyg-lists li, .wysiwyg li {
     font-size: 1.063rem;
+    margin-left: -1.25rem;
+    padding-left: 1.25rem;
   }
 }
 
@@ -3809,31 +3841,43 @@ form .btn:hover {
   margin-top: 1.5rem;
   font-size: 1.063rem;
 }
+
+.house-page-content h2 {
+  display: none;
+}
+
 .last-of-type\:border-b:last-of-type {
   border-bottom-width: 1px;
 }
+
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
+
 .hover\:text-beige-light:hover {
   --tw-text-opacity: 1;
   color: rgb(246 238 229 / var(--tw-text-opacity));
 }
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }
+
 @media (min-width: 768px) {
   .md\:absolute {
     position: absolute;
@@ -3931,6 +3975,9 @@ form .btn:hover {
   .md\:h-screen {
     height: 100vh;
   }
+  .md\:w-full {
+    width: 100%;
+  }
   .md\:max-w-\[170px\] {
     max-width: 170px;
   }
@@ -4027,12 +4074,16 @@ form .btn:hover {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
+
 @media (min-width: 1024px) {
   .lg\:static {
     position: static;
   }
   .lg\:absolute {
     position: absolute;
+  }
+  .lg\:sticky {
+    position: sticky;
   }
   .lg\:bottom-10 {
     bottom: 2.5rem;
@@ -4048,6 +4099,9 @@ form .btn:hover {
   }
   .lg\:bottom-32 {
     bottom: 8rem;
+  }
+  .lg\:top-28 {
+    top: 7rem;
   }
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
@@ -4160,6 +4214,9 @@ form .btn:hover {
   .lg\:mb-16 {
     margin-bottom: 4rem;
   }
+  .lg\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
   .lg\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -4180,6 +4237,12 @@ form .btn:hover {
   }
   .lg\:mb-5 {
     margin-bottom: 1.25rem;
+  }
+  .lg\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  .lg\:mb-7 {
+    margin-bottom: 1.75rem;
   }
   .lg\:mb-9 {
     margin-bottom: 2.25rem;
@@ -4222,6 +4285,9 @@ form .btn:hover {
   }
   .lg\:mt-auto {
     margin-top: auto;
+  }
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
   .lg\:block {
     display: block;
@@ -4325,11 +4391,18 @@ form .btn:hover {
   .lg\:gap-y-5 {
     row-gap: 1.25rem;
   }
+  .lg\:border-b-0 {
+    border-bottom-width: 0px;
+  }
   .lg\:border-l {
     border-left-width: 1px;
   }
   .lg\:border-none {
     border-style: none;
+  }
+  .lg\:bg-beige-light {
+    --tw-bg-opacity: 1;
+    background-color: rgb(246 238 229 / var(--tw-bg-opacity));
   }
   .lg\:px-0 {
     padding-left: 0px;
@@ -4378,6 +4451,9 @@ form .btn:hover {
   .lg\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
   .lg\:pb-10 {
     padding-bottom: 2.5rem;
@@ -4454,6 +4530,9 @@ form .btn:hover {
   .lg\:pt-40 {
     padding-top: 10rem;
   }
+  .lg\:pt-48 {
+    padding-top: 12rem;
+  }
   .lg\:pt-7 {
     padding-top: 1.75rem;
   }
@@ -4463,11 +4542,17 @@ form .btn:hover {
   .lg\:text-right {
     text-align: right;
   }
+  .lg\:text-12 {
+    font-size: 0.75rem;
+  }
   .lg\:text-14 {
     font-size: 0.875rem;
   }
   .lg\:text-17 {
     font-size: 1.063rem;
+  }
+  .lg\:text-20 {
+    font-size: 1.25rem;
   }
   .lg\:text-26 {
     font-size: 1.625rem;
@@ -4484,6 +4569,7 @@ form .btn:hover {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
+
 @media (min-width: 1280px) {
   .xl\:bottom-6 {
     bottom: 1.5rem;
@@ -4511,6 +4597,9 @@ form .btn:hover {
   }
   .xl\:-mt-16 {
     margin-top: -4rem;
+  }
+  .xl\:mb-0 {
+    margin-bottom: 0px;
   }
   .xl\:mb-10 {
     margin-bottom: 2.5rem;
@@ -4544,6 +4633,9 @@ form .btn:hover {
   }
   .xl\:mb-52 {
     margin-bottom: 13rem;
+  }
+  .xl\:mb-6 {
+    margin-bottom: 1.5rem;
   }
   .xl\:mb-8 {
     margin-bottom: 2rem;
@@ -4593,6 +4685,9 @@ form .btn:hover {
   }
   .xl\:flex-row {
     flex-direction: row;
+  }
+  .xl\:flex-col {
+    flex-direction: column;
   }
   .xl\:gap-x-12 {
     -moz-column-gap: 3rem;
@@ -4698,6 +4793,7 @@ form .btn:hover {
     font-size: 2.188rem;
   }
 }
+
 @media (min-width: 1536px) {
   .\32xl\:mt-7 {
     margin-top: 1.75rem;

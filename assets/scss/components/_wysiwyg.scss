@@ -160,6 +160,6 @@ $module: '.wysiwyg-lists';
   }
 
   li {
-    @apply txt-1 -ml-5 pl-5 leading-1.35;
+    @apply txt-1 -ml-2 pl-2 leading-1.35 lg:pl-5 lg:-ml-5;
   }
 }

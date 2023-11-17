@@ -41,7 +41,7 @@
     <div class="container grid-layout">
         <h2 class="col-span-full txt-h2 text-center mb-10 md:mb-20 lg:mb-24 xl:mb-28"><?= $heading; ?></h2>
         <list-of-posts 
-            pagination='2'
+            pagination='3'
             terms='<?= json_encode($terms, JSON_HEX_APOS); ?>'
             posts='<?= json_encode($posts, JSON_HEX_APOS); ?>'
         >

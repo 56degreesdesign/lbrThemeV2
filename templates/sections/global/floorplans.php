@@ -10,7 +10,7 @@
                         <img class="absolute top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/img/floor-plan.jpg" alt="">
                     </div>
                 </div>
-                <div class="flex flex-col gap-y-4 gap-x-8 items-center 2xl:flex-row lg:justify-center">
+                <div class="hidden lg:block flex flex-col gap-y-4 gap-x-8 items-center 2xl:flex-row lg:justify-center">
                     <a class="bg-black uppercase border px-5 lg:px-7 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:bg-transparent hover:text-black duration-300 text-center min-w-[235px]" href="#">
                         one story</a>
                     <a class="border border-black uppercase px-5 lg:px-7 pt-2.5 pb-2 text-15 w-fit text-black font-bold rounded-full hover:bg-black hover:text-white duration-300 text-center min-w-[235px]" href="#">
@@ -20,21 +20,21 @@
                 </div>
             </div>
             
-            <div class="col-span-full bg-beige-light lg:col-span-1">
-                <div class="flex flex-col items-center px-[25px] py-12 md:py-14 md:px-10 lg:pb-10 lg:px-0 lg:h-full lg:justify-between xl:pb-14">
-                    <div class="text-20 font-bold text-center">FLOORPLANS</div>
+            <div class="col-span-full bg-beige lg:bg-beige-light lg:col-span-1">
+                <div class="flex flex-col items-center px-[25px] pt-7 pb-24 md:pt-14 md:pb-28 md:px-10 lg:pb-10 lg:px-0 lg:h-full lg:justify-between xl:pb-14">
+                    <div class="hidden lg:block text-20 font-bold text-center">FLOORPLANS</div>
                     <div>
-                        <h3 class="txt-h2 text-center mb-5 md:mb-8 lg:mb-10 xl:mb-20">STRATA<br>
+                        <h3 class="txt-h2 text-center mb-7 md:mb-8 lg:mb-10 xl:mb-20">STRATA<br>
                             2 BED / 2.5 BATH<br>
                             Single GARAGE
                         </h3>
-                        <p class="txt-h5 text-center">LOCATED ON LOTS<br>
+                        <p class="txt-h5 text-center mb-12 lg:mb-0">LOCATED ON LOTS<br>
                             18 – 21</p>
                     </div>
                     <div class="flex flex-col gap-y-4 items-center">
-                        <a class="bg-orange uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300 " href="#">
+                        <a class="btn btn--orange btn--mobile-wide btn--desktop-narrow" href="#">
                             DOWNLOAD floor plan</a>
-                        <a class="bg-orange uppercase px-5 xl:px-12 pt-2.5 pb-2 text-15 w-fit text-white font-bold rounded-full hover:opacity-70 duration-300 " href="#">
+                        <a class="btn btn--orange btn--mobile-wide btn--desktop-narrow" href="#">
                             DOWNLOAD INTERIOR FINISH PACKAGES</a>
                     </div>
                 </div>
