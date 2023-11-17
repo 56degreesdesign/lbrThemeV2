@@ -1,5 +1,5 @@
 .btn {
-    @apply uppercase px-4 pt-2.5 pb-2 text-14 lg:text-15 text-center h-fit text-white font-bold rounded-full duration-300 whitespace-nowrap;
+    @apply uppercase px-4 pt-2.5 pb-2 text-14 lg:text-15 text-center h-fit text-beige-light font-bold rounded-full duration-300 whitespace-nowrap;
 
     &--black {
         @apply bg-black hover:bg-orange;

@@ -8,12 +8,12 @@ $right_col = $section['right_col'] ?? false;
 if($section) :
 ?>
 
-<section class="bg-beige pt-20 md:pt-28 lg:pt-40 xl:pt-48 pb-32">
+<section class="bg-beige-light py-28 md:pt-28 lg:bg-beige lg:pt-40 xl:pt-48 lg:pb-32">
     <div class="container grid-layout">
-        <h1 class="col-span-full lg:col-start-1 lg:col-span-5 xl:col-start-2 xl:col-span-4 txt-h2 text-center mb-8"><?php echo $heading ?></h1>
+        <h1 class="col-span-full mb-7 lg:col-start-1 lg:col-span-5 xl:col-start-2 xl:col-span-4 txt-h2 text-center lg:mb-8"><?php echo $heading ?></h1>
         <div class="col-span-full lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:col-span-2 lg:mt-8 xl:mt-16 flex flex-col justify-between">
-            <div class="wysiwyg text-center mb-12"><?php echo $left_col['content'] ?></div>
-            <svg class="mx-auto max-w-full" xmlns="http://www.w3.org/2000/svg" width="96.93" height="78.829" viewBox="0 0 96.93 78.829">
+            <div class="wysiwyg text-center mb-11 lg:mb-12"><?php echo $left_col['content'] ?></div>
+            <svg class="mx-auto max-w-full mb-10 lg:mb-0" xmlns="http://www.w3.org/2000/svg" width="96.93" height="78.829" viewBox="0 0 96.93 78.829">
                 <g id="Group_126879" data-name="Group 126879" transform="translate(-4850.555 -8162)">
                     <g id="Group_4021" data-name="Group 4021" transform="translate(4850.555 8162)">
                         <path id="Path_3934" data-name="Path 3934" d="M-.916-1.035h0c-2.959.681-4.6,1.15-4.6,1.15v0s.513,1.6,1.576,4.37v0h0C.607,16.379,15.251,49.923,42.927,72.58l-.01.014.014-.011.009.008,0,0h0l.032-.049C76.361,45.189,90.767,2.005,91.363.185l.045-.068C52.972-11.587,12.483-4.121-.916-1.035" transform="translate(5.522 6.235)"/>
@@ -62,8 +62,8 @@ if($section) :
 
         </div>
         <div class="col-span-full lg:col-start-4 lg:col-span-2 lg:mt-8 xl:mt-16 flex flex-col justify-between">
-            <div class="wysiwyg text-center mb-12"><?php echo $right_col['content'] ?></div>
-            <svg class="mx-auto max-w-full" id="logo" xmlns="http://www.w3.org/2000/svg" width="175.579" height="60.79" viewBox="0 0 175.579 60.79">
+            <div class="wysiwyg text-center mb-11 lg:mb-12"><?php echo $right_col['content'] ?></div>
+            <svg class="mx-auto max-w-[116px] md:max-w-[150px] lg:max-w-full" id="logo" xmlns="http://www.w3.org/2000/svg" width="175.579" height="60.79" viewBox="0 0 175.579 60.79">
                 <path id="Path_129227" data-name="Path 129227" d="M613.706,36.45,609.53,46.558h.981l7.934-10.108Z" transform="translate(-456.196 -27.281)"/>
                 <path id="Path_129228" data-name="Path 129228" d="M272.891,291.122a15.015,15.015,0,0,1-6.77-1.56l-1.736,1.56h-.8l-.533-9.886.933-.088c2.807,6.412,6.1,8.46,9.174,8.46a4.7,4.7,0,0,0,5.079-4.9c0-2.672-1.026-3.965-5.21-5.7-1.426-.579-3.074-1.157-4.455-1.826-3.117-1.557-4.765-4.007-4.765-7.258,0-5.3,4.586-8.508,9.084-8.508a9.726,9.726,0,0,1,5.212,1.472l1.736-1.509h.755l.755,8.727-.891.136c-2.45-4.9-5.076-7.3-7.972-7.3a4.022,4.022,0,0,0-4.231,4.319c0,2.093.891,3.7,4.053,5.079,1.56.712,3.386,1.336,5.031,2.136,3.6,1.738,5.3,4.01,5.3,7.3,0,5.876-4.946,9.351-9.756,9.351" transform="translate(-263.05 -257.456)"/>
                 <path id="Path_129229" data-name="Path 129229" d="M365.219,295.535c-3.119,0-5.031,3.474-5.031,9.574,0,6.012,2.05,9.439,5.21,9.439,3.253,0,5.031-3.469,5.031-9.572,0-6.01-1.914-9.441-5.21-9.441m-.181,20.263c-6.767,0-10.108-4.855-10.108-10.777,0-5.479,3.829-10.732,10.689-10.732,6.77,0,10.02,4.807,10.02,10.686,0,5.534-3.741,10.817-10.6,10.817" transform="translate(-331.817 -282.087)"/>
@@ -76,20 +76,16 @@ if($section) :
                 <path id="Path_129236" data-name="Path 129236" d="M265.31,455.231h.994V444.866h-.994Zm4.578,0h.938v-8.8h.028l5.9,8.8h.883V444.866H276.7v8.553h-.028l-5.715-8.553h-1.064Zm13.333,0h.994v-9.441h3.348v-.923h-7.69v.923h3.348Zm6.583,0h6.483v-.918H290.8V450.2h3.879v-.9H290.8v-3.522h5.195v-.923H289.8v10.364Zm9.172,0h.971v-4.651h2.576l2.536,4.651h1.119l-2.609-4.762a2.651,2.651,0,0,0,2.478-2.8c0-1.821-1.288-2.8-3.6-2.8h-3.474Zm.981-5.534v-3.919h2.407c1.738,0,2.689.5,2.689,1.932,0,1.509-.966,1.99-2.674,1.99Zm9.537,5.534h.938v-8.8h.028l5.9,8.8h.883V444.866H316.3v8.553h-.03l-5.713-8.553h-1.049v10.364Zm10.42,0h.966l1.107-3.195h4.2l1.107,3.195h1.036l-3.67-10.407h-1.067l-3.67,10.407Zm2.38-4.075,1.779-5.144h.025l1.781,5.154Zm10.027,4.075h1.006v-9.441h3.348v-.923h-7.7v.923h3.346Zm6.722,0h1.006V444.866h-1.006Zm8.349.2c2.533,0,4.367-2.131,4.367-5.378s-1.834-5.378-4.367-5.378-4.372,2.131-4.372,5.378S344.856,455.427,347.392,455.427Zm0-.9c-1.962,0-3.376-1.665-3.376-4.48s1.414-4.468,3.376-4.468,3.371,1.653,3.371,4.468-1.414,4.48-3.373,4.48Zm7.547.7h.938v-8.8h.03l5.894,8.8h.883V444.866h-.938v8.553h-.028L356,444.866h-1.064Zm10.435,0h.966l1.107-3.195h4.2l1.1,3.195h1.039l-3.653-10.407h-1.079l-3.668,10.407Zm2.38-4.075,1.779-5.144h.028l1.779,5.154Zm8.8,4.075h6.065v-.918h-5.079v-9.446h-1.006v10.364Zm12,0h.981v-4.651h2.576l2.536,4.651h1.119l-2.619-4.762a2.651,2.651,0,0,0,2.478-2.8c0-1.821-1.288-2.8-3.6-2.8H388.55v10.364Zm.981-5.534v-3.919h2.407c1.738,0,2.689.5,2.689,1.932,0,1.509-.966,1.99-2.674,1.99Zm9.255,5.534h6.485v-.918h-5.5V450.2h3.879v-.9h-3.879v-3.522h5.195v-.923h-6.191v10.364Zm7.761,0h.966l1.1-3.182h4.2l1.107,3.195h1.036l-3.67-10.407h-1.079l-3.668,10.407Zm2.38-4.075,1.768-5.144h.028l1.779,5.154Zm8.553,4.075h6.065v-.918h-5.092v-9.446h-1.006v10.364Zm8.837,0h1.006v-9.441h3.348v-.923h-7.72v.923h3.346v9.441Zm8.948,0h1.006v-4.566l3.487-5.8H438.7l-2.9,4.946-2.913-4.946h-1.077l3.472,5.8v4.566Z" transform="translate(-264.741 -394.637)"/>
             </svg>
         </div>
-        <div class="col-span-full lg:col-start-2 lg:col-span-4 flex justify-center mt-20">
+        <div class="col-span-full mt-11 flex justify-center lg:mt-20 lg:col-start-2 lg:col-span-4">
             <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-medium'] ) ?>
 
         </div>
-        <div class="col-span-full mt-10 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
+        <div class="col-span-full row-start-2 mb-14 lg:mb-0 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
             <div class="relative pb-[63.96%]">
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
             </div>
         </div>
-<!--        <div class="col-span-full justify-end mt-16 hidden lg:flex">-->
-<!--            <a class="btn btn--black btn--desktop-small" href="/casita-rentals">-->
-<!--                Book now</a>-->
-<!--        </div>-->
     </div>
 </section>
-<div class="w-full py-9 bg-orange text-beige-light uppercase text-22 font-bold text-center">Phase 1 Casitas under construction and deliveries begin Spring 2024</div>
+<div class="w-full py-3.5 px-6 bg-orange text-beige-light uppercase text-20 font-bold text-center md:py-5 lg:text-22 lg:py-7 xl:py-9">Phase 1 Casitas under construction and deliveries begin Spring 2024</div>
 <?php endif ?>
