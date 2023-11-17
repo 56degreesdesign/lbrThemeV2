@@ -89,7 +89,7 @@ function create_years_tax() {
         'show_admin_column' => false,
         'show_in_rest' => true,
     );
-    register_taxonomy( 'year', array('newsandevents'), $args );
+    register_taxonomy( 'years', array('newsandevents'), $args );
 
 }
 add_action( 'init', 'create_years_tax' );

@@ -13,7 +13,7 @@ $posts = [];
 
 if ($query->have_posts()) {
     $terms = [];
-    $terms = get_terms('year');
+    $terms = get_terms('years');
 //    usort($terms, function($a, $b) {
 //        return strcmp($a->name, $b->name);
 //    });
@@ -26,7 +26,7 @@ if ($query->have_posts()) {
             'title' => get_the_title(),
             'link' => get_the_permalink(),
             'data' => get_field('section'),
-            'terms' => wp_get_post_terms(get_the_ID(), 'year'),
+            'terms' => wp_get_post_terms(get_the_ID(), 'years'),
         ];
     }
     wp_reset_postdata();

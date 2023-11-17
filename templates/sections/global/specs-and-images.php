@@ -37,7 +37,5 @@ if($section) :
                 <?php endforeach;?>
             </div>
         </div>
-    
     </section>
-
 <?php endif ;?>
