@@ -10,7 +10,7 @@
     // Custom WP query query_posts
     $args_query_posts = array(
         'post__not_in' => array($post->ID),
-        'post_type' => array('post'),
+        'post_type' => array('blog'),
         'posts_per_page' => 3,
         'order' => 'DESC',
         'tax_query' => array(

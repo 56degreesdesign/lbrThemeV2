@@ -4,7 +4,7 @@
     $posts = $section['posts'] ?? false;
 
     $args_query = array(
-        'post_type' => 'post',
+        'post_type' => 'blog',
         'post_status' => array('publish'),
         'posts_per_page' => -1,
         'order' => 'DESC',
