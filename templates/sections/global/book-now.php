@@ -55,13 +55,8 @@
                         </div>
                         <div class="accordion-list border-b border-gray pb-11 mb-12 | lg:border-b-0 lg:pb-0">
                             <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
-                                <div class="overflow-hidden border-t border-gray pb-10 pt-14">
-                                    <h3 class="mb-16 font-Oscar font-bold pl-7 uppercase text-25"><?= $moreContent['heading']; ?></h3>
-                                    <ul class="text-17 list-disc list-inside">
-                                        <?php foreach (  $moreContent['list'] as $li ) : ?>
-                                            <li><?= $li['text']; ?></li>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                <div class="overflow-hidden border-t border-gray pb-10 pt-14 wysiwyg">
+                                    <?= $moreContent; ?>
                                 </div>
                             </div>
                             <button class="accordion-list-button block uppercase text-orange underline font-bold txt-h4 text-center mx-auto | lg:mx-0 lg:text-left">
