@@ -3,7 +3,8 @@
         @apply underline underline-offset-4;
     }
     h3 {
-        @apply text-40 font-Reckless leading-none mt-3 mb-4 font-light;
+        @extend .txt-h3;
+        @apply leading-none mt-3 mb-4;
     }
     strong {
         @apply text-orange;
@@ -25,6 +26,7 @@
 }
 .map-and-slider-content {
     @apply text-center;
+    
     p {
         @apply mt-6 text-17;
     }
