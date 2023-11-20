@@ -10,7 +10,7 @@ $links = get_field('links', 'option') ?? false;
 
 if (!$hidden) :
 ?>
-<footer class="bg-black text-beige relative pb-14 lg:pb-7">
+<footer class="bg-black text-beige relative pb-20 lg:pb-7">
     <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none opacity-60" src="<?php echo $bg['url']?>" alt="">
     <div class="container grid grid-cols-1 pt-11 lg:grid-cols-3 lg:pt-14">
 

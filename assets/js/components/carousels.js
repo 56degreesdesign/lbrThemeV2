@@ -69,10 +69,10 @@ const sliders = async function () {
                             // spaceBetween: 32
                         },
                         1024: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                             // spaceBetween: 21,
                         },
-                        1920: {
+                        1440: {
                             slidesPerView: 3,
                             // spaceBetween: 21,
                         },

@@ -1345,12 +1345,6 @@ html {
 .h-screen {
   height: 100vh;
 }
-.h-\[14px\] {
-  height: 14px;
-}
-.h-3\.5 {
-  height: 0.875rem;
-}
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -1441,6 +1435,10 @@ html {
 }
 .translate-x-full {
   --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-180 {
@@ -1749,10 +1747,6 @@ html {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1775,9 +1769,6 @@ html {
 }
 .pb-12 {
   padding-bottom: 3rem;
-}
-.pb-14 {
-  padding-bottom: 3.5rem;
 }
 .pb-16 {
   padding-bottom: 4rem;
@@ -1917,6 +1908,9 @@ html {
 .pl-6 {
   padding-left: 1.5rem;
 }
+.pl-8 {
+  padding-left: 2rem;
+}
 .pl-\[25px\] {
   padding-left: 25px;
 }
@@ -1979,9 +1973,6 @@ html {
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pl-8 {
-  padding-left: 2rem;
 }
 .\!text-left {
   text-align: left !important;
@@ -2054,6 +2045,9 @@ html {
 }
 .leading-none {
   line-height: 1;
+}
+.tracking-10 {
+  letter-spacing: .010em;
 }
 .text-beige {
   --tw-text-opacity: 1;
@@ -2183,7 +2177,7 @@ html {
 
 @media (min-width: 768px) {
   .txt-h2 {
-    font-size: 3.438rem;
+    font-size: 3.125rem;
   }
 }
 
@@ -2698,7 +2692,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 }
 @media (min-width: 768px) {
   .wysiwyg-headings h2, .wysiwyg h2 {
-    font-size: 3.438rem;
+    font-size: 3.125rem;
   }
 }
 @media (min-width: 1024px) {
@@ -4061,6 +4055,10 @@ form .btn:hover {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
   }
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   .md\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -4076,10 +4074,6 @@ form .btn:hover {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
   .md\:pb-10 {
     padding-bottom: 2.5rem;
@@ -4101,6 +4095,9 @@ form .btn:hover {
   }
   .md\:pb-32 {
     padding-bottom: 8rem;
+  }
+  .md\:pb-\[56\.533\%\] {
+    padding-bottom: 56.533%;
   }
   .md\:pl-10 {
     padding-left: 2.5rem;
@@ -4219,6 +4216,9 @@ form .btn:hover {
   }
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
+  }
+  .lg\:col-span-full {
+    grid-column: 1 / -1;
   }
   .lg\:col-start-1 {
     grid-column-start: 1;
@@ -4415,6 +4415,9 @@ form .btn:hover {
   .lg\:h-full {
     height: 100%;
   }
+  .lg\:h-screen {
+    height: 100vh;
+  }
   .lg\:max-h-none {
     max-height: none;
   }
@@ -4435,9 +4438,6 @@ form .btn:hover {
   }
   .lg\:w-\[58\.22916\%\] {
     width: 58.22916%;
-  }
-  .lg\:w-\[60\%\] {
-    width: 60%;
   }
   .lg\:w-\[83\.333\%\] {
     width: 83.333%;
@@ -4521,6 +4521,9 @@ form .btn:hover {
   }
   .lg\:gap-y-5 {
     row-gap: 1.25rem;
+  }
+  .lg\:overflow-hidden {
+    overflow: hidden;
   }
   .lg\:border-b-0 {
     border-bottom-width: 0px;
@@ -4631,8 +4634,8 @@ form .btn:hover {
   .lg\:pb-\[118\%\] {
     padding-bottom: 118%;
   }
-  .lg\:pb-\[121\%\] {
-    padding-bottom: 121%;
+  .lg\:pb-\[140\%\] {
+    padding-bottom: 140%;
   }
   .lg\:pb-\[51\%\] {
     padding-bottom: 51%;
@@ -4726,6 +4729,11 @@ form .btn:hover {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+  .lg\:shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 }
 @media (min-width: 1280px) {
   .xl\:bottom-6 {
@@ -4740,6 +4748,9 @@ form .btn:hover {
   .xl\:col-span-5 {
     grid-column: span 5 / span 5;
   }
+  .xl\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
   .xl\:col-start-2 {
     grid-column-start: 2;
   }
@@ -4751,6 +4762,9 @@ form .btn:hover {
   }
   .xl\:col-start-8 {
     grid-column-start: 8;
+  }
+  .xl\:col-start-auto {
+    grid-column-start: auto;
   }
   .xl\:-mt-16 {
     margin-top: -4rem;
@@ -4827,11 +4841,23 @@ form .btn:hover {
   .xl\:mt-6 {
     margin-top: 1.5rem;
   }
+  .xl\:mt-12 {
+    margin-top: 3rem;
+  }
   .xl\:block {
     display: block;
   }
+  .xl\:grid {
+    display: grid;
+  }
+  .xl\:hidden {
+    display: none;
+  }
   .xl\:w-1\/2 {
     width: 50%;
+  }
+  .xl\:w-\[60\%\] {
+    width: 60%;
   }
   .xl\:max-w-none {
     max-width: none;
@@ -4857,6 +4883,10 @@ form .btn:hover {
   .xl\:gap-x-52 {
     -moz-column-gap: 13rem;
          column-gap: 13rem;
+  }
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .xl\:px-10 {
     padding-left: 2.5rem;
@@ -4910,6 +4940,9 @@ form .btn:hover {
   }
   .xl\:pb-80 {
     padding-bottom: 20rem;
+  }
+  .xl\:pb-\[121\%\] {
+    padding-bottom: 121%;
   }
   .xl\:pl-10 {
     padding-left: 2.5rem;

@@ -1,1 +1,1 @@
-<a href="#" class="fixed bottom-0 left-0 uppercase w-full bg-black text-beige-light text-center py-5 lg:hidden z-10">book now</a>
+<a href="/residential-casitas" class="fixed bottom-0 left-0 uppercase w-full bg-black text-beige-light text-center py-2.5 txt-2 md:py-5 lg:hidden z-10 tracking-10"><strong>book now</strong></a>

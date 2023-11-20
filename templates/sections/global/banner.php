@@ -2,7 +2,7 @@
 $section = $args['data'];
 $image = $section['image'] ?? false;
 $portrait_on_mobile = $section['portrait_on_mobile'] ?? false;
-$aspect_ratio_mobile = ($portrait_on_mobile) ? 'pb-[216.8%]' : 'pb-[56.533%]';
+$aspect_ratio_mobile = ($portrait_on_mobile) ? 'pb-[216.8%] md:pb-[56.533%]' : 'pb-[56.533%]';
 ?>
 <?php if($section) : ?>
 <section class="bg-beige"> 

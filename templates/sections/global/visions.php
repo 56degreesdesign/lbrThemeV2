@@ -36,9 +36,9 @@ if($section) :?>
         
         <div class="col-span-full accordion-list-group mt-7 lg:hidden">
             <div class="accordion-list col-span-full border-orange border-t border-b pt-4 lg:hidden">
-                <div class="accordion-list-button flex justify-between">
-                    <h6 class="txt-3 mb-4 w-[60%] lg:mb-5"><?php echo $left_col['heading'] ?></h6>
-                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="18.406" height="18.406" viewBox="0 0 18.406 18.406">
+                <div class="accordion-list-button flex justify-between items-center mb-4 lg:mb-5">
+                    <h6 class="txt-3 w-[60%]"><?php echo $left_col['heading'] ?></h6>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.406" height="18.406" viewBox="0 0 18.406 18.406">
                         <g id="Group_127238" data-name="Group 127238" transform="translate(-271.5 -2280.5)">
                             <path id="Path_130178" data-name="Path 130178" d="M-6613,11963.164h18.406" transform="translate(6884.501 -9673.664)" fill="none" stroke="#cc885d" stroke-width="1"/>
                             <path id="Path_130179" data-name="Path 130179" d="M-6613,11963.164h18.406" transform="translate(-11682.664 -4314.095) rotate(-90)" fill="none" stroke="#cc885d" stroke-width="1"/>
@@ -50,8 +50,8 @@ if($section) :?>
                 </div>
             </div>
             <div class="accordion-list col-span-full border-orange border-b pt-4 lg:hidden">
-                <div class="accordion-list-button flex justify-between">
-                    <h6 class="txt-3 mb-4 w-[60%] lg:mb-5"><?php echo $right_col['heading'] ?></h6>
+                <div class="accordion-list-button flex justify-between items-center mb-4 lg:mb-5">
+                    <h6 class="txt-3 w-[60%]"><?php echo $right_col['heading'] ?></h6>
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="18.406" height="18.406" viewBox="0 0 18.406 18.406">
                         <g id="Group_127238" data-name="Group 127238" transform="translate(-271.5 -2280.5)">
                             <path id="Path_130178" data-name="Path 130178" d="M-6613,11963.164h18.406" transform="translate(6884.501 -9673.664)" fill="none" stroke="#cc885d" stroke-width="1"/>

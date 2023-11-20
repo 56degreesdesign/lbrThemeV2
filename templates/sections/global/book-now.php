@@ -4,7 +4,7 @@
 ?>
 
 
-<section class="bg-beige pb-16 md:pb-24 lg:pb-32">
+<section class="bg-beige-light pb-16 md:pb-24 lg:pb-32">
     <div class="container grid-layout">
         <?php foreach ( $places as $place ) : ?>
             <?php
@@ -41,12 +41,12 @@
                         <h2 class="txt-h2 mb-3.5 text-center | lg:text-left lg:mb-2">
                             <?= $title; ?>
                         </h2>
-                        <button class="hidden absolute bottom-0 right-0 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 | lg:block">
+                        <button class="hidden absolute bottom-0 right-0 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 | xl:block">
                             Book now
                         </button>
                     </div>
                     <p class="txt-h5 mb-7 text-center | lg:text-left lg:mb-7"><strong><?= $price; ?></strong></p>
-                    <button class="mb-11 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 | lg:hidden">
+                    <button class="mb-11 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 btn--mobile-wide btn--desktop-small | xl:hidden">
                         Book now
                     </button>
                     <div>
