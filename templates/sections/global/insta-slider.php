@@ -5,12 +5,12 @@ $slides = $section['slides'] ?? false;
 $background = $section['background'] ?? false;
 ?>
 <?php if($section) : ?>
- <section class="bg-orange relative overflow-hidden py-20 md:py-24 lg:py-32 xl:py-40">
+ <section class="bg-orange relative overflow-hidden pt-11 pb-24 md:py-24 lg:py-32 xl:py-40">
      <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="<?php echo $background['url']?>" alt="">
      <div class="container grid-layout">
          <?php if($heading) : ?>
-             <div class="col-span-full flex items-center mb-10 md:mb-16 lg:mb-0 lg:col-start-1 lg:col-span-4 ">
-                 <h3 class="text-center w-full txt-h2 -mt-10 md:-mt-12 xl:-mt-16">
+             <div class="col-span-full flex items-center mb-11 md:mb-16 lg:mb-0 lg:col-start-1 lg:col-span-4 ">
+                 <h3 class="text-center w-full txt-h2 md:-mt-12 xl:-mt-16">
                      <?php echo $heading ?>
                  </h3>
              </div>

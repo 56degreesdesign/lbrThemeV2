@@ -11,3 +11,7 @@
         @apply text-12 md:text-13 lg:text-15;
     }
 }
+
+.swiper-button-disabled {
+    @apply opacity-30 cursor-default;
+}

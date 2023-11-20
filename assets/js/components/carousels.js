@@ -55,7 +55,7 @@ const sliders = async function () {
         if (InstagramSwiper) {
             InstagramSwiper.forEach(el => {
                 let swiperCarousel = new Swiper(el, {
-                    // loop: true,
+                    loop: false,
                     speed: 600,
                     slidesPerView: 1.5,
                     spaceBetween: 0,
@@ -77,26 +77,30 @@ const sliders = async function () {
                             // spaceBetween: 21,
                         },
                     },
+                    navigation: {
+                        nextEl: el.parentElement.querySelector('.swiper-next-el'),
+                        prevEl: el.parentElement.querySelector('.swiper-prev-el'),
+                    },
                     pagination: {
                         el: el.parentElement.querySelector('.swiper-pagination-el'),
                         type: 'fraction',
                     },
                 });
 
-                const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                    nextBtn = el.parentElement.querySelector('.swiper-next-el');
-
-                if (prevBtn != null) {
-                    prevBtn.addEventListener('click', () => {
-                        swiperCarousel.slidePrev()
-                    }, false);
-                }
-
-                if (nextBtn != null) {
-                    nextBtn.addEventListener('click', () => {
-                        swiperCarousel.slideNext()
-                    }, false);
-                }
+                // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+                //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
+                //
+                // if (prevBtn != null) {
+                //     prevBtn.addEventListener('click', () => {
+                //         swiperCarousel.slidePrev()
+                //     }, false);
+                // }
+                //
+                // if (nextBtn != null) {
+                //     nextBtn.addEventListener('click', () => {
+                //         swiperCarousel.slideNext()
+                //     }, false);
+                // }
             });
         }
 

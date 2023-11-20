@@ -17228,7 +17228,7 @@ var sliders = /*#__PURE__*/function () {
           if (InstagramSwiper) {
             InstagramSwiper.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
-                // loop: true,
+                loop: false,
                 speed: 600,
                 slidesPerView: 1.5,
                 spaceBetween: 0,
@@ -17253,25 +17253,33 @@ var sliders = /*#__PURE__*/function () {
                   }
                 },
 
+                navigation: {
+                  nextEl: el.parentElement.querySelector('.swiper-next-el'),
+                  prevEl: el.parentElement.querySelector('.swiper-prev-el')
+                },
                 pagination: {
                   el: el.parentElement.querySelector('.swiper-pagination-el'),
                   type: 'fraction'
                 }
               });
-              var prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                nextBtn = el.parentElement.querySelector('.swiper-next-el');
-              if (prevBtn != null) {
-                prevBtn.addEventListener('click', function () {
-                  swiperCarousel.slidePrev();
-                }, false);
-              }
-              if (nextBtn != null) {
-                nextBtn.addEventListener('click', function () {
-                  swiperCarousel.slideNext();
-                }, false);
-              }
+
+              // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+              //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
+              //
+              // if (prevBtn != null) {
+              //     prevBtn.addEventListener('click', () => {
+              //         swiperCarousel.slidePrev()
+              //     }, false);
+              // }
+              //
+              // if (nextBtn != null) {
+              //     nextBtn.addEventListener('click', () => {
+              //         swiperCarousel.slideNext()
+              //     }, false);
+              // }
             });
           }
+
           if (bannerSwipers) {
             bannerSwipers.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
