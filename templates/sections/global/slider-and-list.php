@@ -8,18 +8,46 @@ $right_col = $section['right_col'] ?? false;
 $slider_position = $section['slider_position'] ?? false;
 ?>
 
-<section class="bg-beige-light pb-20 md:pb-32 lg:pb-44">
+<section class="bg-beige-light pb-11 md:pb-32 lg:pb-44">
     <div class="container grid-layout">
-        <div class="col-span-full <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>">
+        <div class="col-span-full text-center md:text-left <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>">
             <?php if($heading) :?>
                 <h3 class="txt-h3 mb-6 md:mb-8 lg:mb-12"><?php echo $heading ?></h3>
             <?php endif ;?>
             <?php if($content) :?>
                 <p class="txt-1 mb-8 md:mb-10 lg:mb-12 xl:mb-16"><?php echo $content ?></p>
-                <div class="w-full h-px bg-gray mb-8 md:mb-10 lg:mb-12 xl:mb-16"></div>
+                <div class="w-full h-px bg-gray mb-8 hidden md:block md:mb-10 lg:mb-12 xl:mb-16"></div>
             <?php endif ;?>
         </div>
-        <div class="col-span-2 mb-10 lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-1 xl:col-start-2 lg:col-span-2' : 'lg:col-start-8 lg:col-span-2'; ?>">
+        <div class="col-span-full lg:hidden">
+            <div class="accordion-list">
+                <div class="accordion-list-content accordion-list-content__no-gradient w-full">
+                    <div class="overflow-hidden pb-11 wysiwyg">
+                        <?php if($left_col['label']) :?>
+                            <h6 class="txt-3 mb-3.5"><?php echo $left_col['label'] ?></h6>
+                        <?php endif ;?>
+                        <ul class="pl-8">
+                            <?php foreach ($left_col['list'] as $item ) :?>
+                                <li class=""><?php echo $item['item'] ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <?php if($right_col['label']) :?>
+                            <h6 class="txt-3 mb-3.5 mt-3.5"><?php echo $right_col['label'] ?></h6>
+                        <?php endif ;?>
+                        <ul class="pl-8">
+                            <?php foreach ($right_col['list'] as $item ) :?>
+                                <li><?php echo $item['item'] ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+                <button class="accordion-list-button block uppercase text-orange underline font-bold txt-h4 text-center mx-auto | lg:mx-0 lg:text-left">
+                    <span>SEE MORE</span>
+                    <span class="hidden">Close</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-span-2 mb-10 hidden lg:block lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-1 xl:col-start-2 lg:col-span-2' : 'lg:col-start-8 lg:col-span-2'; ?>">
             <?php if($left_col['label']) :?>
                 <h6 class="txt-3 mb-7"><?php echo $left_col['label'] ?></h6>
             <?php endif ;?>
@@ -29,7 +57,7 @@ $slider_position = $section['slider_position'] ?? false;
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="col-span-2 mb-10 lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-4 lg:col-span-2' : 'lg:col-start-10 lg:col-span-3'; ?>">
+        <div class="col-span-2 mb-10 hidden lg:block lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-4 lg:col-span-2' : 'lg:col-start-10 lg:col-span-3'; ?>">
             <?php if($right_col['label']) :?>
                 <h6 class="txt-3 mb-7"><?php echo $right_col['label'] ?></h6>
             <?php else :?>
@@ -42,7 +70,7 @@ $slider_position = $section['slider_position'] ?? false;
             </ul>
         </div>
         <?php if($images) :?>
-            <div class="col-span-full <?php echo ($slider_position === 'left') ? 'lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-3' : 'lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-2 lg:mt-28'; ?>">
+            <div class="col-span-full -order-1 lg:order-none <?php echo ($slider_position === 'left') ? 'lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-3' : 'lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-2 lg:mt-28'; ?>">
                 <div class="swiper small-carousel mb-7 relative">
                     <div class="swiper-wrapper">
                         <?php foreach ($images as $slide) : ?>

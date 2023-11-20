@@ -37,7 +37,7 @@ const select = (option) => {
                     <span class="txt-1 font-bold uppercase">{{ item.time }}</span>
                 </div>
             </div>
-            <div class="col-span-full mt-7 -order-1 -mx-[25px] lg:order-1 lg:mt-0 lg:col-span-6">
+            <div class="col-span-full mt-7 -order-1 -mx-[25px] lg:mx-0 lg:order-1 lg:mt-0 lg:col-span-6">
                 <div v-if="sectionData.image" class="relative pb-[133.33%]">
                     <img class="absolute-full object-cover" :src="sectionData.image.url" alt="">
                 </div>

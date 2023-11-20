@@ -1345,6 +1345,12 @@ html {
 .h-screen {
   height: 100vh;
 }
+.h-\[14px\] {
+  height: 14px;
+}
+.h-3\.5 {
+  height: 0.875rem;
+}
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -1973,6 +1979,9 @@ html {
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.pl-8 {
+  padding-left: 2rem;
 }
 .\!text-left {
   text-align: left !important;
@@ -4000,6 +4009,9 @@ form .btn:hover {
   .md\:mt-20 {
     margin-top: 5rem;
   }
+  .md\:block {
+    display: block;
+  }
   .md\:inline {
     display: inline;
   }
@@ -4065,6 +4077,10 @@ form .btn:hover {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -4109,6 +4125,9 @@ form .btn:hover {
   }
   .md\:pt-32 {
     padding-top: 8rem;
+  }
+  .md\:text-left {
+    text-align: left;
   }
   .md\:text-13 {
     font-size: 0.813rem;
@@ -4170,6 +4189,9 @@ form .btn:hover {
   }
   .lg\:order-1 {
     order: 1;
+  }
+  .lg\:order-none {
+    order: 0;
   }
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;

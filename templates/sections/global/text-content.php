@@ -8,7 +8,7 @@ $anchor = $section['anchor'] ?? false;
 $background_colour = $section['background_colour'] ?? false;
 ?>
 
-<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> py-11 pb-20 lg:py-40">
+<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> py-11 md:py-20 lg:py-40">
     <div class="container grid-layout">
         <div class="col-span-full flex flex-col items-center">
             <div class="w-[84.27%] lg:w-[46.5625%] wysiwyg">
