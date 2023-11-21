@@ -4,8 +4,10 @@ const sliders = async function () {
     const smallSwipers = document.querySelectorAll('.small-carousel');
     const blogSwiper = document.querySelector('.blog-carousel');
     const InstagramSwiper = document.querySelectorAll('.instagram-carousel');
+    const ExploreSwiper = document.querySelectorAll('.explore-carousel');
 
-    if (bannerSwipers || swipers || blogSwiper || InstagramSwiper) {
+
+    if (bannerSwipers || swipers || blogSwiper || InstagramSwiper || ExploreSwiper) {
         let Swiper = await (await import("swiper/bundle")).default;
 
         if (swipers) {
@@ -199,6 +201,32 @@ const sliders = async function () {
                 }, false);
             }
         }
+
+        if (ExploreSwiper) {
+            ExploreSwiper.forEach(el => {
+                let swiperCarousel = new Swiper(el, {
+                    loop: true,
+                    speed: 600,
+                    slidesPerView: 1.41,
+                    spaceBetween: 10,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    breakpoints: {
+                        768: {
+                            spaceBetween: 32
+                        },
+                    },
+                    navigation: {
+                        nextEl: el.parentElement.querySelector('.explore-swiper-next'),
+                        // prevEl: el.parentElement.querySelector('.swiper-prev-el'),
+                    },
+                });
+            });
+        }
+        
+        
     }
 };
 export const init = sliders;

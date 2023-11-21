@@ -17165,7 +17165,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var sliders = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var swipers, bannerSwipers, smallSwipers, blogSwiper, InstagramSwiper, Swiper, swiperCarousel, prevBtn, nextBtn;
+    var swipers, bannerSwipers, smallSwipers, blogSwiper, InstagramSwiper, ExploreSwiper, Swiper, swiperCarousel, prevBtn, nextBtn;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
@@ -17174,16 +17174,17 @@ var sliders = /*#__PURE__*/function () {
           smallSwipers = document.querySelectorAll('.small-carousel');
           blogSwiper = document.querySelector('.blog-carousel');
           InstagramSwiper = document.querySelectorAll('.instagram-carousel');
-          if (!(bannerSwipers || swipers || blogSwiper || InstagramSwiper)) {
-            _context.next = 16;
+          ExploreSwiper = document.querySelectorAll('.explore-carousel');
+          if (!(bannerSwipers || swipers || blogSwiper || InstagramSwiper || ExploreSwiper)) {
+            _context.next = 18;
             break;
           }
-          _context.next = 8;
+          _context.next = 9;
           return __webpack_require__.e(/*! import() */ "node_modules_swiper_swiper-bundle_mjs").then(__webpack_require__.bind(__webpack_require__, /*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs"));
-        case 8:
-          _context.next = 10;
+        case 9:
+          _context.next = 11;
           return _context.sent["default"];
-        case 10:
+        case 11:
           Swiper = _context.sent;
           if (swipers) {
             swipers.forEach(function (el) {
@@ -17363,7 +17364,30 @@ var sliders = /*#__PURE__*/function () {
               }, false);
             }
           }
-        case 16:
+          if (ExploreSwiper) {
+            ExploreSwiper.forEach(function (el) {
+              var swiperCarousel = new Swiper(el, {
+                loop: true,
+                speed: 600,
+                slidesPerView: 1.41,
+                spaceBetween: 10,
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false
+                },
+                breakpoints: {
+                  768: {
+                    spaceBetween: 32
+                  }
+                },
+                navigation: {
+                  nextEl: el.parentElement.querySelector('.explore-swiper-next')
+                  // prevEl: el.parentElement.querySelector('.swiper-prev-el'),
+                }
+              });
+            });
+          }
+        case 18:
         case "end":
           return _context.stop();
       }
