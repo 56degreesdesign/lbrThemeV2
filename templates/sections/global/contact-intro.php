@@ -10,7 +10,7 @@ if($section) :
 
 <section class="bg-beige-light py-28 md:pt-28 lg:bg-beige lg:pt-40 xl:pt-48 lg:pb-32">
     <div class="container grid-layout">
-        <h1 class="col-span-full mb-7 lg:col-start-1 lg:col-span-5 xl:col-start-2 xl:col-span-4 txt-h2 text-center lg:mb-8"><?php echo $heading ?></h1>
+        <h1 class="col-span-full mb-7 lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 2xl:col-start-2 2xl:col-span-4 txt-h2 text-center lg:mb-8"><?php echo $heading ?></h1>
         <div class="col-span-full lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:col-span-2 lg:mt-8 xl:mt-16 flex flex-col justify-between">
             <div class="wysiwyg text-center mb-11 lg:mb-12"><?php echo $left_col['content'] ?></div>
             <svg class="mx-auto max-w-full mb-10 lg:mb-0" xmlns="http://www.w3.org/2000/svg" width="96.93" height="78.829" viewBox="0 0 96.93 78.829">
@@ -76,7 +76,7 @@ if($section) :
                 <path id="Path_129236" data-name="Path 129236" d="M265.31,455.231h.994V444.866h-.994Zm4.578,0h.938v-8.8h.028l5.9,8.8h.883V444.866H276.7v8.553h-.028l-5.715-8.553h-1.064Zm13.333,0h.994v-9.441h3.348v-.923h-7.69v.923h3.348Zm6.583,0h6.483v-.918H290.8V450.2h3.879v-.9H290.8v-3.522h5.195v-.923H289.8v10.364Zm9.172,0h.971v-4.651h2.576l2.536,4.651h1.119l-2.609-4.762a2.651,2.651,0,0,0,2.478-2.8c0-1.821-1.288-2.8-3.6-2.8h-3.474Zm.981-5.534v-3.919h2.407c1.738,0,2.689.5,2.689,1.932,0,1.509-.966,1.99-2.674,1.99Zm9.537,5.534h.938v-8.8h.028l5.9,8.8h.883V444.866H316.3v8.553h-.03l-5.713-8.553h-1.049v10.364Zm10.42,0h.966l1.107-3.195h4.2l1.107,3.195h1.036l-3.67-10.407h-1.067l-3.67,10.407Zm2.38-4.075,1.779-5.144h.025l1.781,5.154Zm10.027,4.075h1.006v-9.441h3.348v-.923h-7.7v.923h3.346Zm6.722,0h1.006V444.866h-1.006Zm8.349.2c2.533,0,4.367-2.131,4.367-5.378s-1.834-5.378-4.367-5.378-4.372,2.131-4.372,5.378S344.856,455.427,347.392,455.427Zm0-.9c-1.962,0-3.376-1.665-3.376-4.48s1.414-4.468,3.376-4.468,3.371,1.653,3.371,4.468-1.414,4.48-3.373,4.48Zm7.547.7h.938v-8.8h.03l5.894,8.8h.883V444.866h-.938v8.553h-.028L356,444.866h-1.064Zm10.435,0h.966l1.107-3.195h4.2l1.1,3.195h1.039l-3.653-10.407h-1.079l-3.668,10.407Zm2.38-4.075,1.779-5.144h.028l1.779,5.154Zm8.8,4.075h6.065v-.918h-5.079v-9.446h-1.006v10.364Zm12,0h.981v-4.651h2.576l2.536,4.651h1.119l-2.619-4.762a2.651,2.651,0,0,0,2.478-2.8c0-1.821-1.288-2.8-3.6-2.8H388.55v10.364Zm.981-5.534v-3.919h2.407c1.738,0,2.689.5,2.689,1.932,0,1.509-.966,1.99-2.674,1.99Zm9.255,5.534h6.485v-.918h-5.5V450.2h3.879v-.9h-3.879v-3.522h5.195v-.923h-6.191v10.364Zm7.761,0h.966l1.1-3.182h4.2l1.107,3.195h1.036l-3.67-10.407h-1.079l-3.668,10.407Zm2.38-4.075,1.768-5.144h.028l1.779,5.154Zm8.553,4.075h6.065v-.918h-5.092v-9.446h-1.006v10.364Zm8.837,0h1.006v-9.441h3.348v-.923h-7.72v.923h3.346v9.441Zm8.948,0h1.006v-4.566l3.487-5.8H438.7l-2.9,4.946-2.913-4.946h-1.077l3.472,5.8v4.566Z" transform="translate(-264.741 -394.637)"/>
             </svg>
         </div>
-        <div class="col-span-full mt-11 flex justify-center lg:mt-20 lg:col-start-2 lg:col-span-4">
+        <div class="col-span-full mt-11 flex justify-center lg:mt-20 lg:col-start-1 lg:col-span-5 xl:col-start-2 xl:col-span-4">
             <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-medium'] ) ?>
 
         </div>

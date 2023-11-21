@@ -4215,6 +4215,12 @@ form .btn:hover {
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
   }
+  .lg\:col-span-full {
+    grid-column: 1 / -1;
+  }
+  .lg\:col-span-9 {
+    grid-column: span 9 / span 9;
+  }
   .lg\:col-start-1 {
     grid-column-start: 1;
   }
@@ -4754,6 +4760,15 @@ form .btn:hover {
   .xl\:col-span-6 {
     grid-column: span 6 / span 6;
   }
+  .xl\:col-span-full {
+    grid-column: 1 / -1;
+  }
+  .xl\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+  .xl\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
   .xl\:col-start-2 {
     grid-column-start: 2;
   }
@@ -5000,6 +5015,12 @@ form .btn:hover {
   }
 }
 @media (min-width: 1536px) {
+  .\32xl\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+  .\32xl\:col-start-2 {
+    grid-column-start: 2;
+  }
   .\32xl\:mb-14 {
     margin-bottom: 3.5rem;
   }
