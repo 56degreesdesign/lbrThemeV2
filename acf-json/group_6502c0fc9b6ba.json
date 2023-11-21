@@ -319,6 +319,26 @@
                     "delay": 0
                 },
                 {
+                    "key": "field_655c85744e623",
+                    "label": "Copy (mobile menu)",
+                    "name": "copy_mobile",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
                     "key": "field_6502c25ca7a21",
                     "label": "Copy Subtext",
                     "name": "copy_subtext",
@@ -359,5 +379,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694683978
+    "modified": 1700562584
 }

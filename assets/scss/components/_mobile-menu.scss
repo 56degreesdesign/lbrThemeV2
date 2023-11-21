@@ -1,0 +1,99 @@
+.mobile-menu {
+    &__header {
+        &--active {
+            @apply bg-green text-beige;
+            
+            &.active-submenu {
+                @apply bg-orange text-black;
+
+                .bg-beige {
+                    @apply bg-orange text-black;
+                }
+
+                svg {
+                    path {
+                        @apply fill-black;
+                    }
+                }
+            }
+            
+            .bg-beige {
+                @apply bg-green text-beige;
+            }
+            
+            svg {
+                path {
+                    @apply fill-beige;
+                }
+            }
+        }
+    }
+    
+    &__wrapper {
+        @apply bg-green text-beige;
+        
+        &--active {
+            @apply translate-y-0;
+        }
+        
+        &.active-submenu {
+            @apply bg-orange text-black;
+        }
+
+        &__submenu {
+            @apply opacity-0 h-0 pt-0 overflow-hidden duration-500 transition-opacity;
+
+            .active-submenu & {
+                @apply opacity-100 h-auto;
+            }
+            
+            ul {
+                @apply list-none;
+            }
+        }
+    }
+    
+    &__menu {  
+        @apply py-20;
+        
+        li {
+            @apply mb-2.5;
+            
+            &.menu-item-has-children {
+                    
+                a {
+                    @apply relative;
+                    
+                    &::before {
+                        content: '';
+                        background-image: url('../../assets/img/icon-arrow.svg');
+                        @apply block absolute right-0 top-1/2 -translate-y-1/2 w-2 h-[11px] bg-cover;
+                    }
+                }
+            }
+            
+            ul {
+                @apply hidden;
+            }
+        }
+        
+        a {
+            @apply block font-bold uppercase tracking-10 leading-1.2 text-22 text-center;
+            
+            span {
+                @apply block text-11;
+            }
+        }
+    }
+    
+    &__btn {
+        &.is-active {
+            span {
+                @apply hidden last:block;
+            }
+        }
+    }
+    
+    &__btn-back {
+    }
+}
