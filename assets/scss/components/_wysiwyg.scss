@@ -42,6 +42,11 @@ $module: '.wysiwyg';
           @apply mb-11;
       }
     }
+    &.wysiwyg--no-margin {
+        h2 {
+            @apply mb-0;
+        }
+    }
 }
 
 $module: '.wysiwyg-anchors';
@@ -72,24 +77,21 @@ $module: '.wysiwyg-headings';
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold leading-tight;
   }
-
-  h1 {
+    h1 {
     @apply txt-h1 mb-10 md:mb-12 lg:mb-16 xl:mb-20;
-  }
-
-  h2 {
+    }
+    h2 {
     @apply txt-h2 mb-11;
-  }
-
-  h3 {
+    }
+    h3 {
       @apply txt-h3 mb-8;
-  } 
+    } 
     h4 {
     @apply txt-h4;
       } 
     h5 {
         @apply txt-h5 mb-3 lg:mb-5 xl:mb-8;
-  }
+    }
     h6 {
         @apply txt-3 mb-4 lg:mb-5;
     }

@@ -9,7 +9,7 @@ if($section) :
     <section class="bg-orange pt-11 pb-24 md:pt-16 lg:pt-20 lg:pb-32 xl:pt-28">
         <div class="container grid-layout">
             <h5 class="col-span-full lg:col-span-6 txt-h5 text-center mb-4 lg:mb-0 lg:text-left"><?php echo $header?></h5>
-            <div class="col-span-full lg:col-span-3 txt-1 mb-11 lg:mb-56"><?php echo $content ?></div>
+            <div class="col-span-full lg:col-span-3 txt-1 mb-11 lg:mb-32 x:mb-40 2xl:mb-56"><?php echo $content ?></div>
             <div class="col-span-full lg:col-span-6 pr-5 hidden lg:block">
                 <div class="flex items-center gap-x-6">
                     <?php get_template_part('templates/partials/nav-arrow', null, ['class' => 'rotate-90']) ?>

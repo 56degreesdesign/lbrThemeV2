@@ -42,9 +42,9 @@ const slides = computed(() => {
 </script>
 
 <template>
-    <section class="bg-beige-light py-24 overflow-hidden lg:py-28">
+    <section class="bg-beige-light py-24 overflow-hidden py-28">
         <div class="container grid-layout">
-            <h3 class="col-span-full lg:col-start-1 lg:col-span-4 txt-h3">Resort news & EVENTS</h3>
+            <h3 class="col-span-full lg:col-start-1 lg:col-span-5 txt-h3">Resort news & EVENTS</h3>
             <div class="col-span-full flex justify-between items-center py-6 mt-3 lg:hidden">
                 <SliderMobileNav @click="changeYear(-1)" :customClass="'rotate-180'"/>
                 <YearBtn :year="selected" :active="true"/>
@@ -58,7 +58,7 @@ const slides = computed(() => {
                     :active="selected === term.name"
                 />
             </div>
-            <div class="col-span-full h-px w-full bg-black mb-7 lg:mb-16 lg:mt-14"></div>
+            <div class="col-span-full h-px w-full bg-black mb-7 lg:my-10 xl:mb-16 xl:mt-14"></div>
             <div class="hidden lg:flex col-start-1 col-span-2 gap-x-12 mb-16 bg-beige-light z-10">
                 <div class="swiper-next-el swiper-nav swiper-nav--small">NEXT</div>
                 <div class="swiper-prev-el swiper-nav swiper-nav--small">PREVIOUS</div>
@@ -86,20 +86,20 @@ const slides = computed(() => {
                     <swiper-slide v-for="slide in slides">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[30px]">
                             <div v-if="slide.data.image" class="col-span-1">
-                                <div class="w-full h-full relative pb-[65.3409%]">
+                                <div class="w-full relative pb-[65.3409%]">
                                     <img class="absolute-full object-cover" :src="slide.data.image.url" alt="">
                                 </div>
                             </div>
-                            <div class="col-span-1 mt-7 lg:mt-0 lg:-translate-y-[109px]">
-                                <div v-if="slide.data.time && slide.data.date" class="flex flex-col mb-4 lg:mb-12">
+                            <div class="col-span-1 mt-7 lg:mt-0 lg:-translate-y-20">
+                                <div v-if="slide.data.time && slide.data.date" class="flex flex-col mb-4 lg:mb-9 xl:mb-12">
                                     <span class="txt-h5">{{ slide.data.date }}</span>
                                     <span class="txt-h5">{{ slide.data.time }}</span>
                                 </div>
                                 <div class="lg:w-[83.333%]">
-                                    <h3 class="txt-h3 mb-7 lg:mb-14">{{ slide.title}}</h3>
+                                    <h3 class="txt-h3 mb-7 lg:mb-9 xl:mb-12 2xl:mb-14">{{ slide.title}}</h3>
                                     <a class="text-14 font-bold underline uppercase block mb-5 lg:mb-8 lg:text-16" :href="slide.data.file.url" download>{{slide.data.file.caption}}</a>
                                     <div class="wysiwyg" v-html="slide.data.content"></div>
-                                    <div v-if="slide.data.button.link" class="mt-5 flex justify-center lg:justify-start lg:mt-9">
+                                    <div v-if="slide.data.button.link" class="mt-5 flex justify-center lg:justify-start lg:mt-m7 xl:mt-9">
                                         <a :class="{ 'bg-black': slide.data.button.color === 'btn--black', 'btn--orange': slide.data.button.color === 'orange' }" class="btn btn--mobile-narrow btn--desktop-medium" :href="slide.data.button.link.url">
                                             {{slide.data.button.link.title}}
                                         </a>

@@ -26,7 +26,7 @@ $portrait = $section['image_long'] ?? false;
                     <h5 class="text-center text-16 font-bold mt-4 mb-5"><?php echo $subheading ?></h5>
                 <?php endif ;?>
                 <?php if($content) :?>
-                    <p class="text-center text-15 md:text-16 mb-7 mx-auto md:mb-12 lg:text-17 lg:mb-16 lg:w-1/2"><?php echo $content ?></p>
+                    <p class="text-center text-15 md:text-16 mb-7 mx-auto md:mb-12 lg:text-17 lg:mb-16 lg:px-10 2xl:px-0 2xl:w-1/2"><?php echo $content ?></p>
                 <?php endif ;?>
                 <div class="flex justify-center <?php echo ($orientation == 'vertical') ? 'lg:mb-24 xl:mb-40' : ''; ?>">
                     <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-wide'] ) ?>

@@ -7,9 +7,9 @@ if($section):
 ?>
 <section>
     <?php if($content) :?>
-    <div class="bg-beige-light lg:bg-beige pt-28 pb-7 md:pb-10 md:pt-32 lg:pt-48 lg:pb-20">
+    <div class="bg-beige-light lg:bg-beige pt-28 pb-7 md:pb-10 md:pt-32 lg:pt-40 lg:pb-12 xl:pb-20 xl:pt-48">
         <div class="container">
-            <div class="wysiwyg"><?php echo $content ?></div>
+            <div class="wysiwyg wysiwyg--no-margin"><?php echo $content ?></div>
         </div>
     </div>
     <?php endif ;?>
@@ -20,7 +20,7 @@ if($section):
                     <?php get_template_part('templates/partials/nav-arrow', null, ['class' => 'rotate-180']) ?>
                     <span class="hidden lg:inline">Jan 12th, 2023</span>
                 </div>
-                <div class="col-start-5 col-span-4 flex items-center justify-center gap-x-8 mt-1">
+                <div class="flex items-center justify-center gap-x-8 mt-1 lg:col-start-4 lg:col-span-6 lg:mt-0 xl:col-start-5 xl:col-span-4">
                     <span>JAN 13TH, 2023</span>
                     <span class="hidden lg:inline">64˚F</span>
                     <span>SHARE</span>
