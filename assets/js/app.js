@@ -15,6 +15,7 @@ const fContactLazy = require('./components/contact-lazy')
 const fSwiperLazy = require('./components/swiper-lazy')
 const fShowTerms = require('./components/show-terms')
 const fAccordionList = require('./components/accordion-list')
+const fMobileMenu = require('./components/mobile-menu')
 
 
 import 'select2';
@@ -90,6 +91,7 @@ jQuery(function ($) {
     fSwiperLazy();
     fShowTerms.init();
     fAccordionList();
+    fMobileMenu;
     
     $(document).ready(function () {
         $('.form select').select2({

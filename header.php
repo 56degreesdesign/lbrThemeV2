@@ -13,13 +13,19 @@ $header_downloads = get_field('header', 'option')['downloads'] ?? false;
 if (!$hidden) :
 ?>
 
-    <header class="fixed top-0 left-0 w-full z-20 max-h-[65px] overflow-hidden lg:max-h-none">
+    <header class="mobile-menu__header fixed top-0 left-0 w-full z-20 max-h-[65px] overflow-hidden lg:max-h-none">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
                     <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => 'black']) ?>
                 </a>
-                <div class="flex items-center hidden lg:flex lg:gap-x-10 xl:gap-x-20">
+                <div class="lg:hidden">
+                    <div class="mobile-menu__btn text-12 tracking-10 font-Oscar uppercase font-bold">
+                        <span>MENU</span>
+                        <span class="hidden">Close</span>
+                    </div>
+                </div>
+                <div class="items-center hidden lg:flex lg:gap-x-10 xl:gap-x-20">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'fs_nav_menu',
@@ -48,6 +54,8 @@ if (!$hidden) :
         </div>
 
     </header>
+
+    <?php get_template_part('templates/partials/mobile-menu-wrapper'); ?>
 
     <div class="menu-wrapper fixed w-full h-screen top-0 left-0 translate-x-full overflow-auto z-[60]">
         <div class="w-1/2 bg-orange absolute top-0 left-0 h-full -z-10"></div>
