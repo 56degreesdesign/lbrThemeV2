@@ -16969,6 +16969,9 @@ jQuery(function ($) {
   fShowTerms.init();
   fAccordionList();
   fMobileMenu;
+  $(window).resize(function () {
+    fMobileMenu;
+  });
   $(document).ready(function () {
     $('.form select').select2({
       minimumResultsForSearch: Infinity,
@@ -17639,7 +17642,7 @@ var mobileMenu = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          if (window.innerWidth <= 768) {
+          if (window.innerWidth < 1023) {
             _mobileMenu = 'mobile-menu', btn = document.querySelector(".".concat(_mobileMenu, "__btn")), btnBack = document.querySelector(".".concat(_mobileMenu, "__btn-back")), header = document.querySelector(".".concat(_mobileMenu, "__header")), wrapper = document.querySelector(".".concat(_mobileMenu, "__wrapper")), menuWrapper = document.querySelector(".".concat(_mobileMenu, "__wrapper__menu")), submenuWrapper = document.querySelector(".".concat(_mobileMenu, "__wrapper__submenu__wrapper")), menu = document.querySelectorAll(".".concat(_mobileMenu, "__menu > li > a"));
             btn.addEventListener('click', function (e) {
               btn.classList.toggle('is-active');

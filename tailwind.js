@@ -36,6 +36,9 @@ module.exports = {
             Reckless: ["Reckless Neue", "sans-serif"],
         },
         extend: {
+            screens: {
+                'menu': '1023px',
+            },
             fontSize: {
                 167: "10.438rem",
                 120: "7.5rem",

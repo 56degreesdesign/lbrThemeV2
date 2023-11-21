@@ -19,7 +19,7 @@ if (!$hidden) :
                 <a class="flex items-center" href="/">
                     <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => 'black']) ?>
                 </a>
-                <div class="lg:hidden">
+                <div class="menu:hidden">
                     <div class="mobile-menu__btn text-12 tracking-10 font-Oscar uppercase font-bold">
                         <span>MENU</span>
                         <span class="hidden">Close</span>
