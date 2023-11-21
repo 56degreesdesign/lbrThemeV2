@@ -4,7 +4,7 @@
     $footer = get_field('footer', 'option') ?? false;
 ?>
 <div class="mobile-menu__wrapper -translate-y-full duration-300 transition-transform fixed w-full h-screen top-0 left-0 overflow-auto z-[19]">
-    <div class="container">
+    <div class="container flex flex-col h-full justify-between">
         <div class="mobile-menu__wrapper__submenu absolute top-0 left-0 w-full z-10">
             <button class="mobile-menu__btn-back sticky top-0 w-full font-bold text-12 text-center bg-orange mb-16 pt-24" aria-label="Back to menu">BACK</button>
             <div class="mobile-menu__wrapper__submenu__wrapper mobile-menu__menu">

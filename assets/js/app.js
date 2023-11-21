@@ -93,6 +93,10 @@ jQuery(function ($) {
     fAccordionList();
     fMobileMenu;
     
+    $(window).resize(function() {
+        fMobileMenu;
+    });
+    
     $(document).ready(function () {
         $('.form select').select2({
             minimumResultsForSearch: Infinity,

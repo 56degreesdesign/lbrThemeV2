@@ -1,5 +1,5 @@
 const mobileMenu = async function () {
-    if ( window.innerWidth <= 768 ) {
+    if ( window.innerWidth < 1023 ) {
         const   mobileMenu = 'mobile-menu',
                 btn = document.querySelector(`.${mobileMenu}__btn`),
                 btnBack = document.querySelector(`.${mobileMenu}__btn-back`),
