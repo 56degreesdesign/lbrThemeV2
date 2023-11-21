@@ -4778,6 +4778,9 @@ form .btn:hover {
   .xl\:col-span-8 {
     grid-column: span 8 / span 8;
   }
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
   .xl\:col-start-2 {
     grid-column-start: 2;
   }
@@ -4795,6 +4798,12 @@ form .btn:hover {
   }
   .xl\:col-start-auto {
     grid-column-start: auto;
+  }
+  .xl\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+  .xl\:row-start-1 {
+    grid-row-start: 1;
   }
   .xl\:-mt-16 {
     margin-top: -4rem;
@@ -5029,6 +5038,12 @@ form .btn:hover {
   }
   .\32xl\:col-start-2 {
     grid-column-start: 2;
+  }
+  .\32xl\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+  .\32xl\:row-start-1 {
+    grid-row-start: 1;
   }
   .\32xl\:mb-14 {
     margin-bottom: 3.5rem;
