@@ -21,7 +21,18 @@ if($section) :
                 <div class="col-span-full text-center leading-1.38 text-20 mb-12 lg:text-left lg:col-start-7 lg:col-span-6 xl:text-26 lg:mb-32 xl:mb-36"><?php echo $description ?></div>
             <?php endif ;?>
             <?php if($list) :?>
-                <div class="col-span-full pl-6 mb-24 border-t wysiwyg pt-10 lg:pl-0 lg:col-start-7 lg:col-span-6 lg:mb-24 xl:pt-16"><?php echo $list ?></div>
+                <div class="hidden lg:block col-span-full pl-6 mb-24 wysiwyg pt-10 lg:pl-0 lg:col-start-7 lg:col-span-6 lg:mb-24 xl:pt-16"><?php echo $list ?></div>
+                <div class="accordion-list col-span-full border-b border-gray pb-11 mb-12 lg:hidden">
+                    <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
+                        <div class="overflow-hidden pl-6 pb-10 wysiwyg">
+                            <?php echo $list ?>
+                        </div>
+                    </div>
+                    <button class="accordion-list-button block uppercase text-orange underline font-bold txt-h4 text-center mx-auto | lg:mx-0 lg:text-left">
+                        <span>VIEW MORE</span>
+                        <span class="hidden">Close</span>
+                    </button>
+                </div>
             <?php endif ;?>
 
             <div class="col-span-full lg:col-start-7 lg:col-span-6 lg:grid lg:grid-cols-2 gap-x-[30px]">

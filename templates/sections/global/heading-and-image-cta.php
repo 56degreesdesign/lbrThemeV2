@@ -28,8 +28,8 @@ $portrait = $section['image_long'] ?? false;
                 <?php if($content) :?>
                     <p class="text-center text-15 md:text-16 mb-7 mx-auto md:mb-12 lg:text-17 lg:mb-16 lg:w-1/2"><?php echo $content ?></p>
                 <?php endif ;?>
-                <div class="flex justify-center <?php echo ($orientation == 'vertical') ? 'mb-10 md:mb-14 lg:mb-24 xl:mb-40' : 'mb-10 lg:mb-0'; ?>">
-                    <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-narrow btn--desktop-wide'] ) ?>
+                <div class="flex justify-center <?php echo ($orientation == 'vertical') ? 'lg:mb-24 xl:mb-40' : ''; ?>">
+                    <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-wide'] ) ?>
                 </div>
             </div>
             <div class="relative col-span-full row-start-1 mb-11 lg:mb-0 lg:row-start-auto <?php echo ($orientation == 'vertical') ? 'lg:col-start-3 lg:col-span-8 pb-[56%]' : ($portrait ? 'lg:col-start-7 lg:col-span-6 pb-[118.131%]' : 'lg:col-start-7 lg:col-span-6 pb-[66%]'); ?>">

@@ -1157,14 +1157,14 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_654e2c18b9f99": {
-                    "key": "layout_654e2c18b9f99",
-                    "name": "book_now",
-                    "label": "Book now",
+                "layout_655c812e81c7a": {
+                    "key": "layout_655c812e81c7a",
+                    "name": "explore_house",
+                    "label": "Explore House",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_654e2c1eb9f9c",
+                            "key": "field_655c813381c7d",
                             "label": "Section",
                             "name": "section",
                             "aria-label": "",
@@ -1178,39 +1178,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "field_654e2bf973ea4"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_655341a7423b3": {
-                    "key": "layout_655341a7423b3",
-                    "name": "book_iframe",
-                    "label": "Book iframe",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_655341b0423b6",
-                            "label": "Section",
-                            "name": "section",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "field_65533f30b46e3"
+                                "field_655c80a2e8081"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -1247,5 +1215,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1700039050
+    "modified": 1700561228
 }
