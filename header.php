@@ -46,7 +46,7 @@ if (!$hidden) :
                                     <a class="underline-animation-black text-10 font-bold uppercase" href="<?php echo $navbar['link']['url'] ?>" target="<?php echo $navbar['link']['target'] ?>"><?php echo $navbar['link']['title'] ?></a>
                                 </div>
                             </div>
-                            <?php get_template_part( 'templates/partials/button', null, ['data' => $navbar['button'], 'class' => ''] ) ?>
+                            <?php get_template_part( 'templates/partials/button', null, ['data' => $navbar['button'], 'class' => 'btn btn--desktop-small btn--black'] ) ?>
                         </div>
                     </div>
                 </div>

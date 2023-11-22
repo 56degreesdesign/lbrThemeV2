@@ -3367,6 +3367,7 @@ export default {
         this.legend = this.all.legend.url;
         this.legendPhase1 = this.all.legend_phase_1.url;
         this.getCategories();
+        console.log('vue resort created')
     },
 
     computed: {

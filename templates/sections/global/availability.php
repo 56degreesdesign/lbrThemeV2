@@ -16,10 +16,32 @@ $props = json_encode($section, JSON_HEX_APOS);
 <?php endif ;?>
 
 <?php if($data && !$interactive) :?> 
-<section class="bg-beige pt-28 pb-16">
+<section class="bg-beige pt-28 pb-16 h-screen min-[700px]:h-auto">
     <div class="container grid-layout">
-        <h3 class="col-start-1 col-span-3 txt-h3 mt-6 lg:mb-10 xl:mb-14 xl:col-span-3"><?php echo $data['heading'] ?></h3>
-        <div class="col-start-1 col-span-2">
+        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mt-6 lg:mb-10 xl:mb-14 xl:col-span-3"><?php echo $data['heading'] ?></h3>
+        <div class="col-span-full flex flex-col items-center justify-center min-[700px]:hidden">
+
+
+            <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
+                <g id="Rotate_Device_Icon" data-name="Rotate Device Icon" transform="translate(0 0.081)">
+                    <g id="Rectangle_336" data-name="Rectangle 336" fill="none" stroke="#565d45" stroke-width="1">
+                        <rect width="44" height="78" rx="10" stroke="none"/>
+                        <rect x="0.5" y="0.5" width="43" height="77" rx="9.5" fill="none"/>
+                    </g>
+                    <g id="Rectangle_337" data-name="Rectangle 337" transform="translate(99 34) rotate(90)" fill="none" stroke="#565d45" stroke-width="1">
+                        <rect width="44" height="78" rx="9" stroke="none"/>
+                        <rect x="0.5" y="0.5" width="43" height="77" rx="8.5" fill="none"/>
+                    </g>
+                    <g id="Group_5764" data-name="Group 5764" transform="translate(60.071 0.419)">
+                        <path id="Path_8170" data-name="Path 8170" d="M8577.93,7070.158l-4.5,4.5-4.5-4.5" transform="translate(-8559.41 -7056.032)" fill="none" stroke="#565d45" stroke-width="1"/>
+                        <path id="Path_8171" data-name="Path 8171" d="M8569.625,7065.454s1.493-13.208-14.146-13.208" transform="translate(-8555.479 -7052.246)" fill="none" stroke="#565d45" stroke-width="1"/>
+                    </g>
+                </g>
+            </svg>
+            <p class="text-center mt-6">TO VIEW AVAILABILITY MAP PLEASE ROTATE DEVICE INTO LANDSCAPE ORIENTATION OR FOR FULL EXPERIENCE VISIT DESKTOP VARIANT</p>
+            
+        </div>
+        <div class="col-start-1 col-span-2 hidden min-[700px]:block">
             <p class="mb-8 hidden xl:block"><?php echo $data['subheading'] ?></p>
             <div class="flex flex-col gap-y-3">
                 <?php foreach ($data['buttons'] as $button) : ?>
@@ -28,7 +50,7 @@ $props = json_encode($section, JSON_HEX_APOS);
             </div>
             <img class="mt-24 max-w-[212px]" src="<?php echo $section['legend']['url']?>" alt="">
         </div>
-        <div class="col-start-4 col-span-9 2xl:row-start-1 2xl:row-span-2">
+        <div class="col-start-4 col-span-9 2xl:row-start-1 2xl:row-span-2 hidden min-[700px]:block">
             <?php get_template_part('templates/partials/map-phase-all'); ?>
         </div>
     </div>

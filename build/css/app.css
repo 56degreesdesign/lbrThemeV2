@@ -1305,6 +1305,9 @@ html {
 .mt-auto {
   margin-top: auto;
 }
+.mt-32 {
+  margin-top: 8rem;
+}
 .block {
   display: block;
 }
@@ -2005,6 +2008,9 @@ html {
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.pb-\[123\.93\%\] {
+  padding-bottom: 123.93%;
 }
 .\!text-left {
   text-align: left !important;
@@ -4107,6 +4113,22 @@ form .btn:hover {
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }
+@media (min-width: 320px) {
+  .min-\[320px\]\:h-auto {
+    height: auto;
+  }
+}
+@media (min-width: 700px) {
+  .min-\[700px\]\:block {
+    display: block;
+  }
+  .min-\[700px\]\:hidden {
+    display: none;
+  }
+  .min-\[700px\]\:h-auto {
+    height: auto;
+  }
+}
 @media (min-width: 768px) {
   .md\:bottom-9 {
     bottom: 2.25rem;
@@ -4596,6 +4618,9 @@ form .btn:hover {
   .lg\:h-screen {
     height: 100vh;
   }
+  .lg\:h-auto {
+    height: auto;
+  }
   .lg\:max-h-none {
     max-height: none;
   }
@@ -4779,6 +4804,10 @@ form .btn:hover {
   .lg\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
+  }
+  .lg\:px-\[5\%\] {
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .lg\:pb-0 {
     padding-bottom: 0px;

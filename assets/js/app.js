@@ -67,6 +67,8 @@ const InitVueComponents = () => {
     
     // Init Vue Instance
     const $VueApp = createApp({});
+    const $VueAppFloor = createApp({});
+
 
     if (ListOfPosts) {
         $VueApp.component("list-of-posts", ListOfPosts);
@@ -83,12 +85,14 @@ const InitVueComponents = () => {
     }
 
     if (Floorplans) {
-        $VueApp.component("floorplans", Floorplans);
+        $VueAppFloor.component("floorplans", Floorplans);
     }
     
 
     // $VueApp.use(VueMasonryPlugin);
     $VueApp.mount('#vue-space');
+    $VueAppFloor.mount('#vue-floor');
+    
 }
 
 // Initialise our components on jQuery.ready…

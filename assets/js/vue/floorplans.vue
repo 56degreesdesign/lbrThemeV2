@@ -22,8 +22,8 @@ const select = (floorType) => {
             <div class="grid grid-cols-2 max-w-[1920px] mx-auto z-10 lg:h-full">
 
                 <div class="col-span-full bg-beige pt-7 md:pt-14 md:pb-10 lg:col-span-1 lg:pr-0 xl:pt-28 xl:pb-14">
-                    <div class="flex justify-center lg:px-[10%] lg:mb-10 xl:mb-14">
-                        <div class="w-full relative pb-[151.93%]">
+                    <div class="flex justify-center lg:px-[5%] lg:mb-10 xl:mb-14">
+                        <div class="w-full relative pb-[123.93%]">
                             <img v-if="activeImage" class="absolute-full object-cover" :src="activeImage" alt="">
                             <div v-else class="absolute-full bg-beige flex items-center justify-center">No Image</div>
                         </div>

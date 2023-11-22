@@ -16948,6 +16948,7 @@ var InitVueComponents = function InitVueComponents() {
 
   // Init Vue Instance
   var $VueApp = (0,vue__WEBPACK_IMPORTED_MODULE_3__.createApp)({});
+  var $VueAppFloor = (0,vue__WEBPACK_IMPORTED_MODULE_3__.createApp)({});
   if (ListOfPosts) {
     $VueApp.component("list-of-posts", ListOfPosts);
   }
@@ -16961,11 +16962,12 @@ var InitVueComponents = function InitVueComponents() {
     $VueApp.component("resort", Resort);
   }
   if (Floorplans) {
-    $VueApp.component("floorplans", Floorplans);
+    $VueAppFloor.component("floorplans", Floorplans);
   }
 
   // $VueApp.use(VueMasonryPlugin);
   $VueApp.mount('#vue-space');
+  $VueAppFloor.mount('#vue-floor');
 };
 
 // Initialise our components on jQuery.ready…
@@ -25500,7 +25502,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"795a9ddb7b3f17f8","assets_js_vue_map-directions_vue":"cfb2947ca040b690","assets_js_vue_news-and-events_vue":"559445c6d138f4c1","assets_js_vue_resort_vue":"a1973f61c312fd93","assets_js_vue_floorplans_vue":"dcb21167c98edbe8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"795a9ddb7b3f17f8","assets_js_vue_map-directions_vue":"cfb2947ca040b690","assets_js_vue_news-and-events_vue":"559445c6d138f4c1","assets_js_vue_resort_vue":"8a45c9129367c302","assets_js_vue_floorplans_vue":"b85c34cc67c1f9a8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
