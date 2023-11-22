@@ -16903,7 +16903,7 @@ var fMobileMenu = __webpack_require__(/*! ./components/mobile-menu */ "./assets/
 
 var InitVueComponents = function InitVueComponents() {
   // Async components
-  var MapDirections, Resort, NewsAndEvents, ListOfPosts;
+  var MapDirections, Resort, NewsAndEvents, ListOfPosts, Floorplans;
   if (document.querySelector(".list-of-posts")) {
     ListOfPosts = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
       loader: function loader() {
@@ -16937,6 +16937,14 @@ var InitVueComponents = function InitVueComponents() {
       delay: 500
     });
   }
+  if (document.querySelector(".floorplans")) {
+    Floorplans = (0,vue__WEBPACK_IMPORTED_MODULE_3__.defineAsyncComponent)({
+      loader: function loader() {
+        return __webpack_require__.e(/*! import() */ "assets_js_vue_floorplans_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/floorplans.vue */ "./assets/js/vue/floorplans.vue"));
+      },
+      delay: 500
+    });
+  }
 
   // Init Vue Instance
   var $VueApp = (0,vue__WEBPACK_IMPORTED_MODULE_3__.createApp)({});
@@ -16951,6 +16959,9 @@ var InitVueComponents = function InitVueComponents() {
   }
   if (Resort) {
     $VueApp.component("resort", Resort);
+  }
+  if (Floorplans) {
+    $VueApp.component("floorplans", Floorplans);
   }
 
   // $VueApp.use(VueMasonryPlugin);
@@ -25489,7 +25500,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"795a9ddb7b3f17f8","assets_js_vue_map-directions_vue":"cfb2947ca040b690","assets_js_vue_news-and-events_vue":"559445c6d138f4c1","assets_js_vue_resort_vue":"a1973f61c312fd93","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"795a9ddb7b3f17f8","assets_js_vue_map-directions_vue":"cfb2947ca040b690","assets_js_vue_news-and-events_vue":"559445c6d138f4c1","assets_js_vue_resort_vue":"a1973f61c312fd93","assets_js_vue_floorplans_vue":"dcb21167c98edbe8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

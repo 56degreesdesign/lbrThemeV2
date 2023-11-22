@@ -19,10 +19,10 @@ if($section) :
                     <div class="mb-8 text-14 font-bold text-center uppercase "><?php echo $label ?></div>
                 <?php endif ;?>
             </div>
-            <h4 class="col-span-full mb-5 text-center txt-h2 lg:hidden"><?php echo $heading ?></h4>
+            <h3 class="col-span-full mb-5 text-center txt-h2 lg:hidden"><?php echo $heading ?></h3>
             <div class="col-span-full <?php echo ($side) ? 'lg:col-start-2 lg:col-span-3' : 'lg:col-start-9 lg:col-span-3'; ?>">
                 <div class="w-full h-full flex flex-col items-center justify-center lg:items-start">
-                    <h4 class="txt-h2 mb-7 hidden lg:block"><?php echo $heading ?></h4>
+                    <h3 class="txt-h2 mb-7 hidden lg:block"><?php echo $heading ?></h3>
                     <div class="wysiwyg text-left hidden lg:block">
                         <?php echo $content ?>
                     </div>

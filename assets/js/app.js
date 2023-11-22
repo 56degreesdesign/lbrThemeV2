@@ -27,7 +27,7 @@ import {
 
 const InitVueComponents = () => {
     // Async components
-    let MapDirections, Resort, NewsAndEvents, ListOfPosts;
+    let MapDirections, Resort, NewsAndEvents, ListOfPosts, Floorplans;
 
     if (document.querySelector(".list-of-posts")) {
         ListOfPosts = defineAsyncComponent({
@@ -57,6 +57,13 @@ const InitVueComponents = () => {
             delay: 500,
         });
     }
+
+    if (document.querySelector(".floorplans")) {
+        Floorplans = defineAsyncComponent({
+            loader: () => import("./vue/floorplans.vue"),
+            delay: 500,
+        });
+    }
     
     // Init Vue Instance
     const $VueApp = createApp({});
@@ -73,6 +80,10 @@ const InitVueComponents = () => {
     }
     if (Resort) {
         $VueApp.component("resort", Resort);
+    }
+
+    if (Floorplans) {
+        $VueApp.component("floorplans", Floorplans);
     }
     
 

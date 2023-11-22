@@ -1780,6 +1780,10 @@ html {
   padding-top: 16rem;
   padding-bottom: 16rem;
 }
+.px-\[10\%\] {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -4316,6 +4320,11 @@ form .btn:hover {
   }
   .md\:text-17 {
     font-size: 1.063rem;
+  }
+}
+@media (min-width: 1023px) {
+  .menu\:hidden {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
