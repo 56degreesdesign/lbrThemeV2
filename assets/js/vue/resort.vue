@@ -1,8 +1,30 @@
 <template>
     <div class="sc-resort__map container" :class="curCategory">
+        <div class="col-span-full flex flex-col items-center h-[90vh] min-[700px]:hidden">
+            <h3 class="text-center txt-h3 mt-24" v-html="all.heading"></h3>
+
+            <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
+                <g id="Rotate_Device_Icon" data-name="Rotate Device Icon" transform="translate(0 0.081)">
+                    <g id="Rectangle_336" data-name="Rectangle 336" fill="none" stroke="#565d45" stroke-width="1">
+                        <rect width="44" height="78" rx="10" stroke="none"/>
+                        <rect x="0.5" y="0.5" width="43" height="77" rx="9.5" fill="none"/>
+                    </g>
+                    <g id="Rectangle_337" data-name="Rectangle 337" transform="translate(99 34) rotate(90)" fill="none" stroke="#565d45" stroke-width="1">
+                        <rect width="44" height="78" rx="9" stroke="none"/>
+                        <rect x="0.5" y="0.5" width="43" height="77" rx="8.5" fill="none"/>
+                    </g>
+                    <g id="Group_5764" data-name="Group 5764" transform="translate(60.071 0.419)">
+                        <path id="Path_8170" data-name="Path 8170" d="M8577.93,7070.158l-4.5,4.5-4.5-4.5" transform="translate(-8559.41 -7056.032)" fill="none" stroke="#565d45" stroke-width="1"/>
+                        <path id="Path_8171" data-name="Path 8171" d="M8569.625,7065.454s1.493-13.208-14.146-13.208" transform="translate(-8555.479 -7052.246)" fill="none" stroke="#565d45" stroke-width="1"/>
+                    </g>
+                </g>
+            </svg>
+            <p class="text-center mt-6">TO VIEW AVAILABILITY MAP PLEASE ROTATE DEVICE INTO LANDSCAPE ORIENTATION OR FOR FULL EXPERIENCE VISIT DESKTOP VARIANT</p>
+
+        </div>
         <div class="sc-resort__map__aside">
             <div class="sc-resort__map__aside__wrapper h-full w-full">
-                <h4 class="txt-h3 mb-8">Availability</h4>
+                <h4 class="txt-h3 mb-8" v-html="all.heading"></h4>
                 <div v-if="phase === 'all' && !activePreview" class="flex flex-col gap-y-8">
                     <button class="btn"
                              v-html="all.phase_all.button"
@@ -17,7 +39,7 @@
                     <div class="sc-resort__map__filter hidden lg:block">
                         <div class="text-10 font-bold uppercase mb-4 xl:mb-8">Filter by<span @click="curCategory = false" class="hidden">reset</span></div>
                         <div class="flex flex-col gap-y-4 mb-4">
-                            <div class="btn btn--black"
+                            <div class="btn btn--black btn--desktop-small"
                                  :class="{'is-active': ( curCategory === category.category || !curCategory )}"
                                  @click="setCategory(category.category)"
                                  v-html="category.label"
@@ -39,12 +61,12 @@
                     </div>
                 </div>
             </div>
-            <div v-if="!activePreview" class="ml-8 w-full mt-1.5 max-w-[200px] lg:max-w-none lg:ml-0 lg:w-1/2 mb-10 xl:mb-20">
+            <div v-if="!activePreview" class="w-full mt-1.5 max-w-[115px] lg:max-w-none lg:ml-0 lg:w-1/2 lg:mb-10 xl:mb-20">
                 <img v-if="phase === 'all' && !activePreview" :src="legend" alt="Legend">
                 <img v-if="phase === '1' && !activePreview" :src="legendPhase1" alt="Legend">
             </div>
         </div>
-        <div  v-if="activePreview" class="col-span-full -mx-[25px] pb-[120%] md:-mx-10 lg:mx-0 lg:col-start-5 lg:col-span-8 relative lg:pb-[78%] bg-beige-light">
+        <div  v-if="activePreview" class="col-span-full -mx-[25px] pb-[120%] md:-mx-10 lg:mx-0 lg:col-start-5 lg:col-span-8 relative lg:pb-[78%] bg-beige-light hidden min-[700px]:block">
             <div class="absolute top-5 right-5">
                 <svg class="cursor-pointer" @click="clearPreview()" xmlns="http://www.w3.org/2000/svg" width="18.677" height="18.676" viewBox="0 0 18.677 18.676">
                     <g id="Group_125755" data-name="Group 125755" transform="translate(6322.456 3589.494)">
@@ -3304,7 +3326,7 @@
             <div v-for="house in houses"
                  v-show="activeHouse === house.number && house.status === 'available'"
                  :key="house.number"
-                 class="sc-resort__map__house-tooltip"
+                 class="sc-resort__map__house-tooltip hidden lg:block"
                  :class="house.category"
                  :style="tooltip"
                  v-on:mouseleave="mouseleave"
@@ -3324,8 +3346,8 @@
                 </svg>
             </div>
         </div>
-        <p class="col-span-full mt-10 text-15 text-center lg:mt-14 lg:text-right xl:mt-20">Casitas square footages are approximate and subject to change without notice.</p>
-        <div class="col-span-full flex justify-center mt-5 lg:hidden">
+        <p class="col-span-full mt-10 text-15 text-center lg:mt-14 lg:text-right xl:mt-20 hidden min-[700px]:block">Casitas square footages are approximate and subject to change without notice.</p>
+        <div class="col-span-full flex justify-center mt-5 hidden">
             <a href="/contact" class="btn">RESERVE YOUR CASITA</a>
 
         </div>

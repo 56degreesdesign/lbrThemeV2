@@ -9,19 +9,17 @@ $props = json_encode($section, JSON_HEX_APOS);
 
 <?php if($section && $interactive) : ?>
     <section id="vue-space" class="resort">
-        <div class="bg-beige pb-10 pt-14 md:pt-20 lg:pt-24 xl:pt-28">
+        <div class="bg-beige min-[700px]:py-10 lg:pb-10 lg:pt-24 xl:pt-28">
             <resort map='<?php echo $props ?>' settings='<?php echo $settings ?>'/>
         </div>
     </section>
 <?php endif ;?>
 
 <?php if($data && !$interactive) :?> 
-<section class="bg-beige pt-28 pb-16 h-screen min-[700px]:h-auto">
+<section class="bg-beige pt-16 pb-10 lg:pt-28 lg:pb-16 h-screen min-[700px]:h-auto">
     <div class="container grid-layout">
-        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mt-6 lg:mb-10 xl:mb-14 xl:col-span-3"><?php echo $data['heading'] ?></h3>
+        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mt-6 mb-10 lg:mb-10 xl:mb-14 xl:col-span-3"><?php echo $data['heading'] ?></h3>
         <div class="col-span-full flex flex-col items-center justify-center min-[700px]:hidden">
-
-
             <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
                 <g id="Rotate_Device_Icon" data-name="Rotate Device Icon" transform="translate(0 0.081)">
                     <g id="Rectangle_336" data-name="Rectangle 336" fill="none" stroke="#565d45" stroke-width="1">
@@ -41,16 +39,16 @@ $props = json_encode($section, JSON_HEX_APOS);
             <p class="text-center mt-6">TO VIEW AVAILABILITY MAP PLEASE ROTATE DEVICE INTO LANDSCAPE ORIENTATION OR FOR FULL EXPERIENCE VISIT DESKTOP VARIANT</p>
             
         </div>
-        <div class="col-start-1 col-span-2 hidden min-[700px]:block">
+        <div class="col-span-full lg:col-start-1 lg:col-span-2 hidden min-[700px]:block">
             <p class="mb-8 hidden xl:block"><?php echo $data['subheading'] ?></p>
-            <div class="flex flex-col gap-y-3">
+            <div class="flex gap-x-5 justify-center mb-10 lg:mb-0 lg:flex-col gap-y-3">
                 <?php foreach ($data['buttons'] as $button) : ?>
-                   <?php get_template_part('templates/partials/button', null, ['data' => $button['button'], 'class' => 'btn--desktop-narrow']); ?>
+                   <?php get_template_part('templates/partials/button', null, ['data' => $button['button'], 'class' => 'w-fit btn--desktop-narrow']); ?>
                 <?php endforeach; ?>
             </div>
-            <img class="mt-24 max-w-[212px]" src="<?php echo $section['legend']['url']?>" alt="">
+            <img class="mt-24 max-w-[212px] hidden lg:block" src="<?php echo $section['legend']['url']?>" alt="">
         </div>
-        <div class="col-start-4 col-span-9 2xl:row-start-1 2xl:row-span-2 hidden min-[700px]:block">
+        <div class="col-span-full lg:col-start-4 lg:col-span-9 2xl:row-start-1 2xl:row-span-2 hidden min-[700px]:block">
             <?php get_template_part('templates/partials/map-phase-all'); ?>
         </div>
     </div>

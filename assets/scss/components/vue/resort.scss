@@ -1,13 +1,14 @@
 .sc-resort {
     &__map {
-        @apply grid-layout;
+        //@apply grid-layout;
+        @apply grid grid-cols-12;
         
         &__aside {
-            @apply col-span-4 flex justify-between md:col-span-full lg:flex-col lg:col-span-3;
+            @apply col-span-3 hidden min-[700px]:flex justify-between flex-col lg:col-span-3;
         }
         
         &__wrapper {
-            @apply col-span-full -mx-[25px] md:-mx-10 lg:mx-0 lg:col-start-4 lg:col-span-9 relative;
+            @apply col-start-5 col-span-8 -mr-[25px] md:-mx-10 lg:mx-0 lg:col-start-4 lg:col-span-9 relative hidden min-[700px]:block;
             
             &::after {
                 @apply block w-[3%] h-[3%] absolute z-10 top-[3%] right-[2%] bg-no-repeat bg-contain;
