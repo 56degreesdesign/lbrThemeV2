@@ -10,7 +10,16 @@ $links = get_field('links', 'option') ?? false;
 
 if (!$hidden) :
 ?>
-<footer class="bg-black text-beige relative pb-20 lg:pb-7">
+<footer class="bg-black text-beige relative z-10 pb-20 lg:pb-7 overflow-clip">
+    <div class="absolute z-1 h-[calc(100%+80px)] -top-20 w-full left-0">
+        <div class="h-full -mt-10"></div>
+        <div class="sticky bottom-10">
+            <div class="container w-full flex justify-end">
+                <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--beige-light']); ?>
+            </div>
+        </div>
+    </div>
+    
     <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none opacity-60" src="<?php echo $bg['url']?>" alt="">
     <div class="container grid grid-cols-1 pt-11 lg:grid-cols-3 lg:pt-14">
 

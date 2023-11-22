@@ -128,7 +128,7 @@ if (!$hidden) :
         ?>
         <div class="w-full fixed bottom-10 left-0 hidden lg:block z-10">
             <div class="container w-full flex justify-end">
-                <a href="/residential-casitas" class="btn btn--desktop-small btn--black">Book now</a>
+                <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--black']); ?>
             </div>
         </div>
     <?php

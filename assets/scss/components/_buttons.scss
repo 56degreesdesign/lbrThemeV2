@@ -4,6 +4,9 @@
     &--black {
         @apply bg-black hover:bg-orange;
     }
+    &--beige-light {
+        @apply bg-beige-light text-black hover:bg-beige;
+    }
     &--orange {
         @apply bg-orange hover:bg-black;
     }

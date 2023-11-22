@@ -1007,6 +1007,9 @@ html {
 .-left-2 {
   left: -0.5rem;
 }
+.-top-20 {
+  top: -5rem;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -1182,6 +1185,9 @@ html {
 .-mr-\[25px\] {
   margin-right: -25px;
 }
+.-mt-10 {
+  margin-top: -2.5rem;
+}
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1287,6 +1293,9 @@ html {
 .mt-3\.5 {
   margin-top: 0.875rem;
 }
+.mt-32 {
+  margin-top: 8rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1304,9 +1313,6 @@ html {
 }
 .mt-auto {
   margin-top: auto;
-}
-.mt-32 {
-  margin-top: 8rem;
 }
 .block {
   display: block;
@@ -1349,6 +1355,9 @@ html {
 }
 .h-\[48px\] {
   height: 48px;
+}
+.h-\[calc\(100\%\+80px\)\] {
+  height: calc(100% + 80px);
 }
 .h-auto {
   height: auto;
@@ -1417,9 +1426,6 @@ html {
 }
 .w-screen {
   width: 100vw;
-}
-.min-w-\[235px\] {
-  min-width: 235px;
 }
 .max-w-\[116px\] {
   max-width: 116px;
@@ -1635,6 +1641,9 @@ html {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-clip {
+  overflow: clip;
+}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1652,10 +1661,6 @@ html {
 }
 .border-t {
   border-top-width: 1px;
-}
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .border-gray {
   --tw-border-opacity: 1;
@@ -1783,10 +1788,6 @@ html {
   padding-top: 16rem;
   padding-bottom: 16rem;
 }
-.px-\[10\%\] {
-  padding-left: 10%;
-  padding-right: 10%;
-}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -1847,6 +1848,9 @@ html {
 .pb-\[120\%\] {
   padding-bottom: 120%;
 }
+.pb-\[123\.93\%\] {
+  padding-bottom: 123.93%;
+}
 .pb-\[124\%\] {
   padding-bottom: 124%;
 }
@@ -1864,9 +1868,6 @@ html {
 }
 .pb-\[134\.96\%\] {
   padding-bottom: 134.96%;
-}
-.pb-\[151\.93\%\] {
-  padding-bottom: 151.93%;
 }
 .pb-\[216\.8\%\] {
   padding-bottom: 216.8%;
@@ -2009,9 +2010,6 @@ html {
 .pt-8 {
   padding-top: 2rem;
 }
-.pb-\[123\.93\%\] {
-  padding-bottom: 123.93%;
-}
 .\!text-left {
   text-align: left !important;
 }
@@ -2020,6 +2018,9 @@ html {
 }
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 .font-Oscar {
   font-family: FH Oscar, sans-serif;
@@ -3650,6 +3651,16 @@ form .btn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(204 136 93 / var(--tw-bg-opacity));
 }
+.btn--beige-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 238 229 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.btn--beige-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 227 214 / var(--tw-bg-opacity));
+}
 .btn--orange {
   --tw-bg-opacity: 1;
   background-color: rgb(204 136 93 / var(--tw-bg-opacity));
@@ -4095,28 +4106,12 @@ form .btn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.hover\:bg-transparent:hover {
-  background-color: transparent;
-}
 .hover\:text-beige-light:hover {
   --tw-text-opacity: 1;
   color: rgb(246 238 229 / var(--tw-text-opacity));
 }
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .hover\:opacity-70:hover {
   opacity: 0.7;
-}
-@media (min-width: 320px) {
-  .min-\[320px\]\:h-auto {
-    height: auto;
-  }
 }
 @media (min-width: 700px) {
   .min-\[700px\]\:block {
@@ -4282,9 +4277,6 @@ form .btn:hover {
   }
   .md\:pb-10 {
     padding-bottom: 2.5rem;
-  }
-  .md\:pb-12 {
-    padding-bottom: 3rem;
   }
   .md\:pb-16 {
     padding-bottom: 4rem;
@@ -4618,9 +4610,6 @@ form .btn:hover {
   .lg\:h-screen {
     height: 100vh;
   }
-  .lg\:h-auto {
-    height: auto;
-  }
   .lg\:max-h-none {
     max-height: none;
   }
@@ -4769,9 +4758,9 @@ form .btn:hover {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
   }
-  .lg\:px-\[10\%\] {
-    padding-left: 10%;
-    padding-right: 10%;
+  .lg\:px-\[5\%\] {
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .lg\:py-0 {
     padding-top: 0px;
@@ -4804,10 +4793,6 @@ form .btn:hover {
   .lg\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
-  }
-  .lg\:px-\[5\%\] {
-    padding-left: 5%;
-    padding-right: 5%;
   }
   .lg\:pb-0 {
     padding-bottom: 0px;
@@ -5123,10 +5108,6 @@ form .btn:hover {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .xl\:px-\[15\%\] {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
   .xl\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -5260,10 +5241,6 @@ form .btn:hover {
   .\32xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-  .\32xl\:px-\[21\.67\%\] {
-    padding-left: 21.67%;
-    padding-right: 21.67%;
   }
   .\32xl\:pb-0 {
     padding-bottom: 0px;
