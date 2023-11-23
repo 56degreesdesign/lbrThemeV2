@@ -4,6 +4,7 @@ module.exports = function () {
 
     const toggleMenu = document.querySelectorAll('.toggle-menu')
     const menuWrapper = document.querySelector('.menu-wrapper')
+    const home = document.querySelector('body.home')
     let isFirstMenuOpen = true;
 
     if (toggleMenu && menuWrapper) {
@@ -36,5 +37,30 @@ module.exports = function () {
         if (menuWrapper) {
             // menuWrapper.classList.add('duration-500');
         }
+    }
+    
+    if ( home ) {
+        document.addEventListener("scroll", (event) => {
+            const   windowScrollTop = window.scrollY,
+                    windowHeight = window.innerHeight,
+                    header = document.querySelector('header');
+            
+            if ( windowScrollTop >= windowHeight ) {
+                header.classList.remove('-translate-y-full');
+            } else {
+                header.classList.add('-translate-y-full');
+            }
+        });
+        
+        setTimeout(() => {
+            const windowScrollTop = window.scrollY;
+            
+            if ( windowScrollTop === 0 ) {
+                scroll({
+                    top: window.innerHeight,
+                    behavior: "smooth"
+                });
+            }
+        }, 5000)
     }
 }

@@ -12,8 +12,10 @@ $navbar = get_field('header', 'option')['navbar'] ?? false;
 $header_downloads = get_field('header', 'option')['downloads'] ?? false;
 if (!$hidden) :
 ?>
-
-    <header class="mobile-menu__header fixed scrolledDown duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-10">
+    <?php
+        $headrClass = is_front_page() ? '-translate-y-full transition-transform'  : null;
+    ?>
+    <header class="mobile-menu__header <?= $headrClass; ?> fixed duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-20">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">

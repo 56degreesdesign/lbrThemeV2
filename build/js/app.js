@@ -17573,6 +17573,7 @@ module.exports = function () {
   var fTime = __webpack_require__(/*! ../components/time */ "./assets/js/components/time.js");
   var toggleMenu = document.querySelectorAll('.toggle-menu');
   var menuWrapper = document.querySelector('.menu-wrapper');
+  var home = document.querySelector('body.home');
   var isFirstMenuOpen = true;
   if (toggleMenu && menuWrapper) {
     var toggleActiveMenu = function toggleActiveMenu() {
@@ -17600,6 +17601,27 @@ module.exports = function () {
     if (menuWrapper) {
       // menuWrapper.classList.add('duration-500');
     }
+  }
+  if (home) {
+    document.addEventListener("scroll", function (event) {
+      var windowScrollTop = window.scrollY,
+        windowHeight = window.innerHeight,
+        header = document.querySelector('header');
+      if (windowScrollTop >= windowHeight) {
+        header.classList.remove('-translate-y-full');
+      } else {
+        header.classList.add('-translate-y-full');
+      }
+    });
+    setTimeout(function () {
+      var windowScrollTop = window.scrollY;
+      if (windowScrollTop === 0) {
+        scroll({
+          top: window.innerHeight,
+          behavior: "smooth"
+        });
+      }
+    }, 5000);
   }
 };
 
