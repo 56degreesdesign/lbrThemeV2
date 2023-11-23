@@ -4,6 +4,7 @@ module.exports = function () {
 
     const toggleMenu = document.querySelectorAll('.toggle-menu')
     const menuWrapper = document.querySelector('.menu-wrapper')
+    const home = document.querySelector('body.home')
     let isFirstMenuOpen = true;
 
     if (toggleMenu && menuWrapper) {
@@ -36,5 +37,20 @@ module.exports = function () {
         if (menuWrapper) {
             // menuWrapper.classList.add('duration-500');
         }
+    }
+    
+    if ( home ) {
+        setTimeout(() => {
+            const windowScrollTop = window.scrollY;
+            
+            if ( windowScrollTop === 0 ) {
+                scroll({
+                    top: window.innerHeight,
+                    behavior: "smooth"
+                });
+            }
+            
+            console.log(windowScrollTop);
+        }, 5000)
     }
 }
