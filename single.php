@@ -10,7 +10,7 @@
             <?php
                 $author_id = $post->post_author;
             ?>
-            <p class="uppercase w-1/2 mb-14 | md:w-full"><strong>by <br><?php the_author_meta( 'display_name', $author_id ); ?></strong></p>
+            <p class="uppercase w-1/2 mb-14 | lg:w-full"><strong>by <br><?php the_author_meta( 'display_name', $author_id ); ?></strong></p>
             <div>
                 <p class="uppercase mb-4"><strong>Share</strong></p>
                 <?php get_social_share_56('flex flex-col', 'uppercase text-orange', ['email', 'facebook', 'linkedin', 'x']);  ?>
