@@ -8,7 +8,7 @@ $bottom_img = get_field('logo', 'option') ?? false;
  
 ?>
 <?php if ($section) : ?>
-<section class="hero-height flex items-start lg:items-center relative z-20">
+<section class="hero-height flex items-start lg:items-center relative z-10">
     <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $bg, 'class' => 'w-full -z-10']); ?>
     <div class="container grid-layout mt-8 lg:mt-0">
         <?php if ($logo) : ?>

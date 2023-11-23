@@ -40,6 +40,18 @@ module.exports = function () {
     }
     
     if ( home ) {
+        document.addEventListener("scroll", (event) => {
+            const   windowScrollTop = window.scrollY,
+                    windowHeight = window.innerHeight,
+                    header = document.querySelector('header');
+            
+            if ( windowScrollTop >= windowHeight ) {
+                header.classList.remove('-translate-y-full');
+            } else {
+                header.classList.add('-translate-y-full');
+            }
+        });
+        
         setTimeout(() => {
             const windowScrollTop = window.scrollY;
             
@@ -49,8 +61,6 @@ module.exports = function () {
                     behavior: "smooth"
                 });
             }
-            
-            console.log(windowScrollTop);
         }, 5000)
     }
 }

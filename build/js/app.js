@@ -17603,6 +17603,16 @@ module.exports = function () {
     }
   }
   if (home) {
+    document.addEventListener("scroll", function (event) {
+      var windowScrollTop = window.scrollY,
+        windowHeight = window.innerHeight,
+        header = document.querySelector('header');
+      if (windowScrollTop >= windowHeight) {
+        header.classList.remove('-translate-y-full');
+      } else {
+        header.classList.add('-translate-y-full');
+      }
+    });
     setTimeout(function () {
       var windowScrollTop = window.scrollY;
       if (windowScrollTop === 0) {
@@ -17611,7 +17621,6 @@ module.exports = function () {
           behavior: "smooth"
         });
       }
-      console.log(windowScrollTop);
     }, 5000);
   }
 };
