@@ -1,7 +1,17 @@
 .menu-wrapper { 
-    @apply translate-x-full;
     &.active {
-        @apply translate-x-0;
+        .menu-orange {
+            @apply translate-x-0 duration-[1500ms];
+        }
+        .menu-green {
+            @apply translate-x-0 duration-1000;
+        }
+    }
+    .menu-orange {
+        @apply translate-x-[200%] duration-200 min-[1921px]:translate-x-[300%];
+    }
+    .menu-green {
+        @apply translate-x-[100%] delay-200 duration-200 min-[1921px]:translate-x-[200%];
     }
 
     .main-mega-menu {
@@ -82,4 +92,7 @@
         }
     }
 
+//.scrolledDown {
+//    @apply -translate-y-full opacity-0 duration-[400ms] top-0;
+//}
 

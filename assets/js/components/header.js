@@ -34,7 +34,7 @@ module.exports = function () {
     function addTransitionToMenu() {
         const menuWrapper = document.querySelector('.menu-wrapper');
         if (menuWrapper) {
-            menuWrapper.classList.add('duration-500');
+            // menuWrapper.classList.add('duration-500');
         }
     }
 }

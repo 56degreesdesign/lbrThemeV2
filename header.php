@@ -13,7 +13,7 @@ $header_downloads = get_field('header', 'option')['downloads'] ?? false;
 if (!$hidden) :
 ?>
 
-    <header class="mobile-menu__header fixed top-0 left-0 w-full z-20 max-h-[65px] overflow-hidden lg:max-h-none">
+    <header class="mobile-menu__header fixed scrolledDown duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-20">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
@@ -57,12 +57,12 @@ if (!$hidden) :
 
     <?php get_template_part('templates/partials/mobile-menu-wrapper'); ?>
 
-    <div class="menu-wrapper fixed w-full h-screen top-0 left-0 translate-x-full overflow-auto z-[60]">
-        <div class="w-1/2 bg-orange absolute top-0 left-0 h-full -z-10"></div>
-        <div class="w-1/2 bg-green absolute top-0 right-0 h-full -z-10"></div>
-        <div class="grid grid-cols-2 h-full max-w-[1920px] mx-auto z-10">
-            <div class="col-span-1 bg-orange  pt-8 pb-20 flex flex-col justify-stretch">
-                <div class="pl-[25px] md:pl-10 lg:pl-[2.5rem] xl:pl-[3.563rem]">
+    <div class="menu-wrapper fixed w-full h-screen top-0 left-0 overflow-auto z-[60] pointer-events-none">
+        <div class="menu-orange w-1/2 bg-orange absolute top-0 left-0 h-full -z-10 pointer-events-auto"></div>
+        <div class="menu-green w-1/2 bg-green absolute top-0 right-0 h-full -z-10 pointer-events-auto"></div>
+        <div class="grid grid-cols-2 h-full max-w-[1920px] mx-auto z-10 ">
+            <div class="menu-orange col-span-1 bg-orange  pt-7 pb-20 flex flex-col justify-stretch pointer-events-auto">
+                <div class="pl-[25px] md:pl-10 lg:pl-[2.5rem] xl:pl-[3.563rem] h-[35px] flex items-center">
                     <?php get_template_part('templates/partials/lbr-logo') ?>
                 </div>
                 <div class="flex flex-col items-center mt-10 mb-5 md:mt-16 lg:mt-20 xl:mt-28">
@@ -96,14 +96,14 @@ if (!$hidden) :
                     <?php endif ;?>
                 </div>
             </div>
-            <div class="col-span-1 bg-green pt-8 pb-20 flex flex-col justify-stretch text-white">
-                <div class="grid grid-cols-6 lg:pr-[2.5rem] xl:pr-[3.563rem]">
+            <div class="menu-green col-span-1 bg-green pt-7 pb-20 flex flex-col justify-stretch text-white pointer-events-auto">
+                <div class="grid grid-cols-6 lg:pr-[2.5rem] xl:pr-[3.563rem] h-[35px]">
                     <div class="col-span-full flex flex-col justify-center items-center text-14 font-bold md:flex-row md:row-start-2 lg:col-start-2 lg:col-span-4 lg:row-start-auto">
                         <span>MOAB, UT <span class="hidden md:inline">-&nbsp</span></span>
                         <p class="currentDateTime"></p><span class="hidden md:inline">&nbsp-&nbsp</span>
                         <p class="currentWeather underline underline-offset-2"></p>
                     </div>
-                    <div class="col-span-full row-start-1 pr-[25px] mb-4 md:pr-10 lg:row-start-auto md:col-start-6 md:col-span-1 flex justify-end lg:mb-0 lg:pr-0">
+                    <div class="col-span-full row-start-1 pr-[25px] mb-4 md:pr-10 items-center lg:row-start-auto md:col-start-6 md:col-span-1 flex justify-end lg:mb-0 lg:pr-0">
                         <span class="toggle-menu text-14 font-bold cursor-pointer uppercase">close</span>
                     </div>
                 </div>

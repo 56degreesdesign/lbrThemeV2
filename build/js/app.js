@@ -17004,6 +17004,32 @@ jQuery(function ($) {
     menuItem.addEventListener('mouseenter', toggleSubmenu, false);
     menuItem.addEventListener('mouseleave', toggleSubmenu, false);
   });
+
+  // menu
+  //   let header = document.querySelector(".mobile-menu__header");
+  //   let isScrolledDown = false;
+  //
+  //   function handleScroll() {
+  //       const intro = document.querySelector(".page-intro");
+  //       const trigger = intro ? intro.getBoundingClientRect().bottom : null;
+  //
+  //       if (window.scrollY > 50 && window.innerWidth > 768) {
+  //           if (!isScrolledDown && (intro && trigger <= 100 || !intro)) {
+  //               header.classList.add("scrolledDown");
+  //               isScrolledDown = true;
+  //           }
+  //
+  //           if (intro && trigger <= 0 || !intro) {
+  //               header.classList.remove("scrolledDown");
+  //               isScrolledDown = false;
+  //           }
+  //       } else {
+  //           header.classList.remove("scrolledDown");
+  //           isScrolledDown = false;
+  //       }
+  //   }
+  //
+  //   window.addEventListener("scroll", handleScroll, false);
 });
 
 /***/ }),
@@ -17581,7 +17607,7 @@ module.exports = function () {
   function addTransitionToMenu() {
     var menuWrapper = document.querySelector('.menu-wrapper');
     if (menuWrapper) {
-      menuWrapper.classList.add('duration-500');
+      // menuWrapper.classList.add('duration-500');
     }
   }
 };
