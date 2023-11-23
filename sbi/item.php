@@ -46,7 +46,7 @@ $img_screenreader = substr( SB_Instagram_Parse::get_caption( $post, sprintf( __(
 $img_screenreader = apply_filters( 'sbi_img_screenreader', $img_screenreader, $post );
 
 ?>
-<div class="swiper-slide h-full w-full sbi_item testing sbi_type_<?php echo esc_attr( $media_type ); ?><?php echo esc_attr( $classes ); ?>" id="sbi_<?php echo esc_html( $post_id ); ?>" data-date="<?php echo esc_html( $timestamp ); ?>">
+<div class="swiper-slide h-full w-full sbi_item sbi_type_<?php echo esc_attr( $media_type ); ?><?php echo esc_attr( $classes ); ?>" id="sbi_<?php echo esc_html( $post_id ); ?>" data-date="<?php echo esc_html( $timestamp ); ?>">
     <div class="sbi_photo_wrap w-full">
         <div class="relative bg-blue pb-[100%] mr-4 md:mr-8 xl:mr-[21px]">
             <a class="sbi_photo block absolute top-0 left-0 w-full !h-full" href="<?php echo esc_url( $permalink ); ?>" target="_blank" rel="noopener nofollow" data-full-res="<?php echo esc_url( $media_full_res ); ?>" data-img-src-set="<?php echo esc_attr( sbi_json_encode( $media_all_sizes_json ) ); ?>"<?php echo $sbi_photo_style_element; ?>>

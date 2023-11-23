@@ -17030,6 +17030,13 @@ jQuery(function ($) {
   //   }
   //
   //   window.addEventListener("scroll", handleScroll, false);
+
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  window.addEventListener('resize', function () {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  });
 });
 
 /***/ }),
@@ -17209,7 +17216,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 var sliders = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var swipers, bannerSwipers, smallSwipers, blogSwiper, InstagramSwiper, ExploreSwiper, Swiper, swiperCarousel, prevBtn, nextBtn;
+    var swipers, bannerSwipers, smallSwipers, blogSwiper, InstagramSwiper, ExploreSwiper, Swiper, swiperCarousel;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
@@ -17254,22 +17261,30 @@ var sliders = /*#__PURE__*/function () {
                 pagination: {
                   el: el.parentElement.querySelector('.swiper-pagination-el'),
                   type: 'fraction'
+                },
+                navigation: {
+                  nextEl: el.parentElement.querySelector('.swiper-next-el'),
+                  prevEl: el.parentElement.querySelector('.swiper-prev-el')
                 }
               });
-              var prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                nextBtn = el.parentElement.querySelector('.swiper-next-el');
-              if (prevBtn != null) {
-                prevBtn.addEventListener('click', function () {
-                  swiperCarousel.slidePrev();
-                }, false);
-              }
-              if (nextBtn != null) {
-                nextBtn.addEventListener('click', function () {
-                  swiperCarousel.slideNext();
-                }, false);
-              }
+
+              // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+              //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
+              //
+              // if (prevBtn != null) {
+              //     prevBtn.addEventListener('click', () => {
+              //         swiperCarousel.slidePrev()
+              //     }, false);
+              // }
+              //
+              // if (nextBtn != null) {
+              //     nextBtn.addEventListener('click', () => {
+              //         swiperCarousel.slideNext()
+              //     }, false);
+              // }
             });
           }
+
           if (InstagramSwiper) {
             InstagramSwiper.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
@@ -17277,10 +17292,6 @@ var sliders = /*#__PURE__*/function () {
                 speed: 600,
                 slidesPerView: 1.5,
                 spaceBetween: 0,
-                // autoplay: {
-                //     delay: 5000,
-                //     disableOnInteraction: false,
-                // },
                 breakpoints: {
                   768: {
                     slidesPerView: 2.5
@@ -17307,24 +17318,8 @@ var sliders = /*#__PURE__*/function () {
                   type: 'fraction'
                 }
               });
-
-              // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-              //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
-              //
-              // if (prevBtn != null) {
-              //     prevBtn.addEventListener('click', () => {
-              //         swiperCarousel.slidePrev()
-              //     }, false);
-              // }
-              //
-              // if (nextBtn != null) {
-              //     nextBtn.addEventListener('click', () => {
-              //         swiperCarousel.slideNext()
-              //     }, false);
-              // }
             });
           }
-
           if (bannerSwipers) {
             bannerSwipers.forEach(function (el) {
               var swiperCarousel = new Swiper(el, {
@@ -17365,48 +17360,44 @@ var sliders = /*#__PURE__*/function () {
                 pagination: {
                   el: el.parentElement.querySelector('.swiper-pagination-el'),
                   type: 'fraction'
+                },
+                navigation: {
+                  nextEl: el.parentElement.querySelector('.swiper-next-el'),
+                  prevEl: el.parentElement.querySelector('.swiper-prev-el')
                 }
               });
-              var prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                nextBtn = el.parentElement.querySelector('.swiper-next-el');
-              if (prevBtn != null) {
-                prevBtn.addEventListener('click', function () {
-                  swiperCarousel.slidePrev();
-                }, false);
-              }
-              if (nextBtn != null) {
-                nextBtn.addEventListener('click', function () {
-                  swiperCarousel.slideNext();
-                }, false);
-              }
+
+              // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+              //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
+              //
+              // if (prevBtn != null) {
+              //     prevBtn.addEventListener('click', () => {
+              //         swiperCarousel.slidePrev()
+              //     }, false);
+              // }
+              //
+              // if (nextBtn != null) {
+              //     nextBtn.addEventListener('click', () => {
+              //         swiperCarousel.slideNext()
+              //     }, false);
+              // }
             });
           }
+
           if (blogSwiper) {
             swiperCarousel = new Swiper(blogSwiper, {
-              // loop: true,
               speed: 600,
               slidesPerView: 1,
               spaceBetween: 21,
-              // autoplay: {
-              //     delay: 5000,
-              //     disableOnInteraction: false,
-              // },
               pagination: {
                 el: blogSwiper.parentElement.parentElement.querySelector('.swiper-pagination-el'),
                 type: 'fraction'
+              },
+              navigation: {
+                nextEl: blogSwiper.parentElement.parentElement.querySelector('.swiper-next-el'),
+                prevEl: blogSwiper.parentElement.parentElement.querySelector('.swiper-prev-el')
               }
             });
-            prevBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-prev-el'), nextBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-next-el');
-            if (prevBtn != null) {
-              prevBtn.addEventListener('click', function () {
-                swiperCarousel.slidePrev();
-              }, false);
-            }
-            if (nextBtn != null) {
-              nextBtn.addEventListener('click', function () {
-                swiperCarousel.slideNext();
-              }, false);
-            }
           }
           if (ExploreSwiper) {
             ExploreSwiper.forEach(function (el) {
@@ -25528,7 +25519,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"795a9ddb7b3f17f8","assets_js_vue_map-directions_vue":"cfb2947ca040b690","assets_js_vue_news-and-events_vue":"559445c6d138f4c1","assets_js_vue_resort_vue":"6377f07765490ae7","assets_js_vue_floorplans_vue":"b85c34cc67c1f9a8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"795a9ddb7b3f17f8","assets_js_vue_map-directions_vue":"69b8b19dd1cca6d8","assets_js_vue_news-and-events_vue":"559445c6d138f4c1","assets_js_vue_resort_vue":"6377f07765490ae7","assets_js_vue_floorplans_vue":"b85c34cc67c1f9a8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

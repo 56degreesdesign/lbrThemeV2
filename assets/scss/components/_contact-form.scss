@@ -197,21 +197,19 @@ form {
     }
 
     &-results {
-        @apply block border border-orange bg-orange -mt-px;
+        @apply block bg-beige-light py-5;
 
         &__options {
             @apply list-none;
         }
 
         &__option {
-            @apply text-beige txt-1 cursor-pointer py-[5px] px-5;
+            @apply text-black txt-1 font-bold cursor-pointer py-[5px] px-5;
 
-            &--highlighted {
-                background-color: rgba(red, 0.2);
-            }
+          
 
             &:first-child {
-                @apply font-bold uppercase;
+                @apply font-bold uppercase hidden;
             }
         }
     }

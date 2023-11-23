@@ -35,22 +35,26 @@ const sliders = async function () {
                         el: el.parentElement.querySelector('.swiper-pagination-el'),
                         type: 'fraction',
                     },
+                    navigation: {
+                        nextEl: el.parentElement.querySelector('.swiper-next-el'),
+                        prevEl: el.parentElement.querySelector('.swiper-prev-el'),
+                    },
                 });
 
-                const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                    nextBtn = el.parentElement.querySelector('.swiper-next-el');
-
-                if (prevBtn != null) {
-                    prevBtn.addEventListener('click', () => {
-                        swiperCarousel.slidePrev()
-                    }, false);
-                }
-
-                if (nextBtn != null) {
-                    nextBtn.addEventListener('click', () => {
-                        swiperCarousel.slideNext()
-                    }, false);
-                }
+                // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+                //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
+                //
+                // if (prevBtn != null) {
+                //     prevBtn.addEventListener('click', () => {
+                //         swiperCarousel.slidePrev()
+                //     }, false);
+                // }
+                //
+                // if (nextBtn != null) {
+                //     nextBtn.addEventListener('click', () => {
+                //         swiperCarousel.slideNext()
+                //     }, false);
+                // }
             });
         }
         
@@ -61,10 +65,6 @@ const sliders = async function () {
                     speed: 600,
                     slidesPerView: 1.5,
                     spaceBetween: 0,
-                    // autoplay: {
-                    //     delay: 5000,
-                    //     disableOnInteraction: false,
-                    // },
                     breakpoints: {
                         768: {
                             slidesPerView: 2.5,
@@ -88,21 +88,6 @@ const sliders = async function () {
                         type: 'fraction',
                     },
                 });
-
-                // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
-                //
-                // if (prevBtn != null) {
-                //     prevBtn.addEventListener('click', () => {
-                //         swiperCarousel.slidePrev()
-                //     }, false);
-                // }
-                //
-                // if (nextBtn != null) {
-                //     nextBtn.addEventListener('click', () => {
-                //         swiperCarousel.slideNext()
-                //     }, false);
-                // }
             });
         }
 
@@ -151,55 +136,44 @@ const sliders = async function () {
                         el: el.parentElement.querySelector('.swiper-pagination-el'),
                         type: 'fraction',
                     },
+                    navigation: {
+                        nextEl: el.parentElement.querySelector('.swiper-next-el'),
+                        prevEl: el.parentElement.querySelector('.swiper-prev-el'),
+                    },
                 });
 
-                const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                    nextBtn = el.parentElement.querySelector('.swiper-next-el');
-
-                if (prevBtn != null) {
-                    prevBtn.addEventListener('click', () => {
-                        swiperCarousel.slidePrev()
-                    }, false);
-                }
-
-                if (nextBtn != null) {
-                    nextBtn.addEventListener('click', () => {
-                        swiperCarousel.slideNext()
-                    }, false);
-                }
+                // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
+                //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
+                //
+                // if (prevBtn != null) {
+                //     prevBtn.addEventListener('click', () => {
+                //         swiperCarousel.slidePrev()
+                //     }, false);
+                // }
+                //
+                // if (nextBtn != null) {
+                //     nextBtn.addEventListener('click', () => {
+                //         swiperCarousel.slideNext()
+                //     }, false);
+                // }
             });
         }
         
         if (blogSwiper) {
             let swiperCarousel = new Swiper(blogSwiper, {
-                // loop: true,
                 speed: 600,
                 slidesPerView: 1,
                 spaceBetween: 21,
-                // autoplay: {
-                //     delay: 5000,
-                //     disableOnInteraction: false,
-                // },
                 pagination: {
                     el: blogSwiper.parentElement.parentElement.querySelector('.swiper-pagination-el'),
                     type: 'fraction',
                 },
+                navigation: {
+                    nextEl: blogSwiper.parentElement.parentElement.querySelector('.swiper-next-el'),
+                    prevEl: blogSwiper.parentElement.parentElement.querySelector('.swiper-prev-el'),
+                },
+                
             });
-
-            const prevBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-prev-el'),
-                nextBtn = blogSwiper.parentElement.parentElement.querySelector('.swiper-next-el');
-
-            if (prevBtn != null) {
-                prevBtn.addEventListener('click', () => {
-                    swiperCarousel.slidePrev()
-                }, false);
-            }
-
-            if (nextBtn != null) {
-                nextBtn.addEventListener('click', () => {
-                    swiperCarousel.slideNext()
-                }, false);
-            }
         }
 
         if (ExploreSwiper) {

@@ -12,7 +12,7 @@ $slides = $section['slides'] ?? false;
                         <div class="swiper-slide h-full w-full">
                             <div class="relative bg-blue pb-[51%] z-0">
                                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $slide['image'], 'class' => 'w-full']); ?>
-                                <div class="absolute bottom-4 left-0 z-20 text-white container grid-layout lg:bottom-32">
+                                <div class="absolute bottom-4 left-0 z-20 text-beige-light container grid-layout lg:bottom-32">
                                     <div class="col-span-full lg:col-start-1 lg:col-span-4 txt-h5"><?php echo $slide['caption'] ?></div>
                                 </div>
                             </div>

@@ -15,7 +15,7 @@
             ?>
             <div class="col-span-full lg:col-span-6">
                 <?php if ( $place['images'] ) : ?>
-                <div class="swiper small-carousel mb-5">
+                <div class="swiper small-carousel relative">
                     <div class="swiper-wrapper">
                         <?php foreach ( $place['images'] as $image ) : ?>
                             <div class="swiper-slide h-full w-full">
@@ -25,15 +25,7 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
-                </div>
-                <div class="flex justify-between">
-                    <div class="flex gap-x-12">
-                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
-                        <div class="swiper-next-el swiper-nav">NEXT</div>
-                    </div>
-                    <div class="">
-                        <span class="swiper-pagination-el text-center txt-h5"></span>
-                    </div>
+                    <?php get_template_part('templates/partials/swiper-nav') ?>
                 </div>
                 <?php endif; ?>
                 <div class="mt-16">
@@ -53,9 +45,9 @@
                         <div class="text-20 mb-2.5 | lg:text-26 lg:mb-14">
                             <p><?= $content; ?></p>
                         </div>
-                        <div class="accordion-list border-b border-gray pb-11 mb-12 | lg:border-b-0 lg:pb-0">
+                        <div class="accordion-list mt-11 border-b border-gray pb-11 mb-12 | lg:border-b-0 lg:pb-0">
                             <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
-                                <div class="overflow-hidden border-t border-gray pb-10 pt-14 wysiwyg">
+                                <div class="overflow-hidden pl-6 border-t border-gray pb-10 pt-14 wysiwyg lg:pl-10">
                                     <?= $moreContent; ?>
                                 </div>
                             </div>

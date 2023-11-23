@@ -25,7 +25,14 @@
     &--desktop-narrow {
         @apply lg:w-auto lg:min-w-[197px];
     }
+    &--desktop-sm {
+        @apply lg:w-auto lg:min-w-[158px];
+    }
     &--desktop-small {
         @apply lg:w-auto lg:min-w-[150px];
+    }
+    &--beige-explore {
+        @apply bg-beige border border-black pt-1.5 text-black hover:bg-black hover:text-beige-light;
+
     }
 }

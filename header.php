@@ -13,7 +13,7 @@ $header_downloads = get_field('header', 'option')['downloads'] ?? false;
 if (!$hidden) :
 ?>
 
-    <header class="mobile-menu__header fixed scrolledDown duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-20">
+    <header class="mobile-menu__header fixed scrolledDown duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-10">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
@@ -33,7 +33,7 @@ if (!$hidden) :
                         'menu_class' => 'main-menu-test',
                     ));
                     ?>
-                    <button class="toggle-menu rounded-full border uppercase px-5 xl:px-10 pt-2.5 pb-2 text-14 w-fit text-center max-h-[35px] font-bold flex items-center hover:bg-black hover:text-beige-light duration-300">Explore more</button>
+                    <button class="toggle-menu btn btn--beige-explore btn--desktop-sm max-h-[35px] ">Explore more</button>
                 </div>
                 <div class="w-full dropdown-menu">
                     <div class="w-full grid grid-cols-3">
@@ -96,7 +96,7 @@ if (!$hidden) :
                     <?php endif ;?>
                 </div>
             </div>
-            <div class="menu-green col-span-1 bg-green pt-7 pb-20 flex flex-col justify-stretch text-white pointer-events-auto">
+            <div class="menu-green col-span-1 bg-green pt-7 pb-20 flex flex-col justify-stretch text-beige-light pointer-events-auto">
                 <div class="grid grid-cols-6 lg:pr-[2.5rem] xl:pr-[3.563rem] h-[35px]">
                     <div class="col-span-full flex flex-col justify-center items-center text-14 font-bold md:flex-row md:row-start-2 lg:col-start-2 lg:col-span-4 lg:row-start-auto">
                         <span>MOAB, UT <span class="hidden md:inline">-&nbsp</span></span>
@@ -122,17 +122,17 @@ if (!$hidden) :
             </div>
         </div>
     </div>
-    <?php
-    $excluded_pages = array('strata', 'mesa', 'spire', 'casita-rentals', 'blog');
-    if (!is_page($excluded_pages)) :
-        ?>
-        <div class="w-full fixed bottom-10 left-0 hidden lg:block z-10">
+<!--    --><?php
+//    $excluded_pages = array('strata', 'mesa', 'spire', 'casita-rentals', 'blog');
+//    if (!is_page($excluded_pages)) :
+//        ?>
+        <div class="w-full fixed bottom-10 left-0 hidden lg:block z-30">
             <div class="container w-full flex justify-end">
                 <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--black']); ?>
             </div>
         </div>
-    <?php
-    endif;
-    ?>
+<!--    --><?php
+//    endif;
+//    ?>
 
 <?php endif ;?>

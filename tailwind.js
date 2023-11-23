@@ -25,7 +25,8 @@ module.exports = {
             white: "#fff",
             beige: {
                 DEFAULT: '#EEE3D6',
-                light: "#F6EEE5"
+                light: "#F6EEE5",
+                ligther: "#EDE2D5"
             },
             green: '#3C4A38',
             orange: "#CC885D",

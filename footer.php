@@ -10,7 +10,7 @@ $links = get_field('links', 'option') ?? false;
 
 if (!$hidden) :
 ?>
-<footer class="bg-black text-beige relative z-10 pb-20 lg:pb-7 overflow-clip">
+<footer class="bg-black text-beige relative pb-20 lg:pb-7 overflow-clip z-40">
     <div class="absolute z-1 h-[calc(100%+80px)] -top-20 w-full left-0">
         <div class="h-full -mt-10"></div>
         <div class="sticky bottom-10">
@@ -25,7 +25,7 @@ if (!$hidden) :
 
         <?php if ($downloads['heading'] && $downloads['content']) : ?>
             <div class="col-span-1 mb-10 hidden lg:block lg:mb-0 lg:justify-end">
-                <h6 class="uppercase text-20 mb-5 font-bold text-center lg:mb-10 lg:text-30"><?php echo $downloads['heading'] ?></h6>
+                <h6 class="uppercase text-25 mb-5 font-bold text-center lg:mb-10 lg:text-30"><?php echo $downloads['heading'] ?></h6>
                 <div class="text-center text-14 lg:text-17 leading-1.25 footer-links">
                     <?php echo $downloads['content'] ?>
                 </div>
@@ -34,7 +34,7 @@ if (!$hidden) :
         
       
         <div class="col-span-1 row-start-2 mb-10 lg:mb-0 lg:row-start-auto">
-            <h6 class="uppercase text-20 mb-8 font-bold text-center lg:mb-10 lg:text-30">Discover</h6>
+            <h6 class="uppercase text-25 mb-8 font-bold text-center lg:mb-10 lg:text-30">Discover</h6>
             <div class="text-center text-14 lg:text-17 leading-1.25 footer-links">
                 <?php
                 wp_nav_menu(array(
@@ -49,7 +49,7 @@ if (!$hidden) :
         <?php if ($find_us['heading'] && $find_us['content']) : ?>
             <div class="col-span-1 flex justify-center row-start-1 lg:row-start-auto lg:justify-start">
                 <div class="flex flex-col items-center">
-                    <h6 class="uppercase text-20 mb-8 font-bold text-center lg:mb-10 lg:text-30"><?php echo $find_us['heading'] ?></h6>
+                    <h6 class="uppercase text-25 mb-8 font-bold text-center lg:mb-10 lg:text-30"><?php echo $find_us['heading'] ?></h6>
                     <div class="text-center text-14 lg:text-17 footer-links">
                         <?php echo $find_us['content'] ?>
                     </div>

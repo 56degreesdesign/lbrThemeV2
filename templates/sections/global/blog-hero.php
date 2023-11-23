@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-full lg:col-start-7 lg:col-span-6 mt-6">
+            <div class="col-span-full lg:col-start-7 lg:col-span-6 mt-10">
                 <div class="flex justify-between">
                     <div class="flex gap-x-12">
                         <div class="swiper-prev-el swiper-nav">PREVIOUS</div>

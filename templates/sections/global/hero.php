@@ -6,7 +6,7 @@ $subheading = $section['subheading'] ?? false;
 $button = $section['button'] ?? false;
 ?>
 <?php if ($section) : ?>
-<section class="min-h-screen flex items-center relative z-10">
+<section class="hero-height flex items-center relative z-10">
     <div class="absolute top-0 left-0 w-full">
         <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
     </div>
@@ -22,19 +22,18 @@ $button = $section['button'] ?? false;
     
     </div>
     <?php if($subheading) : ?>
-        <p class="absolute bottom-24 left-0 w-full uppercase text-14 font-bold text-beige text-center md:text-16 lg:text-17">
+    <div class="absolute bottom-24 left-0 w-full flex justify-center">
+        <p class="uppercase text-14 max-w-[231px] md:max-w-[450px] font-bold text-beige text-center md:text-16 lg:text-17 lg:max-w-none">
             <?php echo $subheading ?>
         </p>
+    </div>
+      
     <?php endif ;?>
     <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center z-20">
         <a href="#" class="pointer-events-auto">
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
         </a>
     </div>
-<!--    <div class="w-full fixed bottom-10 left-0 hidden lg:block">-->
-<!--        <div class="container w-full flex justify-end">-->
-<!--            --><?php //get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--desktop-small'] ) ?>
-<!--        </div>-->
-<!--    </div>-->
+
 </section>
 <?php endif ;?>
