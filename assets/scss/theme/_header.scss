@@ -1,17 +1,19 @@
 .menu-wrapper { 
+    @apply overflow-x-clip;
     &.active {
+        @apply overflow-auto;
         .menu-orange {
-            @apply translate-x-0 duration-[1500ms];
+            @apply translate-x-0 delay-100 duration-[700ms];
         }
         .menu-green {
-            @apply translate-x-0 duration-1000;
+            @apply translate-x-0 duration-[600ms];
         }
     }
     .menu-orange {
-        @apply translate-x-[200%] duration-200 min-[1921px]:translate-x-[300%];
+        @apply translate-x-[200%] delay-100 duration-[600ms] min-[1921px]:translate-x-[300%];
     }
     .menu-green {
-        @apply translate-x-[100%] delay-200 duration-200 min-[1921px]:translate-x-[200%];
+        @apply translate-x-[100%] delay-200 duration-[500ms] min-[1921px]:translate-x-[200%];
     }
 
     .main-mega-menu {

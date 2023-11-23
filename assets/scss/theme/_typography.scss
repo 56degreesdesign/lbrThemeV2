@@ -38,3 +38,17 @@
 .txt-6 {
     
 }
+
+.no-heading {
+    h3 {
+        @apply hidden mb-0;
+    }
+}
+.no-content {
+    p {
+        @apply hidden;
+    }
+    h3 {
+        @apply mb-0;
+    }
+}

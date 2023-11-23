@@ -49,15 +49,15 @@ $slider_position = $section['slider_position'] ?? false;
         </div>
         <div class="col-span-2 mb-10 hidden lg:block lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-1 xl:col-start-2 lg:col-span-2' : 'lg:col-start-8 lg:col-span-2'; ?>">
             <?php if($left_col['label']) :?>
-                <h6 class="txt-3 mb-7"><?php echo $left_col['label'] ?></h6>
+                <h6 class="txt-3 mb-7 whitespace-nowrap"><?php echo $left_col['label'] ?></h6>
             <?php endif ;?>
             <ul class="pl-4 md:pl-10 lg:pl-0">
                 <?php foreach ($left_col['list'] as $item ) :?>
-                    <li class="list-disc txt-1 -ml-5 pl-5"><?php echo $item['item'] ?></li>
+                    <li class="list-disc txt-1 -ml-5 pl-5 lg:ml-0 lg:pl-0 2xl:-ml-5 2xl:pl-5"><?php echo $item['item'] ?></li>
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="col-span-2 mb-10 hidden lg:block lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-4 lg:col-span-2' : 'lg:col-start-10 lg:col-span-3'; ?>">
+        <div class="col-span-2 mb-10 hidden lg:block lg:mb-0 <?php echo ($slider_position === 'left') ? 'lg:col-start-4 lg:col-span-2 pl-3' : 'lg:col-start-10 lg:col-span-3'; ?>">
             <?php if($right_col['label']) :?>
                 <h6 class="txt-3 mb-7"><?php echo $right_col['label'] ?></h6>
             <?php else :?>
@@ -65,7 +65,7 @@ $slider_position = $section['slider_position'] ?? false;
             <?php endif ;?>
             <ul>
                 <?php foreach ($right_col['list'] as $item ) :?>
-                    <li class="list-disc txt-1 -ml-5 pl-5"><?php echo $item['item'] ?></li>
+                    <li class="list-disc txt-1 -ml-5 pl-5 lg:ml-0 lg:pl-0 2xl:-ml-5 2xl:pl-5"><?php echo $item['item'] ?></li>
                 <?php endforeach; ?>
             </ul>
         </div>

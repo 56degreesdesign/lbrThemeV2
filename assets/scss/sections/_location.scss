@@ -1,6 +1,7 @@
 .directions-content {
     a {
-        @apply underline underline-offset-4;
+        //@apply underline underline-offset-4;
+        @apply underline-animation-black;
     }
     h3 {
         @extend .txt-h3;
@@ -14,7 +15,7 @@
     }
     h4 {
         > a {
-            @apply text-orange font-bold text-15;
+            @apply text-orange font-bold text-15 underline-animation-orange underline-animation-orange--revert;
         }
     }
     p {

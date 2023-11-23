@@ -46,7 +46,7 @@ if (!$hidden) :
                                     <a class="underline-animation-black text-10 font-bold uppercase" href="<?php echo $navbar['link']['url'] ?>" target="<?php echo $navbar['link']['target'] ?>"><?php echo $navbar['link']['title'] ?></a>
                                 </div>
                             </div>
-                            <?php get_template_part( 'templates/partials/button', null, ['data' => $navbar['button'], 'class' => 'btn btn--desktop-small btn--black'] ) ?>
+                            <?php get_template_part( 'templates/partials/button', null, ['data' => $navbar['button'], 'class' => 'btn btn--desktop-sm btn--black'] ) ?>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ if (!$hidden) :
 
     <?php get_template_part('templates/partials/mobile-menu-wrapper'); ?>
 
-    <div class="menu-wrapper fixed w-full h-screen top-0 left-0 overflow-auto z-[60] pointer-events-none">
+    <div class="menu-wrapper fixed w-full h-screen top-0 left-0 z-[60] pointer-events-none">
         <div class="menu-orange w-1/2 bg-orange absolute top-0 left-0 h-full -z-10 pointer-events-auto"></div>
         <div class="menu-green w-1/2 bg-green absolute top-0 right-0 h-full -z-10 pointer-events-auto"></div>
         <div class="grid grid-cols-2 h-full max-w-[1920px] mx-auto z-10 ">

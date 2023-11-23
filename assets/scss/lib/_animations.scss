@@ -103,4 +103,14 @@
             width: 100%;
         }
     }
+    &--revert {
+        &::after {
+            @apply w-full;
+        }
+        &:hover {
+            &::after {
+                width: 0%;
+            }
+        }
+    }
 }

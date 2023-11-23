@@ -7,7 +7,7 @@ $button = $section['button'] ?? false;
 ?>
 
 <?php if ($section) : ?>
-    <section class="hero-height flex items-end relative z-10">
+    <section class="hero-height flex items-end relative">
         <div class="absolute top-0 left-0 w-full">
             <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
         </div>

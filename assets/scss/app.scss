@@ -19,21 +19,3 @@
 @import "theme/components";
 @import "theme/sections";
 
-.no-heading {
-    h3 {
-        @apply hidden mb-0;
-    }
-}
-.no-content {
-    p {
-        @apply hidden;
-    }
-    h3 {
-        @apply mb-0;
-    }
-}
-
-.hero-height {
-    height: calc(var(--vh, 1vh) * 100 - 40px);
-    @apply duration-500 lg:h-screen ;
-}

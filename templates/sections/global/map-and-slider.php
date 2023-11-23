@@ -8,14 +8,14 @@ $slides = $section['slides'] ?? false;
 <?php if($section) : ?>
     <section class="bg-beige pb-16 md:pb-24 lg:pb-32 xl:pb-40">
         <div class="container grid-layout">
-            <div class="col-span-full flex flex-col-reverse lg:flex-col lg:col-start-1 lg:col-span-6">
+            <div class="col-span-full flex flex-col lg:col-start-1 lg:col-span-6">
                 <?php if($image) :?>
                     <div class="relative pb-[62.1266%] mb-11 -mx-[25px] lg:mb-40 xl:mb-52">
                         <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
                     </div>
                 <?php endif ;?>
                 <?php if($content) : ?>
-                    <div class="map-and-slider-content -order-1"> <?php echo $content ?></div>
+                    <div class="map-and-slider-content"> <?php echo $content ?></div>
                 <?php endif ;?>
             </div>
             <div class="col-span-full mt-11 lg:col-start-8 lg:col-span-5 lg:mt-32 xl:translate-x-[3.563rem]">

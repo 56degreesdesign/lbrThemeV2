@@ -15,3 +15,13 @@
 .swiper-button-disabled {
     @apply opacity-30 cursor-default;
 }
+
+.sbi-item {
+    transition-property: transform !important;
+    transition-duration: 0s !important;
+}
+#sb_instagram #sbi_images .sbi_item {
+    transition-property: transform !important;
+    transition-duration: 0s !important;
+    width: auto;
+}
