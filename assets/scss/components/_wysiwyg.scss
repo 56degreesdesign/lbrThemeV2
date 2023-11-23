@@ -18,21 +18,42 @@ $module: '.wysiwyg';
     &.wysiwyg--single {
         p {
             @apply text-15 tracking-20 text-left mb-6;
-            @apply xl:text-24 xl:mb-8;
+            @apply md:text-18;
+            @apply lg:text-20;
+            @apply xl:text-24 xl:mb-8; 
+        }
+        
+        h2,
+        h3 {
+            @apply normal-case font-Oscar font-bold text-15 tracking-20;
+            @apply md:text-18;
+            @apply lg:text-20;
+            @apply xl:text-24;
+        }
+        
+        h2 {
+            @apply mb-6;
+            @apply xl:mb-8;
+        }
+        
+        h3 {
+            @apply mb-0 text-orange;
         }
         
         blockquote {
             @apply font-Reckless font-light;
             
             &.big {
-                p {
+                span {
                     @apply tracking-10 leading-1.07;
                 }
             }
             
-            p {
-                @apply tracking-10 leading-1.07 text-center last:mb-0;
-                @apply xl:text-left;
+            &.small span {
+                @apply text-15 tracking-20 text-center;
+                @apply md:text-18;
+                @apply lg:text-20 lg:text-left;
+                @apply xl:text-24;
             }
         }
     }
