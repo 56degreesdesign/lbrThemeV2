@@ -7,7 +7,8 @@
 
 get_header();
 
-get_template_part('templates/sections/documents/documents', null, ['data' => get_field('test')]);
+get_template_part('templates/sections/documents/documents', null, ['data' => get_field('documents')]);
+get_template_part('templates/sections/global/explore', null, ['data' => get_field('explore')['explore']]);
 
 $contact = get_field('contact', 'option');
 get_template_part('templates/sections/global/contact', null, ['data' => $contact]);

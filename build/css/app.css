@@ -3529,6 +3529,10 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+.page-template-tpl-documents .wpcf7 form .wpcf7-not-valid-tip {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 .wpcf7 form .form .wpcf7-list-item {
   margin-right: 2.5rem;
 }
@@ -4004,11 +4008,11 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
     font-size: 0.938rem;
   }
 }
-.btn--black {
+.btn--black, .page-template-tpl-documents .wpcf7 form .btn {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.btn--black:hover {
+.btn--black:hover, .page-template-tpl-documents .wpcf7 form .btn:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(204 136 93 / var(--tw-bg-opacity));
 }
@@ -4030,7 +4034,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.btn--mobile-wide {
+.btn--mobile-wide, .page-template-tpl-documents .wpcf7 form .btn {
   width: 100%;
 }
 .btn--mobile-narrow {
@@ -4053,7 +4057,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
     width: auto;
     min-width: 158px;
   }
-  .btn--desktop-small {
+  .btn--desktop-small, .page-template-tpl-documents .wpcf7 form .btn {
     width: auto;
     min-width: 150px;
   }

@@ -1,10 +1,10 @@
 .wpcf7 form {
     //@apply pl-[22px];
-    
+
     .wpcf7-not-valid-tip {
         @apply mt-1.5 text-14 text-[#CC885D];
     }
-    
+
     .wpcf7-response-output {
         @apply p-0 border-0 mt-7 mx-0 mb-0;
     }
@@ -17,7 +17,7 @@
         -webkit-appearance: none;
         @apply block bg-transparent border-b outline-0 m-0 py-1 px-2.5 text-black w-full;
         @apply md:py-[5px] md:px-5;
-        
+
         &::placeholder {
             @apply opacity-100 text-black font-bold uppercase;
         }
@@ -55,19 +55,21 @@
         -webkit-appearance: none;
         background-position: 0 0;
         -webkit-background-size: contain;
-        transform: translate(-100%,-55%);
+        transform: translate(-100%, -55%);
         @apply absolute top-1/2 -left-2.5 block bg-transparent border-0 rounded-none outline-0 m-0 w-2.5 h-2 lg:w-3 lg:h-[15px] bg-no-repeat bg-contain;
 
         &:checked {
             background-image: url('../../assets/img/icon-arrow-black.svg');
         }
     }
-    .wpcf7-list-item  {
+
+    .wpcf7-list-item {
         @apply ml-0;
         &.last {
             margin-right: 0 !important;
         }
     }
+
     .wpcf7-radio {
         @apply uppercase font-bold mb-5 ml-1.5 flex justify-between lg:block;
         @apply md:mb-0;
@@ -78,6 +80,7 @@
             label {
                 @apply block cursor-pointer;
             }
+
             &:last-of-type {
                 @apply mr-0;
             }
@@ -87,7 +90,7 @@
     input[type="submit"] {
         -webkit-appearance: none;
         @apply block bg-[#CC885D] border-0 rounded-none outline-0 m-0 py-3 px-10 w-full text-black text-center font-bold uppercase cursor-pointer;
-        @apply md:w-fit md:py-2.5 md:px-10; 
+        @apply md:w-fit md:py-2.5 md:px-10;
 
         &:hover {
             background-color: rgba(#CC885D, 0.7);
@@ -123,7 +126,16 @@
             }
         }
     }
-    
+    .page-template-tpl-documents & {
+        .wpcf7-not-valid-tip {
+            @apply text-white;
+        }
+        
+        .btn {
+            @extend .btn--black, .btn--mobile-wide, .btn--desktop-small;
+        }
+    }
+
 
 .form {
     .wpcf7-list-item {

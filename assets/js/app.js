@@ -16,6 +16,7 @@ const fSwiperLazy = require('./components/swiper-lazy')
 const fShowTerms = require('./components/show-terms')
 const fAccordionList = require('./components/accordion-list')
 const fMobileMenu = require('./components/mobile-menu')
+const fDocuments = require('./components/documents')
 
 
 import 'select2';
@@ -107,6 +108,7 @@ jQuery(function ($) {
     fShowTerms.init();
     fAccordionList();
     fMobileMenu;
+    fDocuments.init();
     
     $(window).resize(function() {
         fMobileMenu;
