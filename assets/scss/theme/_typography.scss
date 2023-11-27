@@ -39,6 +39,27 @@
     
 }
 
+.txt-link-orange {
+    @apply text-orange tracking-20 font-bold uppercase leading-1.25 text-14;
+    @apply md:text-16; 
+    @apply lg:text-20; 
+    @apply xl:text-25;
+    
+    &--block {
+        @apply relative ml-5;
+        @apply lg:ml-0;
+        
+        &::before {
+            content: '';
+            @apply absolute top-px -left-5;
+            @apply block w-[10px] h-[14px] bg-contain;
+            @apply lg:w-[12px] lg:h-[18px] lg:-left-7;
+            @apply xl:w-[15px] xl:h-[22px] xl:-left-8;
+            background-image: url('../../assets/img/icon-padlock.svg');
+        }
+    }
+}
+
 .no-heading {
     h3 {
         @apply hidden mb-0;
