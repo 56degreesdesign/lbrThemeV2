@@ -7,7 +7,7 @@ if($boxes) :
     <?php foreach ($boxes as $box) :?>
         <div class="accordion-list border-orange border-t last-of-type:border-b py-2.5">
             <div class="accordion-list-button flex justify-between items-center relative">
-                <div class="wysiwyg no-content text-center w-full px-14"><?php echo $box['content'] ?></div>
+                <div class="wysiwyg no-content text-center w-full"><?php echo $box['content'] ?></div>
                 <svg class="absolute right-0 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="18.406" height="18.406" viewBox="0 0 18.406 18.406">
                     <g id="Group_127238" data-name="Group 127238" transform="translate(-271.5 -2280.5)">
                         <path id="Path_130178" data-name="Path 130178" d="M-6613,11963.164h18.406" transform="translate(6884.501 -9673.664)" fill="none" stroke="#cc885d" stroke-width="1"/>

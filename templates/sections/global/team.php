@@ -30,10 +30,10 @@ $anchor = $section['anchor'] ?? false;
         </div>
         
         <!-- Mobile Accordion -->
-        
+        <?php $counter = 0; ?>
         <div class="col-span-full accordion-list-group lg:hidden">
             <?php foreach ($team as $item) :?>
-            <div class="accordion-list border-orange border-t last-of-type:border-b pt-1.5">
+            <div class="accordion-list border-orange border-t last-of-type:border-b pt-1.5 <?php echo ($counter === 0) ? 'open' : ''; ?>">
                 <div class="accordion-list-button">
                     <div class="text-10 font-bold mb-2"><?php echo $item['label'] ?></div>
                     <div class="flex justify-between">
@@ -59,6 +59,7 @@ $anchor = $section['anchor'] ?? false;
                     </div>
                 </div>
             </div>
+                <?php $counter++; ?>
             <?php endforeach ;?>
         </div>
         

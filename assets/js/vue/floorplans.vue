@@ -7,7 +7,7 @@ const props = defineProps({
 
 const sectionData = ref(JSON.parse(props.section));
 const selected = ref('one_story');
-const activeImage = computed(() => sectionData.value.images[selected.value].url);
+const activeImage = computed(() => sectionData.value.plans[selected.value]);
 
 const select = (floorType) => {
     selected.value = floorType;
@@ -24,7 +24,7 @@ const select = (floorType) => {
                 <div class="col-span-full bg-beige pt-7 md:pt-14 md:pb-10 lg:col-span-1 lg:pr-0 xl:pt-28 xl:pb-14">
                     <div class="flex justify-center lg:px-[5%] lg:mb-10 xl:mb-14">
                         <div class="w-full relative pb-[123.93%]">
-                            <img v-if="activeImage" class="absolute-full object-cover" :src="activeImage" alt="">
+                            <img v-if="activeImage" class="absolute-full object-cover" :src="activeImage.image.url" alt="">
                             <div v-else class="absolute-full bg-beige flex items-center justify-center">No Image</div>
                         </div>
                     </div>
@@ -42,11 +42,11 @@ const select = (floorType) => {
                     <div class="flex flex-col items-center px-[25px] pb-24 md:pb-28 md:px-10 lg:pb-10 lg:px-0 lg:h-full lg:justify-between xl:pb-14">
                         <div class="hidden lg:block text-20 font-bold text-center mt-14">FLOORPLANS</div>
                         <div>
-                            <h3 class="txt-h2 text-center mb-7 md:mb-8 lg:mb-10 xl:mb-20" v-html="sectionData.heading">
+                            <h3 class="txt-h2 text-center mb-7 md:mb-8 lg:mb-10 xl:mb-20" v-html="activeImage.heading">
                             </h3>
-                            <p class="txt-h5 text-center mb-12 lg:mb-0" v-html="sectionData.content"></p>
+                            <p class="txt-h5 text-center mb-12 lg:mb-0" v-html="activeImage.content"></p>
                         </div>
-                        <div class="flex flex-col gap-y-4 items-center">
+                        <div class="flex flex-col gap-y-4 items-center w-full">
                             <a class="btn btn--orange btn--mobile-wide btn--desktop-p-small" :href="sectionData.download_1.url" download>
                                 {{ sectionData.download_1.title }}</a>
                             <a class="btn btn--orange btn--mobile-wide btn--desktop-p-small" :href="sectionData.download_2.url" download>

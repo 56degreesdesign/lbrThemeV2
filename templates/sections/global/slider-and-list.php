@@ -22,9 +22,9 @@ $slider_position = $section['slider_position'] ?? false;
         <div class="col-span-full lg:hidden">
             <div class="accordion-list">
                 <div class="accordion-list-content accordion-list-content__no-gradient w-full">
-                    <div class="overflow-hidden pb-11 wysiwyg">
+                    <div class="overflow-hidden pb-11 wysiwyg border-t pt-11">
                         <?php if($left_col['label']) :?>
-                            <h6 class="txt-3 mb-3.5"><?php echo $left_col['label'] ?></h6>
+                            <h6 class="txt-3 mb-7 pl-8"><?php echo $left_col['label'] ?></h6>
                         <?php endif ;?>
                         <ul class="pl-8">
                             <?php foreach ($left_col['list'] as $item ) :?>
@@ -32,7 +32,7 @@ $slider_position = $section['slider_position'] ?? false;
                             <?php endforeach; ?>
                         </ul>
                         <?php if($right_col['label']) :?>
-                            <h6 class="txt-3 mb-3.5 mt-3.5"><?php echo $right_col['label'] ?></h6>
+                            <h6 class="txt-3 mb-7 mt-11 pl-8"><?php echo $right_col['label'] ?></h6>
                         <?php endif ;?>
                         <ul class="pl-8">
                             <?php foreach ($right_col['list'] as $item ) :?>

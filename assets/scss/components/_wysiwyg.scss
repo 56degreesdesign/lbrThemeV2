@@ -115,6 +115,9 @@ $module: '.wysiwyg-headings';
     }
     h6 {
         @apply txt-3 mb-4 lg:mb-5;
+        br {
+            @apply lg:hidden;
+        }
     }
     p {
         @apply txt-1;

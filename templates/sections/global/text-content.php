@@ -11,7 +11,7 @@ $background_colour = $section['background_colour'] ?? false;
 <section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> py-11 md:py-20 lg:py-40">
     <div class="container grid-layout">
         <div class="col-span-full flex flex-col items-center mb-14 lg:mb-0">
-            <div class="w-[84.27%] lg:w-[50.5625%] wysiwyg">
+            <div class="lg:w-[50.5625%] wysiwyg">
                 <?php echo $content ?>
               </div>
              <?php if($buttons) :?>

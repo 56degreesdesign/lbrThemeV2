@@ -18,7 +18,7 @@ $bottom_img = get_field('logo', 'option') ?? false;
         <?php endif ;?>
     </div>
     <div class="absolute bottom-24 left-0 flex justify-center w-full">
-        <h1 class="text-center txt-h2 text-beige">Welcome<br class="lg:hidden"> to <br> Lionsback Resort</h1>
+        <h1 class="text-center txt-h2 text-beige">Welcome<br class="lg:hidden"> to <br> Lionsback <br class="lg:hidden"> Resort</h1>
     </div>
     <div class="absolute bottom-8 md:bottom-9 lg:bottom-10 left-0 w-full pointer-events-none flex justify-center z-20">
         <a href="<?php echo $link['url'] ?>" class="pointer-events-auto">

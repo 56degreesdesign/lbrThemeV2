@@ -10,7 +10,7 @@ $links = get_field('links', 'option') ?? false;
 
 if (!$hidden) :
 ?>
-<footer class="bg-black text-beige relative pb-20 lg:pb-7 overflow-clip z-40">
+<footer class="bg-black text-beige relative pb-20 lg:pb-7 overflow-clip z-20 lg:z-30">
     <div class="absolute z-1 h-[calc(100%+80px)] -top-20 w-full left-0">
         <div class="h-full -mt-10"></div>
         <div class="sticky bottom-10">
@@ -59,7 +59,7 @@ if (!$hidden) :
         
     </div>
     <div class="container grid-layout lg:pb-0 lg:mt-11">
-        <div class="col-span-full grid grid-cols-2 items-center gap-y-6 justify-center gap-x-2 lg:flex lg:gap-x-16 footer-links">
+        <div class="col-span-full grid grid-cols-2 items-center gap-y-6 justify-center gap-x-2 lg:flex lg:gap-x-16 footer-links text-14 lg:text-16">
             <a class="col-span-1 row-start-1 ml-auto" href="<?php echo $links['instagram']['url'] ?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
             <img class="col-span-full mx-auto mb-12 lg:mb-0 lg:mx-0" src="<?php echo $social_media['icon']['url'] ?>" alt="">
             <a class="col-span-1 row-start-1 mr-auto" href="<?php echo $links['facebook']['url'] ?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>

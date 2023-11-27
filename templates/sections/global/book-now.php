@@ -42,7 +42,7 @@
                         Book now
                     </button>
                     <div>
-                        <div class="text-20 mb-2.5 | lg:text-26 lg:mb-14">
+                        <div class="text-20 mb-2.5 text-center | lg:text-left lg:text-26 lg:mb-14">
                             <p><?= $content; ?></p>
                         </div>
                         <div class="accordion-list mt-11 border-b border-gray pb-11 mb-12 | lg:border-b-0 lg:pb-0">

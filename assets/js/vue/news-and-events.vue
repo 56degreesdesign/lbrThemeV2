@@ -42,7 +42,7 @@ const slides = computed(() => {
 </script>
 
 <template>
-    <section class="bg-beige-light py-24 overflow-hidden py-28">
+    <section class="bg-beige-light py-24 overflow-hidden lg:py-28">
         <div class="container grid-layout">
             <h3 class="col-span-full lg:col-start-1 lg:col-span-5 txt-h3">Resort news & EVENTS</h3>
             <div class="col-span-full flex justify-between items-center py-6 mt-3 lg:hidden">
@@ -59,14 +59,14 @@ const slides = computed(() => {
                 />
             </div>
             <div class="col-span-full h-px w-full bg-black mb-7 lg:my-10 xl:mb-16 xl:mt-14"></div>
-            <div class="hidden lg:flex col-start-1 col-span-2 gap-x-12 mb-16 bg-beige-light z-10">
+            <div class="flex col-start-1 col-span-2 gap-x-12 lg:mb-16 bg-beige-light z-10">
                 <div class="swiper-next-el swiper-nav swiper-nav--small">NEXT</div>
                 <div class="swiper-prev-el swiper-nav swiper-nav--small">PREVIOUS</div>
             </div>
-            <div class="hidden lg:block col-start-12 col-span-1 bg-beige-light z-10">
+            <div class="col-start-4 lg:col-start-12 col-span-1 bg-beige-light z-10 flex justify-end">
                 <span class="swiper-pagination-el swiper-pagination-el--small">1/3</span>
             </div>
-            <div class="col-span-full">
+            <div class="col-span-full mt-3.5 lg:mt-0">
                 <swiper
                     :slides-per-view="1"
                     :space-between="50"
