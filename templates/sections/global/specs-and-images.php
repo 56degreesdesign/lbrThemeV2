@@ -24,7 +24,7 @@ if($section) :
                 <div class="hidden lg:block col-span-full pl-6 mb-24 wysiwyg pt-10 lg:pl-0 lg:col-start-7 lg:col-span-6 lg:mb-24 xl:pt-16"><?php echo $list ?></div>
                 <div class="accordion-list col-span-full border-b border-gray pb-11 mb-12 lg:hidden">
                     <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
-                        <div class="overflow-hidden pl-6 pb-10 wysiwyg">
+                        <div class="overflow-hidden pl-6 pb-10 pt-14 border-t wysiwyg">
                             <?php echo $list ?>
                         </div>
                     </div>

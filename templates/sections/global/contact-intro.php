@@ -80,7 +80,7 @@ if($section) :
             <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-medium'] ) ?>
 
         </div>
-        <div class="col-span-full row-start-2 mb-14 lg:mb-0 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
+        <div class="col-span-full -mx-[25px] md:-mx-10 row-start-2 mb-14 lg:mx-0 lg:mb-0 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
             <div class="relative pb-[63.96%]">
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
             </div>

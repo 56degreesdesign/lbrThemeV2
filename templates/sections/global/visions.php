@@ -35,7 +35,7 @@ if($section) :?>
         <!-- Mobile Accordion -->
         
         <div class="col-span-full accordion-list-group mt-7 lg:hidden">
-            <div class="accordion-list col-span-full border-orange border-t border-b pt-4 lg:hidden">
+            <div class="accordion-list open col-span-full border-orange border-t border-b pt-4 lg:hidden">
                 <div class="accordion-list-button flex justify-between items-center mb-4 lg:mb-5">
                     <h6 class="txt-3 w-[60%]"><?php echo $left_col['heading'] ?></h6>
                     <svg xmlns="http://www.w3.org/2000/svg" width="18.406" height="18.406" viewBox="0 0 18.406 18.406">

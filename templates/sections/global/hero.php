@@ -4,9 +4,10 @@ $bg = $section['background_image'] ?? false;
 $heading = $section['heading'] ?? false;
 $subheading = $section['subheading'] ?? false;
 $button = $section['button'] ?? false;
+$mobile_image = $section['mobile_image'] ?? false;
 ?>
 <?php if ($section) : ?>
-<section class="hero-height flex items-center relative">
+<section class="flex items-center relative hero-height <?php echo ($mobile_image) ? '' : 'hero-height'; ?>">
     <div class="absolute top-0 left-0 w-full">
         <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
     </div>
@@ -30,7 +31,7 @@ $button = $section['button'] ?? false;
       
     <?php endif ;?>
     <div class="absolute bottom-10 left-0 w-full pointer-events-none flex justify-center z-20">
-        <a href="#" class="pointer-events-auto">
+        <a href="<?php echo $button['link']['url'] ?>" class="pointer-events-auto">
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
         </a>
     </div>

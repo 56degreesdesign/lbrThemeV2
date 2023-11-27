@@ -20,3 +20,6 @@
         @apply underline-animation;
     }
 }
+.footer-nav-hidden-lg {
+    @apply lg:hidden;
+}

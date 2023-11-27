@@ -98,7 +98,7 @@ onMounted(() => {
     </div>
     
     <div class="col-span-full flex justify-center">
-        <button v-if="postCount < currentPosts.length" @click="loadMore()" class="uppercase text-orange underline txt-h4">view more</button>
+        <button v-if="postCount < currentPosts.length" @click="loadMore()" class="uppercase text-orange underline txt-h5">view more</button>
     </div>
 </template>
 

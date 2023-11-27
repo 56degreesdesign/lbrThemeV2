@@ -15,7 +15,7 @@ if (!$hidden) :
     <?php
         $headrClass = is_front_page() ? '-translate-y-full transition-transform'  : null;
     ?>
-    <header class="mobile-menu__header <?= $headrClass; ?> fixed duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-20">
+    <header class="mobile-menu__header <?= $headrClass; ?> fixed duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-30">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
@@ -128,7 +128,7 @@ if (!$hidden) :
 //    $excluded_pages = array('strata', 'mesa', 'spire', 'casita-rentals', 'blog');
 //    if (!is_page($excluded_pages)) :
 //        ?>
-        <div class="w-full fixed bottom-10 left-0 hidden lg:block z-30">
+        <div class="w-full fixed bottom-10 left-0 hidden lg:block z-30 pointer-events-none">
             <div class="container w-full flex justify-end">
                 <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--black']); ?>
             </div>
