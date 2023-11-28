@@ -64,7 +64,7 @@ $boxes = array_map(function($box) {
             </div>
 <!--            <div class="wysiwyg">--><?php //echo $box3['content'] ?><!--</div>-->
         </div>
-        <div class="col-start-7 col-span-6">
+        <div class="col-start-7 col-span-6 hidden lg:block">
             <div class="wysiwyg"><?php echo $box3['content'] ?></div>
 
         </div>

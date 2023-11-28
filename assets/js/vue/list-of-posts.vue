@@ -87,7 +87,7 @@ onMounted(() => {
             <button class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full text-10 | lg:text-12" :class="{'bg-orange' : !currentCategory}" @click="setCategory(null)">All</button>
 
             <template v-for="(cat, index) in termsData" :key="`category-${cat.term_id}-${index}`">
-                <button class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full text-10 | lg:text-12" :class="{'bg-orange' : cat.term_id === currentCategory}" @click="setCategory(cat.term_id, index)">{{
+                <button class="bg-black px-4 pt-1 pb-1 text-beige font-bold uppercase rounded-full text-10 md:pt-1.5 md:text-11 | lg:pt-1 lg:text-12" :class="{'bg-orange' : cat.term_id === currentCategory}" @click="setCategory(cat.term_id, index)">{{
                     cat.name }}</button>
             </template>
         </template>

@@ -3,7 +3,7 @@
 ?>
 <div class="hidden min-w-screen h-screen animated fadeIn faster fixed left-0 top-0 justify-center items-center inset-0 z-50 outline-none focus:outline-none bg-no-repeat bg-center bg-cover" id="modal-id">
     <div class="absolute bg-black opacity-20 inset-0 z-0"></div>
-    <div class="w-[250px] px-3.5 py-7 relative mx-auto my-auto shadow-lg bg-orange | lg:w-[700px] lg:px-7 | xl:px-12 xl:py-12 xl:w-[970px]">
+    <div class="w-[250px] px-3.5 py-7 relative mx-auto my-auto shadow-lg bg-orange | md:w-[480px] | lg:w-[700px] lg:px-7 | xl:px-12 xl:py-12 xl:w-[970px]">
         <div class="cursor-pointer absolute top-7 right-3.5 | xl:top-8 xl:right-8">
             <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" width="13.608" height="13.608" viewBox="0 0 13.608 13.608">
                 <g id="Group_126658" data-name="Group 126658" transform="translate(-1398.694 -957.096)">

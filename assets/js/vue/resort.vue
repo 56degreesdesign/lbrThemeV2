@@ -25,11 +25,11 @@
         <div class="sc-resort__map__aside">
             <div class="sc-resort__map__aside__wrapper h-full w-full">
                 <h4 class="txt-h3 mb-8" v-html="all.heading"></h4>
-                <div v-if="phase === 'all' && !activePreview" class="flex flex-col gap-y-8">
+                <div v-if="phase === 'all' && !activePreview" class="flex flex-col gap-y-4 lg:gap-y-8">
                     <button class="btn"
                              v-html="all.phase_all.button"
                              @click="phase = '1'"></button>
-                    <a href="/contact" class="btn hidden lg:block">RESERVE YOUR CASITA</a>
+                    <a href="/contact" class="btn hidden md:block">RESERVE YOUR CASITA</a>
 
                 </div>
                 <div  v-if="phase === '1' && !activePreview" class="">
@@ -3389,7 +3389,6 @@ export default {
         this.legend = this.all.legend.url;
         this.legendPhase1 = this.all.legend_phase_1.url;
         this.getCategories();
-        console.log('vue resort created')
     },
 
     computed: {
@@ -3413,7 +3412,6 @@ export default {
                 this.tooltip.top = rect.top - parent.top + 'px';
                 this.tooltip.left = rect.left + (rect.width / 2) - parent.left + 'px';
             }
-            console.log(this.activeHouse);
 
         },
         mouseleave: function () {
@@ -3441,7 +3439,6 @@ export default {
             (this.curCategory !== cat) ? this.curCategory = cat : this.curCategory = false;
         },
         selectPreview: function(item) {
-            console.log(item)
             this.mouseleave();
             this.activePreview = item
         },

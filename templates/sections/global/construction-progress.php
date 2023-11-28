@@ -23,7 +23,7 @@ if($section):
                 </div>
                 <div class="flex items-center justify-center gap-x-8 mt-1 lg:col-start-4 lg:col-span-6 lg:mt-0 xl:col-start-5 xl:col-span-4">
                     <span>JAN 13TH, 2023</span>
-                    <span class="hidden lg:inline">64˚F</span>
+                    <span class="hidden md:inline currentTemp"></span>
                     <span>SHARE</span>
 <!--                    <span class="hidden lg:inline">TIMELAPSE</span>-->
                 </div>

@@ -16,9 +16,12 @@ function getWeather() {
             const currentWeatherElement = document.querySelector('.currentWeather');
             if (currentWeatherElement) {
                 currentWeatherElement.textContent = formattedWeather;
-            } else {
-                console.error('Element with class "currentWeather" not found');
-            }
+            } 
+            
+            const currentTempElement = document.querySelector('.currentTemp');
+            if (currentTempElement) {
+                currentTempElement.textContent = `${temperature}°`;
+            } 
         })
         .catch(error => {
             console.error('Fetch error:', error);

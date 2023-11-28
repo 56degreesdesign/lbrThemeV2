@@ -16899,6 +16899,7 @@ var fShowTerms = __webpack_require__(/*! ./components/show-terms */ "./assets/js
 var fAccordionList = __webpack_require__(/*! ./components/accordion-list */ "./assets/js/components/accordion-list.js");
 var fMobileMenu = __webpack_require__(/*! ./components/mobile-menu */ "./assets/js/components/mobile-menu.js");
 var fDocuments = __webpack_require__(/*! ./components/documents */ "./assets/js/components/documents.js");
+var fWeather = __webpack_require__(/*! ./components/weather */ "./assets/js/components/weather.js");
 
 // Vue Support Function
 
@@ -16984,6 +16985,7 @@ jQuery(function ($) {
   fAccordionList();
   fMobileMenu;
   fDocuments.init();
+  fWeather();
   $(window).resize(function () {
     fMobileMenu;
   });
@@ -17625,7 +17627,7 @@ var init = gsapController;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = function () {
-  var fWeather = __webpack_require__(/*! ../components/weather */ "./assets/js/components/weather.js");
+  // const fWeather = require('../components/weather');
   var fTime = __webpack_require__(/*! ../components/time */ "./assets/js/components/time.js");
   var toggleMenu = document.querySelectorAll('.toggle-menu');
   var menuWrapper = document.querySelector('.menu-wrapper');
@@ -17637,7 +17639,7 @@ module.exports = function () {
       document.body.classList.toggle('overflow-hidden');
       if (isFirstMenuOpen) {
         isFirstMenuOpen = false;
-        fWeather();
+        // fWeather();
         fTime();
       }
     };
@@ -17932,8 +17934,10 @@ module.exports = function () {
       var currentWeatherElement = document.querySelector('.currentWeather');
       if (currentWeatherElement) {
         currentWeatherElement.textContent = formattedWeather;
-      } else {
-        console.error('Element with class "currentWeather" not found');
+      }
+      var currentTempElement = document.querySelector('.currentTemp');
+      if (currentTempElement) {
+        currentTempElement.textContent = "".concat(temperature, "\xB0");
       }
     })["catch"](function (error) {
       console.error('Fetch error:', error);
@@ -25601,7 +25605,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"110839a3872eb6f5","assets_js_vue_map-directions_vue":"69b8b19dd1cca6d8","assets_js_vue_news-and-events_vue":"688018bcb1cb439a","assets_js_vue_resort_vue":"b82345d56b205939","assets_js_vue_floorplans_vue":"b0172216df4105ac","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"08937a1704c2d3ac","assets_js_vue_map-directions_vue":"69b8b19dd1cca6d8","assets_js_vue_news-and-events_vue":"688018bcb1cb439a","assets_js_vue_resort_vue":"ceb87d4393d491ff","assets_js_vue_floorplans_vue":"b0172216df4105ac","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

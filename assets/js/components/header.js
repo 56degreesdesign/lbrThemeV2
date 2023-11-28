@@ -1,5 +1,5 @@
 module.exports = function () {
-    const fWeather = require('../components/weather');
+    // const fWeather = require('../components/weather');
     const fTime = require('../components/time');
 
     const toggleMenu = document.querySelectorAll('.toggle-menu')
@@ -14,7 +14,7 @@ module.exports = function () {
 
             if (isFirstMenuOpen) {
                 isFirstMenuOpen = false;
-                fWeather();
+                // fWeather();
                 fTime();
             }
         }

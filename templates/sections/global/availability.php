@@ -10,7 +10,7 @@ $props = json_encode($section, JSON_HEX_APOS);
 
 <?php if($section && $interactive) : ?>
     <section id="vue-space" class="resort">
-        <div class="bg-beige min-[700px]:py-10 lg:pb-10 lg:pt-24 xl:pt-28">
+        <div class="bg-beige min-[700px]:py-10 md:pt-20 lg:pb-10 lg:pt-24 xl:pt-28">
             <resort map='<?php echo $props ?>' settings='<?php echo $settings ?>'/>
         </div>
     </section>

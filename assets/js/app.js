@@ -17,6 +17,7 @@ const fShowTerms = require('./components/show-terms')
 const fAccordionList = require('./components/accordion-list')
 const fMobileMenu = require('./components/mobile-menu')
 const fDocuments = require('./components/documents')
+const fWeather = require('./components/weather');
 
 
 import 'select2';
@@ -109,7 +110,9 @@ jQuery(function ($) {
     fAccordionList();
     fMobileMenu;
     fDocuments.init();
-    
+    fWeather();
+
+
     $(window).resize(function() {
         fMobileMenu;
     });

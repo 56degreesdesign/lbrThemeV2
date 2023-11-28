@@ -4680,11 +4680,17 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .md\:mt-20 {
     margin-top: 5rem;
   }
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
   .md\:block {
     display: block;
   }
   .md\:inline {
     display: inline;
+  }
+  .md\:w-\[480px\] {
+    width: 480px;
   }
   .md\:max-w-\[150px\] {
     max-width: 150px;
@@ -4791,6 +4797,15 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .md\:pt-32 {
     padding-top: 8rem;
   }
+  .md\:pb-14 {
+    padding-bottom: 3.5rem;
+  }
+  .md\:pt-1 {
+    padding-top: 0.25rem;
+  }
+  .md\:pt-1\.5 {
+    padding-top: 0.375rem;
+  }
   .md\:text-left {
     text-align: left;
   }
@@ -4805,6 +4820,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .md\:text-17 {
     font-size: 1.063rem;
+  }
+  .md\:text-11 {
+    font-size: 0.688rem;
   }
 }
 
@@ -5223,6 +5241,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .lg\:gap-y-5 {
     row-gap: 1.25rem;
   }
+  .lg\:gap-y-8 {
+    row-gap: 2rem;
+  }
   .lg\:overflow-hidden {
     overflow: hidden;
   }
@@ -5401,6 +5422,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .lg\:pt-7 {
     padding-top: 1.75rem;
+  }
+  .lg\:pt-1 {
+    padding-top: 0.25rem;
   }
   .lg\:text-left {
     text-align: left;
