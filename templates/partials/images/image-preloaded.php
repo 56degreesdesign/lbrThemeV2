@@ -13,7 +13,7 @@ if($image && !$placeholder) : ?>
         <?= $image['sizes']['medium_large']; ?>.webp 320w" 
         imagesizes="100vw">
 <?php endif; ?>      
-<picture class="block <?= $class; ?>">
+<picture class="block <?= $class; ?> absolute top-0 left-0 w-full h-full">
     <?php if ( $image['mime_type'] != 'image/svg+xml' ) : ?>
     <source
         type="image/webp"
@@ -28,14 +28,14 @@ if($image && !$placeholder) : ?>
         <?= $image['sizes']['1536x1536']; ?> 1024w,
         <?= $image['sizes']['large']; ?> 600w,
         <?= $image['sizes']['medium_large']; ?> 320w">
-        <img class="block <?= $imageClass; ?>" 
+        <img class="block <?= $imageClass; ?> w-full h-full object-center object-cover absolute top-0 left-0 preloaded-image" 
             src="<?= $image['sizes']['placeholder']; ?>" 
             width="150"
             height="150"
             sizes="100vw"
             alt="<?= $image['alt']; ?>">
     <?php else : ?>
-        <img class="block <?= $imageClass; ?>" 
+        <img class="block <?= $imageClass; ?> w-full h-full object-center object-cover absolute top-0 left-0 preloaded-image" 
             src="<?= $image['url']; ?>" 
             width="150"
             height="150"

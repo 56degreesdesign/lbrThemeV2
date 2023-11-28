@@ -5063,6 +5063,26 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium"
+                },
+                {
+                    "key": "field_6565c2c2becc2",
+                    "label": "Video",
+                    "name": "video",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -6127,5 +6147,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701099704
+    "modified": 1701167901
 }

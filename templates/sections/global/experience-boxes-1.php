@@ -1,5 +1,7 @@
 <?php
 $section = $args['data']['section'] ?? false;
+$anchor = $section['anchor'] ?? false;
+
 $box1 = $section['box_1']['slider_with_content'] ?? false;
 $box2 = $section['box_2']['slider_with_content'] ?? false;
 $box3 = $section['box_3']['slider_with_content'] ?? false;
@@ -8,7 +10,7 @@ $boxes = array_map(function($box) {
     return $box['slider_with_content'] ?? false;
 }, $section);
 ?>
-<section class="bg-beige-light pt-24 pb-11 md:pb-20 md:pt-32 lg:py-48">
+<section id="<?php echo $anchor ?>" class="bg-beige-light pt-24 pb-11 md:pb-20 md:pt-32 lg:py-48">
     <div class="container grid-layout grid-flow-dense gap-y-12 gap-x-[30px]">
      <!-- Box 1 -->
         <div class="col-start-3 col-span-full grid-cols-10 gap-x-[30px] hidden lg:grid">

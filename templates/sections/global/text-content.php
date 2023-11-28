@@ -25,7 +25,7 @@ $background_colour = $section['background_colour'] ?? false;
         <?php if($image) : ?>
             <div class="col-span-full row-start-1 mt-14 mb-11 lg:mb-0 lg:row-start-auto lg:col-start-3 lg:col-span-8 lg:px-16 lg:mt-20 xl:mt-40">
                 <div class="relative pb-[56.22%]">
-                    <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
+                    <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $image, 'class' => 'w-full']); ?>
                 </div>
             </div>
         <?php endif ;?>

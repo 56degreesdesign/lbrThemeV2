@@ -6,9 +6,10 @@ $images = $section['images'] ?? false;
 $left_col = $section['left_col'] ?? false;
 $right_col = $section['right_col'] ?? false;
 $slider_position = $section['slider_position'] ?? false;
+$anchor = $section['anchor'] ?? false;
 ?>
 
-<section class="bg-beige-light pb-11 md:pb-32 lg:pb-44">
+<section id="<?php echo $anchor ?>" class="bg-beige-light pb-11 md:pb-32 lg:pb-44">
     <div class="container grid-layout">
         <div class="col-span-full text-center md:text-left <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>">
             <?php if($heading) :?>

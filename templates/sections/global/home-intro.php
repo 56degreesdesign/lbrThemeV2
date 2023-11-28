@@ -9,7 +9,7 @@ $bottom_img = get_field('logo', 'option') ?? false;
 ?>
 <?php if ($section) : ?>
 <section class="hero-height flex items-start lg:items-center relative z-10">
-    <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $bg, 'class' => 'w-full -z-10']); ?>
+    <?php get_template_part('templates/partials/images/image', 'bg_preloaded', ['image' => $bg, 'class' => 'w-full -z-10']); ?>
     <div class="container grid-layout mt-8 lg:mt-0">
         <?php if ($logo) : ?>
         <div class="col-span-full flex justify-center | lg:col-start-2 lg:col-span-10 lg:-mx-3">
@@ -25,13 +25,5 @@ $bottom_img = get_field('logo', 'option') ?? false;
             <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
         </a>
     </div>
-<!--    <div class="absolute z-1 h-[calc(100%+80px)] -top-20 w-full left-0">-->
-<!--        <div class="h-full"></div>-->
-<!--        <div class="sticky bottom-10">-->
-<!--            <div class="container w-full flex justify-end">-->
-<!--                --><?php //get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--beige-light']); ?>
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 </section>
 <?php endif ;?>

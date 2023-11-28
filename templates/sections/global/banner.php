@@ -7,7 +7,7 @@ $aspect_ratio_mobile = ($portrait_on_mobile) ? 'pb-[216.8%] md:pb-[56.533%]' : '
 <?php if($section) : ?>
 <section class="bg-beige"> 
     <div class="relative <?php echo $aspect_ratio_mobile?> lg:pb-[51%]">
-        <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
+        <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $image, 'class' => 'w-full']); ?>
     </div>
 </section>
 <?php endif; ?>

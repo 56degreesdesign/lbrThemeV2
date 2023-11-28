@@ -3,6 +3,7 @@ $section = $args['data'] ?? false;
 $content = $section['content'] ?? false;
 $button = $section['button'] ?? false;
 $image = $section['image'] ?? false;
+$video = $section['video'] ?? false;
 if($section):
 ?>
 <section>
@@ -24,7 +25,7 @@ if($section):
                     <span>JAN 13TH, 2023</span>
                     <span class="hidden lg:inline">64˚F</span>
                     <span>SHARE</span>
-                    <span class="hidden lg:inline">TIMELAPSE</span>
+<!--                    <span class="hidden lg:inline">TIMELAPSE</span>-->
                 </div>
                 <div class="col-start-11 col-span-2 flex justify-end items-center gap-x-5">
                     <span class="hidden lg:inline">Jan 14th, 2023</span>
@@ -33,8 +34,15 @@ if($section):
             </div>
         </div>
 
-        <div class="relative pb-[51%]">
-            <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full -z-10']); ?>
+        <div class="bg-beige-light">
+            <video src="<?= $video; ?>"
+                   width="300"
+                   height="300"
+                   class="w-full h-auto"
+                   playsinline
+                   controls
+                   muted
+            ></video>
         </div>
         
     </div>

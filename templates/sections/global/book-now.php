@@ -4,9 +4,9 @@
 ?>
 
 
-<section class="bg-beige-light pb-16 md:pb-24 lg:pb-32">
+<section class="bg-beige-light md:pb-10 lg:pb-24 xl:pb-32">
     <div class="container grid-layout">
-        <?php foreach ( $places as $place ) : ?>
+        <?php foreach ( $places as $key => $place ) : ?>
             <?php
                 $title = $place['title'];
                 $price = $place['price'];
@@ -45,7 +45,7 @@
                         <div class="text-20 mb-2.5 text-center | lg:text-left lg:text-26 lg:mb-14">
                             <p><?= $content; ?></p>
                         </div>
-                        <div class="accordion-list mt-11 border-b border-gray pb-11 mb-12 | lg:border-b-0 lg:pb-0">
+                        <div class="accordion-list mt-11 pb-11 mb-12 | lg:border-b-0 lg:pb-0 <?= $key == 0 ? 'border-b border-gray' : '' ?>">
                             <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
                                 <div class="overflow-hidden pl-6 border-t border-gray pb-10 pt-14 wysiwyg lg:pl-10">
                                     <?= $moreContent; ?>

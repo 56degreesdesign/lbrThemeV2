@@ -36,6 +36,31 @@
         <link rel="preload" href="<?= get_template_directory_uri(); ?>/build/css/app.css?ver=<?= filemtime(get_template_directory() . '/build/css/app.css' ); ?>" as="style" type="text/css">
         <link rel="preload" href="<?= get_template_directory_uri(); ?>/build/js/app.js?ver=<?= filemtime(get_template_directory() . '/build/js/app.js' ); ?>" as="script" type="text/javascript">
 
+        <?php
+        // preload hero image
+        $images = null;
+        if ( have_rows('sections') ) {
+            while ( have_rows('sections') ) {
+                the_row();
+                
+                 if ( isset(get_sub_field(get_row_layout())['background_image']) ) {
+                    $image = get_sub_field(get_row_layout())['background_image'];
+                }
+                else {
+                    $image = false;
+                }
+                if ( $image && !empty($image['url']) ) $images[] = $image;
+            }
+        }
+
+        if ( $images != null ) :
+        ?>
+        <?php foreach ( $images as $image ) : ?>
+            <link rel="preload" fetchpriority="high" as="image" imagesrcset="<?= $image['url']; ?>.webp 1440w,
+                    <?= $image['sizes']['1536x1536']; ?>.webp 1024w,
+                    <?= $image['sizes']['large']; ?>.webp 600w,
+                    <?= $image['sizes']['medium_large']; ?>.webp 320w" imagesizes="100vw">
+        <?php endforeach; endif; ?>
         
         <?php wp_head() ?>
 	</head>

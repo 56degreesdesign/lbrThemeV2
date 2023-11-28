@@ -1,6 +1,6 @@
 .footer-links {
     a {
-        @apply font-bold mb-4 inline-block underline-animation uppercase;
+        @apply font-bold mb-4 inline-block underline-animation uppercase text-14 lg:text-16;
 
     }
     p:first-of-type {

@@ -12,7 +12,7 @@ $button = $section['button'] ?? false;
             <?php get_template_part('templates/partials/navbar', null, ['colour' => 'white']) ?>
         </div>
         
-        <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $background_image, 'class' => 'w-full -z-10']); ?>
+        <?php get_template_part('templates/partials/images/image', 'bg_preloaded', ['image' => $background_image, 'class' => 'w-full -z-10']); ?>
         <div class="container grid-layout">
                 <div class="col-span-full flex justify-center lg:col-start-2 lg:col-span-10">
                     <?php if($heading) : ?>

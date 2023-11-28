@@ -9,11 +9,12 @@ $orientation = $section['orientation'] ?? false;
 $display_bg_pattern = $section['background_pattern'] ?? false;
 $bg_pattern = get_field('footer', 'option')['background_image'] ?? false;
 $portrait = $section['image_long'] ?? false;
+$anchor = $section['anchor'] ?? false;
 
 ?>
 
 <?php if ($section) : ?>
-    <section class="bg-beige relative py-24 md:py-28 lg:py-32 xl:py-40">
+    <section id="<?php echo $anchor ?>" class="bg-beige relative py-24 md:py-28 lg:py-32 xl:py-40">
         <?php if ($display_bg_pattern) : ?>
             <img class="absolute-full object-cover" src="<?php echo $bg_pattern['url'] ?>" alt="">
         <?php endif ;?>

@@ -7,6 +7,17 @@
     <div class="container grid-layout">
         <h1 class="col-span-full txt-h2 text-center mb-7 md:mb-20 lg:mb-28 xl:mb-32"><?= $heading; ?></h1>
         <?php if( $posts ): ?>
+            <div class="col-span-full lg:col-start-7 lg:col-span-6 mt-11 mb-3.5 lg:mt-4 lg:row-start-3">
+                <div class="flex justify-between">
+                    <div class="flex gap-x-12">
+                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
+                        <div class="swiper-next-el swiper-nav">NEXT</div>
+                    </div>
+                    <div class="">
+                        <span class="swiper-pagination-el text-center txt-h5"></span>
+                    </div>
+                </div>
+            </div>
             <div class="col-span-full">
                 <div class="swiper blog-carousel">
                     <div class="swiper-wrapper">
@@ -35,31 +46,9 @@
                                             </a>
                                         </div>
                                     </div>
-<!--                                    <div class="col-span-full row-start-2 lg:col-start-7 lg:col-span-6 mb-7">-->
-<!--                                        <div class="flex justify-between">-->
-<!--                                            <div class="flex gap-x-12">-->
-<!--                                                <div class="swiper-prev-el swiper-nav">PREVIOUS</div>-->
-<!--                                                <div class="swiper-next-el swiper-nav">NEXT</div>-->
-<!--                                            </div>-->
-<!--                                            <div class="">-->
-<!--                                                <span class="swiper-pagination-el text-center txt-h5"></span>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-            <div class="col-span-full lg:col-start-7 lg:col-span-6 mt-10">
-                <div class="flex justify-between">
-                    <div class="flex gap-x-12">
-                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
-                        <div class="swiper-next-el swiper-nav">NEXT</div>
-                    </div>
-                    <div class="">
-                        <span class="swiper-pagination-el text-center txt-h5"></span>
                     </div>
                 </div>
             </div>

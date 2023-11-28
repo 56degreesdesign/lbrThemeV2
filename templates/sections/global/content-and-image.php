@@ -11,7 +11,7 @@ $button = $section['button'] ?? false;
     <div class="max-w-[1920px] px-[25px] mx-auto grid grid-cols-2 md:px-10 lg:px-0 relative">
         <div class="col-span-full -mx-[25px] md:-mx-10 lg:mx-0 lg:col-span-1">
             <div class="w-full relative pb-[112.87%]">
-                <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
+                <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $image, 'class' => 'w-full']); ?>
             </div>
         </div>
         <div class="col-span-full mt-10 flex flex-col items-center justify-center md:mt-12 lg:mt-0 lg:col-span-1">

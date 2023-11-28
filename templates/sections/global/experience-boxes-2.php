@@ -5,11 +5,13 @@ $box2 = $section['box_2']['slider_with_content'] ?? false;
 $box3 = $section['box_3']['slider_with_content'] ?? false;
 $box4 = $section['box_4']['slider_with_content'] ?? false;
 $box5 = $section['box_5']['slider_with_content'] ?? false;
+$anchor = $section['anchor'] ?? false;
+
 $boxes = array_map(function($box) {
     return $box['slider_with_content'] ?? false;
 }, $section);
 ?>
-<section class="bg-beige-light pt-24 pb-11 md:pb-20 md:pt-32 lg:py-48"> 
+<section id="<?php echo $anchor ?>" class="bg-beige-light pt-24 pb-11 md:pb-20 md:pt-32 lg:py-48"> 
     <div class="container grid-layout grid-flow-dense gap-y-12 gap-x-[30px]">
         <!-- Box 1 -->
         <div class="col-start-2 col-span-11 xl:col-start-2 xl:col-span-9 grid-cols-9 gap-x-[30px] hidden lg:grid">

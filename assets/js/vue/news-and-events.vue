@@ -44,13 +44,8 @@ const slides = computed(() => {
 <template>
     <section class="bg-beige-light py-24 overflow-hidden lg:py-28">
         <div class="container grid-layout">
-            <h3 class="col-span-full lg:col-start-1 lg:col-span-5 txt-h3">Resort news & EVENTS</h3>
-            <div class="col-span-full flex justify-between items-center py-6 mt-3 lg:hidden">
-                <SliderMobileNav @click="changeYear(-1)" :customClass="'rotate-180'"/>
-                <YearBtn :year="selected" :active="true"/>
-                <SliderMobileNav @click="changeYear(1)"/>
-            </div>
-            <div class="lg:col-start-7 col-span-full items-center gap-x-2.5 hidden lg:flex">
+            <h3 class="col-span-full lg:col-start-1 lg:col-span-5 txt-h3 text-center lg:text-left">Resort news & EVENTS</h3>
+            <div class="col-span-full lg:col-start-7 lg:col-span-full items-center gap-x-2.5 flex justify-center lg:justify-start my-7 lg:my-0">
                 <YearBtn 
                     @click="select(term.name)" 
                     v-for="term in termsData" 

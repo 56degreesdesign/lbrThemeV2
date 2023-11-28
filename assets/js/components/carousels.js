@@ -40,21 +40,6 @@ const sliders = async function () {
                         prevEl: el.parentElement.querySelector('.swiper-prev-el'),
                     },
                 });
-
-                // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
-                //
-                // if (prevBtn != null) {
-                //     prevBtn.addEventListener('click', () => {
-                //         swiperCarousel.slidePrev()
-                //     }, false);
-                // }
-                //
-                // if (nextBtn != null) {
-                //     nextBtn.addEventListener('click', () => {
-                //         swiperCarousel.slideNext()
-                //     }, false);
-                // }
             });
         }
         
@@ -141,21 +126,6 @@ const sliders = async function () {
                         prevEl: el.parentElement.querySelector('.swiper-prev-el'),
                     },
                 });
-
-                // const prevBtn = el.parentElement.querySelector('.swiper-prev-el'),
-                //     nextBtn = el.parentElement.querySelector('.swiper-next-el');
-                //
-                // if (prevBtn != null) {
-                //     prevBtn.addEventListener('click', () => {
-                //         swiperCarousel.slidePrev()
-                //     }, false);
-                // }
-                //
-                // if (nextBtn != null) {
-                //     nextBtn.addEventListener('click', () => {
-                //         swiperCarousel.slideNext()
-                //     }, false);
-                // }
             });
         }
         
@@ -191,10 +161,6 @@ const sliders = async function () {
                         768: {
                             spaceBetween: 32
                         },
-                    },
-                    navigation: {
-                        nextEl: el.parentElement.querySelector('.explore-swiper-next'),
-                        // prevEl: el.parentElement.querySelector('.swiper-prev-el'),
                     },
                 });
             });

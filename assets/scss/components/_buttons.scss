@@ -37,4 +37,7 @@
     &--desktop-p-small {
         @apply lg:w-auto lg:px-7;
     }
+    &--small-text {
+        @apply text-14;
+    }
 }

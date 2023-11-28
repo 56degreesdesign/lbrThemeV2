@@ -11,7 +11,7 @@ $slides = $section['slides'] ?? false;
             <div class="col-span-full flex flex-col lg:col-start-1 lg:col-span-6">
                 <?php if($image) :?>
                     <div class="relative pb-[70%] lg:pb-[62.1266%] mb-11 -mx-[25px] lg:mb-40 xl:mb-52">
-                        <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
+                        <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $image, 'class' => 'w-full']); ?>
                     </div>
                 <?php endif ;?>
                 <?php if($content) : ?>
@@ -24,7 +24,7 @@ $slides = $section['slides'] ?? false;
                         <?php foreach ($slides as $slide) : ?>
                             <div class="swiper-slide h-full w-full">
                                 <div class="relative bg-blue pb-[126.64%]">
-                                    <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $slide, 'class' => 'w-full']); ?>
+                                    <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $slide, 'class' => 'w-full']); ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>

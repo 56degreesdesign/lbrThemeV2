@@ -22,13 +22,13 @@ if($image && !$placeholder) : ?>
         <?= $image['sizes']['large']; ?> 600w,
         <?= $image['sizes']['large']; ?> 320w">
         <img class="lazyload fade-up <?= $imageClass; ?>" 
-            data-expand="-50" src="<?= $image['sizes']['placeholder']; ?>"             
+            data-expand="-500" src="<?= $image['sizes']['placeholder']; ?>"             
             width="150"
             height="150"
             data-src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
     <?php else : ?>
         <img class="lazyload fade-up <?= $imageClass; ?>" 
-            data-expand="-50" src="<?= $image['url']; ?>"             
+            data-expand="-500" src="<?= $image['url']; ?>"             
             width="150"
             height="150"
             data-src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
@@ -36,8 +36,8 @@ if($image && !$placeholder) : ?>
 </picture>
 
 <?php elseif($placeholder) : ?>
-    <picture class="block <?= $class; ?>">
-        <img class="lazyload fade-up <?= $imageClass; ?>" 
+    <picture class="block absolute top-0 left-0 w-full h-full <?= $class; ?>">
+        <img class="lazyload fade-up w-full h-full object-center object-cover absolute top-0 left-0 <?= $imageClass; ?>" 
             data-expand="-50" src="https://picsum.photos/300/200?random=1" 
             data-src="https://picsum.photos/1220/800?random=1" alt="Img Alt">
     </picture>

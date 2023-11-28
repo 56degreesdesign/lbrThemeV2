@@ -35,7 +35,7 @@ if (!$hidden) :
                         'menu_class' => 'main-menu-test',
                     ));
                     ?>
-                    <button class="toggle-menu btn btn--beige-explore btn--desktop-sm max-h-[35px] ">Explore more</button>
+                    <button class="toggle-menu btn btn--beige-explore btn--desktop-sm max-h-[35px] btn--small-text">Explore more</button>
                 </div>
                 <div class="w-full dropdown-menu">
                     <div class="w-full grid grid-cols-3">
@@ -130,7 +130,7 @@ if (!$hidden) :
 //        ?>
         <div class="w-full fixed bottom-10 left-0 hidden lg:block z-30 pointer-events-none">
             <div class="container w-full flex justify-end">
-                <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--black']); ?>
+                <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--black btn--small-text']); ?>
             </div>
         </div>
 <!--    --><?php
