@@ -109,5 +109,5 @@
 </section>
 
 <script>
-    let testLogin = <?php echo json_encode(get_field('purchaser_documents', 'option'), JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
+    let formCredentials = <?php echo json_encode(get_field('purchaser_documents', 'option'), JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
 </script>

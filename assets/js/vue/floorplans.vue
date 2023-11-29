@@ -20,7 +20,6 @@ const select = (floorType) => {
             <div class="w-1/2 bg-beige absolute top-0 left-0 h-full -z-10 hidden xl:block"></div>
             <div class="w-1/2 bg-beige-light absolute top-0 right-0 h-full -z-10 hidden xl:block"></div>
             <div class="grid grid-cols-2 max-w-[1920px] mx-auto z-10 lg:h-full">
-
                 <div class="col-span-full bg-beige pt-7 md:pt-14 md:pb-10 lg:col-span-1 lg:pr-0 xl:pt-28 xl:pb-14">
                     <div class="flex justify-center lg:px-[5%] lg:mb-10 xl:mb-14">
                         <div class="w-full relative pb-[123.93%]">
@@ -29,11 +28,11 @@ const select = (floorType) => {
                         </div>
                     </div>
                     <div class="hidden lg:flex flex-col gap-y-4 gap-x-8 items-center 2xl:flex-row lg:justify-center">
-                        <button v-if="sectionData.images.one_story" @click="select('one_story')" :class="{ 'btn-floors--active': selected === 'one_story', 'btn-floors--inactive': selected !== 'one_story' }" class="btn-floors">
+                        <button v-if="sectionData.plans.one_story" @click="select('one_story')" :class="{ 'btn-floors--active': selected === 'one_story', 'btn-floors--inactive': selected !== 'one_story' }" class="btn-floors">
                             one story</button>
-                        <button v-if="sectionData.images.split_level" @click="select('split_level')" :class="{ 'btn-floors--active': selected === 'split_level', 'btn-floors--inactive': selected !== 'split_level' }" class="btn-floors">
+                        <button v-if="sectionData.plans.split_level" @click="select('split_level')" :class="{ 'btn-floors--active': selected === 'split_level', 'btn-floors--inactive': selected !== 'split_level' }" class="btn-floors">
                             ONE STORY SPLIT-LEVEL</button>
-                        <button v-if="sectionData.images.two_story" @click="select('two_story')" :class="{ 'btn-floors--active': selected === 'two_story', 'btn-floors--inactive': selected !== 'two_story' }" class="btn-floors">
+                        <button v-if="sectionData.plans.two_story" @click="select('two_story')" :class="{ 'btn-floors--active': selected === 'two_story', 'btn-floors--inactive': selected !== 'two_story' }" class="btn-floors">
                             two story</button>
                     </div>
                 </div>

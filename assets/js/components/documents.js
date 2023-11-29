@@ -54,7 +54,7 @@ const documents = async function () {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
             
-            if ( username === testLogin.login && password === testLogin.password){
+            if ( username === formCredentials.login && password === formCredentials.password){
                 // Refresh the page by replacing the URL with itself
                 location.replace(location.href);
                 setCookie('documents','show',30);
@@ -64,7 +64,6 @@ const documents = async function () {
                 attempt --;// Decrementing by one.
                 const loginFormError = document.querySelector('.login-form-error');
                 loginFormError.textContent = "Wrong credentials. You have "+attempt+" attempts left."
-                console.log(testLogin.login)
 
                 // Disabling fields after 3 attempts.
                 if( attempt === 0){
@@ -72,8 +71,8 @@ const documents = async function () {
                     document.getElementById("password").disabled = true;
                     document.getElementById("submit-login").disabled = true;
                     loginFormError.textContent = 'Too many attempts. Form disabled';
+                    submitLogin.classList.remove('cursor-pointer');
                     submitLogin.classList.add('cursor-not-allowed');
-
                     return false;
                 }
             }

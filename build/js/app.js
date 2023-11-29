@@ -17498,7 +17498,7 @@ var documents = /*#__PURE__*/function () {
             validate = function validate() {
               var username = document.getElementById("username").value;
               var password = document.getElementById("password").value;
-              if (username === testLogin.login && password === testLogin.password) {
+              if (username === formCredentials.login && password === formCredentials.password) {
                 // Refresh the page by replacing the URL with itself
                 location.replace(location.href);
                 setCookie('documents', 'show', 30);
@@ -17507,7 +17507,6 @@ var documents = /*#__PURE__*/function () {
                 attempt--; // Decrementing by one.
                 var loginFormError = document.querySelector('.login-form-error');
                 loginFormError.textContent = "Wrong credentials. You have " + attempt + " attempts left.";
-                console.log(testLogin.login);
 
                 // Disabling fields after 3 attempts.
                 if (attempt === 0) {
@@ -17515,6 +17514,7 @@ var documents = /*#__PURE__*/function () {
                   document.getElementById("password").disabled = true;
                   document.getElementById("submit-login").disabled = true;
                   loginFormError.textContent = 'Too many attempts. Form disabled';
+                  submitLogin.classList.remove('cursor-pointer');
                   submitLogin.classList.add('cursor-not-allowed');
                   return false;
                 }
@@ -25610,7 +25610,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"08937a1704c2d3ac","assets_js_vue_map-directions_vue":"540e81e713918df8","assets_js_vue_news-and-events_vue":"688018bcb1cb439a","assets_js_vue_resort_vue":"ceb87d4393d491ff","assets_js_vue_floorplans_vue":"b0172216df4105ac","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"08937a1704c2d3ac","assets_js_vue_map-directions_vue":"540e81e713918df8","assets_js_vue_news-and-events_vue":"688018bcb1cb439a","assets_js_vue_resort_vue":"ceb87d4393d491ff","assets_js_vue_floorplans_vue":"dd081d2dee4d75f5","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
