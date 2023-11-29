@@ -17498,19 +17498,24 @@ var documents = /*#__PURE__*/function () {
             validate = function validate() {
               var username = document.getElementById("username").value;
               var password = document.getElementById("password").value;
-              if (username === "test" && password === "test") {
+              if (username === testLogin.login && password === testLogin.password) {
                 // Refresh the page by replacing the URL with itself
                 location.replace(location.href);
                 setCookie('documents', 'show', 30);
                 return false;
               } else {
                 attempt--; // Decrementing by one.
-                alert("You have left " + attempt + " attempt;");
+                var loginFormError = document.querySelector('.login-form-error');
+                loginFormError.textContent = "Wrong credentials. You have " + attempt + " attempts left.";
+                console.log(testLogin.login);
+
                 // Disabling fields after 3 attempts.
                 if (attempt === 0) {
                   document.getElementById("username").disabled = true;
                   document.getElementById("password").disabled = true;
                   document.getElementById("submit-login").disabled = true;
+                  loginFormError.textContent = 'Too many attempts. Form disabled';
+                  submitLogin.classList.add('cursor-not-allowed');
                   return false;
                 }
               }

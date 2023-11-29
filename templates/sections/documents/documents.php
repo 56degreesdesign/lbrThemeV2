@@ -19,8 +19,9 @@
                 <form method="post">
                     <input id="username" type="text" placeholder="USERNAME" required />
                     <input id="password" type="password" placeholder="PASSWORD" required /> 
-                    <button id="submit-login" class="mt-3.5 btn btn--black btn--mobile-wide btn--desktop-small | xl:mt-10">Enter</button>
+                    <button id="submit-login" class="mt-3.5 cursor-pointer btn bg-black border border-black hover:bg-orange hover:border-beige-light btn--mobile-wide btn--desktop-small lg:mt-6">Enter</button>
                 </form>
+                <div class="login-form-error mt-3 txt-1"></div>
             </div>
             <div class="form-documents-submit -order-1 border-b border-black mb-6 lg:mb-0 lg:border-0">
                 <h4 class="txt-h4 mb-4 | xl:mb-9">Property owners please<br>
@@ -106,3 +107,7 @@
         </div>
     </div>
 </section>
+
+<script>
+    let testLogin = <?php echo json_encode(get_field('purchaser_documents', 'option'), JSON_HEX_TAG); ?>; // Don't forget the extra semicolon!
+</script>

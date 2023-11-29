@@ -1539,6 +1539,9 @@ body {
 .cursor-default {
   cursor: default;
 }
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -3826,6 +3829,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   padding-bottom: 0.25rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
+  text-transform: none;
   line-height: 1.5;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -3866,6 +3870,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   padding-bottom: 0.25rem;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
+  text-transform: none;
   line-height: 1.5;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -3896,6 +3901,19 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 }
 .form-documents-submit form .form__row:last-of-type {
   margin-top: 0 !important;
+}
+.form-documents-submit form .form__row .btn {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.form-documents-submit form .form__row .btn:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 227 214 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 136 93 / var(--tw-bg-opacity));
 }
 
 .lds-ring {
@@ -4650,6 +4668,16 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   border-bottom-width: 1px;
 }
 
+.hover\:border-beige-light:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(246 238 229 / var(--tw-border-opacity));
+}
+
+.hover\:bg-orange:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 136 93 / var(--tw-bg-opacity));
+}
+
 .hover\:opacity-70:hover {
   opacity: 0.7;
 }
@@ -5182,6 +5210,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .lg\:mt-40 {
     margin-top: 10rem;
   }
+  .lg\:mt-6 {
+    margin-top: 1.5rem;
+  }
   .lg\:mt-8 {
     margin-top: 2rem;
   }
@@ -5662,9 +5693,6 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .xl\:mr-\[21px\] {
     margin-right: 21px;
-  }
-  .xl\:mt-10 {
-    margin-top: 2.5rem;
   }
   .xl\:mt-14 {
     margin-top: 3.5rem;

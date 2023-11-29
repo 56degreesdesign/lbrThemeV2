@@ -3,7 +3,7 @@
         input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]) {
             -webkit-appearance: none;
             @extend .txt-h4;
-            @apply block bg-beige-light border-b border-orange outline-0 m-0 py-1 px-2.5 text-black w-full leading-normal;
+            @apply block bg-beige-light border-b border-orange outline-0 m-0 py-1 px-2.5 text-black w-full leading-normal normal-case;
             @apply md:py-[5px] md:px-5;
 
             &::placeholder {
@@ -18,7 +18,7 @@
         input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]) {
             -webkit-appearance: none;
             @extend .txt-h4;
-            @apply block bg-transparent border-b outline-0 m-0 py-1 px-2.5 text-black w-full leading-normal;
+            @apply block bg-transparent border-b outline-0 m-0 py-1 px-2.5 text-black w-full leading-normal normal-case;
             @apply md:py-[5px] md:px-5;
 
             &::placeholder {
@@ -29,6 +29,9 @@
             &__row {
                 &:last-of-type {
                     margin-top: 0 !important;
+                }
+                .btn {
+                    @apply bg-black border border-black hover:bg-orange hover:border-beige;
                 }
             }
         }
