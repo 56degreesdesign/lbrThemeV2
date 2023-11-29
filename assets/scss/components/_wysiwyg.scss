@@ -32,7 +32,7 @@ $module: '.wysiwyg';
         }
         
         h2 {
-            @apply mb-6;
+            @apply mb-4 md:mb-5 lg:mb-6;
             @apply xl:mb-8;
         }
         
@@ -60,7 +60,7 @@ $module: '.wysiwyg';
 
     &.wysiwyg--no-subheading {
       h2 {
-          @apply mb-11;
+          @apply mb-6 md:mb-8 lg:mb-11;
       }
     }
     &.wysiwyg--no-margin {
@@ -102,13 +102,15 @@ $module: '.wysiwyg-headings';
     @apply txt-h1 mb-10 md:mb-12 lg:mb-16 xl:mb-20;
     }
     h2 {
-    @apply txt-h2 mb-11;
+        @apply txt-h2;
+        @apply mb-5 md:mb-7 lg:mb-9;
+        @apply xl:mb-11;
     }
     h3 {
-      @apply txt-h3 mb-8;
+        @apply txt-h3 mb-8;
     } 
     h4 {
-    @apply txt-h4;
+        @apply txt-h4;
       } 
     h5 {
         @apply txt-h5 mb-3 lg:mb-5 xl:mb-8;

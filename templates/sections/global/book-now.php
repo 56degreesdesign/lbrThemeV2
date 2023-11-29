@@ -38,11 +38,13 @@
                         </button>
                     </div>
                     <p class="txt-h5 mb-7 text-center | lg:text-left lg:mb-7"><strong><?= $price; ?></strong></p>
-                    <button class="mb-11 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 btn--mobile-wide btn--desktop-small | xl:hidden">
-                        Book now
-                    </button>
+                    <div class="flex justify-center lg:justify-start">
+                        <button class="mb-11 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 btn--mobile-wide btn--desktop-small | xl:hidden">
+                            Book now
+                        </button>
+                    </div>
                     <div>
-                        <div class="text-20 mb-2.5 text-center | lg:text-left lg:text-26 lg:mb-14">
+                        <div class="text-20 mb-2.5 text-center | lg:text-22 lg:text-left lg:mb-14 | xl:text-26">
                             <p><?= $content; ?></p>
                         </div>
                         <div class="accordion-list mt-11 pb-11 mb-12 | lg:border-b-0 lg:pb-0 <?= $key == 0 ? 'border-b border-gray' : '' ?>">

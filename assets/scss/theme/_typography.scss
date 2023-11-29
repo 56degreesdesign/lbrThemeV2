@@ -2,7 +2,7 @@
     @apply text-60 md:text-90 lg:text-120 xl:text-167 uppercase font-Reckless font-light text-center leading-none;
 }
 .txt-h2 {
-    @apply text-40 md:text-50 lg:text-60 xl:text-70 font-Reckless uppercase font-light leading-none;
+    @apply text-35 md:text-40 lg:text-50 xl:text-70 font-Reckless uppercase font-light leading-none;
 }
 .txt-h3 {
     @apply text-26 lg:text-30 xl:text-40 font-Reckless uppercase font-light leading-1.125;
@@ -17,7 +17,7 @@
     @apply text-25 xl:text-30 uppercase font-Reckless text-center leading-1.16;
 }
 .txt-1 {
-    @apply text-15 md:text-16 lg:text-17 leading-1.35;
+    @apply text-15 md:text-16 xl:text-17 leading-1.35;
 }
 
 .txt-2 {
@@ -37,6 +37,9 @@
 
 .txt-6 {
     
+}
+.intro-heading {
+    @apply text-40 md:text-50 lg:text-60 xl:text-70 font-Reckless uppercase font-light leading-none text-beige text-center;
 }
 
 .txt-link-orange {
@@ -75,5 +78,10 @@
         br {
             @apply md:hidden;
         }
+    }
+}
+.text-content {
+    p {
+        @apply mx-auto lg:max-w-[640px] 2xl:max-w-[900px];
     }
 }

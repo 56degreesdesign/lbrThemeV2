@@ -48,7 +48,7 @@ const select = (option) => {
 
 <style lang="scss" scoped>
 .btn {
-    @apply uppercase px-10 pt-2 pb-1.5 text-15 w-full font-bold rounded-full hover:opacity-70 duration-300 cursor-pointer lg:w-[162px] leading-1.33;
+    @apply uppercase px-10 pt-2 pb-1.5 text-15 w-full font-bold rounded-full hover:opacity-70 duration-300 cursor-pointer md:w-[162px] leading-1.33;
     
     &--active {
         @apply bg-orange border border-transparent text-beige-light;

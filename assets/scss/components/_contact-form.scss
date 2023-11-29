@@ -166,7 +166,7 @@
     }
 }
     .btn {
-        @apply bg-orange w-full uppercase px-4 pt-2.5 pb-2 text-14 text-beige-light font-bold rounded-full hover:bg-black duration-300 lg:text-15 lg:w-auto lg:min-w-[150px];
+        @apply bg-orange w-full uppercase px-4 pt-2.5 pb-2 text-14 text-beige-light font-bold rounded-full hover:bg-black duration-300 lg:text-15 md:w-auto md:min-w-[150px];
     }
 }
 

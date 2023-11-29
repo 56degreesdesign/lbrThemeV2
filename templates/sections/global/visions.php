@@ -26,7 +26,7 @@ if($section) :?>
         <?php endif;?>
         
         <?php if($right_col['content']) :?>
-            <div class="g:col-start-8 lg:col-span-5 xl:col-start-7 xl:col-span-4 md:mt-20 xl:mt-36 hidden lg:block">
+            <div class="lg:col-start-8 lg:col-span-5 xl:col-start-7 xl:col-span-4 md:mt-20 xl:mt-36 hidden lg:block">
                 <h6 class="txt-3 mb-5 text-center"><?php echo $right_col['heading'] ?></h6>
                 <div class="wysiwyg text-center"><?php echo $right_col['content']?></div>
             </div>

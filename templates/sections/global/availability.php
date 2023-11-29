@@ -17,9 +17,9 @@ $props = json_encode($section, JSON_HEX_APOS);
 <?php endif ;?>
 
 <?php if($data && !$interactive) :?> 
-<section id="<?php echo $anchor ?>" class="bg-beige pt-16 pb-72 lg:pt-28 lg:pb-16  min-[700px]:h-auto">
+<section id="<?php echo $anchor ?>" class="bg-beige pt-16 pb-72  lg:pt-28 lg:pb-16 min-[700px]:h-auto min-[700px]:py-14">
     <div class="container grid-layout">
-        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mt-6 mb-10 lg:mb-10 xl:mb-14 xl:col-span-3"><?php echo $data['heading'] ?></h3>
+        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mb-10 lg:mb-10 xl:mb-14 xl:mt-6 xl:col-span-3"><?php echo $data['heading'] ?></h3>
         <div class="col-span-full flex flex-col items-center justify-center min-[700px]:hidden">
             <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
                 <g id="Rotate_Device_Icon" data-name="Rotate Device Icon" transform="translate(0 0.081)">
@@ -49,7 +49,10 @@ $props = json_encode($section, JSON_HEX_APOS);
             </div>
             <img class="mt-24 max-w-[212px] hidden lg:block" src="<?php echo $section['legend']['url']?>" alt="">
         </div>
-        <div class="col-span-full lg:col-start-4 lg:col-span-9 2xl:row-start-1 2xl:row-span-2 hidden min-[700px]:block">
+        <div class="col-span-1 md:col-span-3 flex items-end lg:hidden">
+            <img class="max-w-[150px] hidden min-[700px]:block" src="<?php echo $section['legend']['url']?>" alt="">
+        </div>
+        <div class="col-span-3 pl-5 md:pl-0 md:col-start-4 md:col-span-9 2xl:row-start-1 2xl:row-span-2 hidden min-[700px]:block">
             <?php get_template_part('templates/partials/map-phase-all'); ?>
         </div>
     </div>

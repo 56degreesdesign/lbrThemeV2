@@ -25,5 +25,12 @@
                 @apply opacity-100 text-black font-bold uppercase;
             }
         }
+        .form {
+            &__row {
+                &:last-of-type {
+                    margin-top: 0 !important;
+                }
+            }
+        }
     }
 }

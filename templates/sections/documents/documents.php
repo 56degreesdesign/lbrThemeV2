@@ -13,7 +13,7 @@
             </svg>
         </div>
         <div class="grid lg:grid-cols-2 lg:gap-x-7 xl:gap-x-24">
-            <div class="border-b border-black pb-7 mb-7 form-documents-login | lg:border-0">
+            <div class="lg:pb-7 lg:mb-7 form-documents-login">
                 <h4 class="txt-h4 mb-4 | xl:mb-9">Nice to see you again.<br>
                     Please login below.</h4>
                 <form method="post">
@@ -22,7 +22,7 @@
                     <button id="submit-login" class="mt-3.5 btn btn--black btn--mobile-wide btn--desktop-small | xl:mt-10">Enter</button>
                 </form>
             </div>
-            <div class="form-documents-submit lg:-order-1">
+            <div class="form-documents-submit -order-1 border-b border-black mb-6 lg:mb-0 lg:border-0">
                 <h4 class="txt-h4 mb-4 | xl:mb-9">Property owners please<br>
                     contact us for full access.</h4>
                 <?= do_shortcode('[contact-form-7 id="b74372a" title="Access documents"]'); ?>
