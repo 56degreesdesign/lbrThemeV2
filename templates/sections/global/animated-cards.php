@@ -18,7 +18,7 @@ $counter = 1;
                     <div class="txt-h5 text-center mb-11 hidden lg:block"><?php echo $card['label'] ?></div>
                 </div>
                 <div class="col-span-full w-full relative mb-11 -mx-[25px] md:-mx-10 lg:mx-0 lg:mb-0 lg:col-span-6 flex items-center xl:col-span-5">
-                    <div class="w-full relative pb-[66.45%] lg:w-[100%+57px] lg:-ml-[57px] lg:pb-[100vh]">
+                    <div class="w-full relative pb-[66.45%] lg:w-[calc(100%+57px)] lg:-ml-[57px] lg:pb-[100vh]">
                         <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $card['image'], 'class' => 'w-full']); ?>
                     </div>
                 </div>

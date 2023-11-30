@@ -124,17 +124,9 @@ if (!$hidden) :
             </div>
         </div>
     </div>
-<!--    --><?php
-//    $excluded_pages = array('strata', 'mesa', 'spire', 'casita-rentals', 'blog');
-//    if (!is_page($excluded_pages)) :
-//        ?>
         <div class="w-full fixed bottom-10 left-0 hidden lg:block z-30 pointer-events-none">
             <div class="container w-full flex justify-end">
                 <?php get_template_part('templates/partials/book-now-btn', null, ['class' => 'btn--black btn--small-text']); ?>
             </div>
         </div>
-<!--    --><?php
-//    endif;
-//    ?>
-
 <?php endif ;?>
