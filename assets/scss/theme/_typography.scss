@@ -104,7 +104,14 @@
     }
 }
 .txt-h6 {
-    @apply text-25 xl:text-30 uppercase font-Reckless text-center leading-1.16;
+    //@apply text-25 xl:text-30;
+    @apply uppercase font-Reckless text-center leading-1.16;
+
+    font-size: calc(25px + (30 - 25) * ((100vw - 375px) / (1920 - 375)));
+
+    @include xxl {
+        @apply xxl:text-30;
+    }
 }
 .txt-1 {
     @apply text-15 md:text-16 xl:text-17 leading-1.35;
