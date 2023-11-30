@@ -1,17 +1,103 @@
+@mixin md {
+    @media only screen and (min-width: 768px) { @content; }
+}
+
+@mixin lg {
+    @media only screen and (min-width: 1024px) { @content; }
+}
+
+@mixin xl {
+    @media only screen and (min-width: 1280px) { @content; }
+}
+
 .txt-h1 {
-    @apply text-60 md:text-90 lg:text-120 xl:text-167 uppercase font-Reckless font-light text-center leading-none;
+    //@apply text-60 md:text-90 lg:text-120 xl:text-167; 
+    @apply uppercase font-Reckless font-light text-center leading-none;
+
+    font-size: calc(60px + (90 - 60) * ((100vw - 300px) / (768 - 300)));
+
+    @include md {
+        font-size: calc(90px + (120 - 90) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    @include lg {
+        font-size: calc(120px + (167 - 120) * ((100vw - 1024px) / (1280 - 1024)));
+    }
+
+    @include xl {
+        @apply xl:text-167;
+    }
 }
 .txt-h2 {
-    @apply text-35 md:text-40 lg:text-50 xl:text-70 font-Reckless uppercase font-light leading-none;
+    //@apply text-35 md:text-40 lg:text-50 xl:text-70;
+    @apply font-Reckless uppercase font-light leading-none;
+    font-size: calc(35px + (40 - 35) * ((100vw - 300px) / (768 - 300)));
+    
+    @include md {
+        font-size: calc(40px + (50 - 40) * ((100vw - 768px) / (1024 - 768)));
+    }
+    
+    @include lg {
+        font-size: calc(50px + (70 - 50) * ((100vw - 1024px) / (1280 - 1024)));
+    }
+    
+    @include xl {
+        @apply xl:text-70;
+    }
 }
 .txt-h3 {
-    @apply text-26 lg:text-30 xl:text-40 font-Reckless uppercase font-light leading-1.125;
+    //@apply text-26 lg:text-30 xl:text-40;
+    @apply font-Reckless uppercase font-light leading-1.125;
+
+    font-size: calc(26px + (26 - 26) * ((100vw - 300px) / (768 - 300)));
+
+    @include md {
+        font-size: calc(26px + (30 - 26) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    @include lg {
+        font-size: calc(30px + (40 - 30) * ((100vw - 1024px) / (1280 - 1024)));
+    }
+
+    @include xl {
+        @apply xl:text-40;
+    }
 }
 .txt-h4 {
-    @apply text-14 md:text-17 lg:text-22 xl:text-25 font-bold uppercase leading-1.2;
+    //@apply text-14 md:text-17 lg:text-22 xl:text-25;
+    @apply font-bold uppercase leading-1.2;
+
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (768 - 300)));
+
+    @include md {
+        font-size: calc(22px + (17 - 22) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    @include lg {
+        font-size: calc(22px + (25 - 22) * ((100vw - 1024px) / (1280 - 1024)));
+    }
+
+    @include xl {
+        @apply xl:text-25;
+    }
 }
 .txt-h5 {
-    @apply text-14 md:text-17 xl:text-20 font-bold uppercase leading-1.25;
+    //@apply text-14 md:text-17 xl:text-20;
+    @apply font-bold uppercase leading-1.25;
+
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (768 - 300)));
+
+    @include md {
+        font-size: calc(20px + (17 - 20) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    @include lg {
+        font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1280 - 1024)));
+    }
+
+    @include xl {
+        @apply xl:text-20;
+    }
 }
 .txt-h6 {
     @apply text-25 xl:text-30 uppercase font-Reckless text-center leading-1.16;
@@ -39,7 +125,22 @@
     
 }
 .intro-heading {
-    @apply text-40 md:text-50 lg:text-60 xl:text-70 font-Reckless uppercase font-light leading-none text-beige text-center;
+    //@apply text-40 md:text-50 lg:text-60 xl:text-70;
+    @apply font-Reckless uppercase font-light leading-none text-beige text-center;
+
+    font-size: calc(40px + (50 - 40) * ((100vw - 300px) / (768 - 300)));
+
+    @include md {
+        font-size: calc(50px + (60 - 50) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    @include lg {
+        font-size: calc(60px + (70 - 60) * ((100vw - 1024px) / (1280 - 1024)));
+    }
+
+    @include xl {
+        @apply xl:text-70;
+    }
 }
 
 .txt-link-orange {
