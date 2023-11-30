@@ -7,11 +7,11 @@
 }
 
 @mixin xl {
-    @media only screen and (min-width: 1536px) { @content; }
+    @media only screen and (min-width: 1920px) { @content; }
 }
 
 @mixin xxl {
-    @media only screen and (min-width: 1536px) { @content; }
+    @media only screen and (min-width: 1920px) { @content; }
 }
 
 .txt-h1 {
@@ -25,7 +25,7 @@
     }
 
     @include lg {
-        font-size: calc(120px + (167 - 120) * ((100vw - 1024px) / (1536 - 1024)));
+        font-size: calc(120px + (167 - 120) * ((100vw - 1024px) / (1920 - 1024)));
     }
 
     @include xxl {
@@ -42,7 +42,7 @@
     }
     
     @include lg {
-        font-size: calc(50px + (70 - 50) * ((100vw - 1024px) / (1536 - 1024)));
+        font-size: calc(50px + (70 - 50) * ((100vw - 1024px) / (1920 - 1024)));
     }
     
     @include xxl {
@@ -60,7 +60,7 @@
     }
 
     @include lg {
-        font-size: calc(30px + (40 - 30) * ((100vw - 1024px) / (1536 - 1024)));
+        font-size: calc(30px + (40 - 30) * ((100vw - 1024px) / (1920 - 1024)));
     }
 
     @include xxl {
@@ -78,7 +78,7 @@
     }
 
     @include lg {
-        font-size: calc(22px + (25 - 22) * ((100vw - 1024px) / (1536 - 1024)));
+        font-size: calc(22px + (25 - 22) * ((100vw - 1024px) / (1920 - 1024)));
     }
 
     @include xxl {
@@ -96,7 +96,7 @@
     }
 
     @include lg {
-        font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1536 - 1024)));
+        font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1920 - 1024)));
     }
 
     @include xxl {
@@ -139,7 +139,7 @@
     }
 
     @include lg {
-        font-size: calc(60px + (70 - 60) * ((100vw - 1024px) / (1536 - 1024)));
+        font-size: calc(60px + (70 - 60) * ((100vw - 1024px) / (1920 - 1024)));
     }
 
     @include xxl {
