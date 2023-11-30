@@ -18,11 +18,11 @@ $counter = 1;
                     <div class="txt-h5 text-center mb-11 hidden lg:block"><?php echo $card['label'] ?></div>
                 </div>
                 <div class="col-span-full w-full relative mb-11 -mx-[25px] md:-mx-10 lg:mx-0 lg:mb-0 lg:col-span-6 flex items-center xl:col-span-5">
-                    <div class="w-full relative pb-[66.45%] lg:pb-[100vh]">
+                    <div class="w-full relative pb-[66.45%] lg:w-[100%+57px] lg:-ml-[57px] lg:pb-[100vh]">
                         <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $card['image'], 'class' => 'w-full']); ?>
                     </div>
                 </div>
-                <div class="col-span-full mb-10 lg:mb-0 lg:row-start-auto lg:pt-24 lg:col-start-8 lg:col-span-5 xl:col-start-8 xl:col-span-4 wysiwyg flex flex-col items-center justify-center">
+                <div class="col-span-full mb-10 lg:mb-0 lg:row-start-auto lg:pt-20 xl:pt-24 lg:col-start-8 lg:col-span-5 xl:col-start-8 xl:col-span-4 wysiwyg flex flex-col items-center justify-center">
                     <div class="txt-h5 mb-5 hidden text-center lg:block lg:mb-7 2xl:mb-10"><?php echo $card['label'] ?></div>
                     <div class="text-orange txt-1 rounded-[50%] w-7 h-7 border border-orange items-center justify-center hidden lg:flex lg:mb-7 2xl:mb-10"><?php echo $counter ?></div>
                     <div class="cards-animate__content text-center">
