@@ -118,7 +118,11 @@
     @apply text-14 md:text-15 lg:text-16 font-bold uppercase leading-1.25;
 }
 .txt-4 {
+    font-size: calc(20px + (26 - 20) * ((100vw - 375px) / (1920 - 375)));
     
+    @include xxl {
+        @apply xxl:text-26;
+    }
 }
 
 .txt-5 {
