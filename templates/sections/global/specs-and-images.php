@@ -18,7 +18,7 @@ if($section) :
                 </div>
             <?php endif ;?>
             <?php if($description) :?>
-                <div class="col-span-full text-center leading-1.38 text-20 mb-11 lg:text-left lg:col-start-7 lg:col-span-6 xl:text-26 lg:mb-32 xl:mb-36"><?php echo $description ?></div>
+                <div class="txt-4 col-span-full text-center leading-1.38 mb-11 lg:text-left lg:col-start-7 lg:col-span-6 lg:mb-32 xl:mb-36"><?php echo $description ?></div>
             <?php endif ;?>
             <?php if($list) :?>
                 <div class="hidden lg:block col-span-full pl-6 mb-24 wysiwyg pt-10 lg:pl-0 lg:col-start-7 lg:col-span-6 lg:mb-24 xl:pt-16"><?php echo $list ?></div>

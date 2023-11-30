@@ -1,0 +1,11 @@
+.cards-animate {
+    &__content {
+        h2 {
+            @apply lg:w-[120%] lg:-ml-[10%] xl:w-[140%] xl:-ml-[20%] 2xl:w-full 2xl:ml-0;
+            
+            br {
+                @apply lg:hidden;
+            }
+        }
+    }
+}

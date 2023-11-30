@@ -44,7 +44,7 @@
                         </button>
                     </div>
                     <div>
-                        <div class="text-20 mb-2.5 text-center | lg:text-22 lg:text-left lg:mb-14 | xl:text-26">
+                        <div class="txt-4 mb-2.5 text-center | lg:text-22 lg:text-left lg:mb-14">
                             <p><?= $content; ?></p>
                         </div>
                         <div class="accordion-list mt-7 | lg:border-b-0 lg:pb-0 <?= $key == 0 ? 'border-b border-gray pb-11 mb-11' : 'pb-10 mb-10' ?>">

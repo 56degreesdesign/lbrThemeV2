@@ -12,7 +12,7 @@ if($section) :
             <div class="col-start-1 col-span-4 wysiwyg"><?php echo $content ?></div>
         <?php endif ;?>
         <?php if($description) :?>
-            <div class="col-start-7 col-span-6 text-20 xl:text-26"><?php echo $description ?></div>
+            <div class="txt-4 col-start-7 col-span-6"><?php echo $description ?></div>
         <?php endif ;?>
         <div class="col-start-1 col-span-5 xl:col-span-4">
             <div class="relative pb-[64.65%]">
