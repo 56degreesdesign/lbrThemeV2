@@ -18,7 +18,7 @@
     //@apply text-60 md:text-90 lg:text-120 xl:text-167; 
     @apply uppercase font-Reckless font-light text-center leading-none;
 
-    font-size: calc(60px + (90 - 60) * ((100vw - 300px) / (768 - 300)));
+    font-size: calc(60px + (90 - 60) * ((100vw - 375px) / (768 - 375)));
 
     @include md {
         font-size: calc(90px + (120 - 90) * ((100vw - 768px) / (1024 - 768)));
@@ -35,7 +35,7 @@
 .txt-h2 {
     //@apply text-35 md:text-40 lg:text-50 xl:text-70;
     @apply font-Reckless uppercase font-light leading-none;
-    font-size: calc(35px + (40 - 35) * ((100vw - 300px) / (768 - 300)));
+    font-size: calc(35px + (40 - 35) * ((100vw - 375px) / (768 - 375)));
     
     @include md {
         font-size: calc(40px + (50 - 40) * ((100vw - 768px) / (1024 - 768)));
@@ -53,7 +53,7 @@
     //@apply text-26 lg:text-30 xl:text-40;
     @apply font-Reckless uppercase font-light leading-1.125;
 
-    font-size: calc(26px + (26 - 26) * ((100vw - 300px) / (768 - 300)));
+    font-size: calc(26px + (26 - 26) * ((100vw - 375px) / (768 - 375)));
 
     @include md {
         font-size: calc(26px + (30 - 26) * ((100vw - 768px) / (1024 - 768)));
@@ -71,7 +71,7 @@
     //@apply text-14 md:text-17 lg:text-22 xl:text-25;
     @apply font-bold uppercase leading-1.2;
 
-    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (768 - 300)));
+    font-size: calc(14px + (17 - 14) * ((100vw - 375px) / (768 - 375)));
 
     @include md {
         font-size: calc(22px + (17 - 22) * ((100vw - 768px) / (1024 - 768)));
@@ -89,7 +89,7 @@
     //@apply text-14 md:text-17 xl:text-20;
     @apply font-bold uppercase leading-1.25;
 
-    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (768 - 300)));
+    font-size: calc(14px + (17 - 14) * ((100vw - 375px) / (768 - 375)));
 
     @include md {
         font-size: calc(20px + (17 - 20) * ((100vw - 768px) / (1024 - 768)));
@@ -132,7 +132,7 @@
     //@apply text-40 md:text-50 lg:text-60 xl:text-70;
     @apply font-Reckless uppercase font-light leading-none text-beige text-center;
 
-    font-size: calc(40px + (50 - 40) * ((100vw - 300px) / (768 - 300)));
+    font-size: calc(40px + (50 - 40) * ((100vw - 375px) / (768 - 375)));
 
     @include md {
         font-size: calc(50px + (60 - 50) * ((100vw - 768px) / (1024 - 768)));
