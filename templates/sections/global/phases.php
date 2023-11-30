@@ -6,7 +6,7 @@ $prev_phase = $section['previous_phase'] ?? false;
 $current_phase = $section['current_phase'] ?? false;
 if($section) :
 ?>
-    <section class="bg-orange pt-11 pb-24 md:pt-16 lg:pt-20 lg:pb-32 xl:pt-28">
+    <section class="bg-orange pt-11 pb-20 md:pt-16 lg:pt-20 lg:pb-32 xl:pt-28">
         <div class="container grid-layout">
             <h5 class="col-span-full lg:col-span-6 txt-h5 text-center mb-4 lg:mb-0 lg:text-left"><?php echo $header?></h5>
             <div class="col-span-full lg:col-span-3 txt-1 mb-11 lg:mb-32 x:mb-40 2xl:mb-56"><?php echo $content ?></div>

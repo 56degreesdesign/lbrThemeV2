@@ -93,7 +93,7 @@ onMounted(() => {
         </template>
     </category-list>
 
-    <div class="col-span-full grid grid-cols-1 gap-y-10 mb-11 md:mb-28 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 lg:mb-32 xl:mb-40">
+    <div class="col-span-full grid grid-cols-1 gap-y-11 mb-11 md:mb-28 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 lg:mb-32 xl:mb-40">
         <BoxPostPost v-for="(post, index) in printPosts" :key="`box-post-post-${post.id}-${index}`" :post="post" class="load" />
     </div>
     

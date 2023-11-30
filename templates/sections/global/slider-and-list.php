@@ -7,16 +7,17 @@ $left_col = $section['left_col'] ?? false;
 $right_col = $section['right_col'] ?? false;
 $slider_position = $section['slider_position'] ?? false;
 $anchor = $section['anchor'] ?? false;
+$bigger_padding = $section['bigger_padding'] ?? false;
 ?>
 
-<section id="<?php echo $anchor ?>" class="bg-beige-light pb-11 md:pb-32 lg:pb-44">
+<section id="<?php echo $anchor ?>" class="bg-beige-light md:pb-32 lg:pb-44 <?php echo ($bigger_padding ? 'pb-20' : 'pb-11'); ?>">
     <div class="container grid-layout">
-        <div class="col-span-full text-center md:text-left <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>">
+        <div class="col-span-full text-center md:text-left <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>" >
             <?php if($heading) :?>
-                <h3 class="txt-h3 mb-6 md:mb-8 lg:mb-12"><?php echo $heading ?></h3>
+                <h3 class="txt-h3 mb-7 md:mb-8 lg:mb-12"><?php echo $heading ?></h3>
             <?php endif ;?>
             <?php if($content) :?>
-                <p class="txt-1 mb-8 md:mb-10 lg:mb-12 xl:mb-16"><?php echo $content ?></p>
+                <p class="txt-1 mb-7 md:mb-10 lg:mb-12 xl:mb-16"><?php echo $content ?></p>
                 <div class="w-full h-px bg-gray mb-8 hidden md:block md:mb-10 lg:mb-12 xl:mb-16"></div>
             <?php endif ;?>
         </div>

@@ -6,7 +6,7 @@ $slides = $section['slides'] ?? false;
 ?>
 
 <?php if($section) : ?>
-    <section class="bg-beige pb-16 md:pb-24 lg:pb-32 xl:pb-40">
+    <section class="bg-beige pb-20 md:pb-24 lg:pb-32 xl:pb-40">
         <div class="container grid-layout">
             <div class="col-span-full flex flex-col lg:col-start-1 lg:col-span-6">
                 <?php if($image) :?>

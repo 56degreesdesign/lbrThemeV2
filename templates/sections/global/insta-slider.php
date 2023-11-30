@@ -7,7 +7,7 @@ $links = get_field('links', 'option') ?? false;
 
 ?>
 <?php if($section) : ?>
- <section class="bg-orange relative overflow-hidden pt-11 pb-24 md:py-24 lg:py-32 xl:py-40">
+ <section class="bg-orange relative overflow-hidden pt-11 pb-20 md:py-24 lg:py-32 xl:py-40">
      <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="<?php echo $background['url']?>" alt="">
      <div class="container grid-layout">
          <?php if($heading) : ?>
@@ -17,7 +17,7 @@ $links = get_field('links', 'option') ?? false;
                  </h3>
              </div>
         <?php endif ;?>
-         <div class="col-span-full flex justify-center gap-x-2 mb-11 lg:hidden">
+         <div class="col-span-full flex justify-center gap-x-2 mb-11 lg:hidden text-14">
              <a class="font-bold inline-block underline-animation-black uppercase" href="<?php echo $links['instagram']['url'] ?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
              <a class="font-bold inline-block underline-animation-black uppercase" href="<?php echo $links['facebook']['url'] ?>" target="<?php echo $links['facebook']['target'] ?>"><?php echo $links['facebook']['title'] ?></a>
 

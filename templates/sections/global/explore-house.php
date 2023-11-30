@@ -12,14 +12,14 @@ $big_padding = $section['big_padding'] ?? false;
 
 if($section) :
     ?>
-    <section class="bg-beige pt-8 <?php echo ($big_padding ? 'pb-24' : 'pb-4'); ?> lg:pb-40 lg:pt-0">
+    <section class="bg-beige pt-11 <?php echo ($big_padding ? 'pb-20 md:pb-24' : ''); ?> lg:pb-40 lg:pt-0">
         <div class="container grid-layout grid-flow-dense">
             <div class="col-span-full lg:hidden">
                 <?php if($label) :?>
-                    <div class="mb-8 text-14 font-bold text-center uppercase "><?php echo $label ?></div>
+                    <div class="mb-7 -mt-11 text-14 font-bold text-center uppercase"><?php echo $label ?></div>
                 <?php endif ;?>
             </div>
-            <h3 class="col-span-full mb-5 text-center txt-h2 lg:hidden"><?php echo $heading ?></h3>
+            <h3 class="col-span-full mb-4 md:mb-5 text-center txt-h2 lg:hidden"><?php echo $heading ?></h3>
             <div class="col-span-full <?php echo ($side) ? 'lg:col-start-2 lg:col-span-3' : 'lg:col-start-9 lg:col-span-3'; ?>">
                 <div class="w-full h-full flex flex-col items-center justify-center lg:items-start">
                     <h3 class="txt-h2 mb-7 hidden lg:block"><?php echo $heading ?></h3>
@@ -37,7 +37,7 @@ if($section) :
                 </div>
             </div>
             <div class="col-span-full lg:hidden">
-                <div class="wysiwyg text-center mb-11">
+                <div class="wysiwyg text-center mb-7 md:mb-11">
                     <?php echo $content ?>
                 </div>
                 <div class="flex justify-center">

@@ -7,7 +7,7 @@ $right_col = $section['right_column'] ?? false;
 $anchor = $section['anchor'] ?? false;
 
 if($section) :?>
-<section id="<?php echo $anchor ?>" class="bg-beige py-20 md:py-26 lg:py-32 xl:py-40">
+<section id="<?php echo $anchor ?>" class="bg-beige pt-11 pb-20 md:py-26 lg:py-32 xl:py-40">
     <div class="container grid-layout">
         <?php if($content) :?>
             <div class="col-span-full wysiwyg text-center"><?php echo $content ?></div>

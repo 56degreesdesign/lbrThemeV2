@@ -17,7 +17,7 @@ $props = json_encode($section, JSON_HEX_APOS);
 <?php endif ;?>
 
 <?php if($data && !$interactive) :?> 
-<section id="<?php echo $anchor ?>" class="bg-beige pt-16 pb-72  lg:pt-28 lg:pb-16 min-[700px]:h-auto min-[700px]:py-14">
+<section id="<?php echo $anchor ?>" class="bg-beige pt-20 pb-72 lg:pt-28 lg:pb-16 min-[700px]:h-auto min-[700px]:py-14">
     <div class="container grid-layout">
         <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mb-10 lg:mb-10 xl:mb-14 xl:mt-6 xl:col-span-3"><?php echo $data['heading'] ?></h3>
         <div class="col-span-full flex flex-col items-center justify-center min-[700px]:hidden">

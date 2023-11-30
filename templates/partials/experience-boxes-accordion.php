@@ -17,7 +17,7 @@ if($boxes) :
             </div>
             <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
                 <div class="flex flex-col">
-                    <div class="swiper small-carousel relative w-full mt-6 mb-7">
+                    <div class="swiper small-carousel relative w-full mt-7 mb-7">
                         <?php (count($box['slider']) > 1) ? get_template_part('templates/partials/swiper-nav', null, ['desktop_absolute' => true ]) : ''; ?>
                         <div class="swiper-wrapper">
                             <?php foreach ($box['slider'] as $slide) : ?>
@@ -29,7 +29,7 @@ if($boxes) :
                             <?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="wysiwyg mb-11 no-heading text-center">
+                    <div class="wysiwyg mb-8 md:mb-11 no-heading text-center">
                         <?php echo $box['content'] ?>
                     </div>
                 </div>

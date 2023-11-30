@@ -63,7 +63,6 @@
                     
                 a {
                     @apply relative;
-                    
                     &::before {
                         content: '';
                         background-image: url('../../assets/img/icon-arrow.svg');
@@ -82,6 +81,16 @@
             
             span {
                 @apply block text-11;
+            }
+        }
+        .current_page_item {
+            > a {
+                @apply underline underline-offset-4;
+                }
+        }
+        .current_page_parent {
+            > a {
+                @apply underline underline-offset-4;
             }
         }
     }

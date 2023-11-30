@@ -36,11 +36,11 @@
     $repeater = $section['repeater'] ?? false;
     $cookie = $_COOKIE['documents'] ?? false;
 ?>
-<section class="bg-beige pt-28 pb-24 | xl:pt-48 xl:pb-0">
+<section class="bg-beige pt-28 pb-20 | xl:pt-48 xl:pb-0">
     <div class="container grid-layout">
         <div class="col-span-full mb-11 | lg:mb-0 lg:col-span-6">
             <div class="text-center | lg:w-2/3 lg:text-left">
-                <h1 class="txt-h2 mb-6 | lg:mb-16"><?= get_the_title(); ?></h1>
+                <h1 class="txt-h2 mb-7 | lg:mb-16"><?= get_the_title(); ?></h1>
                 <div class="wysiwyg">
                     <?= $content; ?>
                 </div>
@@ -76,7 +76,7 @@
                         $documents = $item['documents'];
                     ?>
                     <div class="accordion-list border-orange lg:hidden <?= $index === 0 ? 'border-t' : null; ?>">
-                        <button class="accordion-list-button w-full flex justify-between py-6">
+                        <button class="accordion-list-button w-full flex justify-between py-4 md:py-6">
                             <h6 class="txt-3"><?= $heading; ?></h6>
                             <svg class="" xmlns="http://www.w3.org/2000/svg" width="18.406" height="18.406" viewBox="0 0 18.406 18.406">
                                 <g id="Group_127238" data-name="Group 127238" transform="translate(-271.5 -2280.5)">

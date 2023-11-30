@@ -1,7 +1,7 @@
 <template>
     <div class="sc-resort__map container" :class="curCategory">
         <div class="col-span-full flex flex-col items-center h-[90vh] min-[700px]:hidden">
-            <h3 class="text-center txt-h3 mt-24" v-html="all.heading"></h3>
+            <h3 class="text-center txt-h3 mt-20 md:mt-24" v-html="all.heading"></h3>
 
             <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
                 <g id="Rotate_Device_Icon" data-name="Rotate Device Icon" transform="translate(0 0.081)">

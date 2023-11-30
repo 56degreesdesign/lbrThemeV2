@@ -18,7 +18,7 @@
     //@apply text-60 md:text-90 lg:text-120 xl:text-167; 
     @apply uppercase font-Reckless font-light text-center leading-none;
 
-    font-size: calc(60px + (90 - 60) * ((100vw - 375px) / (768 - 375)));
+    font-size: calc(50px + (90 - 50) * ((100vw - 375px) / (768 - 375)));
 
     @include md {
         font-size: calc(90px + (120 - 90) * ((100vw - 768px) / (1024 - 768)));

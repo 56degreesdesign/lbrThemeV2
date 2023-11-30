@@ -3,7 +3,7 @@
     $heading = $section['heading'] ?? false;
     $posts = $section['posts'] ?? false;
 ?>
-<section class="bg-beige-light pt-28 pb-11 | lg:pt-48 md:pb-14">
+<section class="bg-beige-light pt-28 pb-20 | lg:pt-48">
     <div class="container grid-layout">
         <h1 class="col-span-full txt-h2 text-center lg:mb-28 xl:mb-32"><?= $heading; ?></h1>
         <?php if( $posts ): ?>
@@ -36,7 +36,7 @@
                                                 Read more</a>
                                         </div>
                                     </div>
-                                    <div class="col-span-full -order-1 mb-4 lg:order-2 lg:mb-0 lg:col-span-6">
+                                    <div class="col-span-full -order-1 mb-11 lg:order-2 lg:mb-0 lg:col-span-6">
                                         <div class="relative pb-[64.75%]">
                                             <a href="<?= get_the_permalink(); ?>" title="Read more">
                                                 <?php

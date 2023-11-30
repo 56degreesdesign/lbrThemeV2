@@ -28,7 +28,7 @@
                     <?php get_template_part('templates/partials/swiper-nav') ?>
                 </div>
                 <?php endif; ?>
-                <div class="mt-16">
+                <div class="mt-7 md:mt-16">
                     <div class="relative">
                         <h2 class="txt-h2 mb-3.5 text-center | lg:text-left lg:mb-2">
                             <?= $title; ?>
@@ -47,9 +47,9 @@
                         <div class="text-20 mb-2.5 text-center | lg:text-22 lg:text-left lg:mb-14 | xl:text-26">
                             <p><?= $content; ?></p>
                         </div>
-                        <div class="accordion-list mt-11 pb-11 mb-12 | lg:border-b-0 lg:pb-0 <?= $key == 0 ? 'border-b border-gray' : '' ?>">
+                        <div class="accordion-list mt-7 | lg:border-b-0 lg:pb-0 <?= $key == 0 ? 'border-b border-gray pb-11 mb-11' : 'pb-10 mb-10' ?>">
                             <div class="accordion-list-content accordion-list-content__no-gradient w-full" style="max-height: 0px;">
-                                <div class="overflow-hidden pl-6 border-t border-gray pb-10 pt-14 wysiwyg lg:pl-10">
+                                <div class="overflow-hidden pl-6 border-t border-gray pb-7 md:pb-10 pt-14 wysiwyg lg:pl-10">
                                     <?= $moreContent; ?>
                                 </div>
                             </div>

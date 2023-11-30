@@ -6,10 +6,10 @@ $anchor = $section['anchor'] ?? false;
 
 ?>
 <?php if ($section) : ?>
-<section id="<?php echo $anchor ?>" class="bg-beige-light pt-24 pb-20 md:pt-28 md:pb-26 lg:pt-32 lg:pb-40 xl:pt-40 xl:pb-52">
+<section id="<?php echo $anchor ?>" class="bg-beige-light pt-20 pb-20 md:pt-28 md:pb-26 lg:pt-32 lg:pb-40 xl:pt-40 xl:pb-52">
     <div class="container grid-layout">
         <?php if($content) :?>
-            <div class="col-span-full wysiwyg text-center mb-7 md:mb-9 lg:mb-20"><?php echo $content ?></div>
+            <div class="col-span-full wysiwyg text-center mb-3.5 md:mb-9 lg:mb-20"><?php echo $content ?></div>
         <?php endif ;?>
         <div class="col-span-full  lg:grid-cols-2 gap-x-14 gap-y-28 hidden lg:grid">
             <?php foreach ($team as $item) : ?>

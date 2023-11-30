@@ -8,12 +8,12 @@ $right_col = $section['right_col'] ?? false;
 if($section) :
 ?>
 
-<section class="bg-beige-light py-28 md:pt-28 lg:bg-beige lg:pt-40 xl:pt-48 lg:pb-32">
+<section class="bg-beige pt-28 pb-20 md:pt-28 lg:pt-40 xl:pt-48 lg:pb-32">
     <div class="container grid-layout">
         <h1 class="col-span-full mb-7 lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 2xl:col-start-2 2xl:col-span-4 txt-h2 text-center lg:mb-8"><?php echo $heading ?></h1>
         <div class="col-span-full lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:col-span-2 lg:mt-8 xl:mt-16 flex flex-col justify-between">
             <div class="wysiwyg text-center mb-11 lg:mb-12"><?php echo $left_col['content'] ?></div>
-            <svg class="mx-auto max-w-full mb-10 lg:mb-0" xmlns="http://www.w3.org/2000/svg" width="96.93" height="78.829" viewBox="0 0 96.93 78.829">
+            <svg class="mx-auto max-w-full mb-11 lg:mb-0" xmlns="http://www.w3.org/2000/svg" width="96.93" height="78.829" viewBox="0 0 96.93 78.829">
                 <g id="Group_126879" data-name="Group 126879" transform="translate(-4850.555 -8162)">
                     <g id="Group_4021" data-name="Group 4021" transform="translate(4850.555 8162)">
                         <path id="Path_3934" data-name="Path 3934" d="M-.916-1.035h0c-2.959.681-4.6,1.15-4.6,1.15v0s.513,1.6,1.576,4.37v0h0C.607,16.379,15.251,49.923,42.927,72.58l-.01.014.014-.011.009.008,0,0h0l.032-.049C76.361,45.189,90.767,2.005,91.363.185l.045-.068C52.972-11.587,12.483-4.121-.916-1.035" transform="translate(5.522 6.235)"/>
@@ -80,7 +80,7 @@ if($section) :
             <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => 'btn--mobile-wide btn--desktop-medium'] ) ?>
 
         </div>
-        <div class="col-span-full -mx-[25px] md:-mx-10 row-start-2 mb-14 lg:mx-0 lg:mb-0 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
+        <div class="col-span-full -mx-[25px] md:-mx-10 row-start-2 mb-11 md:mb-14 lg:mx-0 lg:mb-0 lg:mt-0 lg:col-start-7 lg:row-start-2 lg:row-span-2 lg:col-span-6">
             <div class="relative pb-[63.96%]">
                 <?php get_template_part('templates/partials/images/image', 'bg', ['image' => $image, 'class' => 'w-full']); ?>
             </div>

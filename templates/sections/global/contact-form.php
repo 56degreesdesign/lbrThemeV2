@@ -7,7 +7,7 @@ $form = $section['form'] ?? false;
 $anchor = $section['anchor'] ?? false;
 ?>
 
-<section id="<?php echo $anchor?>" class="bg-beige-light py-24 md:py-28 lg:bg-beige lg:pt-32 lg:pb-28 xl:pb-32 xl:pt-40">
+<section id="<?php echo $anchor?>" class="bg-beige py-20 md:py-28 lg:pt-32 lg:pb-28 xl:pb-32 xl:pt-40">
     <div class="container grid-layout">
         <?php if($label) :?>
             <h4 class="col-span-full hidden xl:block txt-h4 mb-10 lg:col-start-1 lg:col-span-2 lg:mb-0"><?php echo $label ?></h4>

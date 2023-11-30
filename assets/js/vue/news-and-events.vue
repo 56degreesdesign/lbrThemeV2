@@ -42,7 +42,7 @@ const slides = computed(() => {
 </script>
 
 <template>
-    <section class="bg-beige-light py-24 overflow-hidden lg:py-28">
+    <section class="bg-beige-light pt-11 pb-20 md:py-24 overflow-hidden lg:py-28">
         <div class="container grid-layout">
             <h3 class="col-span-full lg:col-start-1 lg:col-span-5 txt-h3 text-center lg:text-left">Resort news & EVENTS</h3>
             <div class="col-span-full lg:col-start-7 lg:col-span-full items-center gap-x-2.5 flex justify-center lg:justify-start my-7 lg:my-0">
@@ -61,7 +61,7 @@ const slides = computed(() => {
             <div class="col-start-4 lg:col-start-12 col-span-1 bg-beige-light z-10 flex justify-end">
                 <span class="swiper-pagination-el swiper-pagination-el--small">1/3</span>
             </div>
-            <div class="col-span-full mt-3.5 lg:mt-0">
+            <div class="col-span-full mt-4 lg:mt-0">
                 <swiper
                     :slides-per-view="1"
                     :space-between="50"
@@ -94,7 +94,7 @@ const slides = computed(() => {
                                     <h3 class="txt-h3 mb-7 lg:mb-9 xl:mb-12 2xl:mb-14">{{ slide.title}}</h3>
                                     <a class="text-14 font-bold underline uppercase block mb-5 lg:mb-8 lg:text-16" :href="slide.data.file.url" download>{{slide.data.file.caption}}</a>
                                     <div class="wysiwyg" v-html="slide.data.content"></div>
-                                    <div v-if="slide.data.button.link" class="mt-5 flex justify-center lg:justify-start lg:mt-m7 xl:mt-9">
+                                    <div v-if="slide.data.button.link" class="mt-7 flex justify-center lg:justify-start xl:mt-9">
                                         <a :class="{ 'bg-black': slide.data.button.color === 'btn--black', 'btn--orange': slide.data.button.color === 'orange' }" class="btn btn--mobile-narrow btn--desktop-medium" :href="slide.data.button.link.url">
                                             {{slide.data.button.link.title}}
                                         </a>
