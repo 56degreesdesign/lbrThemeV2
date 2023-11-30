@@ -39,6 +39,7 @@ module.exports = {
         extend: {
             screens: {
                 'menu': '1023px',
+                'xxl': '1536px',
             },
             fontSize: {
                 167: "10.438rem",

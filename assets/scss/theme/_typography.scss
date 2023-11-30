@@ -7,7 +7,11 @@
 }
 
 @mixin xl {
-    @media only screen and (min-width: 1280px) { @content; }
+    @media only screen and (min-width: 1536px) { @content; }
+}
+
+@mixin xxl {
+    @media only screen and (min-width: 1536px) { @content; }
 }
 
 .txt-h1 {
@@ -21,11 +25,11 @@
     }
 
     @include lg {
-        font-size: calc(120px + (167 - 120) * ((100vw - 1024px) / (1280 - 1024)));
+        font-size: calc(120px + (167 - 120) * ((100vw - 1024px) / (1536 - 1024)));
     }
 
-    @include xl {
-        @apply xl:text-167;
+    @include xxl {
+        @apply xxl:text-167;
     }
 }
 .txt-h2 {
@@ -38,11 +42,11 @@
     }
     
     @include lg {
-        font-size: calc(50px + (70 - 50) * ((100vw - 1024px) / (1280 - 1024)));
+        font-size: calc(50px + (70 - 50) * ((100vw - 1024px) / (1536 - 1024)));
     }
     
-    @include xl {
-        @apply xl:text-70;
+    @include xxl {
+        @apply xxl:text-70;
     }
 }
 .txt-h3 {
@@ -56,11 +60,11 @@
     }
 
     @include lg {
-        font-size: calc(30px + (40 - 30) * ((100vw - 1024px) / (1280 - 1024)));
+        font-size: calc(30px + (40 - 30) * ((100vw - 1024px) / (1536 - 1024)));
     }
 
-    @include xl {
-        @apply xl:text-40;
+    @include xxl {
+        @apply xxl:text-40;
     }
 }
 .txt-h4 {
@@ -74,11 +78,11 @@
     }
 
     @include lg {
-        font-size: calc(22px + (25 - 22) * ((100vw - 1024px) / (1280 - 1024)));
+        font-size: calc(22px + (25 - 22) * ((100vw - 1024px) / (1536 - 1024)));
     }
 
-    @include xl {
-        @apply xl:text-25;
+    @include xxl {
+        @apply xxl:text-25;
     }
 }
 .txt-h5 {
@@ -92,11 +96,11 @@
     }
 
     @include lg {
-        font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1280 - 1024)));
+        font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1536 - 1024)));
     }
 
-    @include xl {
-        @apply xl:text-20;
+    @include xxl {
+        @apply xxl:text-20;
     }
 }
 .txt-h6 {
@@ -135,11 +139,11 @@
     }
 
     @include lg {
-        font-size: calc(60px + (70 - 60) * ((100vw - 1024px) / (1280 - 1024)));
+        font-size: calc(60px + (70 - 60) * ((100vw - 1024px) / (1536 - 1024)));
     }
 
-    @include xl {
-        @apply xl:text-70;
+    @include xxl {
+        @apply xxl:text-70;
     }
 }
 
