@@ -17170,6 +17170,7 @@ module.exports = function () {
         accordion.button.addEventListener("click", function () {
           if (window.innerWidth >= 1024 && accordionElement.closest(".accordion-list-group")) {
             var group = accordionElement.closest(".accordion-list-group");
+            console.log(group);
             group.querySelectorAll(".accordion-list").forEach(function (el) {
               if (accordion.accordion !== el) {
                 if (!accordion.isOpen) {
@@ -25610,7 +25611,7 @@ module.exports = jQuery;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"8d937b820f937b69","assets_js_vue_map-directions_vue":"7e5ee17d2e7dcbef","assets_js_vue_news-and-events_vue":"4fad1cd1e2bf0cae","assets_js_vue_resort_vue":"1f5f68698e3569eb","assets_js_vue_floorplans_vue":"80f511992edfeca8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".bundle.min.js?h=" + {"assets_js_vue_list-of-posts_vue":"8d937b820f937b69","assets_js_vue_map-directions_vue":"7e5ee17d2e7dcbef","assets_js_vue_news-and-events_vue":"4fad1cd1e2bf0cae","assets_js_vue_resort_vue":"4696e89687d74fda","assets_js_vue_floorplans_vue":"80f511992edfeca8","node_modules_gsap_index_js":"e9471d50a5f42cd6","node_modules_gsap_ScrollTrigger_js":"b91d19193d2da0f1","assets_js_components_gsap_cards-animate_js":"fdffd20947cec051","node_modules_swiper_swiper-bundle_mjs":"3b677a62e4fbbb91"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

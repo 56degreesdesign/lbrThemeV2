@@ -3,7 +3,6 @@ $section = $args['data'] ?? false;
 $heading = $section['heading'] ?? false;
 $background_image = $section['background_image'] ?? false;
 $location = $section['location'] ?? false;
-$button = $section['button'] ?? false;
 ?>
 
 <?php if ($section) : ?>
@@ -24,11 +23,6 @@ $button = $section['button'] ?? false;
             <a href="#casitas-explore" class="pointer-events-auto">
                 <?php get_template_part('templates/partials/arrow-down', null, ['fill' => '#EEE3D6']); ?>
             </a>
-        </div>
-        <div class="w-full absolute bottom-10 left-0">
-            <div class="container w-full pointer-events-none flex justify-end">
-                <?php get_template_part( 'templates/partials/button', null, ['data' => $button, 'class' => ''] ) ?>
-            </div>
         </div>
     </section>
 <?php endif ;?>

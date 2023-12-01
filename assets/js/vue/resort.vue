@@ -1,6 +1,6 @@
 <template>
     <div class="sc-resort__map container" :class="curCategory">
-        <div class="col-span-full flex flex-col items-center h-[90vh] min-[700px]:hidden">
+        <div class="col-span-full flex flex-col items-center h-[90vh] min-[650px]:hidden">
             <h3 class="text-center txt-h3 mt-20 md:mt-24" v-html="all.heading"></h3>
 
             <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
@@ -66,7 +66,7 @@
                 <img v-if="phase === '1' && !activePreview" :src="legendPhase1" alt="Legend">
             </div>
         </div>
-        <div  v-if="activePreview" class="col-span-full -mx-[25px] pb-[120%] md:-mx-10 lg:mx-0 lg:col-start-5 lg:col-span-8 relative lg:pb-[78%] bg-beige-light hidden min-[700px]:block">
+        <div  v-if="activePreview" class="col-span-full -mx-[25px] pb-[120%] md:-mx-10 lg:mx-0 lg:col-start-5 lg:col-span-8 relative lg:pb-[78%] bg-beige-light hidden min-[650px]:block">
             <div class="absolute top-5 right-5">
                 <svg class="cursor-pointer" @click="clearPreview()" xmlns="http://www.w3.org/2000/svg" width="18.677" height="18.676" viewBox="0 0 18.677 18.676">
                     <g id="Group_125755" data-name="Group 125755" transform="translate(6322.456 3589.494)">
@@ -3346,11 +3346,10 @@
                 </svg>
             </div>
         </div>
-        <p class="col-span-full mt-10 text-15 text-center lg:mt-14 lg:text-right xl:mt-20 hidden min-[700px]:block">Casitas square footages are approximate and subject to change without notice.</p>
-        <div class="col-span-full flex justify-center mt-5 hidden">
-            <a href="/contact" class="btn">RESERVE YOUR CASITA</a>
-
-        </div>
+        <p class="col-span-full mt-10 text-15 text-center lg:mt-14 lg:text-right xl:mt-20 hidden min-[650px]:block">Casitas square footages are approximate and subject to change without notice.</p>
+<!--        <div class="col-span-full flex justify-center mt-5 hidden">-->
+<!--            <a href="/contact" class="btn">RESERVE YOUR CASITA</a>-->
+<!--        </div>-->
     </div>
 </template>
 
@@ -3451,7 +3450,7 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-    @apply bg-orange uppercase px-5 xl:px-12 text-center pt-2.5 pb-2 text-15 w-fit h-fit text-beige-light font-bold rounded-full hover:bg-black duration-300 cursor-pointer;
+    @apply bg-orange uppercase px-5 xl:px-12 text-center pt-2 pb-1.5 text-15 w-fit h-fit text-beige-light font-bold rounded-full hover:bg-black duration-300 cursor-pointer;
     &--black {
         @apply bg-black/10 text-white;
         &.is-active {

@@ -15,7 +15,7 @@ if (!$hidden) :
     <?php
         $headrClass = is_front_page() ? '-translate-y-full transition-transform'  : null;
     ?>
-    <header class="mobile-menu__header <?= $headrClass; ?> fixed duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-30">
+    <header class="mobile-menu__header <?= $headrClass; ?> fixed duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-40 shadow-md">
         <div class="w-full shadow-lg bg-beige">
             <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">

@@ -110,6 +110,7 @@ module.exports = function () {
                     accordion.button.addEventListener("click", () => {
                         if (window.innerWidth >= 1024 && accordionElement.closest(".accordion-list-group")) {
                             const group = accordionElement.closest(".accordion-list-group");
+                            console.log(group)
 
                             group.querySelectorAll(".accordion-list").forEach(el => {
                                 if (accordion.accordion !== el) {
@@ -117,6 +118,7 @@ module.exports = function () {
                                         el.classList.remove("open");
                                     } else {
                                         el.classList.add("open");
+
                                     }
                                 }
                             })

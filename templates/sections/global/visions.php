@@ -63,7 +63,6 @@ if($section) :?>
                     <div class="wysiwyg mb-11 pr-9"><?php echo $right_col['content']?></div>
                 </div>
             </div>
-            
         </div>
 
     </div>

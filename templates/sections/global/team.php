@@ -14,7 +14,7 @@ $anchor = $section['anchor'] ?? false;
         <div class="col-span-full  lg:grid-cols-2 gap-x-14 gap-y-28 hidden lg:grid">
             <?php foreach ($team as $item) : ?>
             <div class="flex flex-col lg:flex-row col-span-1">
-                <h6 class="text-15 font-bold uppercase mb-4 lg:mb-0 lg:w-2/6"><?php echo $item['label'] ?></h6>
+                <h6 class="text-15 font-bold uppercase mb-4 lg:mb-0 lg:w-2/6 lg:pr-7"><?php echo $item['label'] ?></h6>
                 <div class="lg:w-4/6">
                     <?php if ($item['logo']) : ?> 
                     <div class="mb-8 min-h-[29px]">

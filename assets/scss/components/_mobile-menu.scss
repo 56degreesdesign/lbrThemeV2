@@ -1,7 +1,7 @@
 .mobile-menu {
     &__header {
         &--active {
-            @apply bg-green text-beige;
+            @apply bg-green text-beige shadow-none;
             
             &.active-submenu {
                 @apply bg-orange text-black;
