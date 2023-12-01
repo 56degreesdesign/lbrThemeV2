@@ -959,15 +959,6 @@ body {
   width: 0%;
 }
 
-.\!container {
-  width: 100% !important;
-  max-width: 1920px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.5625rem !important;
-  padding-right: 1.5625rem !important;
-}
-
 .container {
   width: 100%;
   max-width: 1920px;
@@ -977,25 +968,34 @@ body {
   padding-right: 1.5625rem;
 }
 
+.\!container {
+  width: 100% !important;
+  max-width: 1920px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5625rem !important;
+  padding-right: 1.5625rem !important;
+}
+
 @media (min-width: 768px) {
-  .\!container {
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-  }
   .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+  .\!container {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
 }
 
 @media (min-width: 1280px) {
-  .\!container {
-    padding-left: 3.563rem !important;
-    padding-right: 3.563rem !important;
-  }
   .container {
     padding-left: 3.563rem;
     padding-right: 3.563rem;
+  }
+  .\!container {
+    padding-left: 3.563rem !important;
+    padding-right: 3.563rem !important;
   }
 }
 .pointer-events-none {
@@ -1223,6 +1223,10 @@ body {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+.my-11 {
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
 }
 .-ml-5 {
   margin-left: -1.25rem;
@@ -1808,6 +1812,9 @@ body {
   -o-object-position: center;
      object-position: center;
 }
+.p-1 {
+  padding: 0.25rem;
+}
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2282,11 +2289,6 @@ body {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -2308,18 +2310,11 @@ body {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.\!filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
-}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.\!transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition-duration: 150ms !important;
+.\!filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -2337,6 +2332,13 @@ body {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.\!transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
 }
 .duration-300 {
   transition-duration: 300ms;
@@ -5942,6 +5944,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .xl\:block {
     display: block;
   }
+  .xl\:flex {
+    display: flex;
+  }
   .xl\:hidden {
     display: none;
   }
@@ -5966,6 +5971,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .xl\:flex-col {
     flex-direction: column;
+  }
+  .xl\:justify-between {
+    justify-content: space-between;
   }
   .xl\:gap-x-12 {
     -moz-column-gap: 3rem;

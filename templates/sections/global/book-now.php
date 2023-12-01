@@ -29,17 +29,17 @@
                 </div>
                 <?php endif; ?>
                 <div class="mt-7 md:mt-16">
-                    <div class="relative">
+                    <div class="relative xl:flex xl:justify-between">
                         <h2 class="txt-h2 mb-3.5 text-center | lg:text-left lg:mb-2">
                             <?= $title; ?>
                         </h2>
-                        <button class="hidden absolute bottom-0 right-0 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 | xl:block">
+                        <button class="hidden btn btn--black btn--desktop-sm | mt-auto xl:block">
                             Book now
                         </button>
                     </div>
                     <p class="txt-h5 mb-7 text-center | lg:text-left lg:mb-7"><strong><?= $price; ?></strong></p>
                     <div class="flex justify-center lg:justify-start">
-                        <button class="mb-11 bg-black rounded-full py-2.5 px-6 pointer-events-auto uppercase font-bold text-beige text-12 btn--mobile-wide btn--desktop-small | xl:hidden">
+                        <button class="mb-11 btn btn--black btn--mobile-wide btn--desktop-sm | xl:hidden">
                             Book now
                         </button>
                     </div>
