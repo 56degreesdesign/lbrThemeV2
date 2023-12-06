@@ -19,7 +19,7 @@ $button = $section['button'] ?? false;
                 <h1 class="txt-h2 text-center mb-11 lg:mb-14"><?php echo $heading ?></h1>
             <?php endif ;?>
             <?php if($content) :?>
-                <p class="text-center text-17 lg:w-1/2"><?php echo $content ?></p>
+                <p class="text-center text-17 lg:w-[70%] 2lg:w-1/2"><?php echo $content ?></p>
             <?php endif ;?>
         </div>
     </div>

@@ -19,7 +19,7 @@ $props = json_encode($section, JSON_HEX_APOS);
 <?php if($data && !$interactive) :?> 
 <section id="<?php echo $anchor ?>" class="bg-beige pt-20 pb-72 lg:pt-28 lg:pb-16 min-[650px]:h-auto min-[650px]:py-14">
     <div class="container grid-layout">
-        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mb-10 lg:mb-10 xl:mb-14 xl:mt-6 xl:col-span-3"><?php echo $data['heading'] ?></h3>
+        <h3 class="col-span-full text-center lg:text-left lg:col-start-1 lg:col-span-3 txt-h3 mb-10 lg:mb-10 xl:mb-14 xl:col-span-3"><?php echo $data['heading'] ?></h3>
         <div class="col-span-full flex flex-col items-center justify-center min-[650px]:hidden">
             <svg class="mt-32" xmlns="http://www.w3.org/2000/svg" width="99" height="78.081" viewBox="0 0 99 78.081">
                 <g id="Rotate_Device_Icon" data-name="Rotate Device Icon" transform="translate(0 0.081)">

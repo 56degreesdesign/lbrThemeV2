@@ -21,7 +21,7 @@ if($section) :
                 <?php endif ;?>
             </div>
             <h3 class="col-span-full mb-4 md:mb-5 text-center txt-h2 lg:hidden"><?php echo $heading ?></h3>
-            <div class="col-span-full <?php echo ($side) ? 'lg:col-start-2 lg:col-span-3' : 'lg:col-start-9 lg:col-span-3'; ?>">
+            <div class="col-span-full <?php echo ($side) ? 'lg:col-start-2 lg:col-span-4' : 'lg:col-start-9 lg:col-span-4'; ?>">
                 <div class="w-full h-full flex flex-col items-center justify-center lg:items-start">
                     <h3 class="txt-h2 mb-7 hidden lg:block"><?php echo $heading ?></h3>
                     <div class="wysiwyg text-left hidden lg:block">
