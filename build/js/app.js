@@ -17767,7 +17767,7 @@ var mobileMenu = /*#__PURE__*/function () {
               document.body.classList.toggle('overflow-hidden');
             });
             btnBack.addEventListener('click', function (e) {
-              menuWrapper.classList.remove('opacity-0');
+              menuWrapper.classList.remove('-translate-x-full');
               wrapper.classList.remove('active-submenu');
               header.classList.remove('active-submenu');
             });
@@ -17779,7 +17779,7 @@ var mobileMenu = /*#__PURE__*/function () {
                   console.log(submenu);
                   header.classList.add('active-submenu');
                   wrapper.classList.add('active-submenu');
-                  menuWrapper.classList.add('opacity-0');
+                  menuWrapper.classList.add('-translate-x-full');
                   submenuWrapper.innerHTML = submenu;
                 }
               });

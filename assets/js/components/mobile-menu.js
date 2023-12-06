@@ -17,7 +17,7 @@ const mobileMenu = async function () {
         });
 
         btnBack.addEventListener('click', (e) => {
-            menuWrapper.classList.remove('opacity-0');
+            menuWrapper.classList.remove('-translate-x-full');
             wrapper.classList.remove('active-submenu');
             header.classList.remove('active-submenu');
         });
@@ -32,7 +32,7 @@ const mobileMenu = async function () {
 
                     header.classList.add('active-submenu');
                     wrapper.classList.add('active-submenu');
-                    menuWrapper.classList.add('opacity-0');
+                    menuWrapper.classList.add('-translate-x-full');
                     submenuWrapper.innerHTML = submenu;
                 }
             })

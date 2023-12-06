@@ -1541,6 +1541,10 @@ body {
 .flex-shrink {
   flex-shrink: 1;
 }
+.-translate-x-full {
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1730,6 +1734,9 @@ body {
 }
 .overflow-clip {
   overflow: clip;
+}
+.overflow-x-clip {
+  overflow-x: clip;
 }
 .whitespace-nowrap {
   white-space: nowrap;
@@ -4402,6 +4409,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   background-color: rgb(60 74 56 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(238 227 214 / var(--tw-text-opacity));
+  transition-duration: 300ms;
 }
 .mobile-menu__wrapper--active {
   --tw-translate-y: 0px;
@@ -4410,21 +4418,23 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 .mobile-menu__wrapper.active-submenu {
   --tw-bg-opacity: 1;
   background-color: rgb(204 136 93 / var(--tw-bg-opacity));
+}
+.mobile-menu__wrapper.active-submenu .mobile-menu__wrapper__text {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 .mobile-menu__wrapper__submenu {
-  height: 0px;
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   overflow: hidden;
   padding-top: 0px;
-  opacity: 0;
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
   transition-duration: 500ms;
 }
 .active-submenu .mobile-menu__wrapper__submenu {
-  height: auto;
-  opacity: 1;
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .mobile-menu__wrapper__submenu ul {
   list-style-type: none;
@@ -4449,7 +4459,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   content: "";
   background-image: url("../../assets/img/icon-arrow.svg");
   position: absolute;
-  right: 0px;
+  right: 25px;
   top: 50%;
   display: block;
   height: 11px;
@@ -6032,10 +6042,6 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  .xl\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-  }
   .xl\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -6240,6 +6246,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .\32xl\:pb-32 {
     padding-bottom: 8rem;
   }
+  .\32xl\:pb-36 {
+    padding-bottom: 9rem;
+  }
   .\32xl\:pb-40 {
     padding-bottom: 10rem;
   }
@@ -6272,9 +6281,6 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .\32xl\:pt-52 {
     padding-top: 13rem;
-  }
-  .\32xl\:pb-36 {
-    padding-bottom: 9rem;
   }
   .\32xl\:text-20 {
     font-size: 1.25rem;
