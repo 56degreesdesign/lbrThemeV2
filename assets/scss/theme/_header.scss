@@ -57,7 +57,7 @@
         > li {
             @apply relative;
             > a {
-                @apply text-14 no-underline font-bold underline-offset-2 uppercase underline-animation-black;
+                @apply text-14 no-underline font-bold underline-offset-2 uppercase underline-animation-black underline-animation-black--revert;
             }
             .sub-menu {
                 @apply pointer-events-none absolute top-4 pt-10 pb-3 left-0 opacity-0 duration-300 text-orange uppercase;
@@ -76,6 +76,17 @@
                         }
                     }
                 }
+            }
+      
+        }
+        .current_page_item {
+            > a {
+                @apply underline underline-offset-4;
+            }
+        }
+        .current_page_parent {
+            > a {
+                @apply underline underline-offset-4;
             }
         }
     }

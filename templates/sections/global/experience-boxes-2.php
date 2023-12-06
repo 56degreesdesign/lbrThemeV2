@@ -11,7 +11,7 @@ $boxes = array_map(function($box) {
     return $box['slider_with_content'] ?? false;
 }, $section);
 ?>
-<section id="<?php echo $anchor ?>" class="bg-beige-light pt-11 pb-20 md:pt-24 md:pb-20 lg:py-36 xl:py-48"> 
+<section id="<?php echo $anchor ?>" class="bg-beige-light pt-11 pb-20 md:py-20 lg:py-24 2lg:py-32 2xl:py-48 " > 
     <div class="container grid-layout grid-flow-dense lg:gap-y-12 gap-x-[30px]">
         <!-- Box 1 -->
         <div class="col-start-2 col-span-11 xl:col-start-2 xl:col-span-9 grid-cols-9 gap-x-[30px] hidden lg:grid">
@@ -110,7 +110,7 @@ $boxes = array_map(function($box) {
         <!-- Mobile accordion -->
         <?php get_template_part('templates/partials/experience-boxes-accordion', null, ['data' => $boxes]) ?>
         
-        <div class="col-span-full flex justify-center mt-11 md:mt-20 lg:mt-40 xl:mt-52">
+        <div class="col-span-full flex justify-center mt-11 md:mt-20 lg:mt-24 2lg:mt-32 2xl:mt-52">
             <a class="btn btn--orange btn--mobile-wide btn--desktop-wide" href="/contact">
                 INQUIRE TO LEARN MORE</a>
         </div>

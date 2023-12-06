@@ -23,8 +23,8 @@ $counter = 1;
                     </div>
                 </div>
                 <div class="col-span-full mb-10 lg:mb-0 lg:row-start-auto lg:pt-20 xl:pt-24 lg:col-start-8 lg:col-span-5 xl:col-start-8 xl:col-span-4 wysiwyg flex flex-col items-center justify-center">
-                    <div class="txt-h5 mb-5 hidden text-center lg:block lg:mb-7 2xl:mb-10"><?php echo $card['label'] ?></div>
-                    <div class="text-orange txt-1 rounded-[50%] w-7 h-7 border border-orange items-center justify-center hidden lg:flex lg:mb-7 2xl:mb-10"><?php echo $counter ?></div>
+                    <div class="txt-h5 mb-5 hidden text-center lg:block lg:mb-10"><?php echo $card['label'] ?></div>
+                    <div class="text-orange txt-1 rounded-[50%] w-5 h-5 2lg:w-6 2lg:h-6 2xl:w-7 2xl:h-7 border border-orange items-center justify-center hidden lg:flex lg:mb-10"><?php echo $counter ?></div>
                     <div class="cards-animate__content text-center">
                         <?php echo $card['content'] ?>
                     </div>

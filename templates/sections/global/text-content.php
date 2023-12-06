@@ -10,7 +10,7 @@ $bigger_content = $section['bigger_content'] ?? false;
 $smaller_padding = $section['smaller_padding'] ?? false;
 ?>
 
-<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> pt-11 md:py-20 lg:py-32 xl:py-40 <?php echo ($smaller_padding ? 'pb-11' : 'pb-20'); ?>">
+<section id="<?php echo $anchor ?>" class="bg-<?php echo $background_colour ?> pt-11 md:py-20 lg:py-24 2lg:py-32 2xl:py-40 <?php echo ($smaller_padding ? 'pb-11' : 'pb-20'); ?>">
     <div class="container grid-layout">
         <div class="col-span-full flex flex-col items-center lg:mb-0">
             <div class="text-content wysiwyg <?php echo ($bigger_content ? 'wysiwyg--big' : ''); ?>">

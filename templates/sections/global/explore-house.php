@@ -8,11 +8,12 @@ $heading = $section['heading'] ?? false;
 $label = $section['label'] ?? false; 
 $border = $section['bottom_border'] ?? false;
 $big_padding = $section['big_padding'] ?? false;
+$top_padding=$section['top_padding'] ?? false;
 
 
 if($section) :
     ?>
-    <section class="bg-beige pt-11 <?php echo ($big_padding ? 'pb-20 md:pb-24' : ''); ?> lg:pb-40 lg:pt-0">
+    <section class="bg-beige pt-11 <?php echo ($big_padding ? 'pb-20 md:pb-24' : ''); ?> <?php echo ($top_padding ? 'lg:pt-24 2xl:pt-40' : 'lg:pt-0'); ?> lg:pb-24 2xl:pb-40">
         <div class="container grid-layout grid-flow-dense">
             <div class="col-span-full lg:hidden">
                 <?php if($label) :?>
@@ -37,7 +38,7 @@ if($section) :
                 </div>
             </div>
             <div class="col-span-full lg:hidden">
-                <div class="wysiwyg text-center mb-7 md:mb-11">
+                <div class="wysiwyg text-center mb-7 md:mb-11 house-page-content">
                     <?php echo $content ?>
                 </div>
                 <div class="flex justify-center">

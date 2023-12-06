@@ -7,7 +7,7 @@ $links = get_field('links', 'option') ?? false;
 
 ?>
 <?php if($section) : ?>
- <section class="bg-orange relative overflow-hidden pt-11 pb-20 md:py-24 lg:py-32 xl:py-40">
+ <section class="bg-orange relative overflow-hidden pt-11 pb-20 md:py-24 2lg:py-32 2xl:py-40">
      <img class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" src="<?php echo $background['url']?>" alt="">
      <div class="container grid-layout">
          <?php if($heading) : ?>

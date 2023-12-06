@@ -27,9 +27,9 @@ const mobileMenu = async function () {
                 
                 if ( link.parentElement.classList.contains('menu-item-has-children') ) {
                     e.preventDefault();
-                    
                     const submenu = link.nextSibling.nextSibling.outerHTML;
-                    
+                    console.log(submenu)
+
                     header.classList.add('active-submenu');
                     wrapper.classList.add('active-submenu');
                     menuWrapper.classList.add('opacity-0');

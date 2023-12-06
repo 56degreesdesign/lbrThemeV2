@@ -16,7 +16,7 @@ const select = (option) => {
 
 <template>
    
-    <section class="bg-beige pt-20 pb-11 md:pt-14 md:pb-32 lg:pt-20 lg:pb-44 xl:pt-24 xl:pb-52">
+    <section class="bg-beige pt-20 pb-11 md:pt-14 md:pb-32 lg:py-24 2lg:py-32 2xl:pt-24 2xl:pb-52">
         <div class="container grid-layout">
             <div class="col-span-full flex flex-col pt-7 md:pt-10 lg:pt-0 lg:col-span-6 2xl:pt-14">
                 <span v-if="sectionData.heading" class="txt-h4 mb-4 text-center md:mb-6 lg:text-left">{{sectionData.heading}}</span>

@@ -8,7 +8,7 @@ $right_col = $section['right_col'] ?? false;
 if($section) :
 ?>
 
-<section class="bg-beige pt-28 pb-20 md:pt-28 lg:pt-40 xl:pt-48 lg:pb-32">
+<section class="bg-beige pt-28 pb-20 md:pt-28 lg:pb-24 lg:pt-40 xl:pt-48 2lg:pb-32">
     <div class="container grid-layout">
         <h1 class="col-span-full mb-7 lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 2xl:col-start-2 2xl:col-span-4 txt-h2 text-center lg:mb-8"><?php echo $heading ?></h1>
         <div class="col-span-full lg:col-start-1 lg:col-span-2 xl:col-start-2 xl:col-span-2 lg:mt-8 xl:mt-16 flex flex-col justify-between">

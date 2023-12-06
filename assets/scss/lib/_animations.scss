@@ -90,6 +90,19 @@
             width: 0%;
         }
     }
+    &--revert {
+        &::after {
+            width: 0%;
+
+        }
+        &:hover {
+            &::after {
+                width: 0%;
+                @apply w-full;
+
+            }
+        }
+    }
 }
 
 .underline-animation-orange {

@@ -140,17 +140,15 @@
     
 }
 .intro-heading {
-    //@apply text-40 md:text-50 lg:text-60 xl:text-70;
-    @apply font-Reckless uppercase font-light leading-none text-beige text-center;
-
     font-size: calc(40px + (50 - 40) * ((100vw - 375px) / (768 - 375)));
+    @apply font-Reckless uppercase font-light leading-none text-beige text-center;
 
     @include md {
         font-size: calc(50px + (60 - 50) * ((100vw - 768px) / (1024 - 768)));
     }
-
+    
     @include lg {
-        font-size: calc(60px + (70 - 60) * ((100vw - 1024px) / (1920 - 1024)));
+        font-size: calc(50px + (70 - 50) * ((100vw - 1024px) / (1920 - 1024)));
     }
 
     @include xxl {

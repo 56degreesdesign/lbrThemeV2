@@ -73,7 +73,7 @@ $module: '.wysiwyg';
             @apply txt-h1;
         }
         p {
-            @apply text-20 lg:text-24 xl:text-26;
+            @apply text-20 2lg:text-22 2xl:text-26;
         }
     }
 }
@@ -121,7 +121,7 @@ $module: '.wysiwyg-headings';
         @apply txt-h4;
       } 
     h5 {
-        @apply txt-h5 mb-4 lg:mb-5 xl:mb-8;
+        @apply txt-h5 mb-4 lg:mb-5 2lg:mb-7 xl:mb-8;
     }
     h6 {
         @apply txt-3 mb-4 lg:mb-5;

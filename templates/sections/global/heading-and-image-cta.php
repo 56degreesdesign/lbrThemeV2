@@ -14,7 +14,7 @@ $anchor = $section['anchor'] ?? false;
 ?>
 
 <?php if ($section) : ?>
-    <section id="<?php echo $anchor ?>" class="bg-beige relative py-20 md:py-28 lg:py-32 xl:py-40">
+    <section id="<?php echo $anchor ?>" class="bg-beige relative py-20 md:py-24 2lg:py-32 2xl:py-40">
         <?php if ($display_bg_pattern) : ?>
             <img class="absolute-full object-cover" src="<?php echo $bg_pattern['url'] ?>" alt="">
         <?php endif ;?>

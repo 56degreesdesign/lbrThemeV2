@@ -7,7 +7,7 @@
 ?>
 
 
-<section class="bg-beige pb-20 md:pb-24 lg:pb-32">
+<section class="bg-beige pb-20 md:pb-24 2lg:pb-32">
     <div class="container grid-layout">
         <div class="col-span-full">
             <?php

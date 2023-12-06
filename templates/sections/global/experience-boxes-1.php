@@ -10,7 +10,7 @@ $boxes = array_map(function($box) {
     return $box['slider_with_content'] ?? false;
 }, $section);
 ?>
-<section id="<?php echo $anchor ?>" class="bg-beige-light pt-11 pb-11 md:pb-20 md:pt-32 lg:py-36 xl:py-48">
+<section id="<?php echo $anchor ?>" class="bg-beige-light py-11 md:py-20 lg:py-24 2lg:py-32 2xl:py-48">
     <div class="container grid-layout grid-flow-dense lg:gap-y-12 gap-x-[30px]">
      <!-- Box 1 -->
         <div class="col-start-3 col-span-full grid-cols-10 gap-x-[30px] hidden lg:grid">

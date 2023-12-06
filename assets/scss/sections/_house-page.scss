@@ -2,4 +2,11 @@
     h2 {
         @apply hidden lg:block;
     }
+    p {
+        @apply txt-1;
+        
+        strong {
+            @apply text-16;
+        }
+    }
 }

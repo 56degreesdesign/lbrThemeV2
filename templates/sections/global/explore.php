@@ -5,7 +5,7 @@ $left_col = $section['left_column'] ?? false;
 $right_col = $section['right_column'] ?? false;
 ?>
 <?php if($section) : ?>
-<section class="bg-beige-light pt-12 pb-20 md:pt-16 md:pb-28 lg:pt-20 lg:pb-24 xl:pb-36">
+<section class="bg-beige-light pt-12 pb-20 md:pt-16 md:pb-28 lg:pt-20 lg:pb-24 2lg:pb-32 2xl:pb-36">
     <div class="container grid grid-cols-2">
         <?php if($heading) :?>
             <h4 class="col-span-full text-center mb-10 md:mb-14 lg:mb-20 txt-h5 hidden lg:block"><?php echo $heading ?> </h4>

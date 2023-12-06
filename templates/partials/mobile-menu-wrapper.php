@@ -20,7 +20,7 @@
                 ));
             ?>
         </div>
-        <div>
+        
             <div class="flex justify-center mb-12 gap-x-1">
                 <?php if ($links['instagram']) : ?>
                     <a class="text-14 font-bold uppercase underline text-center tracking-10" href="<?php echo $links['instagram']['url']?>" target="<?php echo $links['instagram']['target'] ?>"><?php echo $links['instagram']['title'] ?></a>
@@ -35,6 +35,6 @@
             <div class="text-13 text-center mb-7">
                 <?= $footer['copy_mobile']; ?>
             </div>
-        </div>
+        
     </div>
 </div>

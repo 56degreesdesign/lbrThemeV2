@@ -17,7 +17,7 @@ if (!$hidden) :
     ?>
     <header class="mobile-menu__header <?= $headrClass; ?> fixed duration-300 top-0 left-0 w-full max-h-[65px] overflow-hidden lg:max-h-none z-40 shadow-md">
         <div class="w-full shadow-lg bg-beige">
-            <div class="container flex justify-between py-6 xl:py-7 bg-beige flex-wrap" >
+            <div class="container flex justify-between py-5 2xl:py-7 bg-beige flex-wrap" >
                 <a class="flex items-center" href="/">
                     <?php get_template_part('templates/partials/lbr-logo', null, ['colour' => 'black']) ?>
                 </a>

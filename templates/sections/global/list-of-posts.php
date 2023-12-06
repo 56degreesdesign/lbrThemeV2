@@ -37,7 +37,7 @@
     }
 ?>
 <?php if ( $section ) : ?>
-<section id="vue-space" class="list-of-posts bg-beige pt-11 pb-20 md:py-24 lg:py-32 xl:py-40">
+<section id="vue-space" class="list-of-posts bg-beige pt-11 pb-20 md:py-24 2lg:py-32 2xl:py-40">
     <div class="container grid-layout">
         <h2 class="col-span-full txt-h2 text-center mb-11 md:mb-20 lg:mb-24 xl:mb-28"><?= $heading; ?></h2>
         <list-of-posts 

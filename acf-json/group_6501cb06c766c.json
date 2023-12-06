@@ -2776,6 +2776,26 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "key": "field_656892b2fc393",
+                    "label": "Bigger Padding",
+                    "name": "bigger_padding",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
                 }
             ]
         },
@@ -5745,6 +5765,26 @@
                     "layout": "block",
                     "prefix_label": 0,
                     "prefix_name": 0
+                },
+                {
+                    "key": "field_656f15146291f",
+                    "label": "Top Padding",
+                    "name": "top_padding",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
                 }
             ]
         },
@@ -5939,5 +5979,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701350787
+    "modified": 1701778805
 }
