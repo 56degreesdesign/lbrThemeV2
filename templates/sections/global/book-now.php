@@ -33,7 +33,7 @@
                         <h2 class="txt-h2 mb-3.5 text-center | lg:text-left lg:mb-5">
                             <?= $title; ?>
                         </h2>
-                        <button class="hidden btn btn--black btn--desktop-sm | mt-auto xl:block">
+                        <button class="hidden btn btn--black btn--desktop-sm | mt-auto xl:block xl:mb-5">
                             Book now
                         </button>
                     </div>

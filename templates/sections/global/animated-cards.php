@@ -8,7 +8,7 @@ $counter = 1;
 ?>
 
 <div id="<?php echo $anchor ?>" class="relative lg:overflow-hidden">
-    <div class="sticky top-[64px] bg-beige-light txt-h5 text-center pt-7 md:pt-11 pb-7 z-20 lg:hidden">SUSTAINABILITY<br>
+    <div class="sticky top-[58px] bg-beige-light txt-h5 text-center pt-7 md:pt-11 pb-7 z-20 lg:hidden">SUSTAINABILITY<br>
         CONSIDERATIONS</div>
     <div class="cards-animate w-screen">
         <?php foreach ($cards as $key => $card) :?>
@@ -17,7 +17,7 @@ $counter = 1;
                 <div class="col-span-full flex justify-center lg:hidden">
                     <div class="txt-h5 text-center mb-11 hidden lg:block"><?php echo $card['label'] ?></div>
                 </div>
-                <div class="col-span-full w-full relative mb-11 -mx-[25px] md:-mx-10 lg:mx-0 lg:mb-0 lg:col-span-6 flex items-center xl:col-span-5">
+                <div class="col-span-full w-full relative mb-11 -mx-[25px] md:mx-0 lg:mb-0 lg:col-span-6 flex items-center xl:col-span-5">
                     <div class="w-full relative pb-[66.45%] lg:w-[calc(100%+57px)] lg:-ml-[57px] lg:pb-[100vh]">
                         <?php get_template_part('templates/partials/images/image', 'preloaded', ['image' => $card['image'], 'class' => 'w-full']); ?>
                     </div>

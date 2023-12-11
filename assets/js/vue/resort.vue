@@ -3450,7 +3450,7 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-    @apply bg-orange uppercase px-5 xl:px-12 text-center pt-2 pb-1.5 text-15 w-fit h-fit text-beige-light font-bold rounded-full hover:bg-black duration-300 cursor-pointer;
+    @apply bg-orange uppercase px-5 xl:px-12 text-center pt-2 pb-1.5 text-14 w-fit h-fit text-beige-light font-bold rounded-full hover:bg-black duration-300 cursor-pointer;
     &--black {
         @apply bg-black/10 text-white;
         &.is-active {

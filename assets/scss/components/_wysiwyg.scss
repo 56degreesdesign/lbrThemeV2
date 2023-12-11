@@ -73,7 +73,7 @@ $module: '.wysiwyg';
             @apply txt-h1;
         }
         p {
-            @apply text-20 2lg:text-22 2xl:text-26;
+            @apply text-20 2lg:text-22 2xl:text-26 lg:max-w-[750px] 2xl:max-w-[982px];
         }
     }
 }

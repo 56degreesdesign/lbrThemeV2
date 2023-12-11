@@ -60,7 +60,7 @@ const select = (floorType) => {
 
 <style lang="scss" scoped>
 .btn-floors {
-    @apply uppercase px-4 pt-2 pb-1.5 text-15 font-bold rounded-full duration-300 cursor-pointer leading-1.33 w-fit min-w-[235px] hover:bg-orange hover:text-beige-light hover:border-transparent;
+    @apply uppercase px-4 pt-2 pb-1.5 text-14 font-bold rounded-full duration-300 cursor-pointer leading-1.33 w-fit min-w-[235px] hover:bg-orange hover:text-beige-light hover:border-transparent;
 
     &--active {
         @apply bg-black border border-transparent text-beige-light;
