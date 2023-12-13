@@ -12,7 +12,7 @@ $bigger_padding = $section['bigger_padding'] ?? false;
 
 <section id="<?php echo $anchor ?>" class="bg-beige-light md:pb-24 2lg:pb-32 2xl:pb-44 <?php echo ($bigger_padding ? 'pb-20' : 'pb-11'); ?>">
     <div class="container grid-layout">
-        <div class="col-span-full text-center md:text-left <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5 xl:mt-52' : 'lg:col-start-8 lg:col-span-5'; ?>" >
+        <div class="col-span-full text-center md:text-left <?php echo ($slider_position === 'left') ? 'lg:col-start-1 lg:col-span-6 xl:col-start-2 xl:col-span-5' : 'lg:col-start-8 lg:col-span-5'; ?>" >
             <?php if($heading) :?>
                 <h3 class="txt-h3 mb-7 md:mb-8 lg:mb-12"><?php echo $heading ?></h3>
             <?php endif ;?>
@@ -72,7 +72,7 @@ $bigger_padding = $section['bigger_padding'] ?? false;
             </ul>
         </div>
         <?php if($images) :?>
-            <div class="col-span-full -order-1 lg:order-none <?php echo ($slider_position === 'left') ? 'lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-3' : 'lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-2 lg:mt-28'; ?>">
+            <div class="col-span-full -order-1 lg:order-none <?php echo ($slider_position === 'left') ? 'lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-3' : 'lg:col-start-1 lg:col-span-6 lg:row-start-1 lg:row-span-2'; ?>">
                 <div class="swiper small-carousel mb-7 relative">
                     <div class="swiper-wrapper">
                         <?php foreach ($images as $slide) : ?>

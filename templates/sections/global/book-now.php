@@ -53,7 +53,7 @@
                                     <?= $moreContent; ?>
                                 </div>
                             </div>
-                            <button class="accordion-list-button block uppercase text-orange underline font-bold text-16 2lg:text-18 2xl:text-20 text-center mx-auto | lg:mx-0 lg:text-left">
+                            <button class="accordion-list-button block uppercase text-orange underline font-bold txt-h5 text-center mx-auto | lg:mx-0 lg:text-left">
                                 <span>VIEW MORE</span>
                                 <span class="hidden">Close</span>
                             </button>

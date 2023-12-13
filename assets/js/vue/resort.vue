@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div v-if="!activePreview" class="w-full mt-1.5 max-w-[115px] lg:max-w-none lg:ml-0 lg:w-1/2 lg:mb-10 xl:mb-20">
+            <div v-if="!activePreview" class="w-full mt-1.5 max-w-[115px] lg:ml-0 lg:w-1/2 lg:max-w-[212px] lg:mb-10 xl:mb-20">
                 <img v-if="phase === 'all' && !activePreview" :src="legend" alt="Legend">
                 <img v-if="phase === '1' && !activePreview" :src="legendPhase1" alt="Legend">
             </div>

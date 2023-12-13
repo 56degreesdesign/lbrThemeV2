@@ -41,13 +41,13 @@ sbi_header_html( $settings, $header_data, 'outside' );
             ?>
         </div>
     </div>
-    <div class="flex justify-between mx-[25px] mt-3.5 md:mx-10 md:mt-12 lg:flex-row lg:ml-0 lg:mr-[60px] xl:mt-16">
-        <div class="flex gap-x-10 lg:gap-x-40 xl:gap-x-52 2xl:gap-x-60">
-            <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
-            <div class="swiper-next-el swiper-nav">NEXT</div>
+    <div class="flex justify-between mx-[25px] mt-2.5 md:mx-10 lg:flex-row lg:ml-0 lg:mr-[60px] xl:mt-6">
+        <div class="flex gap-x-4 md:gap-x-5 lg:gap-x-6 xl:gap-x-12">
+            <div class="swiper-prev-el swiper-nav swiper-nav--small">PREVIOUS</div>
+            <div class="swiper-next-el swiper-nav swiper-nav--small">NEXT</div>
         </div>
         <div>
-            <span class="swiper-pagination-el text-center txt-h5">1/3</span>
+            <span class="swiper-pagination-el text-center txt-h5 swiper-pagination-el--small">1/3</span>
         </div>
     </div>
 

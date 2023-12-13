@@ -10,11 +10,11 @@
             <div class="col-span-full lg:col-start-7 lg:col-span-6 mt-11 mb-3.5 lg:mt-4 lg:row-start-3">
                 <div class="flex justify-between">
                     <div class="flex gap-x-12">
-                        <div class="swiper-prev-el swiper-nav">PREVIOUS</div>
-                        <div class="swiper-next-el swiper-nav">NEXT</div>
+                        <div class="swiper-prev-el swiper-nav swiper-nav--small">PREVIOUS</div>
+                        <div class="swiper-next-el swiper-nav swiper-nav--small">NEXT</div>
                     </div>
                     <div class="">
-                        <span class="swiper-pagination-el text-center txt-h5"></span>
+                        <span class="swiper-pagination-el text-center txt-h5 swiper-pagination-el--small"></span>
                     </div>
                 </div>
             </div>

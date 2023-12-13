@@ -1097,14 +1097,11 @@ body {
 .top-7 {
   top: 1.75rem;
 }
-.top-\[60\%\] {
-  top: 60%;
-}
-.top-\[64px\] {
-  top: 64px;
-}
 .top-\[58px\] {
   top: 58px;
+}
+.top-\[60\%\] {
+  top: 60%;
 }
 .-z-10 {
   z-index: -10;
@@ -2464,12 +2461,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .txt-h5 {
-    font-size: calc(20px + -3 * (100vw - 768px) / 256);
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .txt-h5 {
-    font-size: calc(20px + 0 * (100vw - 1024px) / 896);
+    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -2561,6 +2553,26 @@ body {
     .txt-4 {
       font-size: 1.625rem;
     }
+  }
+}
+
+.txt-5 {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .txt-5 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .txt-5 {
+    font-size: 1.25rem;
   }
 }
 
@@ -2946,6 +2958,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
   grid-template-rows: 0fr;
+  transition-delay: 300ms;
 }
 .dropdown-menu > div {
   overflow: hidden;
@@ -3339,12 +3352,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 }
 @media only screen and (min-width: 768px) {
   .wysiwyg-headings h5, .wysiwyg h5 {
-    font-size: calc(20px + -3 * (100vw - 768px) / 256);
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .wysiwyg-headings h5, .wysiwyg h5 {
-    font-size: calc(20px + 0 * (100vw - 1024px) / 896);
+    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -4098,12 +4106,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 }
 @media only screen and (min-width: 768px) {
   .swiper-nav {
-    font-size: calc(20px + -3 * (100vw - 768px) / 256);
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .swiper-nav {
-    font-size: calc(20px + 0 * (100vw - 1024px) / 896);
+    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -4140,13 +4143,7 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
 
 @media only screen and (min-width: 768px) {
   .swiper-pagination-el {
-    font-size: calc(20px + -3 * (100vw - 768px) / 256);
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .swiper-pagination-el {
-    font-size: calc(20px + 0 * (100vw - 1024px) / 896);
+    font-size: 1.125rem;
   }
 }
 
@@ -4963,6 +4960,10 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
     margin-left: -2.5rem;
     margin-right: -2.5rem;
   }
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .md\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -4970,10 +4971,6 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .md\:my-14 {
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
-  }
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
   }
   .md\:-mt-12 {
     margin-top: -3rem;
@@ -5545,6 +5542,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .lg\:max-w-none {
     max-width: none;
   }
+  .lg\:max-w-\[212px\] {
+    max-width: 212px;
+  }
   .lg\:-translate-y-20 {
     --tw-translate-y: -5rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5810,6 +5810,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   .lg\:text-14 {
     font-size: 0.875rem;
   }
+  .lg\:text-15 {
+    font-size: 0.938rem;
+  }
   .lg\:text-16 {
     font-size: 1rem;
   }
@@ -5818,9 +5821,6 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .lg\:text-18 {
     font-size: 1.125rem;
-  }
-  .lg\:text-20 {
-    font-size: 1.25rem;
   }
   .lg\:text-22 {
     font-size: 1.375rem;
@@ -5983,6 +5983,9 @@ h1 .wysiwyg-anchors a, h1 .wysiwyg a, h1 .wysiwyg-anchors a:visited, h2 .wysiwyg
   }
   .xl\:mt-9 {
     margin-top: 2.25rem;
+  }
+  .xl\:mt-6 {
+    margin-top: 1.5rem;
   }
   .xl\:block {
     display: block;

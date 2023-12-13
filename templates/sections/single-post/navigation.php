@@ -1,4 +1,4 @@
-<section class="flex justify-between uppercase text-12 | lg:text-20">
+<section class="flex justify-between uppercase text-12 md:text-13 lg:text-15">
     <div class="grid grid-cols-2 gap-x-4 xl:gap-x-12">
         <?php
             $next_post = get_adjacent_post(false, '', false);

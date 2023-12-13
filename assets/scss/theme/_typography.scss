@@ -91,12 +91,15 @@
 
     font-size: calc(14px + (17 - 14) * ((100vw - 375px) / (768 - 375)));
 
+    //@include md {
+    //    font-size: calc(20px + (17 - 20) * ((100vw - 768px) / (1024 - 768)));
+    //}
+    //
+    //@include lg {
+    //    font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1920 - 1024)));
+    //}
     @include md {
-        font-size: calc(20px + (17 - 20) * ((100vw - 768px) / (1024 - 768)));
-    }
-
-    @include lg {
-        font-size: calc(20px + (20 - 20) * ((100vw - 1024px) / (1920 - 1024)));
+        @apply text-18;
     }
 
     @include xxl {
@@ -133,7 +136,7 @@
 }
 
 .txt-5 {
-    
+    @apply text-14 md:text-18 lg:text-20 mb-4 font-bold uppercase leading-1.25;
 }
 
 .txt-6 {

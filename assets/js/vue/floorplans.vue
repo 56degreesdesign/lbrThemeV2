@@ -39,8 +39,9 @@ const select = (floorType) => {
 
                 <div class="col-span-full bg-beige lg:bg-beige-light lg:col-span-1">
                     <div class="flex flex-col items-center px-[25px] pb-20 md:pb-28 md:px-10 lg:pb-10 lg:px-0 lg:h-full lg:justify-between xl:pb-14">
-                        <div class="hidden lg:block text-20 font-bold text-center mt-14">FLOORPLANS</div>
+                        <div class="hidden lg:block"></div>
                         <div>
+                            <div class="hidden lg:block txt-h5 font-bold text-center mb-7 md:mb-8 lg:mb-10 xl:mb-20">FLOORPLANS</div>
                             <h3 class="txt-h2 text-center mb-7 md:mb-8 lg:mb-10 xl:mb-20" v-html="activeImage.heading">
                             </h3>
                             <p class="txt-h5 text-center mb-7 md:mb-12 lg:mb-0" v-html="activeImage.content"></p>
